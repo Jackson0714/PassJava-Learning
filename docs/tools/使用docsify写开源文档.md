@@ -1,0 +1,218 @@
+# 使用docsify 写开源文档
+
+官网：https://docsify.js.org/#/
+
+> docsify 是一个动态生成文档网站的工具。不同于 GitBook、Hexo 的地方是它不会生成将 `.md` 转成 `.html` 文件，所有转换工作都是在运行时进行。
+
+这将非常实用，如果只是需要快速的搭建一个小型的文档网站，或者不想因为生成的一堆 `.html` 文件“污染” commit 记录，只需要创建一个 `index.html` 就可以开始写文档而且直接[部署在 GitHub Pages](https://docsify.js.org/#/zh-cn/deploy)。
+
+# 一、初始化项目
+
+## 1.1 安装Node.js
+
+- 下载地址：https://nodejs.org/dist/v8.9.4/node-v8.9.4-x64.msi
+- 下载完成后点击安装。
+- 查看node 版本，命令：node -v
+  - 版本：v8.9.4
+
+## 1.2 安装docsify-cli工具
+
+命令行执行：
+
+``` shell
+npm i docsify-cli -g
+```
+
+会在这个路径下 
+
+​	C:\Users\Administrator\AppData\Roaming\npm\node_modules
+
+生成 docsify-cli 文件夹
+
+![mark](http://wukong1.oss-cn-beijing.aliyuncs.com/blog/20200405/094531332.png)
+
+## 1.3 初始化文档结构
+
+先创建一个本地文件夹docs，然后执行命令
+
+``` shell
+docsify init ./docs
+```
+
+会生成如下目录：
+
+```markdown
+ -| docs/
+    -| .nojekyll 用于阻止 GitHub Pages 会忽略掉下划线开头的文件
+    -| index.html 入口文件
+    -| README.md 会做为主页内容渲染
+```
+
+直接编辑 `docs/README.md` 就能更新网站内容
+
+## 1.4 本地实时预览
+
+``` shell
+docsify serve docs
+```
+
+默认访问 [http://localhost:3000](http://localhost:3000/) 
+
+- README文件：
+
+``` markdown
+# Headline
+> An awesome project.
+```
+
+- 预览效果：
+
+![mark](http://wukong1.oss-cn-beijing.aliyuncs.com/blog/20200405/095558944.png)
+
+# 二、定制导航栏
+
+## 2.1 定制导航栏
+
+``` javascript
+<script>
+    window.$docsify = {
+      name: 'PassJava-Learning',
+      repo: 'https://github.com/Jackson0714/PassJava-Platform',
+      loadNavbar: true,
+      loadSidebar: true, // 加载自定义侧边栏
+      maxLevel: 2, // 默认情况下会抓取文档中所有标题渲染成目录，可配置最大支持渲染的标题层级。
+      subMaxLevel: 4, // 生成目录的最大层级
+      mergeNavbar: true, // 小屏设备下合并导航栏到侧边栏
+      alias: { // 定义路由别名，可以更自由的定义路由规则。 支持正则
+        '/.*/_sidebar.md': '/_sidebar.md',//防止意外回退
+        '/.*/_navbar.md': '/_navbar.md'
+      }
+    }
+  </script>
+```
+
+- 添加_sidebar.md文件来配置侧边栏
+
+``` markdown
+* 介绍
+    * [PassJava 功能介绍](introduction/PassJava_introduction_01.md)
+    * [PassJava 必备知识](introduction/PassJava_introduction_02.md)
+* PassJava 架构篇
+
+* SpringBoot 学习篇
+    * [SpringBoot整合JDBC](springboot-tech/spring-boot-05-data-jdbc.md)
+    * [SpringBoot整合Druid](springboot-tech/spring-boot-06-data-druid.md)
+    * [SpringBoot整合MyBatis](springboot-tech/spring-boot-07-data-mybatis.md)
+
+* 工具篇
+    * [图床神器配置](tools/图床神器配置.md)
+    * [使用docsify写开源文档](tools/使用docsify写开源文档.md)
+    * [我的常用工具](tools/我的常用工具.md)
+
+* 想法
+    * [打造一款刷Java知识的小程序2](idea/打造一款刷Java知识的小程序2.md)
+```
+
+- 添加_navbar.md文件来配置顶部导航栏
+
+``` markdown
+* 演示
+  * [后台管理]()
+  * [小程序端]()
+
+* 项目地址
+  * [后台平台](https://github.com/Jackson0714/PassJava-Platform)
+  * [后台管理](https://github.com/Jackson0714/PassJava-Portal)
+  * [学习教程](https://github.com/Jackson0714/PassJava-Learning)
+```
+
+- 查看导航栏效果
+
+  ![mark](http://cdn.jayh.club/blog/20200405/PI4bmQXz9cMq.png?imageslim)
+
+
+
+# 三、定制封面页
+
+- 在index.html中添加封面页的配置
+
+``` markdown
+<script>
+    window.$docsify = {
+      coverpage: true
+    }
+ </script>
+```
+
+- 添加_coverpage.md文件来配置封面页
+
+``` markdown
+![logo](images/logo.png)
+
+# PassJava-Learning
+
+> PassJava 学习教程，架构、业务、技术要点全方位解析。
+
+PassJava 是一款帮助Java面试的开源系统，
+可以用零碎时间利用小程序查看常见面试题，夯实Java基础。
+采用流行的技术，如 SpringBoot、MyBatis、Redis、 MySql、
+MongoDB、 RabbitMQ、Elasticsearch，采用Docker容器化部署。
+
+[GitHub](https://github.com/jackson0714/PassJava-Learning)
+[Get Started](README.md)
+```
+
+- 查看封面效果
+
+  ![mark](http://cdn.jayh.club/blog/20200405/pvHBsSMBR3bJ.png?imageslim)
+
+# 四、添加全文搜索
+
+在index.html中添加全文搜索的配置
+
+``` html
+<script>
+    window.$docsify = {
+      search: {
+        placeholder: '搜索',
+        noData: '找不到结果!',
+        depth: 3
+      },
+    }
+ </script>
+```
+
+![mark](http://cdn.jayh.club/blog/20200405/34Nd7YdPahJC.png?imageslim)
+
+# 五、添加代码高亮
+
+在index.html中添加代码高亮的配置
+
+```html
+  <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-java.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-sql.js"></script>
+```
+
+# 六、添加一键拷贝代码
+
+在index.html中添加一键拷贝代码的配置
+
+``` javascript
+<script src="//unpkg.com/docsify-copy-code"></script>
+```
+
+# 七、在Github上部署文档
+
+
+
+
+
+遇到的问题：
+
+1. 初始化docsify文档不成功
+
+   升级node.js之后就成功了
+
+
+![mark](http://wukong1.oss-cn-beijing.aliyuncs.com/blog/20200404/183724669.png)
