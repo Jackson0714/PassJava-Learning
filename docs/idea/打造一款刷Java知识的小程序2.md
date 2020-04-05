@@ -1,5 +1,6 @@
 # 打造一款刷Java 知识的小程序（二）
-> 学习Java的神器即将面向广大Java爱好者（微信审核中）
+> 学习Java的神器即将面向广大Java爱好者
+
 ![mark](http://cdn.jayh.club/blog/20200405/ik8h4UItdnSA.jpg?imageslim)
 
 ## 一、第二版做了什么？

@@ -204,9 +204,19 @@ MongoDB、 RabbitMQ、Elasticsearch，采用Docker容器化部署。
 
 # 七、在Github上部署文档
 
+- 提交代码到github
 
+- Setting中开启github pages
 
+  ![mark](http://cdn.jayh.club/blog/20200405/Sx57CDmbYmpJ.png?imageslim)
 
+- GitHub Pages配置
+
+  ![mark](http://cdn.jayh.club/blog/20200405/Hg0JNX9DAgh7.png?imageslim)
+
+- 配置成功
+
+  访问 [https://jackson0714.github.io/PassJava-Learning](https://jackson0714.github.io/PassJava-Learning)
 
 遇到的问题：
 
@@ -216,3 +226,84 @@ MongoDB、 RabbitMQ、Elasticsearch，采用Docker容器化部署。
 
 
 ![mark](http://wukong1.oss-cn-beijing.aliyuncs.com/blog/20200404/183724669.png)
+
+# 八、部署到云服务器
+
+## 1.添加nginx配置文件
+
+- 执行命令
+
+```shell
+sudo vim /etc/nginx/conf.d/pass_java_learning.conf
+```
+
+- 更新配置信息
+``` shell
+server {
+    listen       80;
+    server_name  tech.jayh.club;
+ 
+    location / {
+        root   /home/ubuntu/jay/passjava/passjava-learning/PassJava-Learning/docs;
+        index  index.html;
+    }
+}
+```
+## 2.域名解析
+
+主机记录：tech
+
+记录类型：A
+
+线路类型：默认
+
+记录值：主机IP地址
+
+![mark](http://cdn.jayh.club/blog/20200405/5iDaoJJ9poNK.png?imageslim)
+
+## 3.访问 tech.jay.club
+
+## 4. 遇到的问题
+
+- 404  未找到页面
+
+  可以通过命令查看错误日志
+
+  ``` shell
+  cat /var/log/nginx/error.log
+  ```
+
+  **原因：**docs 路径配置错误，下面三种路径都报404
+
+  ​	/home/jay/passjava/passjava-learning/PassJava-Learning/docs;
+
+  ​	/jay/passjava/passjava-learning/PassJava-Learning/docs;
+
+  ​	~/jay/passjava/passjava-learning/PassJava-Learning/docs;
+
+  **解决方案：**
+
+  改成 /home/ubuntu/jay/passjava/passjava-learning/PassJava-Learning/docs
+
+- 403 限制访问
+
+  修改nginx.conf文件
+
+  ```shell
+  sudo vim nginx.conf
+  ```
+
+  `user www-data` 改为 `user root`
+
+  重启 nginx 服务
+
+  ``` shell
+  sudo service nginx restart
+  ```
+
+  ​
+
+
+# 公众号
+
+![mark](http://cdn.jayh.club/blog/20200404/GU60Sv47XT7J.png?imageslim)

@@ -11,7 +11,7 @@
 
 ## 更好的阅读体验
 - 文档地址：[http://www.jayh.club](http://www.jayh.club)
-- 备用地址：[]()
+- 备用地址：[https://jackson0714.github.io/PassJava-Learning](https://jackson0714.github.io/PassJava-Learning/)
 
 ## 介绍
 - [PassJava 架构及功能概览]()
