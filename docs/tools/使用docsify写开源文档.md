@@ -6,6 +6,8 @@
 
 这将非常实用，如果只是需要快速的搭建一个小型的文档网站，或者不想因为生成的一堆 `.html` 文件“污染” commit 记录，只需要创建一个 `index.html` 就可以开始写文档而且直接[部署在 GitHub Pages](https://docsify.js.org/#/zh-cn/deploy)。
 
+![mark](http://cdn.jayh.club/blog/20200405/J2LfpLH0ziGD.gif)
+
 # 一、初始化项目
 
 ## 1.1 安装Node.js
@@ -49,6 +51,14 @@ docsify init ./docs
 ```
 
 直接编辑 `docs/README.md` 就能更新网站内容
+
+**遇到的问题：**
+
+1. 初始化docsify文档不成功
+
+   升级node.js之后就成功了
+
+![mark](http://wukong1.oss-cn-beijing.aliyuncs.com/blog/20200404/183724669.png)
 
 ## 1.4 本地实时预览
 
@@ -217,15 +227,6 @@ MongoDB、 RabbitMQ、Elasticsearch，采用Docker容器化部署。
 - 配置成功
 
   访问 [https://jackson0714.github.io/PassJava-Learning](https://jackson0714.github.io/PassJava-Learning)
-
-遇到的问题：
-
-1. 初始化docsify文档不成功
-
-   升级node.js之后就成功了
-
-
-![mark](http://wukong1.oss-cn-beijing.aliyuncs.com/blog/20200404/183724669.png)
 
 # 八、部署到云服务器
 
