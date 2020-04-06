@@ -1,18 +1,20 @@
-* 介绍
-    * [PassJava 功能介绍](introduction/PassJava_introduction_01.md)
-    * [PassJava 必备知识](introduction/PassJava_introduction_02.md)
+* 一、PassJava 项目简介
+    * [1.项目背景](01.项目简介/1.项目背景.md)
+    * [2.项目微服务架构图](01.项目简介/2.项目微服务架构图.md)
+    * [3.微服务划分图](01.项目简介/3.微服务划分图.md)
+    * [4.项目技术和特色](01.项目简介/4.项目技术和特色.md)
+    * [5.项目前置要求](01.项目简介/5.项目前置要求.md)
 * PassJava 架构篇
-
 * SpringBoot 学习篇
-    * [SpringBoot整合JDBC](springboot-tech/spring-boot-05-data-jdbc.md)
-    * [SpringBoot整合Druid](springboot-tech/spring-boot-06-data-druid.md)
-    * [SpringBoot整合MyBatis](springboot-tech/spring-boot-07-data-mybatis.md)
-
+    * [01.分布式基础概念](03.SpringCloud学习篇/01.分布式基础概念.md)
+* SpringBoot 学习篇
+    * [SpringBoot整合JDBC](02.SpringBoot学习篇/spring-boot-05-data-jdbc.md)
+    * [SpringBoot整合Druid](02.SpringBoot学习篇/spring-boot-06-data-druid.md)
+    * [SpringBoot整合MyBatis](02.SpringBoot学习篇/spring-boot-07-data-mybatis.md)
 * 工具篇
-    * [图床神器配置](tools/图床神器配置.md)
-    * [使用docsify写开源文档](tools/使用docsify写开源文档.md)
-    * [我的常用工具](tools/我的常用工具.md)
-    * [Ubuntu16.04安装最新版nodejs](tools/Ubuntu16.04安装最新版nodejs.md)
-
+    * [图床神器配置](99.tools/图床神器配置.md)
+    * [使用docsify写开源文档](99.tools/使用docsify写开源文档.md)
+    * [我的常用工具](99.tools/我的常用工具.md)
+    * [Ubuntu16.04安装最新版nodejs](99.tools/Ubuntu16.04安装最新版nodejs.md)
 * 想法
-    * [打造一款刷Java知识的小程序2](idea/打造一款刷Java知识的小程序2.md)
+    * [打造一款刷Java知识的小程序2](98.idea/打造一款刷Java知识的小程序2.md)

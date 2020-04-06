@@ -1,6 +1,6 @@
 # 使用docsify 写开源文档
 
-官网：https://docsify.js.org/#/
+文档演示地址：http://tech.jayh.club/
 
 > docsify 是一个动态生成文档网站的工具。不同于 GitBook、Hexo 的地方是它不会生成将 `.md` 转成 `.html` 文件，所有转换工作都是在运行时进行。
 
