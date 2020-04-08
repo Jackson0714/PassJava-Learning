@@ -1,7 +1,7 @@
 # PassJava 学习教程
 
 ## 简介
-- PassJava-Learning项目是PassJava项目的学习教程。对架构、业务、技术要点进行讲解。
+- PassJava-Learning项目是PassJava（佳必过）项目的学习教程。对架构、业务、技术要点进行讲解。
 - PassJava 是一款Java`面试刷题`的开源系统，可以用零碎时间利用小程序查看常见面试题，夯实Java基础。
 - PassJava 项目可以教会你如何搭建SpringBoot项目，Spring Cloud项目
 - 采用流行的技术，如 SpringBoot、MyBatis、Redis、 MySql、 MongoDB、 RabbitMQ、Elasticsearch，采用Docker容器化部署。
