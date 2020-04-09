@@ -7,6 +7,8 @@
     
 * 二、PassJava 架构篇
 
+    ​	[01.创建项目和添加模块](03.SpringBoot学习篇/01.创建项目和添加模块.md)
+
 * 三、SpringBoot 学习篇
 
     * [SpringBoot整合JDBC](03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)
@@ -22,8 +24,10 @@
     - [01.环境搭建篇](05.安装部署篇/01.环境搭建篇.md)
     - [02.配置虚拟机网络](05.安装部署篇/02.配置虚拟机网络.md)
     - [03.安装docker](05.安装部署篇/03.安装docker.md)
-    - [04.docker安装mysql.md](05.安装部署篇/04.docker安装mysql.md)
-    - [05.docker安装redis.md](05.安装部署篇/05.docker安装redis.md)
+    - [04.docker安装mysql](05.安装部署篇/04.docker安装mysql.md)
+    - [05.docker安装redis](05.安装部署篇/05.docker安装redis.md)
+    - [06.本地开发环境配置](05.安装部署篇/06.本地开发环境配置.md)
+    - [07.配置git](05.安装部署篇/07.配置git.md)
 
 * 工具篇
     * [图床神器配置](99.tools/图床神器配置.md)
