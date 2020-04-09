@@ -153,13 +153,13 @@ http://192.168.10.160:8082/druid
 
 - 执行SQL语句
 
-  ![img](..\images\spring-boot-06-druid-jdbc\select.png)
+  ![img](..\images\spring-boot-06-druid-jdbc\select1.png)
 
 查看监控：
 
 有一条查询请求的记录
 
-![img](..\images\spring-boot-06-druid-jdbc\monitor.png)
+![img](..\images\spring-boot-06-druid-jdbc\monitor1.png)
 
 # 三、技术问题
 
