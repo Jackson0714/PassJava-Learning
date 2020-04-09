@@ -5,7 +5,7 @@
     * [4.项目技术和特色](01.项目简介/4.项目技术和特色.md)
     * [5.项目前置要求](01.项目简介/5.项目前置要求.md)
 * 二、PassJava 架构篇
-    * [01.创建项目和添加模块](02.PassJava 架构篇/01.创建项目和添加模块.md)
+    * [01.创建项目和添加模块](02.PassJava架构篇/01.创建项目和添加模块.md)
 * 三、SpringBoot 学习篇
 
     * [SpringBoot整合JDBC](03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)
