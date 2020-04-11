@@ -6,6 +6,7 @@
     * [5.项目前置要求](01.项目简介/5.项目前置要求.md)
 * 二、PassJava 架构篇
     * [01.创建项目和添加模块](02.PassJava架构篇/01.创建项目和添加模块.md)
+    * [02.创建数据库和表](02.PassJava架构篇/02.创建数据库和表.md)
 * 三、SpringBoot 学习篇
 
     * [SpringBoot整合JDBC](03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)
