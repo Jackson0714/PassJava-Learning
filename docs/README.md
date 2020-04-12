@@ -1,3 +1,7 @@
+PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一时间获取。
+
+
+
 # PassJava 学习教程
 
 ## 简介
@@ -13,8 +17,8 @@
 
 ## 文档连载目录
 
-- [打造一款 刷Java 知识的小程序](http://mp.weixin.qq.com/s?__biz=MzAwMjI0ODk0NA==&mid=2451942962&idx=1&sn=745fb1a194e848ecc4203dbb66e26d50&chksm=8d1c57adba6bdebba45c35281eacce46efcb5fbc74b916ead2099f3e72d12aac7a51fa66b2a0&scene=21#wechat_redirect)
-- [打造一款 刷Java 知识的小程序（二）](http://mp.weixin.qq.com/s?__biz=MzAwMjI0ODk0NA==&mid=2451942985&idx=1&sn=daffd599523069f1de2dbaf1c6cca3cc&chksm=8d1c57d6ba6bdec090e267fa3052cfee6381a8bbce2e9d98a6b0e065e1b7b7e5a0687da566c1&scene=21#wechat_redirect)
+- [打造一款 刷Java 知识的小程序](https://www.cnblogs.com/jackson0714/p/passJava1.html)
+- [打造一款 刷Java 知识的小程序（二）](https://www.cnblogs.com/jackson0714/p/passJava2.html)
 - [01.五分钟搞懂分布式基础概念](http://www.jayh.club/#/04.SpringCloud学习篇/01.分布式基础概念)
 - [02.快速搭建Linux环境-运维必备](http://www.jayh.club/#/05.安装部署篇/01.环境搭建篇)
 - [03.配置虚拟机网络](http://www.jayh.club/#/05.安装部署篇/02.配置虚拟机网络)
@@ -25,8 +29,8 @@
 - [08.配置Git](http://www.jayh.club/#/05.安装部署篇/07.配置git)
 - [09.初始化项目和添加微服务](http://www.jayh.club/#/02.PassJava架构篇/01.创建项目和添加模块)
 - [10.PassJava-微服务划分图](http://www.jayh.club/#/01.项目简介/3.微服务划分图)
-- [11.初始化数据库和表]()
-- [12.搭建管理后台]()
+- [11.初始化数据库和表](http://www.jayh.club/#/02.PassJava架构篇/02.创建数据库和表)
+- [12.搭建管理后台](http://www.jayh.club/#/02.PassJava架构篇/03.搭建管理后台)
 
 ## 小程序演示
 
