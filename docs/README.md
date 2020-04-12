@@ -44,8 +44,8 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 
 ## 介绍
 
-- [PassJava 架构及功能概览]()
-- [PassJava 学习所需知识点]()
+- [PassJava 架构及功能概览](http://www.jayh.club/#/01.项目简介/2.项目微服务架构图)
+- [PassJava 学习所需知识点](http://www.jayh.club/#/01.项目简介/5.项目前置要求)
 
 ## 架构篇
 > 手把手教你搭建一个PassJava 中使用的 SpringBoot 框架
@@ -59,7 +59,16 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 ## 部署篇
 > PassJava 开发及生产环境的搭建
 
+- [02.快速搭建Linux环境-运维必备](http://www.jayh.club/#/05.安装部署篇/01.环境搭建篇)
+- [03.配置虚拟机网络](http://www.jayh.club/#/05.安装部署篇/02.配置虚拟机网络)
+- [04.安装Docker](http://www.jayh.club/#/05.安装部署篇/03.安装docker)
+- [05.Docker安装mysql](http://www.jayh.club/#/05.安装部署篇/04.docker安装mysql)
+- [06.Docker安装redis](http://www.jayh.club/#/05.安装部署篇/05.docker安装redis)
+- [07.本地开发环境配置](http://www.jayh.club/#/05.安装部署篇/06.本地开发环境配置)
+- [08.配置Git](http://www.jayh.club/#/05.安装部署篇/07.配置git)
+
 ## 参考篇
+
 > PassJava 相关技术的使用教程
 
 ## 工具篇
