@@ -7,6 +7,9 @@
 * 二、PassJava 架构篇
     * [01.创建项目和添加模块](02.PassJava架构篇/01.创建项目和添加模块.md)
     * [02.创建数据库和表](02.PassJava架构篇/02.创建数据库和表.md)
+    * [03.搭建管理后台](02.PassJava架构篇/03.搭建管理后台.md)
+    * [04.自动生成前后端代码](02.PassJava架构篇/04.自动生成前后端代码.md)
+    * [05.整合MyBatis-Plus实现CRUD](02.PassJava架构篇/05.整合MyBatis-Plus实现CRUD.md)
 * 三、SpringBoot 学习篇
 
     * [SpringBoot整合JDBC](03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)
