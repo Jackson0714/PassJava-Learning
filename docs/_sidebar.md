@@ -10,6 +10,9 @@
     * [03.搭建管理后台](02.PassJava架构篇/03.搭建管理后台.md)
     * [04.自动生成前后端代码](02.PassJava架构篇/04.自动生成前后端代码.md)
     * [05.整合MyBatis-Plus实现CRUD](02.PassJava架构篇/05.整合MyBatis-Plus实现CRUD.md)
+    * [06.06.生成所有微服务的CRUD代码](02.PassJava架构篇/06.生成所有微服务的CRUD代码.md)
+    * [07.SpringCloudAlibaba组件简介](02.PassJava架构篇/07.SpringCloudAlibaba组件简介.md)
+    * [08.SpringCloud整合Alibaba-Nacos组件](02.PassJava架构篇/08.SpringCloud整合Alibaba-Nacos组件.md)
 * 三、SpringBoot 学习篇
 
     * [SpringBoot整合JDBC](03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)

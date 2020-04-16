@@ -33,6 +33,7 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 - [12.搭建管理后台](http://www.jayh.club/#/02.PassJava架构篇/03.搭建管理后台)
 - [13.初始化数据库和表](http://www.jayh.club/#/02.PassJava架构篇/04.自动生成前后端代码)
 - [14.整合MyBatis-Plus实现CRUD](http://www.jayh.club/#/02.PassJava架构篇/05.整合MyBatis-Plus实现CRUD)
+- [15.Spring Cloud Alibaba 组件简介](http://www.jayh.club/#/02.PassJava架构篇/07.SpringCloudAlibaba组件简介)
 
 ## 小程序演示
 
