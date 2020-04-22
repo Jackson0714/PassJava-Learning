@@ -35,8 +35,9 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 - [14.整合MyBatis-Plus实现CRUD](http://www.jayh.club/#/02.PassJava架构篇/05.整合MyBatis-Plus实现CRUD)
 - [15.生成所有微服务的CRUD代码](http://www.jayh.club/#/02.PassJava架构篇/06.生成所有微服务的CRUD代码)
 - [16.Spring Cloud Alibaba 组件简介](http://www.jayh.club/#/02.PassJava架构篇/07.SpringCloudAlibaba组件简介)
-- [17.SpringCloud整合Alibaba-Nacos组件](http://www.jayh.club/#/02.PassJava架构篇/08.SpringCloud整合Alibaba-Nacos组件)
+- [17.SpringCloud整合Alibaba-Nacos注册中心](http://www.jayh.club/#/02.PassJava架构篇/08.SpringCloud整合Alibaba-Nacos组件)
 - [18.SpringCloud整合OpenFeign组件](http://www.jayh.club/#/02.PassJava架构篇/09.SpringCloud整合OpenFeign组件)
+- [19.SpringCloud整合Alibaba-Nacos配置中心](http://www.jayh.club/#/02.PassJava架构篇/10.SpringCloud整合Nacos配置中心)
 
 ## 小程序演示
 
