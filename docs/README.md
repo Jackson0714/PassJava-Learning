@@ -31,7 +31,7 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 - [10.PassJava-微服务划分图](http://www.jayh.club/#/01.项目简介/3.微服务划分图)
 - [11.初始化数据库和表](http://www.jayh.club/#/02.PassJava架构篇/02.创建数据库和表)
 - [12.搭建管理后台](http://www.jayh.club/#/02.PassJava架构篇/03.搭建管理后台)
-- [13.0自动生成前后端代码](http://www.jayh.club/#/02.PassJava架构篇/04.自动生成前后端代码)
+- [13.自动生成前后端代码](http://www.jayh.club/#/02.PassJava架构篇/04.自动生成前后端代码)
 - [14.整合MyBatis-Plus实现CRUD](http://www.jayh.club/#/02.PassJava架构篇/05.整合MyBatis-Plus实现CRUD)
 - [15.生成所有微服务的CRUD代码](http://www.jayh.club/#/02.PassJava架构篇/06.生成所有微服务的CRUD代码)
 - [16.Spring Cloud Alibaba 组件简介](http://www.jayh.club/#/02.PassJava架构篇/07.SpringCloudAlibaba组件简介)
