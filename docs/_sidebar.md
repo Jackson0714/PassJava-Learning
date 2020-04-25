@@ -32,11 +32,14 @@
     - [05.docker安装redis](05.安装部署篇/05.docker安装redis.md)
     - [06.本地开发环境配置](05.安装部署篇/06.本地开发环境配置.md)
     - [07.配置git](05.安装部署篇/07.配置git.md)
+* 六、PassJava业务篇
+    * [01.管理后台-题目类型功能](06.PassJava业务篇/01.管理后台-题目类型功能.md)
 * 工具篇
     * [图床神器配置](99.tools/图床神器配置.md)
     * [使用docsify写开源文档](99.tools/使用docsify写开源文档.md)
     * [我的常用工具](99.tools/我的常用工具.md)
     * [Ubuntu16.04安装最新版nodejs](99.tools/Ubuntu16.04安装最新版nodejs.md)
+    * [VSCode快速生成Vue模板](99.tools/VSCode快速生成Vue模板.md)
 * 想法
   
     * [打造一款刷Java知识的小程序2](98.idea/打造一款刷Java知识的小程序2.md)
