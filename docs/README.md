@@ -39,6 +39,7 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 - [18.SpringCloud整合OpenFeign组件](http://www.jayh.club/#/02.PassJava架构篇/09.SpringCloud整合OpenFeign组件)
 - [19.SpringCloud整合Alibaba-Nacos配置中心](http://www.jayh.club/#/02.PassJava架构篇/10.SpringCloud整合Nacos配置中心)
 - [20.SpringCloud整合Gateway网关](http://www.jayh.club/#/02.PassJava架构篇/11.SpringCloud整合Gateway网关)
+- [21.管理后台-题目类型功能](http://www.jayh.club/#/06.PassJava业务篇/01.管理后台-题目类型功能)
 
 ## 小程序演示
 

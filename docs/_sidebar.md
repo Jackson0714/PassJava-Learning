@@ -17,9 +17,10 @@
     * [10.SpringCloud整合Nacos配置中心](02.PassJava架构篇/10.SpringCloud整合Nacos配置中心.md)
 * 三、SpringBoot 学习篇
 
-    * [SpringBoot整合JDBC](03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)
-    * [SpringBoot整合Druid](03.SpringBoot学习篇/spring-boot-06-data-druid.md)
-    * [SpringBoot整合MyBatis](03.SpringBoot学习篇/spring-boot-07-data-mybatis.md)
+    * [05.SpringBoot整合JDBC](03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)
+    * [06.SpringBoot整合Druid](03.SpringBoot学习篇/spring-boot-06-data-druid.md)
+    * [07.SpringBoot整合MyBatis](03.SpringBoot学习篇/spring-boot-07-data-mybatis.md)
+    * [08.SpringBoot-Mybatis逻辑删除](03.SpringBoot学习篇/08.SpringBoot-Mybatis逻辑删除.md)
 * 四、SpringBoot 学习篇
 
     * [01.分布式基础概念](04.SpringCloud学习篇/01.分布式基础概念.md)
