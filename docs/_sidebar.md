@@ -12,9 +12,11 @@
     * [05.整合MyBatis-Plus实现CRUD](02.PassJava架构篇/05.整合MyBatis-Plus实现CRUD.md)
     * [06.生成所有微服务的CRUD代码](02.PassJava架构篇/06.生成所有微服务的CRUD代码.md)
     * [07.SpringCloudAlibaba组件简介](02.PassJava架构篇/07.SpringCloudAlibaba组件简介.md)
-    * [08.SpringCloud整合Alibaba-Nacos注册中心](02.PassJava架构篇/08.SpringCloud整合Alibaba-Nacos组件.md)
+    * [08.SpringCloud整合Nacos注册中心](02.PassJava架构篇/08.SpringCloud整合Alibaba-Nacos组件.md)
     * [09.SpringCloud整合OpenFeign组件](02.PassJava架构篇/09.SpringCloud整合OpenFeign组件.md)
     * [10.SpringCloud整合Nacos配置中心](02.PassJava架构篇/10.SpringCloud整合Nacos配置中心.md)
+    * [11.SpringCloud整合Gateway网关](02.PassJava架构篇/11.SpringCloud整合Gateway网关.md)
+    * [12.SpringCloud整合OSS对象存储](02.PassJava架构篇/12.SpringCloud整合OSS对象存储.md)
 * 三、SpringBoot 学习篇
 
     * [05.SpringBoot整合JDBC](03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)
