@@ -147,7 +147,7 @@ http://192.168.10.160:8082/druid
 
 - 正常进入后可以看到监控后台
 
-![img](..\images\spring-boot-06-druid-jdbc\Druid_Monitor.png)
+![img](..\images\spring-boot-06-druid-jdbc\Druid_Monitor1.png)
 
 
 
