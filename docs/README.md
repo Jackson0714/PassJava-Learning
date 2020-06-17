@@ -83,6 +83,16 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 
 > PassJava 中一些功能的技术要点解析
 
+[05.SpringBoot整合Jdbc](http://www.jayh.club/#/03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)
+
+[06.SpringBoot整合Druid](http://www.jayh.club/#/03.SpringBoot学习篇/spring-boot-06-data-druid.md)
+
+[07.spring-boot-05-data-jdbc](http://www.jayh.club/#/03.SpringBoot学习篇/spring-boot-07-data-mybatis.md)
+
+[08.SpringBoot Mybatis逻辑删除](http://www.jayh.club/#/03.SpringBoot学习篇/08.SpringBoot-Mybatis逻辑删除.md)
+
+[09.Object划分](http://www.jayh.club/#/03.SpringBoot学习篇/09.Object划分.md)
+
 ## 部署篇
 
 > PassJava 开发及生产环境的搭建
