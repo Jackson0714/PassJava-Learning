@@ -1,0 +1,84 @@
+# 修改Markdown神器[Typora]的主题样式
+
+> Typora是一款专注写作的工具，基于markdown标记语言来完成写作。出于以下原因决定替换主题样式：
+>
+> 1.自带的样式比较low，想替换一款高大上的;
+>
+> 2.用微信公众号发的文章样式和typora不一样，两边的效果需要保持一致，方便在typora预览效果;
+>
+> 3.能自己DIY一些东西，也是比较有意思的一件事。
+
+# 一、主题样式从哪里获取？
+
+自己写样式不太现实，也太花时间。
+
+## 1.1 可以从Typora的官网下载样式
+
+### 1.1.1 下载主题
+
+
+
+http://theme.typora.io/
+
+![Typora官网主题](http://cdn.jayh.club/blog/20200810/155814626.png)
+
+我比较喜欢这两款
+
+- Vue
+
+http://theme.typora.io/theme/Vue/
+
+![mark](http://cdn.jayh.club/blog/20200810/155858824.png)
+
+
+
+- 橙心
+
+http://theme.typora.io/theme/OrangeHeart/
+
+![橙心主题](http://cdn.jayh.club/blog/20200810/155915165.png)
+
+### 1.1.2 配置官网主题样式
+
+将下载好的样式文件拷贝到Typora工具的theme目录下
+
+C:\Users\\`<user name>`\AppData\Roaming\Typora\themes
+
+![Typora工具的theme目录](http://cdn.jayh.club/blog/20200810/160009493.png)
+
+我下载的Vue主题样式文件
+
+![Vue样式文件](http://cdn.jayh.club/blog/20200810/160022498.png)
+
+然后重启Typora
+
+导航栏切换主题为Vue
+
+![导航栏切换主题](http://cdn.jayh.club/blog/20200810/160041079.png)
+
+修改后的效果：
+
+![Vue主题](http://cdn.jayh.club/blog/20200810/160053750.png)
+
+
+
+## 1.2 从mdnice上获取样式
+
+`mdnice`是在线写markdown的神器
+
+### 1.2.1 mdnice导航栏 `选择主题CSS区域`![选择主题CSS区域](http://cdn.jayh.club/blog/20200810/160110624.png)
+
+### 1.2.2 选择全栈蓝样式
+
+![选择全栈蓝](http://cdn.jayh.club/blog/20200810/160127115.png) 
+
+
+
+将右边的css样式保存到Typora的themes文件夹，这里我将文件命名为nicemd.css，大家可以起名字，注意不要用中文。
+
+![nicemd.css](http://cdn.jayh.club/blog/20200810/160138482.png)
+
+然后打开重启Typora，主题菜单栏里面就可以看到新增加的Nicemd主题了。
+
+![Nicemd主题](http://cdn.jayh.club/blog/20200810/154730847.png)
+

@@ -47,13 +47,14 @@
 
     * [01.30分钟全面解析-SQL事务+隔离级别+阻塞+死锁.md](08.SQL进阶/01.30分钟全面解析-SQL事务+隔离级别+阻塞+死锁.md)
 * 九、JVM
-    * [01.走进Java](09.JVM/01.走进Java.md)
+    * [01.50+道JVM面试题+11张思维导图就是让你懂JVM.md](09.JVM/01.50+道JVM面试题+11张思维导图就是让你懂JVM.md)
     * [02.JVM内存区域思维导图](09.JVM/02.JVM内存区域思维导图.md)
 * iOS篇
     * [96.iOS](09.JVM/从零开始用swift开发一个iOS应用（仿微博）]1. 第一个demo上手体验.md)
 * 工具篇
+    * [01.自定义Markdown神器Typora的主题样式](99.tools/01.自定义Markdown神器Typora的主题样式.md)
+    * [02.使用docsify写开源文档](99.tools/02.使用docsify写开源文档.md)
     * [图床神器配置](99.tools/图床神器配置.md)
-    * [使用docsify写开源文档](99.tools/使用docsify写开源文档.md)
     * [我的常用工具](99.tools/我的常用工具.md)
     * [Ubuntu16.04安装最新版nodejs](99.tools/Ubuntu16.04安装最新版nodejs.md)
     * [VSCode快速生成Vue模板](99.tools/VSCode快速生成Vue模板.md)
