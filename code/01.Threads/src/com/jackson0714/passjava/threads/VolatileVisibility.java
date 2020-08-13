@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
  * 不保证原子性
  * 禁止指令重排
  * @author: 悟空聊架构
- * @create: 2020-08-12 22:37
+ * @create: 2020-08-12
  */
 
 
@@ -25,7 +25,7 @@ class ShareData {
  * 1. 假设int number = 0， number变量之前没有添加volatile关键字修饰，没有可见性
  * 2. 添加了volatile，可以解决可见性问题
  */
-public class volatileVisibility {
+public class VolatileVisibility {
     public static void main(String[] args) {
         // 资源类
         ShareData shareData = new ShareData();
