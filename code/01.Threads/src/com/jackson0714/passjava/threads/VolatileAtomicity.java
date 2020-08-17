@@ -4,6 +4,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  演示volatile 不保证原子性
+ * @author: 悟空聊架构
  * @create: 2020-08-13
  */
 
