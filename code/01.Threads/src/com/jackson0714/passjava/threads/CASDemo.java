@@ -6,11 +6,19 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @create: 2020-08-17
  */
 public class CASDemo {
-    public static void  main(String[] args) {
+    public static void  main(String[] args) throws InterruptedException {
         AtomicInteger atomicInteger = new AtomicInteger(10);
-        Boolean result1 = atomicInteger.compareAndSet(10,20);
-        System.out.printf("当前atomicInteger变量的值:%d 比较结果%s\r\n", atomicInteger.get(), result1);
-        Boolean result2 = atomicInteger.compareAndSet(10,30);
-        System.out.printf("当前atomicInteger变量的值:%d, 比较结果%s\n" , atomicInteger.get(), result2);
+        Thread.sleep(100);
+
+        new Thread(() -> {
+            atomicInteger.getAndIncrement();
+        }, "aaa").start();
+
+        atomicInteger.getAndIncrement();
+    }
+
+    private static void demo() {
+        AtomicInteger atomicInteger = new AtomicInteger(10);
+        atomicInteger.getAndIncrement();
     }
 }
