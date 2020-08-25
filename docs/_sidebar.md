@@ -17,7 +17,7 @@
     * [10.SpringCloud整合Nacos配置中心](02.PassJava架构篇/10.SpringCloud整合Nacos配置中心.md)
     * [11.SpringCloud整合Gateway网关](02.PassJava架构篇/11.SpringCloud整合Gateway网关.md)
     * [12.SpringCloud整合OSS对象存储](02.PassJava架构篇/12.SpringCloud整合OSS对象存储.md)
-    * [13.SpringCloud整合OSS对象存储](02.PassJava架构篇/13.整合统一异常处理.md)
+    * [13.SpringCloud整合统一异常处理](02.PassJava架构篇/13.整合统一异常处理.md)
 * 三、SpringBoot 学习篇
 
     * [05.SpringBoot整合JDBC](03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)

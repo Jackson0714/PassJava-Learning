@@ -75,6 +75,8 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 - [11.SpringCloud整合Alibaba-Nacos配置中心](http://www.jayh.club/#/02.PassJava架构篇/10.SpringCloud整合Nacos配置中心)
 - [12.SpringCloud整合Gateway网关](http://www.jayh.club/#/02.PassJava架构篇/11.SpringCloud整合Gateway网关)
 - [13.SpringCloud整合OSS对象存储](http://www.jayh.club/#/02.PassJava架构篇/12.SpringCloud整合OSS对象存储)
+- [14.整合统一异常处理-更新中]([http://www.jayh.club/#/02.PassJava%E6%9E%B6%E6%9E%84%E7%AF%87/13.%E6%95%B4%E5%90%88%E7%BB%9F%E4%B8%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86](http://www.jayh.club/#/02.PassJava架构篇/13.整合统一异常处理))
+- [15.Elasticsearch基础-更新中]()
 
 ## 业务篇
 
@@ -108,6 +110,8 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 
 ## Java并发多线程
 
+> 从源码层面详细讲解并发多线程
+
 [01.反制面试官-14张原理图-再也不怕被问volatile!](https://juejin.im/post/6861885337568804871)
 
 [02.我跟老婆讲CAS原理，被鄙视太简单！15张图 -源码调试 .md](https://juejin.im/post/6863799243182702599)
@@ -119,7 +123,17 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 ## 工具篇
 > 一些常用开发工具的使用
 
+[01.自定义Markdown神器Typora的主题样式](https://juejin.im/post/6864745378558771214)
 
+[02.使用docsify写开源文档]()
+
+[03.Git同时上传到码云和github](https://juejin.im/post/6859388700858679303)
+
+[04.Idea的武艺-更新中]()
+
+[05.IDEA调试Java源码]()
+
+[06.IDEA调试Java多线程]()
 
 ## 公众号
 
