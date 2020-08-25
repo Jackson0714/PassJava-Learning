@@ -129,11 +129,15 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 
 [03.Git同时上传到码云和github](https://juejin.im/post/6859388700858679303)
 
-[04.Idea的武艺-更新中]()
+[04.图床神器配置](99.tools/04.图床神器配置.md)
 
-[05.IDEA调试Java源码]()
+[05.我的常用工具](99.tools/05.我的常用工具.md)
 
-[06.IDEA调试Java多线程]()
+[06.Idea的十八般武艺](99.tools/06.Idea的十八般武艺.md)
+
+[07.Ubuntu16.04安装最新版nodejs](99.tools/Ubuntu16.04安装最新版nodejs.md)
+
+[08.VSCode快速生成Vue模板](99.tools/VSCode快速生成Vue模板.md)
 
 ## 公众号
 
