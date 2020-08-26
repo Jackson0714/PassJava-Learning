@@ -12,8 +12,10 @@ public class AtomicStampedReferenceDemo {
         // 初始化一个积木对象A，形状为三角形
         BuildingBlock A = new BuildingBlock("三角形");
 
-        // 初始化一个积木对象B，形状为四边形，乙会将三角形替换成四边形
-        BuildingBlock B = new BuildingBlock("四边形");
+        // 初始化一个积木对象B，形状为四边形，乙
+        //
+        // 会将三角形替换成四边形
+        Bu          ildingBlock B = new BuildingBlock("四边形");
 
         // 初始化一个积木对象B，形状为四边形，乙会将三边形替换成五边形
         BuildingBlock D = new BuildingBlock("五边形");
