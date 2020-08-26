@@ -16,7 +16,7 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 - 备用地址1：[https://jackson0714.github.io/PassJava-Learning](https://jackson0714.github.io/PassJava-Learning/) 
 - 备用地址2：http://jayh2018.gitee.io/passjava-learning/#/README
 
-## 文档连载目录
+## PassJava 教程连载目录
 
 - [打造一款 刷Java 知识的小程序](https://www.cnblogs.com/jackson0714/p/passJava1.html)
 - [打造一款 刷Java 知识的小程序（二）](https://www.cnblogs.com/jackson0714/p/passJava2.html)
