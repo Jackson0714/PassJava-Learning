@@ -1,7 +1,9 @@
 package com.jackson0714.passjava.threads;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.CopyOnWriteArraySet;
 
 /**
  * 积木类
@@ -29,7 +31,7 @@ class BuildingBlockWithName {
  */
 public class ArrayListDemo {
     public static void main(String args[]) {
-        CopyOnWriteArrayListDemo();
+        HashSetDemo();
     }
 
     /**
@@ -178,4 +180,36 @@ public class ArrayListDemo {
             }, String.valueOf(i)).start();
         }
     }
+
+    /**
+     * Description: HashSet的使用
+     * @Author: 公众号 | 悟空聊架构 | PassJava666
+     * @Date: 2020/8/29 - 00:40
+     * @Site: www.jayh.club
+     * @Github: https://github.com/Jackson0714
+     */
+    public static void HashSetDemo() {
+        Set<BuildingBlockWithName> set1 = new HashSet<>();
+        set1.add("a");
+        Set<BuildingBlockWithName> set2 = Collections.synchronizedSet(new HashSet<>());
+        CopyOnWriteArraySet<BuildingBlockWithName> set3 = new CopyOnWriteArraySet<>();
+    }
+
+    /**
+     * Description: HashMap的使用
+     * @Author: 公众号 | 悟空聊架构 | PassJava666
+     * @Date: 2020/8/29 - 00:40
+     * @Site: www.jayh.club
+     * @Github: https://github.com/Jackson0714
+     */
+    public static void HashMapDemo() {
+        Map<String, BuildingBlockWithName> map1 = new HashMap<>();
+        map1.put("A", new BuildingBlockWithName("三角形", "A"));
+
+        Map<String, BuildingBlockWithName> map2 = Collections.synchronizedMap(new HashMap<>());
+
+        ConcurrentHashMap<String, BuildingBlockWithName> map3 = new ConcurrentHashMap<>();
+        map3.put("A", new BuildingBlockWithName("三角形", "A"));
+    }
+
 }
