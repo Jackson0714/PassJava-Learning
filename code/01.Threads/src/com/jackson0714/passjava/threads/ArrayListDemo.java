@@ -1,9 +1,7 @@
 package com.jackson0714.passjava.threads;
 
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.UUID;
-import java.util.Vector;
+import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * 积木类
@@ -31,11 +29,11 @@ class BuildingBlockWithName {
  */
 public class ArrayListDemo {
     public static void main(String args[]) {
-        vectorDemo();
+        CopyOnWriteArrayListDemo();
     }
 
     /**
-     * Description: 验证单线程下ArrayList线程是安全的
+     * Description: 验证单线程下ArrayList是线程安全的
      * @Author: 公众号 | 悟空聊架构 | PassJava666
      * @Date: 2020/8/27
      * @Site: www.jayh.club
@@ -62,7 +60,7 @@ public class ArrayListDemo {
     }
 
     /**
-     * Description: 验证多线程下ArrayList线程不安全
+     * Description: 验证多线程下ArrayList是线程不安全的
      * @Author: 公众号 | 悟空聊架构 | PassJava666
      * @Date: 2020/8/27
      * @Site: www.jayh.club
@@ -92,14 +90,74 @@ public class ArrayListDemo {
     }
 
     /**
-     * Description: 验证多线程下ArrayList线程不安全
+     * Description: 验证多线程下vector是线程安全的
      * @Author: 公众号 | 悟空聊架构 | PassJava666
      * @Date: 2020/8/28
      * @Site: www.jayh.club
      * @Github: https://github.com/Jackson0714
      */
     public static void vectorDemo() {
-        Vector<BuildingBlockWithName> arrayList = new Vector<>(5,3);
+        Vector<BuildingBlockWithName> arrayList = new Vector<>();
+        for(int i = 0; i < 20; i++) {
+            new Thread(() -> {
+                Random random = new Random();
+                int type = random.nextInt(4); // 随机生成0/1/2/3/4
+                switch(type) {
+                    case 0: arrayList.add(new BuildingBlockWithName("三角形", "A"));
+                        break;
+                    case 1:  arrayList.add(new BuildingBlockWithName("四边形", "B"));
+                        break;
+                    case 2: arrayList.add(new BuildingBlockWithName("五边形", "C"));
+                        break;
+                    case 3: arrayList.add(new BuildingBlockWithName("六边形", "D"));
+                        break;
+                    case 4: arrayList.add(new BuildingBlockWithName("五角星", "E"));
+                        break;
+                }
+                System.out.println(arrayList);
+            }, String.valueOf(i)).start();
+        }
+    }
+
+    /**
+     * Description: 验证多线程下Collections.synchronizedList(new ArrayList())是线程安全的
+     * @Author: 公众号 | 悟空聊架构 | PassJava666
+     * @Date: 2020/8/28
+     * @Site: www.jayh.club
+     * @Github: https://github.com/Jackson0714
+     */
+    public static void collectionsSynchronizedListDemo() {
+        List<Object> arrayList = Collections.synchronizedList(new ArrayList<>());
+        for(int i = 0; i < 20; i++) {
+            new Thread(() -> {
+                Random random = new Random();
+                int type = random.nextInt(4); // 随机生成0/1/2/3/4
+                switch(type) {
+                    case 0: arrayList.add(new BuildingBlockWithName("三角形", "A"));
+                        break;
+                    case 1:  arrayList.add(new BuildingBlockWithName("四边形", "B"));
+                        break;
+                    case 2: arrayList.add(new BuildingBlockWithName("五边形", "C"));
+                        break;
+                    case 3: arrayList.add(new BuildingBlockWithName("六边形", "D"));
+                        break;
+                    case 4: arrayList.add(new BuildingBlockWithName("五角星", "E"));
+                        break;
+                }
+                System.out.println(arrayList);
+            }, String.valueOf(i)).start();
+        }
+    }
+
+    /**
+     * Description: 验证多线程下CopyOnWriteArrayList是线程安全的
+     * @Author: 公众号 | 悟空聊架构 | PassJava666
+     * @Date: 2020/8/28
+     * @Site: www.jayh.club
+     * @Github: https://github.com/Jackson0714
+     */
+    public static void CopyOnWriteArrayListDemo() {
+        CopyOnWriteArrayList<BuildingBlockWithName> arrayList = new CopyOnWriteArrayList<>();
         for(int i = 0; i < 20; i++) {
             new Thread(() -> {
                 Random random = new Random();
