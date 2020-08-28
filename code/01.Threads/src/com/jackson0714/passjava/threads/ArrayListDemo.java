@@ -3,6 +3,7 @@ package com.jackson0714.passjava.threads;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.UUID;
+import java.util.Vector;
 
 /**
  * 积木类
@@ -30,7 +31,7 @@ class BuildingBlockWithName {
  */
 public class ArrayListDemo {
     public static void main(String args[]) {
-        demo2();
+        vectorDemo();
     }
 
     /**
@@ -47,6 +48,13 @@ public class ArrayListDemo {
         arrayList.add(new BuildingBlockWithName("五边形", "C"));
         arrayList.add(new BuildingBlockWithName("六边形", "D"));
         arrayList.add(new BuildingBlockWithName("五角星", "E"));
+
+        arrayList.add(new BuildingBlockWithName("6角星", "F"));
+        arrayList.add(new BuildingBlockWithName("7角星", "G"));
+        arrayList.add(new BuildingBlockWithName("8角星", "H"));
+        arrayList.add(new BuildingBlockWithName("9角星", "I"));
+        arrayList.add(new BuildingBlockWithName("10角星", "J"));
+        arrayList.add(new BuildingBlockWithName("11角星", "K"));
 
         for (BuildingBlockWithName buildingBlockWithName : arrayList) {
             System.out.println(buildingBlockWithName.toString());
@@ -86,12 +94,12 @@ public class ArrayListDemo {
     /**
      * Description: 验证多线程下ArrayList线程不安全
      * @Author: 公众号 | 悟空聊架构 | PassJava666
-     * @Date: 2020/8/27
+     * @Date: 2020/8/28
      * @Site: www.jayh.club
      * @Github: https://github.com/Jackson0714
      */
-    public static void demo3() {
-        ArrayList<BuildingBlockWithName> arrayList = new ArrayList<>();
+    public static void vectorDemo() {
+        Vector<BuildingBlockWithName> arrayList = new Vector<>(5,3);
         for(int i = 0; i < 20; i++) {
             new Thread(() -> {
                 Random random = new Random();
