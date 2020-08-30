@@ -144,6 +144,6 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 
 ## 公众号
 
-PassJava 项目全套学习教程连载中，关注公众号「**wkljg**」第一时间获取。
+PassJava 项目全套学习教程连载中，关注公众号「**PassJava666**」第一时间获取。
 
 ![公众号图片](http://cdn.jayh.club/blog/20200405/K6buDl2MUwGe.png?imageslim)
