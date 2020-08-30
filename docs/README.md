@@ -5,7 +5,6 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 # PassJava 学习教程
 
 ## 简介
-
 - PassJava-Learning项目是PassJava（佳必过）项目的学习教程。对架构、业务、技术要点进行讲解。
 - PassJava 是一款Java`面试刷题`的开源系统，可以用零碎时间利用小程序查看常见面试题，夯实Java基础。
 - PassJava 项目可以教会你如何搭建SpringBoot项目，Spring Cloud项目
@@ -61,7 +60,6 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 - [PassJava 学习所需知识点](http://www.jayh.club/#/01.项目简介/5.项目前置要求)
 
 ## 架构篇
-
 > 手把手教你搭建一个PassJava 中使用的 SpringCloud框架
 
 - [01.初始化项目和添加微服务](http://www.jayh.club/#/02.PassJava架构篇/01.创建项目和添加模块)
@@ -88,15 +86,15 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 
 > PassJava 中一些功能的技术要点解析
 
-- [05.SpringBoot整合Jdbc](http://www.jayh.club/#/03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)
+[05.SpringBoot整合Jdbc](http://www.jayh.club/#/03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)
 
-- [06.SpringBoot整合Druid](http://www.jayh.club/#/03.SpringBoot学习篇/spring-boot-06-data-druid.md)
+[06.SpringBoot整合Druid](http://www.jayh.club/#/03.SpringBoot学习篇/spring-boot-06-data-druid.md)
 
-- [07.spring-boot-05-data-jdbc](http://www.jayh.club/#/03.SpringBoot学习篇/spring-boot-07-data-mybatis.md)
+[07.spring-boot-05-data-jdbc](http://www.jayh.club/#/03.SpringBoot学习篇/spring-boot-07-data-mybatis.md)
 
-- [08.SpringBoot Mybatis逻辑删除](http://www.jayh.club/#/03.SpringBoot学习篇/08.SpringBoot-Mybatis逻辑删除.md)
+[08.SpringBoot Mybatis逻辑删除](http://www.jayh.club/#/03.SpringBoot学习篇/08.SpringBoot-Mybatis逻辑删除.md)
 
-- [09.Object划分](http://www.jayh.club/#/03.SpringBoot学习篇/09.Object划分.md)
+[09.Object划分](http://www.jayh.club/#/03.SpringBoot学习篇/09.Object划分.md)
 
 ## 部署篇
 
@@ -114,33 +112,32 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 
 > 从源码层面详细讲解并发多线程
 
-- [01.反制面试官-14张原理图-再也不怕被问volatile!](https://juejin.im/post/6861885337568804871)
+[01.反制面试官-14张原理图-再也不怕被问volatile!](https://juejin.im/post/6861885337568804871)
 
-- [02.我跟老婆讲CAS原理，被鄙视太简单！15张图 -源码调试 .md](https://juejin.im/post/6863799243182702599)
+[02.我跟老婆讲CAS原理，被鄙视太简单！15张图 -源码调试 .md](https://juejin.im/post/6863799243182702599)
 
-- [03.Java并发必知必会第三弹：用积木讲解ABA原理.md](https://juejin.im/post/6864945088721027079)
+[03.Java并发必知必会第三弹：用积木讲解ABA原理.md](https://juejin.im/post/6864945088721027079)
 
-- [04.全网最细-21张图带你领略集合的线程不安全](https://juejin.im/post/6866444584688451591)
+[04.全网最细-21张图带你领略集合的线程不安全](https://juejin.im/post/6866444584688451591)
 
 ## 工具篇
-
 > 一些常用开发工具的使用
 
-- [01.自定义Markdown神器Typora的主题样式](https://juejin.im/post/6864745378558771214)
+[01.自定义Markdown神器Typora的主题样式](https://juejin.im/post/6864745378558771214)
 
-- [02.使用docsify写开源文档]([http://www.jayh.club/#/99.tools/02.%E4%BD%BF%E7%94%A8docsify%E5%86%99%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3](http://www.jayh.club/#/99.tools/02.使用docsify写开源文档))
+[02.使用docsify写开源文档]([http://www.jayh.club/#/99.tools/02.%E4%BD%BF%E7%94%A8docsify%E5%86%99%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3](http://www.jayh.club/#/99.tools/02.使用docsify写开源文档))
 
-- [03.Git同时上传到码云和github](https://juejin.im/post/6859388700858679303)
+[03.Git同时上传到码云和github](https://juejin.im/post/6859388700858679303)
 
-- [04.图床神器配置]([http://www.jayh.club/#/99.tools/04.%E5%9B%BE%E5%BA%8A%E7%A5%9E%E5%99%A8%E9%85%8D%E7%BD%AE](http://www.jayh.club/#/99.tools/04.图床神器配置))
+[04.图床神器配置]([http://www.jayh.club/#/99.tools/04.%E5%9B%BE%E5%BA%8A%E7%A5%9E%E5%99%A8%E9%85%8D%E7%BD%AE](http://www.jayh.club/#/99.tools/04.图床神器配置))
 
-- [05.我的常用工具](http://www.jayh.club/#/99.tools/05.%E6%88%91%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7)
+[05.我的常用工具](http://www.jayh.club/#/99.tools/05.%E6%88%91%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7)
 
-- [06.Idea的十八般武艺](99.tools/06.Idea的十八般武艺.md)
+[06.Idea的十八般武艺](99.tools/06.Idea的十八般武艺.md)
 
-- [07.Ubuntu16.04安装最新版nodejs]([http://www.jayh.club/#/99.tools/06.Idea%E7%9A%84%E5%8D%81%E5%85%AB%E8%88%AC%E6%AD%A6%E8%89%BA](http://www.jayh.club/#/99.tools/06.Idea的十八般武艺))
+[07.Ubuntu16.04安装最新版nodejs]([http://www.jayh.club/#/99.tools/06.Idea%E7%9A%84%E5%8D%81%E5%85%AB%E8%88%AC%E6%AD%A6%E8%89%BA](http://www.jayh.club/#/99.tools/06.Idea的十八般武艺))
 
-- [08.VSCode快速生成Vue模板]([http://www.jayh.club/#/99.tools/VSCode%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90Vue%E6%A8%A1%E6%9D%BF](http://www.jayh.club/#/99.tools/VSCode快速生成Vue模板))
+[08.VSCode快速生成Vue模板]([http://www.jayh.club/#/99.tools/VSCode%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90Vue%E6%A8%A1%E6%9D%BF](http://www.jayh.club/#/99.tools/VSCode快速生成Vue模板))
 
 ## 公众号
 
