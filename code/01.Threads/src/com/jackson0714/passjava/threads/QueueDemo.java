@@ -2,9 +2,7 @@ package com.jackson0714.passjava.threads;
 
 import com.sun.jmx.remote.internal.ArrayQueue;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.Queue;
+import java.util.*;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.TransferQueue;
 
@@ -20,7 +18,9 @@ public class QueueDemo {
         ArrayBlockingQueue<Integer> queue = new ArrayBlockingQueue<>(2);
         queue.add(100);
         queue.add(200);
-        int a = queue.poll();
+        int a = queue.peek();
+        PriorityQueue;
+        Deque
 
     }
 }
