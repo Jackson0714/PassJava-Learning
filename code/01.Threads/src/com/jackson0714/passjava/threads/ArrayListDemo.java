@@ -190,7 +190,7 @@ public class ArrayListDemo {
      */
     public static void HashSetDemo() {
         Set<BuildingBlockWithName> set1 = new HashSet<>();
-        set1.add("a");
+        //set1.add("a");
         Set<BuildingBlockWithName> set2 = Collections.synchronizedSet(new HashSet<>());
         CopyOnWriteArraySet<BuildingBlockWithName> set3 = new CopyOnWriteArraySet<>();
     }
