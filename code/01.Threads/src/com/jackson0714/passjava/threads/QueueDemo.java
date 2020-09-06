@@ -25,6 +25,8 @@ public class QueueDemo {
 
         queue.add(100);
         queue.add(200);
+
+        //TransferQueue;
         //int a = queue.peek();
 //        PriorityQueue;
 //        Deque;
