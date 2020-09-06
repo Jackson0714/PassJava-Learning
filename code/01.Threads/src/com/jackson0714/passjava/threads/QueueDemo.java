@@ -4,6 +4,8 @@ import com.sun.jmx.remote.internal.ArrayQueue;
 
 import java.util.*;
 import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingDeque;
+import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.TransferQueue;
 
 /**
@@ -15,12 +17,18 @@ import java.util.concurrent.TransferQueue;
 public class QueueDemo {
 
     public static void main(String[] args) {
-        ArrayBlockingQueue<Integer> queue = new ArrayBlockingQueue<>(2);
+        //ArrayBlockingQueue<Integer> queue = new ArrayBlockingQueue<>(2);
+        LinkedBlockingDeque queue = new LinkedBlockingDeque();
+        queue.addFirst("test1");
+        queue.addFirst(300);
+        queue.addLast("400");
+
         queue.add(100);
         queue.add(200);
-        int a = queue.peek();
-        PriorityQueue;
-        Deque
+        //int a = queue.peek();
+//        PriorityQueue;
+//        Deque;
+//        LinkedBlockingDeque;
 
     }
 }
