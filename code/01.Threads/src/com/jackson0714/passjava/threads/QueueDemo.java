@@ -46,6 +46,10 @@ public class QueueDemo {
         concurrentLinkedDeque.addLast(buildingBlock2);
         //结果：顺序：三角形、四边形
 
+        ArrayBlockingQueue arrayBlockingQueue = new ArrayBlockingQueue(100, true);
+        arrayBlockingQueue.add(buildingBlock1);
+        arrayBlockingQueue.add(buildingBlock2);
+
         //TransferQueue;
         //int a = queue.peek();
 //        PriorityQueue;
