@@ -3,10 +3,7 @@ package com.jackson0714.passjava.threads;
 import com.sun.jmx.remote.internal.ArrayQueue;
 
 import java.util.*;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingDeque;
-import java.util.concurrent.LinkedBlockingDeque;
-import java.util.concurrent.TransferQueue;
+import java.util.concurrent.*;
 
 /**
  * @Author: 悟空聊架构| PassJava666
@@ -25,6 +22,29 @@ public class QueueDemo {
 
         queue.add(100);
         queue.add(200);
+
+        ConcurrentLinkedQueue concurrentLinkedQueue = new ConcurrentLinkedQueue();
+
+        BuildingBlockWithName buildingBlock = new BuildingBlockWithName("三角形", "A");
+
+        concurrentLinkedQueue.add(buildingBlock);
+
+        LinkedList linkedList = new LinkedList();
+        linkedList.add(buildingBlock);
+
+        List list = Collections.synchronizedList(new LinkedList<>());
+
+        ArrayDeque arrayDeque = new ArrayDeque();
+        for (int i = 0; i < 50; i++) {
+            arrayDeque.add(buildingBlock);
+        }
+
+        BuildingBlockWithName buildingBlock1 = new BuildingBlockWithName("三角形", "A");
+        BuildingBlockWithName buildingBlock2 = new BuildingBlockWithName("四边形", "B");
+        ConcurrentLinkedDeque concurrentLinkedDeque = new ConcurrentLinkedDeque();
+        concurrentLinkedDeque.addFirst(buildingBlock1);
+        concurrentLinkedDeque.addLast(buildingBlock2);
+        //结果：顺序：三角形、四边形
 
         //TransferQueue;
         //int a = queue.peek();
