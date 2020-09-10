@@ -135,7 +135,7 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 - [08.VSCode快速生成Vue模板]([http://www.jayh.club/#/99.tools/VSCode%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90Vue%E6%A8%A1%E6%9D%BF](http://www.jayh.club/#/99.tools/VSCode快速生成Vue模板))
 
 ## LeetCode刷题
-
+![LeetCode数组第一题](http://www.jayh.club/#/92.LeetCode/01.%E6%95%B0%E7%BB%84/001.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C-%E6%95%B0%E7%BB%84-LeetCode%E7%AC%AC1%E9%A2%98)
 
 
 ## 公众号
