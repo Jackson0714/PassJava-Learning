@@ -77,7 +77,7 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 - [11.SpringCloud整合Alibaba-Nacos配置中心](http://www.jayh.club/#/02.PassJava架构篇/10.SpringCloud整合Nacos配置中心)
 - [12.SpringCloud整合Gateway网关](http://www.jayh.club/#/02.PassJava架构篇/11.SpringCloud整合Gateway网关)
 - [13.SpringCloud整合OSS对象存储](http://www.jayh.club/#/02.PassJava架构篇/12.SpringCloud整合OSS对象存储)
-- [14.整合统一异常处理-更新中]([http://www.jayh.club/#/02.PassJava%E6%9E%B6%E6%9E%84%E7%AF%87/13.%E6%95%B4%E5%90%88%E7%BB%9F%E4%B8%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86](http://www.jayh.club/#/02.PassJava架构篇/13.整合统一异常处理))
+- [14.整合统一异常处理-更新中](http://www.jayh.club/#/02.PassJava架构篇/13.整合统一异常处理)
 - [15.Elasticsearch基础-更新中]()
 
 ## 业务篇
@@ -89,13 +89,9 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 > PassJava 中一些功能的技术要点解析
 
 - [05.SpringBoot整合Jdbc](http://www.jayh.club/#/03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)
-
 - [06.SpringBoot整合Druid](http://www.jayh.club/#/03.SpringBoot学习篇/spring-boot-06-data-druid.md)
-
 - [07.spring-boot-05-data-jdbc](http://www.jayh.club/#/03.SpringBoot学习篇/spring-boot-07-data-mybatis.md)
-
 - [08.SpringBoot Mybatis逻辑删除](http://www.jayh.club/#/03.SpringBoot学习篇/08.SpringBoot-Mybatis逻辑删除.md)
-
 - [09.Object划分](http://www.jayh.club/#/03.SpringBoot学习篇/09.Object划分.md)
 
 ## 部署篇
@@ -126,16 +122,21 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 > 一些常用开发工具的使用
 
 - [01.自定义Markdown神器Typora的主题样式](https://juejin.im/post/6864745378558771214)
-- [02.使用docsify写开源文档]([http://www.jayh.club/#/99.tools/02.%E4%BD%BF%E7%94%A8docsify%E5%86%99%E5%BC%80%E6%BA%90%E6%96%87%E6%A1%A3](http://www.jayh.club/#/99.tools/02.使用docsify写开源文档))
+- [02.使用docsify写开源文档](http://www.jayh.club/#/99.tools/02.使用docsify写开源文档)
 - [03.Git同时上传到码云和github](https://juejin.im/post/6859388700858679303)
-- [04.图床神器配置]([http://www.jayh.club/#/99.tools/04.%E5%9B%BE%E5%BA%8A%E7%A5%9E%E5%99%A8%E9%85%8D%E7%BD%AE](http://www.jayh.club/#/99.tools/04.图床神器配置))
-- [05.我的常用工具](http://www.jayh.club/#/99.tools/05.%E6%88%91%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7)
-- [06.Idea的十八般武艺](99.tools/06.Idea的十八般武艺.md)
-- [07.Ubuntu16.04安装最新版nodejs]([http://www.jayh.club/#/99.tools/06.Idea%E7%9A%84%E5%8D%81%E5%85%AB%E8%88%AC%E6%AD%A6%E8%89%BA](http://www.jayh.club/#/99.tools/06.Idea的十八般武艺))
-- [08.VSCode快速生成Vue模板]([http://www.jayh.club/#/99.tools/VSCode%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90Vue%E6%A8%A1%E6%9D%BF](http://www.jayh.club/#/99.tools/VSCode快速生成Vue模板))
+- [04.图床神器配置](http://www.jayh.club/#/99.tools/04.图床神器配置)
+- [05.我的常用工具](http://www.jayh.club/#/99.tools/05.我的常用工具)
+- [06.Idea的十八般武艺](http://www.jayh.club/#/99.tools/06.Idea的十八般武艺)
+- [93.IDEA快捷键](http://www.jayh.club/#/99.tools/93.IDEA快捷键)
+- [94.Ubuntu16.04安装最新版nodejs](http://www.jayh.club/#/99.tools/94.Ubuntu16_04安装最新版nodejs)
+- [95.VSCode快速生成Vue模板](http://www.jayh.club/#/99.tools/95.VSCode快速生成Vue模板)
+- [96.HTML特殊符号](http://www.jayh.club/#/99.tools/96.HTML特殊符号)
+- [97.IDEA设置代码彩虹颜色](http://www.jayh.club/#/99.tools/97.IDEA设置代码彩虹颜色)
+- [98.IDEA调试Java多线程](http://www.jayh.club/#/99.tools/98.IDEA调试Java多线程)
+- [99.IDEA调试Java源码](http://www.jayh.club/#/99.tools/99.IDEA调试Java源码)
 
 ## LeetCode刷题
-![LeetCode数组第一题](http://www.jayh.club/#/92.LeetCode/01.%E6%95%B0%E7%BB%84/001.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C-%E6%95%B0%E7%BB%84-LeetCode%E7%AC%AC1%E9%A2%98)
+![LeetCode数组第一题](http://www.jayh.club/#/92.LeetCode/01.数组/94.Ubuntu16_04安装最新版nodejs)
 
 
 ## 公众号
