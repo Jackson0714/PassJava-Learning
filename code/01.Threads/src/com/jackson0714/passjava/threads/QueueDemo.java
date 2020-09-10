@@ -50,6 +50,18 @@ public class QueueDemo {
         arrayBlockingQueue.add(buildingBlock1);
         arrayBlockingQueue.add(buildingBlock2);
 
+
+        //LinkedBlockingDeque;
+        LinkedList linkedList1 = new LinkedList();
+        linkedList1.add("A");
+        linkedList1.add("B");
+        linkedList1.add("C");
+
+        LinkedBlockingQueue linkedBlockingQueue = new LinkedBlockingQueue();
+        LinkedBlockingDeque linkedBlockingDeque = new LinkedBlockingDeque();
+
+
+
         //TransferQueue;
         //int a = queue.peek();
 //        PriorityQueue;

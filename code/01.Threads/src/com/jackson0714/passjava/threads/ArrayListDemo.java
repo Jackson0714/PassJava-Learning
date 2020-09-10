@@ -34,7 +34,7 @@ public class ArrayListDemo {
         HashSetDemo();
     }
 
-    /**
+    /**l
      * Description: 验证单线程下ArrayList是线程安全的
      * @Author: 公众号 | 悟空聊架构 | PassJava666
      * @Date: 2020/8/27
