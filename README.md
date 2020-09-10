@@ -136,7 +136,7 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 - [99.IDEA调试Java源码](http://www.jayh.club/#/99.tools/99.IDEA调试Java源码)
 
 ## LeetCode刷题
-![LeetCode数组第一题](http://www.jayh.club/#/92.LeetCode/01.数组/94.Ubuntu16_04安装最新版nodejs)
+- [LeetCode数组第一题](http://www.jayh.club/#/92.LeetCode/01.数组/001.两数之和-数组-LeetCode第1题)
 
 
 ## 公众号
