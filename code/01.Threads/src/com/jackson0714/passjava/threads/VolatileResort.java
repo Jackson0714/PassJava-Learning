@@ -9,23 +9,28 @@ package com.jackson0714.passjava.threads;
 
 public class VolatileResort {
     static int num = 0;
-    static volatile boolean flag = false;
+    static boolean flag = false;
     public static void init() {
-        num= 1;
+        num = 1;
         flag = true;
     }
     public static void add() {
         while (flag) {
+            num = num + 5;
             flag = false;
-            num = num + 100;
             System.out.println("num:" + num);
         }
     }
     public static void main(String[] args) throws InterruptedException {
-        new Thread(() -> {
+        Thread t1 = new Thread(() -> {
             add();
-        },"子线程").start();
-        init();
+        },"子线程 t1");
 
+        Thread t2 = new Thread(() -> {
+            init();
+        },"子线程 t2");
+
+        t2.start();
+        t1.start();
     }
 }
