@@ -54,7 +54,7 @@
     * [06.Idea的十八般武艺](99.tools/06.Idea的十八般武艺.md)
     * [92.Java环境问题](99.tools/92.Java环境问题)
     * [93.IDEA快捷键](99.tools/93.IDEA快捷键.md)
-    * [94.Ubuntu16.04安装最新版nodejs](99.tools/94.Ubuntu16.04安装最新版nodejs.md)
+    * [94.Ubuntu16.04安装最新版nodejs](99.tools/94.Ubuntu16_04安装最新版nodejs.md)
     * [95.VSCode快速生成Vue模板](99.tools/95.VSCode快速生成Vue模板.md)
     * [96.HTML特殊符号](99.tools/96.HTML特殊符号.md)
     * [97.IDEA设置代码彩虹颜色](99.tools/97.IDEA设置代码彩虹颜色.md)
