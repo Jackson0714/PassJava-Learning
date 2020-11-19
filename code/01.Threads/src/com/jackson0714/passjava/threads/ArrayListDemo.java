@@ -26,7 +26,7 @@ class BuildingBlockWithName {
 /**
  * @Author: 悟空聊架构| PassJava666
  * @Date: 2020/8/26 22:22
- * @Site: www.jayh.club
+ * @Site: www.passjava.cn
  * @Github: https://github.com/Jackson0714
  */
 public class ArrayListDemo {
@@ -38,7 +38,7 @@ public class ArrayListDemo {
      * Description: 验证单线程下ArrayList是线程安全的
      * @Author: 公众号 | 悟空聊架构 | PassJava666
      * @Date: 2020/8/27
-     * @Site: www.jayh.club
+     * @Site: www.passjava.cn
      * @Github: https://github.com/Jackson0714
      */
     public static void demo1() {
@@ -65,7 +65,7 @@ public class ArrayListDemo {
      * Description: 验证多线程下ArrayList是线程不安全的
      * @Author: 公众号 | 悟空聊架构 | PassJava666
      * @Date: 2020/8/27
-     * @Site: www.jayh.club
+     * @Site: www.passjava.cn
      * @Github: https://github.com/Jackson0714
      */
     public static void demo2() {
@@ -95,7 +95,7 @@ public class ArrayListDemo {
      * Description: 验证多线程下vector是线程安全的
      * @Author: 公众号 | 悟空聊架构 | PassJava666
      * @Date: 2020/8/28
-     * @Site: www.jayh.club
+     * @Site: www.passjava.cn
      * @Github: https://github.com/Jackson0714
      */
     public static void vectorDemo() {
@@ -125,7 +125,7 @@ public class ArrayListDemo {
      * Description: 验证多线程下Collections.synchronizedList(new ArrayList())是线程安全的
      * @Author: 公众号 | 悟空聊架构 | PassJava666
      * @Date: 2020/8/28
-     * @Site: www.jayh.club
+     * @Site: www.passjava.cn
      * @Github: https://github.com/Jackson0714
      */
     public static void collectionsSynchronizedListDemo() {
@@ -155,7 +155,7 @@ public class ArrayListDemo {
      * Description: 验证多线程下CopyOnWriteArrayList是线程安全的
      * @Author: 公众号 | 悟空聊架构 | PassJava666
      * @Date: 2020/8/28
-     * @Site: www.jayh.club
+     * @Site: www.passjava.cn
      * @Github: https://github.com/Jackson0714
      */
     public static void CopyOnWriteArrayListDemo() {
@@ -185,7 +185,7 @@ public class ArrayListDemo {
      * Description: HashSet的使用
      * @Author: 公众号 | 悟空聊架构 | PassJava666
      * @Date: 2020/8/29 - 00:40
-     * @Site: www.jayh.club
+     * @Site: www.passjava.cn
      * @Github: https://github.com/Jackson0714
      */
     public static void HashSetDemo() {
@@ -199,7 +199,7 @@ public class ArrayListDemo {
      * Description: HashMap的使用
      * @Author: 公众号 | 悟空聊架构 | PassJava666
      * @Date: 2020/8/29 - 00:40
-     * @Site: www.jayh.club
+     * @Site: www.passjava.cn
      * @Github: https://github.com/Jackson0714
      */
     public static void HashMapDemo() {

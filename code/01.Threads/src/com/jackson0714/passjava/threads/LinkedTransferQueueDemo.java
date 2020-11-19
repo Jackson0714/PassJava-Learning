@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @Author: 悟空聊架构 | PassJava666
  * @Date: 2020/9/8
- * @Site: www.jayh.club
+ * @Site: www.passjava.cn
  * @Github: https://github.com/Jackson0714
  */
 public class LinkedTransferQueueDemo {
