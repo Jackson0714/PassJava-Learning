@@ -53,6 +53,8 @@ SpringBoot、MyBatis、Redis、 MySql、 MongoDB、 RabbitMQ、Elasticsearch
 
 ![mark](http://cdn.jayh.club/blog/20200407/scg1XhlvGbUV.png?imageslim)
 
+![mark](http://cdn.jayh.club/blog/20200410/IIBsmjviRsAx.png?imageslim)
+
 # 三、项目前置要求
 
 > 由于 PassJava 项目涉及到很多知识点，希望大家先补下功课，推荐的书籍如下。
@@ -393,11 +395,573 @@ docker update redis --restart=always 虚拟机重启后，redis自动启动
 
 docker update mysql --restart=always 虚拟机重启后，mysql自动启动
 
+## 4.4 docker 安装mysql
+
+### 1.下载镜像
+
+``` sh
+sudo docker pull mysql:5.7
+```
+
+```
+ubuntu@VM-0-13-ubuntu:~$ sudo docker pull mysql:5.7
+5.7: Pulling from library/mysql
+c499e6d256d6: Pull complete 
+22c4cdf4ea75: Pull complete 
+6ff5091a5a30: Pull complete 
+2fd3d1af9403: Pull complete 
+0d9d26127d1d: Pull complete 
+54a67d4e7579: Pull complete 
+fe989230d866: Pull complete 
+466a91a95e2f: Pull complete 
+3e4554c238f1: Pull complete 
+603b48ead88c: Pull complete 
+1e86a9aa7171: Pull complete 
+Digest: sha256:fbaeced79cfdae5d3c8d4a8c41e883f254f72ed7428c6b93a498824b76d97121
+Status: Downloaded newer image for mysql:5.7
+docker.io/library/mysql:5.7
+```
+
+### 2.查看下载的镜像
+
+``` sh
+sudo docker images
+```
+
+![mark](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/7QiFgCOVD0OC.png)
+
+### 3.创建mysql实例并启动
+
+- 创建mysql实例并启动
+
+``` sh
+sudo docker run -p 3306:3306 --name mysql \
+-v /mydata/mysql/log:/var/log/mysql \
+-v /mydata/mysql/data:/var/lib/mysql \
+-v /mydata/mysql/conf:/etc/mysql \
+-e MYSQL_ROOT_PASSWORD=root \
+-d mysql:5.7
+参数说明
+-p 3306:3306 将容器的3306端口映射到主机
+-v /mydata/mysql/log:/var/log/mysql\ 将日志文件挂载到主机
+-v /mydata/mysql/data:/var/lib/mysql\ 将数据文件挂载到主机
+-v /mydata/mysql/conf:/etc/mysql\ 将配置文件挂载到主机
+```
+
+![mark](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/3edTHcpOsU46.png)
+
+- 查看docker容器
+
+  mysql容器已启动
+
+![mark](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/99jqOmq2tshz.png)
+
+### 4.连接数据库
+
+- 用Workbench连接数据库
+
+![mark](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/vj81LmpK9zEn.png)
+
+- 查看数据库
+
+![mark](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/hkkUN9VUCNR4.png)
+
+### 5.进入mysql 容器
+
+``` sh
+sudo docker exec -it mysql /bin/bash
+```
+
+![mark](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/ruh1ghIj40QA.png)
+
+### 6.查看虚拟机映射文件
+
+``` sh
+cd /mydata/mysql
+ls
+```
+
+![mark](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/wzdOsRaOi2D8.png)
+
+### 7.修改mysql账号密码
+
+``` sh
+1.进入mysql容器
+docker exec -it mysql /bin/bash
+
+2.登录mysql
+mysql -u root -p
+输入密码：root
+
+3.切换数据库
+use mysql
+
+4.查询root用户
+select * from user where user = root;
+
+5.修改密码
+update user set authentication_string = password('新的密码'), password_expired = 'N', password_last_changed = now() where user = 'root';
+
+6.这条命令暂不清楚
+update user set plugin="mysql_native_password";
+
+7.刷新权限
+flush privileges;
+
+8.退出
+quit;
+
+9.重新登录
+mysql -u root -p 
+
+输入新的密码，登录成功
+```
+
+### 8.其他命令
+
+- 设置容器在机器重启后自动启动
+
+``` sh
+docker update 84c --restart=always
+```
+
+## 4.5 docker安装redis
+
+### 1.下载镜像
+
+- 下载镜像
+
+``` sh
+sudo docker pull redis
+```
+
+```sh
+ubuntu@VM-0-13-ubuntu:~$ sudo docker pull redis
+Using default tag: latest
+latest: Pulling from library/redis
+c499e6d256d6: Already exists 
+bf1bc8a5a7e4: Pull complete 
+7564fb795604: Pull complete 
+ec6e86f783e4: Pull complete 
+1371d6223f46: Pull complete 
+021fd554320f: Pull complete 
+Digest: sha256:a732b1359e338a539c25346a50bf0a501120c41dc248d868e546b33e32bf4fe4
+Status: Downloaded newer image for redis:latest
+docker.io/library/redis:latest
+```
+
+- 查看下载的镜像
+
+``` sh
+sudo docker images
+```
+
+![mark](http://cdn.jayh.club/blog/20200408/MKBt0WBqxGan.png?imageslim)
+
+### 2.启动redis
+
+- 创建redis.conf 配置文件
+
+``` sh
+sudo mkdir -p /mydata/redis/conf
+sudo touch /mydata/redis/conf/redis.conf
+```
+
+- 启动redis
+
+``` sh
+sudo docker run -p 6379:6379 --name redis -v /mydata/redis/data:/data \
+-v /mydata/redis/conf/redis.conf:/etc/redis/redis.conf \
+-d redis redis-server /etc/redis/redis.conf
+```
+
+![mark](http://cdn.jayh.club/blog/20200408/G7ajnGUfDQsn.png?imageslim)
+
+### 3.连接redis
+
+```sh
+sudo docker exec -it redis redis-cli
+```
+
+### 4.测试redis
+
+设置a=100，返回OK
+
+``` sh
+set a 100
+```
+
+获取a的值，返回"100"
+
+``` sh
+get a
+```
+
+![mark](http://cdn.jayh.club/blog/20200408/pyqMcA67Sye8.png?imageslim)
+
+### 5.设置redis持久化存储
+
+- 修改虚拟机映射的redis配置文件
+
+``` sh
+修改配置文件：
+sudo vim  /mydata/redis/conf/redis.conf
+添加配置：
+appendonly yes
 
 
-# 五、PassJava 架构篇
+```
 
-# 六、PassJava 业务篇
+- 检查是否生效
 
-# 七、SpringBoot 学习篇
+``` sh
+重启redis容器：
+docker restart redis
+设置a=200，返回OK
+set a 200
+获取a的值，返回"200"
+get a
+重启redis容器
+sudo docker restart redis
+重新连接redis容器
+sudo docker exec -it redis redis-cli
+获取a的值
+get a,返回"200"
+```
 
+### 6.安装redis可视化工具
+
+- 安装redis可视化工具
+
+  redis-desktop-manager
+
+- 连接redis
+
+![mark](http://cdn.jayh.club/blog/20200408/Nf7XJjB1DzbW.png?imageslim)
+
+- 查看redis数据库
+
+![mark](http://cdn.jayh.club/blog/20200408/QUVveBGFSvcB.png?imageslim)
+
+## 4.6 本地开发环境配置
+
+### 1. 本地环境安装Java
+
+我本地环境的java版本 1.8.0_131
+
+``` sh
+java -version
+```
+
+![mark](http://cdn.jayh.club/blog/20200409/Rgsr2cSJK2op.png?imageslim)
+
+java安装和环境变量配置：https://www.cnblogs.com/jackson0714/p/6591942.html
+
+### 2.本地环境配置Maven
+
+（1）下载Maven，拷贝文件夹到C盘
+
+C:\apache-maven-3.6.2
+
+（2）添加到环境变量
+
+![mark](http://cdn.jayh.club/blog/20200412/v7rtqjkVwQtC.png?imageslim)
+
+ 
+
+ cmder里面 执行命令 mvn -v
+
+如果报错命令不存在，则重新启动cmder
+
+![mark](http://cdn.jayh.club/blog/20200412/7rGpkYz7poOv.png?imageslim)
+
+（3）设置Maven代理
+
+阿里云代理 https://maven.aliyun.com/mvn/view
+
+点击使用指南，拷贝配置指南
+
+![mark](http://cdn.jayh.club/blog/20200412/QzrJuur9YETW.png?imageslim)
+
+```xml
+<mirror>
+    <id>aliyunmaven</id>
+    <mirrorOf>*</mirrorOf>
+    <name>阿里云公共仓库</name>
+    <url>https://maven.aliyun.com/repository/public</url>
+</mirror>
+```
+
+（4）配置jdk1.8编译项目
+
+``` xml
+<profiles>
+    <profile>
+        <id>jdk-1.8</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+            <jdk>1.8</jdk>
+        </activation>
+        <properties>
+            <maven.compiler.source>1.8</maven.compiler.source>
+            <maven.compiler.target>1.8</maven.compiler.target>
+            <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+        </properties>
+    </profile>
+<profiles>
+```
+
+### 3.IDEA Maven构建工具配置
+
+- Maven配置
+
+![Maven配置](http://cdn.jayh.club/blog/20200409/hnOTRUp5FuFM.png?imageslim)
+
+- 字符集配置
+
+![字符集配置](http://cdn.jayh.club/blog/20200412/cerMB5gRuyG7.png?imageslim)
+
+### 4. IDEA 安装Lombok插件
+
+Lombok：简化JavaBean的开发
+
+![mark](http://cdn.jayh.club/blog/20200409/QXsBR9HVIlzz.png?imageslim)
+
+## 5. IDEA 安装mybatisx 插件
+
+mybatisx：mybatis plus开发的一个插件，从mapper方法快速定位到xml文件
+
+![mark](http://cdn.jayh.club/blog/20200409/r3v9UwnpFadN.png?imageslim)
+
+
+
+### 6.安装VSCode
+
+https://code.visualstudio.com/
+
+![mark](http://cdn.jayh.club/blog/20200409/YxKrkYS18n7X.png?imageslim)
+
+
+
+### 7.添加VSCode插件
+
+![mark](http://cdn.jayh.club/blog/20200409/yJbjY1fhR3O3.png?imageslim)
+
+- Auto Close Tag 自动加上关闭标签
+
+![mark](http://cdn.jayh.club/blog/20200409/VipCQvRyj9wo.png?imageslim)
+
+- Auto Rename Tag 自动命名配对标签
+
+![mark](http://cdn.jayh.club/blog/20200409/aePiOxpNRkKB.png?imageslim)
+
+- Chinese 中文简体包
+
+![mark](http://cdn.jayh.club/blog/20200409/QAIlWX9eA4lG.png?imageslim)
+
+- ESLint 语法检查
+
+![mark](http://cdn.jayh.club/blog/20200409/Pnz46wDClPNa.png?imageslim)
+
+- HTML CSS Support 帮助CSS开发
+
+![mark](http://cdn.jayh.club/blog/20200409/Rt7NNbFQItKu.png?imageslim)
+
+- HTML Snippets 帮忙HTML开发
+
+![mark](http://cdn.jayh.club/blog/20200409/l5UTT1JNDKVT.png?imageslim)
+
+- JavaScript (ES6) 帮助JavaScript开发
+
+![mark](http://cdn.jayh.club/blog/20200409/zNX7cnSxhsB6.png?imageslim)
+
+- Liver Server 启动一个本地服务
+
+![mark](http://cdn.jayh.club/blog/20200409/lslvvQy9fAKr.png?imageslim)
+
+- open in browser 用浏览器打开文件
+
+![mark](http://cdn.jayh.club/blog/20200409/5XOOR410BIYJ.png?imageslim)
+
+- Vetur  帮助Vue开发
+
+![mark](http://cdn.jayh.club/blog/20200409/PleA3UCu77i1.png?imageslim)
+
+- minapp 帮助小程序开发
+
+![mark](http://cdn.jayh.club/blog/20200409/oQ8dXmeAK6Y2.png?imageslim)
+
+### 问题
+
+1.新项目导入main1,main2
+
+删除main1.iml,main2.iml
+
+## 4.7 配置Git
+
+### 1.配置git 用户名和邮箱
+
+``` sh
+git config --global user.name "jackson0714"
+git config --global user.email "jackson0585@163.com"
+```
+
+### 2.生成ssh key
+
+```sh
+ssh-keygen -t rsa -b 4096 -C "jackson0585@163.com"
+```
+
+![mark](http://cdn.jayh.club/blog/20200409/Onz67H4OF7fd.png?imageslim)
+
+### 3.设置ssh key
+
+- 打开文件
+
+ C:\Users\Administrator\.ssh\id_rsa.pub
+
+- 拷贝里面的内容
+
+- 打开这个链接
+
+https://github.com/settings/ssh/new
+
+- 粘贴已拷贝的内容
+
+![mark](http://cdn.jayh.club/blog/20200409/26eesOCTIv1A.png?imageslim)
+
+- 保存ssh key
+
+![mark](http://cdn.jayh.club/blog/20200409/EdBtsTK7cnQc.png?imageslim)
+
+
+
+### 4.遇到的问题
+
+如果遇到Fatal: HttpRequestException encountered问题
+
+![mark](http://cdn.jayh.club/blog/20200409/GhJ87LMpSTr2.png?imageslim)
+
+则下载这个安装包解决：
+
+[Git Credential Manager for Windows v1.20](https://github.com/microsoft/Git-Credential-Manager-for-Windows/releases/tag/1.20.0)
+
+链接：https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/
+
+
+git每次提交都需要输入用户名和密码
+
+解决办法：git config --global credential.helper store
+
+下次提交输入用户名和密码后就会记住了
+
+### 5.让一个项目同时提交到码云和GitHub两个仓库
+
+在项目目录里找到.git文件夹然后找到config文件。
+
+打开这个文件后找到下面的代码
+
+```
+[remote "origin"]
+    url = git提交地址
+    fetch = +refs/heads/*:refs/remotes/origin/*
+```
+
+将其改成
+
+```
+[remote "origin"]
+    url = 码云Git提交地址
+    url = GitHub提交地址
+    fetch = +refs/heads/*:refs/remotes/origin/*
+```
+
+问题：
+
+c731c6f..69bae9b  master -> master
+To https://gitee.com/jayh2018/passjava-portal.git
+! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://gitee.com/jayh2018/passjava-portal.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+## 4.8 Windows安装mysql 
+
+### 1.安装截图
+
+![mark](http://cdn.jayh.club/blog/20200610/TkeERMXCMQlu.png?imageslim)
+
+### 2.遇到的问题 1
+windows用syslog连接本地mysql数据库，提示 plugin caching_sha2_password
+
+
+![mark](http://cdn.jayh.club/blog/20200426/MUb6xENWSIOh.png?imageslim)
+
+解决方案：
+
+```sql
+ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123';
+```
+
+![mark](http://cdn.jayh.club/blog/20200426/Ky258k2bJazi.png?imageslim)
+
+### 2.遇到的问题 2
+Host is not allowed to connect to this MySQL server
+
+使用远程连接mysql的时候碰到这样的错误：
+
+Host is not allowed to connect to this MySQL server。
+
+简单的解决方式如下：
+
+（1）修改表。可能是你的帐号不允许从远程登陆，只能在localhost。这个时候只要在localhost的那台电脑，登入mysql后，更改 "mysql" 数据库里的 "user" 表里的 "host" 项，从"localhost"改称"%"
+
+mysql -u root -p
+
+按照提示输入密码
+
+mysql>use mysql;
+
+mysql>update user set host = '%' where user = 'root';
+
+（2）修改完后执行如下SQL命令
+
+flush privileges
+
+# 五、PassJava 基础实践篇
+
+## 5.1 初始化项目和添加微服务
+
+## 5.2 初始化数据库和表
+
+## 5.3 搭建管理后台
+
+## 5.4 自动生成前后端代码
+
+## 5.5 整合MyBatis-Plus实现CRUD
+
+## 5.6 生成所有微服务的CRUD代码
+
+## 5.7 管理后台-题目类型功能
+
+# 六、PassJava 高级实践篇
+
+## 6.1 Spring Cloud Alibaba 组件简介
+
+## 6.2 SpringCloud整合Alibaba-Nacos注册中心
+
+## 6.3 SpringCloud整合Alibaba-Nacos配置中心
+
+## 6.4 SpringCloud整合Gateway网关
+
+## 6.5 整合OSS对象存储
+
+## 6.6 整合统一异常处理
+
+
+# 七、中间件进阶篇
+
+## 7.1 Elasticsearch上篇（原理）
