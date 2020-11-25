@@ -1,6 +1,12 @@
-公众号：悟空聊架构
-
 # Spring Cloud 实战项目 - 从理论到落地
+
+## 公众号：悟空聊架构
+
+![公众号](http://cdn.jayh.club/blog/20200910/8cQn6wSJtQND.png?imageslim)
+
+## 加我好友
+
+![加我好友](http://cdn.jayh.club/blog/20200911/lSRsgX96L3ki.png?imageslim)
 
 # 一、PassJava 项目简介
 
