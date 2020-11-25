@@ -430,7 +430,7 @@ docker.io/library/mysql:5.7
 sudo docker images
 ```
 
-![mark](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/7QiFgCOVD0OC.png)
+![mark](http://cdn.jayh.club/blog/20200408/7QiFgCOVD0OC.png?imageslim)
 
 ### 3.创建mysql实例并启动
 
@@ -450,23 +450,23 @@ sudo docker run -p 3306:3306 --name mysql \
 -v /mydata/mysql/conf:/etc/mysql\ 将配置文件挂载到主机
 ```
 
-![mark](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/3edTHcpOsU46.png)
+![mark](http://cdn.jayh.club/blog/20200408/3edTHcpOsU46.png?imageslim)
 
 - 查看docker容器
 
   mysql容器已启动
 
-![mark](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/99jqOmq2tshz.png)
+![mark](http://cdn.jayh.club/blog/20200408/99jqOmq2tshz.png?imageslim)
 
 ### 4.连接数据库
 
 - 用Workbench连接数据库
 
-![mark](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/vj81LmpK9zEn.png)
+![mark](http://cdn.jayh.club/blog/20200408/vj81LmpK9zEn.png?imageslim)
 
 - 查看数据库
 
-![mark](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/hkkUN9VUCNR4.png)
+![mark](http://cdn.jayh.club/blog/20200408/hkkUN9VUCNR4.png?imageslim)
 
 ### 5.进入mysql 容器
 
@@ -474,7 +474,7 @@ sudo docker run -p 3306:3306 --name mysql \
 sudo docker exec -it mysql /bin/bash
 ```
 
-![mark](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/ruh1ghIj40QA.png)
+![mark](http://cdn.jayh.club/blog/20200408/ruh1ghIj40QA.png?imageslim)
 
 ### 6.查看虚拟机映射文件
 
@@ -483,7 +483,7 @@ cd /mydata/mysql
 ls
 ```
 
-![mark](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/wzdOsRaOi2D8.png)
+![mark](http://cdn.jayh.club/blog/20200408/wzdOsRaOi2D8.png?imageslim)
 
 ### 7.修改mysql账号密码
 
@@ -2583,13 +2583,7 @@ public R memberStudyTimeTest(@PathVariable("id") Long id) {
   - 对方服务收到请求，请求体里有json数据
   - 将请求体中的json数据转换成对方服务的参数类型。只需要两边的字段名称和类型是一致的。
 
-
-
 ## 6.4 Spring Cloud 整合 Nacos配置中心
-
- PassJava (佳必过) 项目全套学习教程连载中，[关注公众号](#公众号)第一时间获取。
-
-文档在线地址：www.passjava.cn
 
 ### 1.传统配置方式
 
@@ -2621,7 +2615,7 @@ public R testLocalConfig() {
 
 - 测试结果
 
-![mark](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/hVV0scmFNGyo.png)
+![mark](http://cdn.jayh.club/blog/20200419/hVV0scmFNGyo.png?imageslim)
 
 总结：从配置文件中获取配置。
 
@@ -2648,7 +2642,7 @@ PassJava-Common项目的pom.xml文件引入Spring Cloud Alibaba Nacos Config依�
 
 - 配置 Nacos Config 元数据
 
-![bootstrap.properties](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/Ts8oLK9Bnzi3.png)
+![bootstrap.properties](http://cdn.jayh.club/blog/20200419/Ts8oLK9Bnzi3.png?imageslim)
 
 ``` properties
 spring.application.name=passjava-member
@@ -2668,7 +2662,7 @@ member.nick="悟空"
 member.age=10
 ```
 
-![Nacos后台新增配置](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/jrSKiQ6H0VES.png)
+![Nacos后台新增配置](http://cdn.jayh.club/blog/20200419/jrSKiQ6H0VES.png?imageslim)
 
 ### 5.开启动态刷新配置功能
 
@@ -2701,7 +2695,7 @@ Refresh keys changed: [member.age]
 
 注意：Nacos的配置项优先级高于application.propertite里面的配置。
 
-![测试结果](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/hU9oOojlIG5T.png)
+![测试结果](http://cdn.jayh.club/blog/20200419/hU9oOojlIG5T.png?imageslim)
 
 ### 7.命名空间
 
@@ -2711,7 +2705,7 @@ Refresh keys changed: [member.age]
 
 - 创建命名空间
 
-  ![创建命名空间](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/BUfm3HeAJn0Q.png)
+  ![创建命名空间](http://cdn.jayh.club/blog/20200420/BUfm3HeAJn0Q.png?imageslim)
 
 ``` json
 # 创建5个命名空间
@@ -2722,18 +2716,17 @@ passjava-question
 passjava-study
 ```
 
-![命名空间](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/aUf1sIOuqtxq.png)
+![命名空间](http://cdn.jayh.club/blog/20200420/aUf1sIOuqtxq.png?imageslim)
 
 - 命名空间下创建配置
 
   我们打开配置列表菜单，可以看到有五个命名空间。
 
-  ![命名空间下创建配置](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/XnxTl32zmBJo.png)
-
+  ![命名空间下创建配置](http://cdn.jayh.club/blog/20200420/XnxTl32zmBJo.png?imageslim)
 
 选中passjava-channel命名空间，然后新增配置项，与之前新增配置的步骤一致，也可以通过克隆命名空间来克隆配置。
 
-![克隆配置](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/YqMIkqR7AQok.png)
+![克隆配置](http://cdn.jayh.club/blog/20200420/YqMIkqR7AQok.png?imageslim)
 
 - 修改指定的命名空间
 
@@ -2747,7 +2740,7 @@ passjava-study
 
   修改passjava-member.properties的配置内容
 
-  ![passjava-member.properties](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/pSiFa7mJVXiD.png)
+  ![passjava-member.properties](http://cdn.jayh.club/blog/20200420/pSiFa7mJVXiD.png?imageslim)
 
   重启member服务
 
@@ -2768,7 +2761,7 @@ passjava-study
 
   说明获取的是passjava-member命名空间的配置
 
-### 8.分组
+#### 8.分组
 
 如果我们有多套环境，比如开发环境，测试环境，生产环境，每一套环境的配置参数不一样，那配置中心该如何配置呢？
 
@@ -2776,9 +2769,9 @@ passjava-study
 
 - 首先创建一套dev环境配置项，然后克隆配置到test和prod环境
 
-![dev环境](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/GsB5STRumA72.png)
+![dev环境](http://cdn.jayh.club/blog/20200420/GsB5STRumA72.png?imageslim)
 
-![dev、test、prod分组](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/kUF8qfV1ty18.png)
+![dev、test、prod分组](http://cdn.jayh.club/blog/20200420/kUF8qfV1ty18.png?imageslim)
 
 - bootstrap.properties配置当前使用的分组：prod
 
@@ -2805,19 +2798,19 @@ spring.cloud.nacos.config.group=prod
 
 1.配置中心新建`datasource.yml` 配置
 
-![datasource.yml 配置](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/0gOWIlAxhfpn.png)
+![datasource.yml 配置](http://cdn.jayh.club/blog/20200422/0gOWIlAxhfpn.png?imageslim)
 
 2.配置中心新建`mybatis.yml` 配置
 
-![mybatis.yml配置](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/D3qEAgusQmnn.png)
+![mybatis.yml配置](http://cdn.jayh.club/blog/20200422/D3qEAgusQmnn.png?imageslim)
 
 3.配置中心新建`more.yml` 配置
 
-![more.yml配置](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/v6Cci7Lm82fD.png)
+![more.yml配置](http://cdn.jayh.club/blog/20200422/v6Cci7Lm82fD.png?imageslim)
 
 4.克隆dev环境配置到test和prod环境
 
-![mark](../../../../../01_Project/10_SCRM/wh/knowledge/database/elasticsearch/images/using_es/vtWsoYwn8XBW.png)
+![mark](http://cdn.jayh.club/blog/20200422/vtWsoYwn8XBW.png?imageslim)
 
 
 
