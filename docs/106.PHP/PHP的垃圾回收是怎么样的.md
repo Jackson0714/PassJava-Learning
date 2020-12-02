@@ -63,9 +63,9 @@ Java 种的垃圾回收机制，大家肯定都有所了解，比如如何确定
 
 ![回收步骤](http://cdn.jayh.club/blog/20201119/aqTDSoepOCEB.png?imageslim)
 
-- **步骤一：** 遍历垃圾回收器的 buffer 缓冲区，把 value 标为灰色，把 value 的成员的 refount-1，标为白色。
+- **步骤一：** 遍历垃圾回收器的 buffer 缓冲区，把 value 标为灰色，把 value 的成员的 refount-1，还是标为灰色。
 
-- **步骤二：** 遍历垃圾回收器的 buffer 缓冲区，如果 value 的 refcount 等于 0，则认为是垃圾；如果不等于 0，则表示还有外部的引用，不是垃圾，将 refcount+1 还原回去，标为黑色。
+- **步骤二：** 遍历垃圾回收器的 buffer 缓冲区，如果 value 的 refcount 等于 0，标为白色，认为是垃圾；如果不等于 0，则表示还有外部的引用，不是垃圾，将 refcount+1 还原回去，标为黑色。
 
 - **步骤三：** 遍历垃圾回收器的 buffer 缓冲区，将 value 为非白色的节点从 buffer 中删除，最终 buffer 缓冲区中都是真正的垃圾。
 
