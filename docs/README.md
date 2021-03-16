@@ -102,6 +102,12 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 - [02.这三年被分布式坑惨了，曝光十大坑](http://www.passjava.cn/#/92.分布式/02.分布式中的十种坑.md)
 - [03.用三国杀讲分布式算法，舒适了吧？](http://www.passjava.cn/#/92.分布式/03.用三国杀讲分布式算法，舒适了吧？.md)
 - [04.用太极拳讲分布式理论，舒服！](http://www.passjava.cn/#/92.分布式/04.用太极拳讲分布式理论，舒服！.md)
+- [05.诸葛VS庞统，拿下Paxos](http://www.passjava.cn/#/92.分布式/05.诸葛VS庞统，拿下Paxos.md)
+- [06.用动图讲解分布式Raft](http://www.passjava.cn/#/92.分布式/06.用动图讲解分布式Raft.md)
+- [07.韩信大招：一致性哈希](http://www.passjava.cn/#/92.分布式/07.韩信大招：一致性哈希.md)
+- [08.Gossip协议](http://www.passjava.cn/#/92.分布式/08.Gossip协议.md)
+- [09.QuorumNWR算法](http://www.passjava.cn/#/92.分布式/09.QuorumNWR算法.md)
+- [10.区块链12问和Pow算法](http://www.passjava.cn/#/92.分布式/10.区块链12问.md)
 
 ## 悟空故事汇
 - [01.如果消息队列都在一个群里，他们会聊什么？](http://www.passjava.cn/#/90.悟空群聊/1.如果消息队列都在一个群里，他们会聊什么？.md)
@@ -164,6 +170,11 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 - [05.Docker安装redis](http://www.passjava.cn/#/05.安装部署篇/05.docker安装redis)
 - [06.本地开发环境配置](http://www.passjava.cn/#/05.安装部署篇/06.本地开发环境配置)
 - [07.配置Git](http://www.passjava.cn/#/05.安装部署篇/07.配置git)
+
+## 架构图解
+  
+- [01.微服务架构中的两款流量防卫兵](http://www.passjava.cn/#/89.架构图解/01.微服务架构中的两款流量防卫兵.md)
+- [02.20张图手摸手教你性能压测](http://www.passjava.cn/#/89.架构图解/02.20张图手摸手教你性能压测.md)
 
 ## LeetCode刷题
 - [LeetCode数组第一题](http://www.passjava.cn/#/92.LeetCode算法题/01.数组/001.两数之和-数组-LeetCode第1题)
