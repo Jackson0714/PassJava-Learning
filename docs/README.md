@@ -47,6 +47,8 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 - [24.Elasticsearch上篇（原理）](http://www.passjava.cn/#/02.PassJava架构篇/14.Elasticsearch原理.md)
 - [25.Elasticsearch中篇（实战）更新中](http://www.passjava.cn/#/02.PassJava架构篇/14.Elasticsearch实战.md)
 - [26.Elasticsearch下篇（集群部署）更新中](http://www.passjava.cn/#/02.PassJava架构篇/14.Elasticsearch集群部署.md)
+- [27.微服务架构中的链路追踪](http://www.passjava.cn/#/02.PassJava架构篇/17.微服务架构中的链路追踪.md)
+- [28.20张图手摸手教你性能压测](http://www.passjava.cn/#/02.PassJava架构篇/18.20张图手摸手教你性能压测.md)
 
 ## 小程序演示
 
@@ -84,6 +86,8 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 - [14.Elasticsearch上篇（原理）](http://www.passjava.cn/#/02.PassJava架构篇/14.Elasticsearch原理)
 - [15.Elasticsearch中篇（实战）更新中](http://www.passjava.cn/#/02.PassJava架构篇/14.Elasticsearch实战)
 - [16.Elasticsearch下篇（集群部署）更新中](http://www.passjava.cn/#/02.PassJava架构篇/14.Elasticsearch集群部署)
+- [17.微服务架构中的链路追踪](http://www.passjava.cn/#/02.PassJava架构篇/17.微服务架构中的链路追踪.md)
+- [18.48张图手摸手教你性能压测](http://www.passjava.cn/#/02.PassJava架构篇/18.20张图手摸手教你性能压测.md)
 
 ## Java并发多线程
 
@@ -174,7 +178,6 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 ## 架构图解
   
 - [01.微服务架构中的两款流量防卫兵](http://www.passjava.cn/#/89.架构图解/01.微服务架构中的两款流量防卫兵.md)
-- [02.20张图手摸手教你性能压测](http://www.passjava.cn/#/89.架构图解/02.20张图手摸手教你性能压测.md)
 
 ## LeetCode刷题
 - [LeetCode数组第一题](http://www.passjava.cn/#/92.LeetCode算法题/01.数组/001.两数之和-数组-LeetCode第1题)
