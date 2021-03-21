@@ -8,8 +8,8 @@
 - Java、架构、中间件、面试、LeetCode
 
 
-<a href='https://github.com/Jackson0714/PassJava-Learning/stargazers'><img src='https://img.shields.io/github/stars/Jackson0714/PassJava-Learning' alt='star'></img></a>
-<a href='https://github.com/Jackson0714/PassJava-Learning/network/members'><img src='https://img.shields.io/github/forks/Jackson0714/PassJava-Learning' alt='fork'></img></a>
+<a href='https://github.com/Jackson0714/PassJava-Platform/stargazers'><img src='https://img.shields.io/github/stars/Jackson0714/PassJava-Platform' alt='star'></img></a>
+<a href='https://github.com/Jackson0714/PassJava-Platform/network/members'><img src='https://img.shields.io/github/forks/Jackson0714/PassJava-Platform' alt='fork'></img></a>
 
-[项目地址](https://github.com/jackson0714/PassJava-Learning)
+[项目地址](https://github.com/jackson0714/PassJava-Platform)
 [开始学习](README.md)
