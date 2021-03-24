@@ -1,12 +1,23 @@
-# Spring Cloud 实战项目 - 从理论到落地
+# Spring Cloud 实战项目 - 从理论到落地 v 1.1
 
-## 公众号：悟空聊架构
+## 更新记录
 
-![公众号](http://cdn.jayh.club/blog/20200910/8cQn6wSJtQND.png?imageslim)
+### v 1.1 2021-03-23
 
-## 加我好友
+- 新增 《6.8 整合链路追踪》
+- 新增 《8.1 压测、性能监控、性能调优》
 
-![加我好友](http://cdn.jayh.club/blog/20210318/1vj9qu7DUYej.png?imageslim)
+###  v 1.0 2020-11-25
+
+- 初始版本
+
+## 公众号：悟空聊架构 （原创好文，第一时间推送）
+
+![公众号：悟空聊架构](http://cdn.jayh.club/blog/20210323/cMGAFt562d4J.png?imageslim)
+
+## 加我好友 （答疑解惑）
+
+![加我好友](http://cdn.jayh.club/blog/20210323/2AlG6mLwpKcV.png?imageslim)
 
 # 一、PassJava 项目简介
 
@@ -3699,6 +3710,2232 @@ public R handleException(Throwable throwable) {
 }
 ```
 
+## 6.8 整合链路追踪
+
+![封面](02.微服务架构中的链路追踪.assets/tUuJz4TnDwHa.png)
+
+封面图是 凌晨 3点半起来更文的锁屏桌面。
+
+本篇主要内容如下：
+
+### 前言
+
+从上周六 7 号到今天的 11 号，我都在医院，小孩因肺炎已经住院了，我白天和晚上的时间需要照顾娃，只能在娃睡觉的时候肝文了。对了，医院没有宽带和 WiFi，我用的手机开的热点~
+
+### 本篇主要内容
+
+这篇主要是理论 + 实践相结合。实践部分涉及到如何把链路追踪 `Sleuth` + `Zipkin` 加到我的 Spring Cloud 《佳必过》开源项目上。
+
+本篇知识点：
+
+- 链路追踪基本原理
+- 如何在项目中轻松加入链路追踪中间件
+- 如何使用链路追踪排查问题。
+
+### 1. 为什么要用链路追踪？
+
+#### 1.1 因：拆分服务单元
+
+`微服务`架构其实是一个`分布式`的架构，按照业务划分成了多个服务单元。
+
+由于服务单元的`数量`是很多的，有可能几千个，而且业务也会更复杂，如果出现了错误和异常，很难去定位。
+
+#### 1.2 因：逻辑复杂
+
+比如一个请求需要调用多个服务才能完成整个业务闭环，而内部服务的代码逻辑和业务逻辑比较复杂，假如某个服务出现了问题，是难以快速确定那个服务出问题的。
+
+#### 1.3 果：快速定位
+
+而如果我们加上了`分布式链路追踪`，去跟踪一个请求有哪些服务参与其中，参与的顺序是怎样的，这样我们就知道了每个请求的详细经过，即使出了问题也能快速定位。
+
+ ### 2. 链路追踪的核心
+
+链路追踪组件有 Twitter 的可视化链路追踪组件 `Zipkin`、Google 的 `Dapper`、阿里的 `Eagleeye` 等，而 Sleuth 是 Spring Cloud 的组件。Spring Cloud Sleuth 借鉴了 Dapper 的术语。
+
+本文主要讲解 Sleuth + Zipkin 结合使用来更好地实现链路追踪。
+
+为什么能够进行整条链路的追踪？其实就是一个 Trace ID 将 一连串的 Span 信息连起来了。根据 Span 记录的信息再进行整合就可以获取整条链路的信息。下面
+
+#### 2.1 Span（跨度）
+
+- 大白话：远程调用和 Span  `一对一`。
+- 基本的工作单元，每次发送一个远程调用服务就会产生一个 Span。
+
+- Span 是一个 64 位的唯一 ID。
+- 通过计算 Span 的开始和结束时间，就可以统计每个服务调用所花费的时间。
+
+#### 2.2 Trace（跟踪）
+
+- 大白话：一个 Trace 对应多个 Span，`一对多`。
+- 它由一系列 Span 组成，树状结构。
+
+- 64 位唯一 ID。
+- 每次客户端访问微服务系统的 API 接口，可能中间会调用多个微服务，每次调用都会产生一个新的 Span，而多个 Span 组成了 Trace
+
+#### 2.3 Annotation（注解）
+
+链路追踪系统定义了一些核心注解，用来定义一个请求的开始和结束，注意是微服务之间的请求，而不是浏览器或手机等设备。注解包括：
+
+- `cs` - Client Sent：客户端发送一个请求，描述了这个请求调用的 `Span` 的开始时间。注意：这里的客户端指的是微服务的调用者，不是我们理解的浏览器或手机等客户端。
+- `sr` - Server Received：服务端获得请求并准备开始处理它，如果将其 `sr` 减去 `cs` 时间戳，即可得到网络传输时间。
+- `ss` - Server Sent：服务端发送响应，会记录请求处理完成的时间，`ss` 时间戳减去 `sr` 时间戳，即可得到服务器请求的时间。
+- `cr` - Client Received：客户端接收响应，Span 的结束时间，如果 `cr` 的时间戳减去 `cs` 时间戳，即可得到一次微服务调用所消耗的时间，也就是一个 `Span` 的消耗的总时间。
+
+#### 2.4 链路追踪原理
+
+假定三个微服务调用的链路如下图所示：`Service 1` 调用 `Service 2`，`Service 2` 调用 `Service 3` 和 Service 4。
+
+![微服务调用链路图](http://cdn.jayh.club/blog/20201113/0DBcQe6jT0D5.png?imageslim)
+
+那么链路追踪会在每个服务调用的时候加上 Trace ID 和 Span ID。如下图所示：
+
+![链路追踪原理图](http://cdn.jayh.club/blog/20201113/QmIVxLVczhEl.png?imageslim)
+
+**大白话解释：** 
+
+- 大家注意上面的颜色，相同颜色的代表是同一个 Span ID，说明是链路追踪中的一个节点。
+
+- 第一步：客户端调用 `Service 1`，生成一个 `Request`，`Trace ID` 和 `Span ID` 为空，那个时候请求还没有到 `Service 1`。
+- 第二步：请求到达 `Service 1`，记录了 Trace ID = X，Span ID 等于 A。
+- 第三步：`Service 1` 发送请求给 `Service 2`，Span ID 等于 B，被称作 Client Sent，即客户端发送一个请求。
+- 第四步：请求到达 `Service 2`，Span ID 等于 B，Trace ID 不会改变，被称作 Server Received，即服务端获得请求并准备开始处理它。
+- 第五步：`Service 2` 开始处理这个请求，处理完之后，Trace ID 不变，Span ID = C。
+- 第六步：`Service 2` 开始发送这个请求给 `Service 3`，Trace ID 不变，Span ID = D，被称作 Client Sent，即客户端发送一个请求。
+- 第七步：`Service 3` 接收到这个请求，Span ID = D，被称作 Server Received。
+- 第八步：`Service 3` 开始处理这个请求，处理完之后，Span ID = E。
+- 第九步：`Service 3` 开始发送响应给 `Service 2`，Span ID = D，被称作 Server Sent，即服务端发送响应。
+- 第十步：`Service 3` 收到 `Service 2` 的响应，Span ID = D，被称作 Client Received，即客户端接收响应。
+- 第十一步：`Service 2` 开始返回 响应给 `Service 1`，Span ID = B，和第三步的 Span ID 相同，被称作 Client Received，即客户端接收响应。
+- 第十二步：`Service 1` 处理完响应，Span ID = A，和第二步的 Span ID 相同。
+- 第十三步：`Service 1` 开始向客户端返回响应，Span ID = A、
+- `Service 3` 向 Service 4 发送请求和 `Service 3` 类似，对应的 Span ID 是 F 和 G。可以参照上面前面的第六步到第十步。
+
+**把以上的相同颜色的步骤简化为下面的链路追踪图：** 
+
+![链路追踪父子节点图](http://cdn.jayh.club/blog/20201113/jD37o9mBtnwJ.jpg?imageslim)
+
+- 第一个节点：Span ID = A，Parent ID = null，`Service 1` 接收到请求。
+- 第二个节点：Span ID = B，Parent ID= A，`Service 1` 发送请求到 `Service 2` 返回响应给 `Service 1` 的过程。
+- 第三个节点：Span ID = C，Parent ID= B，`Service 2` 的 中间处理过程。
+- 第四个节点：Span ID = D，Parent ID= C，`Service 2` 发送请求到 `Service 3` 返回响应给 `Service 2` 的过程。
+- 第五个节点：Span ID = E，Parent ID= D，`Service 3` 的中间处理过程。
+- 第六个节点：Span ID = F，Parent ID= C，`Service 3` 发送请求到 Service 4 返回响应给 `Service 3` 的过程。
+- 第七个节点：Span ID = G，Parent ID= F，Service 4 的中间处理过程。
+
+通过 Parent ID 即可找到父节点，整个链路就可以进行跟踪追溯了。
+
+### 3. Spring Cloud 整合 Sleuth
+
+大家可以参照我的 GitHub 开源项目 PassJava（佳必过）。
+
+#### 3.1 引入 Spring Cloud 依赖
+
+在 passjava-common 中引入 Spring Cloud 依赖
+
+因为我们使用的链路追踪组件 Sleuth 是 Spring Cloud 的组件，所以我们需要引入 Spring Cloud 依赖。
+
+```
+<dependencyManagement>
+    <dependencies>
+        <!--  Spring Cloud 依赖  -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>Hoxton.SR3</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+```
+
+#### 3.2 引入Sleuth依赖
+
+引入链路追踪组件 Sleuth 非常简单，在 pom.xml 文件中引入 Sleuth 依赖即可。
+
+在 passjava-common 中引入 Sleuth 依赖：
+
+``` xml
+<!-- 链路追踪组件 -->
+<dependency>
+	<groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-sleuth</artifactId>
+</dependency>
+```
+
+#### 3.3 通过日志观察链路追踪
+
+我们先不整合 zipkin 链路追踪可视化组件，而是通过日志的方式来查看链路追踪信息。
+
+``` properties
+文件路径：\PassJava-Platform\passjava-question\src\main\resources\application.properties
+添加配置：
+logging.level.org.springframework.cloud.openfeign=debug
+logging.level.org.springframework.cloud.sleuth=debug
+```
+
+#### 3.4 启动微服务
+
+启动以下微服务：
+
+- passjava-gateway 服务（网关）
+
+- passjava-question 服务（题目中心微服务）
+
+- renren 服务（Admin 后台管理服务）
+
+  启动成功后如下图所示：
+
+![启动微服务](http://cdn.jayh.club/blog/20201113/bep64zUgq0k8.png?imageslim)
 
 
 
+#### 3.5 测试跟踪请求
+
+打开 Admin 后台，访问题目中心->题目配置页面，可以看到发送了下面的请求：
+
+``` http
+http://localhost:8060/api/question/v1/admin/question/list?t=1605170539929&page=1&limit=10&key=
+```
+
+![佳必过项目的后台界面](http://cdn.jayh.club/blog/20201113/UkTQdJqazR3f.png?imageslim)
+
+打开控制台，可以看到打印出了追踪日志。
+
+![链路追踪日志](http://cdn.jayh.club/blog/20201113/EVK7LJBndCut.png?imageslim)
+
+说明：
+
+- 当没有配置 Sleuth 链路追踪的时候，INFO 信息里面是 [passjava-question,,,]，后面跟着三个空字符串。
+- 当配置了 Sleuth 链路追踪的时候，追踪到的信息是 [passjava-question,504a5360ca906016,e55ff064b3941956,false] ，第一个是 Trace ID，第二个是 Span ID。
+
+### 4. Zipkin 链路追踪原理
+
+上面我们通过简单的引入 Sleuth 组件，就可以获取到调用链路，但只能通过控制台的输出信息来看，不太方便。
+
+Zipkin 油然而生，一个图形化的工具。Zipkin 是 Twitter 开源的分布式跟踪系统，主要用来用来收集系统的时序数据，进而可以跟踪系统的调用问题。
+
+而且引入了 Zipkin 组件后，就不需要引入 Sleuth 组件了，因为 Zipkin 组件已经帮我们引入了。
+
+Zipkin 的官文：https://zipkin.io
+
+#### 4.1 Zipkin 基础架构
+
+![Zipkin 基础架构](http://cdn.jayh.club/blog/20201113/FRXaXaM82QHB.png?imageslim)
+
+**Zipkin 包含四大组件：** 
+
+- Collection（收集器组件），主要负责收集外部系统跟踪信息。
+- Storage（存储组件），主要负责将收集到的跟踪信息进行存储，默认存放在内存中，支持存储到 MySQL 和 ElasticSearch。
+- API（查询组件），提供接口查询跟踪信息，给 UI 组件用的。
+- UI （可视化 Web UI 组件），可以基于服务、时间、注解来可视化查看跟踪信息。注意：Web UI 不需要身份验证。
+
+#### 4.2 Zipkin 跟踪流程
+
+![ Zipkin 跟踪流程](http://cdn.jayh.club/blog/20201113/9TJsLVF4q9Iu.png?imageslim)
+
+**流程解释：** 
+
+- 第一步：用户代码发起 HTTP Get 请求，请求路径：/foo。
+- 第二步：请求到到跟踪工具后，请求被拦截，会被记录两项信息：标签和时间戳。以及HTTP Headers 里面会增加跟踪头信息。
+- 第三步：将封装好的请求传给 HTTP 客户端，请求中包含 X-B3-TraceID 和 X-B3-SpanId 请求头信息。
+- 第四步：由HTTP 客户端发送请求。
+- 第五步：Http 客户端返回响应 200 OK 后，跟踪工具记录耗时时间。
+- 第六步：跟踪工具发送 200 OK 给用户端。
+- 第七步：异步报告 Span 信息给 Zipkin 收集器。
+
+### 5. 整合 Zipkin 可视化组件
+
+#### 5.1 启动虚拟机并连接
+
+``` sh
+vagrant up
+```
+
+![启动虚拟机](http://cdn.jayh.club/blog/20201113/0MHnr14FCOEQ.png?imageslim)
+
+用 Xshell 工具连接 虚拟机。
+
+#### 5.2 docker 安装 zipkin 服务
+
+- 使用以下命令开始拉取 zipkin 镜像并启动 zipkin 容器。
+
+``` sh
+docker run -d -p 9411:9411 openzipkin/zipkin
+```
+
+- 命令执行完后，会执行下载操作和启动操作。
+
+![docker 安装 zipkin 服务](http://cdn.jayh.club/blog/20201113/SqP777Tdyw1V.png?imageslim)
+
+- 使用 docker ps 命令可以看到 zipkin 容器已经启动成功了。如下图所示：
+
+![zipkin 容器启动成功](http://cdn.jayh.club/blog/20201113/744ztsITuJkV.png?imageslim)
+
+- 在浏览器窗口打开 zipkin UI 
+
+> 访问服务地址：http://192.168.56.10:9411/zipkin。
+
+<img src="http://cdn.jayh.club/blog/20201113/ttYgi3S0vCDA.png?imageslim" alt="链路追踪" style="zoom:67%;" />
+
+#### 5.3 引入 Zipkin 依赖
+
+在公共模块引入 zipkin 依赖
+
+```xml
+<!-- 链路追踪组件 Zipkin -->
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-zipkin</artifactId>
+</dependency>
+```
+
+因为 zipkin 包里面已经引入了 sleuth 组件，所以可以把之前引入的 sleuth 组件删掉。
+
+#### 5.4 添加 Zipkin 配置
+
+在需要追踪的微服务模块下添加 zipkin 配置。
+
+```properties
+# zipkin 的服务器地址
+spring.zipkin.base-url=http://192.168.56.10:9411/
+# 关闭服务发现，否则 Spring Cloud 会把 zipkin 的 URL 当作服务名称。
+spring.zipkin.discovery-client-enabled=false
+# 设置使用 http 的方式传输数据，也可以用 RabbitMQ 或 Kafka。
+spring.zipkin.sender.type=web
+# 设置采样率为 100 %，默认为 0.1（10%）
+spring.sleuth.sampler.probability=1
+```
+
+#### 5.5 测试 Zipkin 是否工作
+
+这里我在 passjava-member 微服务中写了一个 API：
+
+passjava-member 服务的 API：getMemberStudyTimeListTest，访问路径为/studytime/list/test/{id}。
+
+passjava-member 服务远程调用 passjava-study 服务的 API：getMemberStudyTimeListTest。
+
+我用 postman 工具测试 member 服务的 API：
+
+![测试 Passjava-member 服务的 API](http://cdn.jayh.club/blog/20201113/fdTdJTy6d9AX.png?imageslim)
+
+打开 Zipkin 工具，搜索 passjava-member 的链路追踪日志，可以看到有一条记录，相关说明如下图所示：
+
+![zipkin 示例](http://cdn.jayh.club/blog/20201113/mpU94HPGzLSa.png?imageslim)
+
+从图中可以看到 passjava-member 微服务调用了 passjava-study 微服务，如图中左半部分所示。
+
+而且 passjava-study 微服务详细的调用时间都记录得非常清楚，如图中右半部分所示。
+
+**时间计算：**
+
+- 请求传输时间：Server Start - Client Start = 2.577s-2.339s = 0.238s
+- 服务端处理时间：Server Finish - Server Start = 2.863s - 2.577s = 0.286s
+- 请求总耗时：Client Finish - Client Start = 2.861s - 2.339s = 0.522s
+- Passjava-member 服务总耗时：3.156 s
+- Passjava-study 服务总耗时：0.521s
+- 由此可以看出 passjava-member 服务花费了很长时间，性能很差。
+
+
+
+还可以用图标的方式查看：
+
+![图标的方式查看](http://cdn.jayh.club/blog/20201113/oVdmfBTIVCg5.png?imageslim)
+
+### 6. Zipkin 数据持久化
+
+#### 6.1 Zipkin 支持的数据库
+
+Zipkin 存储数据默认是放在内存中的，如果 Zipkin 重启，那么监控数据也会丢失。如果是生成环境，数据丢失会带来很大问题，所以需要将 Zipkin 的监控数据持久化。而 Zipkin 支持将数据存储到以下数据库：
+
+- 内存（默认，不建议使用）
+- MySQL（数据量大的话， 查询较为缓慢，不建议使用）
+- Elasticsearch（建议使用）
+- Cassandra（国内使用 Cassandra 的公司较少，相关文档也不多）
+
+#### 6.2 使用 Elasticsearch 作为储存介质
+
+- 通过 docker 的方式配置 elasticsearch 作为 zipkin 数据的存储介质。
+
+``` sh
+docker run --env STORAGE_TYPE=elasticsearch --env ES_HOSTS=192.168.56.10:9200 openzipkin/zipkin-dependencies
+```
+
+- ES 作为存储介质的配置参数：
+
+![ES 作为存储介质的配置参数](http://cdn.jayh.club/blog/20201113/Tw1EtAwIvTkr.png?imageslim)
+
+### 7. 总结
+
+本篇讲解了链路追踪的核心原理，以及 Sleuth + Zipkin 的组件的原理，以及将这两款组件加到了我的开源项目《佳必过》里面了。
+
+> 开源项目地址：https://github.com/Jackson0714/PassJava-Platform
+
+### 写在最后
+
+这周真的身心俱疲，娃也是受罪，出院后，娃吃饭也不像以前那么积极了，看到医生那种衣服就怕，连看到照片打印机都怕了。生怕是要给他打针、吃药、做雾化的。还未结婚生娃的抓紧时间学习吧，加油少年~
+
+
+
+参考文档：
+
+> https://github.com/openzipkin/zipkin#storage-component
+>
+> https://github.com/openzipkin/zipkin/tree/master/zipkin-server#elasticsearch-storage
+>
+> https://github.com/openzipkin/zipkin/tree/master/zipkin-storage/elasticsearch
+
+
+
+# 七、ELK 篇
+
+## 7.1 Elasticsearch上篇（原理）
+
+本篇主要内容如下：
+
+![主要内容](http://cdn.jayh.club/blog/20201009/FeDIusuH1JXe.png?imageslim)
+
+### 前言
+
+项目中我们总是用 `Kibana` 界面来搜索测试或生产环境下的日志，来看下有没有异常信息。`Kibana` 就是 我们常说的 `ELK` 中的 `K`。
+
+Kibana 界面如下图所示：
+
+![Kibana 界面](http://cdn.jayh.club/blog/20201007/oxihEk0lT425.png?imageslim)
+
+但这些日志检索原理是什么呢？这里就该我们的 Elasticsearch 搜索引擎登场了。
+
+**我会分为三篇来讲解 Elasticsearch（简称ES）的原理、实战及部署。**  
+
+- **上篇：** 讲解 ES 的原理、中文分词的配置。
+- **中篇：** 实战 ES 应用。
+- **下篇：** ES 的集群部署。
+
+为什么要分成三篇，因为每一篇都很长，而且侧重点不一样，所以分成三篇来讲解。
+
+### 1. Elasticsearch 简介
+
+#### 1.1 什么是 Elasticsearch?
+
+Elasticsearch 是一个分布式的开源搜索和分析引擎，适用于所有类型的数据，包括文本、数字、地理空间、结构化和非结构化数据。简单来说只要涉及搜索和分析相关的， ES 都可以做。
+
+#### 1.2 Elasticsearch 的用途？
+
+Elasticsearch 在速度和可扩展性方面都表现出色，而且还能够索引多种类型的内容，这意味着其可用于多种用例：
+
+-   比如一个在线网上商店，您可以在其中允许客户搜索您出售的产品。在这种情况下，您可以使用Elasticsearch 存储整个产品目录和库存，并为它们提供搜索和自动完成建议。
+
+![搜索手机](http://cdn.jayh.club/blog/20201008/bouuKG9HOiEo.png?imageslim)
+
+-   比如收集日志或交易数据，并且要分析和挖掘此数据以查找趋势，统计信息，摘要或异常。在这种情况下，您可以使用 Logstash（Elasticsearch / Logstash / Kibana堆栈的一部分）来收集，聚合和解析数据，然后让 Logstash 将这些数据提供给 Elasticsearch。数据放入 Elasticsearch 后，您可以运行搜索和聚合以挖掘您感兴趣的任何信息。
+
+#### 1.3 Elasticsearch 的工作原理？
+
+![ELK 原理图](http://cdn.jayh.club/blog/20201009/zGTJCTFPs4Xq.png?imageslim)
+
+Elasticsearch 是在 Lucene 基础上构建而成的。ES 在 Lucence 上做了很多增强。
+
+Lucene 是apache软件基金会 4 的 jakarta 项目组的一个子项目，是一个[开放源代码](https://baike.baidu.com/item/开放源代码/114160)的全文检索引擎工具包，但它不是一个完整的全文检索引擎，而是一个全文检索引擎的架构，提供了完整的查询引擎和索引引擎，部分[文本分析](https://baike.baidu.com/item/文本分析/11046544)引擎（英文与德文两种西方语言）。Lucene的目的是为软件开发人员提供一个简单易用的工具包，以方便的在目标系统中实现全文检索的功能，或者是以此为基础建立起完整的全文检索引擎。（来自百度百科）
+
+**Elasticsearch 的原始数据从哪里来？** 
+
+原始数据从多个来源 ( 包括日志、系统指标和网络应用程序 ) 输入到 Elasticsearch 中。
+
+**Elasticsearch 的数据是怎么采集的？** 
+
+数据采集指在 Elasticsearch 中进行索引之前解析、标准化并充实这些原始数据的过程。这些数据在 Elasticsearch 中索引完成之后，用户便可针对他们的数据运行复杂的查询，并使用聚合来检索自身数据的复杂汇总。这里用到了 Logstash，后面会介绍。
+
+**怎么可视化查看想要检索的数据？** 
+
+这里就要用到 Kibana 了，用户可以基于自己的数据进行搜索、查看数据视图等。
+
+#### 1.4 Elasticsearch 索引是什么？
+
+Elasticsearch 索引指相互关联的文档集合。Elasticsearch 会以 JSON 文档的形式存储数据。每个文档都会在一组键 ( 字段或属性的名称 ) 和它们对应的值 ( 字符串、数字、布尔值、日期、数值组、地理位置或其他类型的数据 ) 之间建立联系。
+
+Elasticsearch 使用的是一种名为倒排索引的数据结构，这一结构的设计可以允许十分快速地进行全文本搜索。倒排索引会列出在所有文档中出现的每个特有词汇，并且可以找到包含每个词汇的全部文档。
+
+在索引过程中，Elasticsearch 会存储文档并构建倒排索引，这样用户便可以近实时地对文档数据进行搜索。索引过程是在索引 API 中启动的，通过此 API 您既可向特定索引中添加 JSON 文档，也可更改特定索引中的 JSON 文档。
+
+#### 1.5 Logstash 的用途是什么？
+
+Logstash 就是 `ELK` 中的 `L`。
+
+Logstash 是 Elastic Stack 的核心产品之一，可用来对数据进行聚合和处理，并将数据发送到 Elasticsearch。Logstash 是一个开源的服务器端数据处理管道，允许您在将数据索引到 Elasticsearch 之前同时从多个来源采集数据，并对数据进行充实和转换。
+
+#### 1.6 Kibana 的用途是什么？
+
+Kibana 是一款适用于 Elasticsearch 的数据可视化和管理工具，可以提供实时的直方图、线性图等。
+
+#### 1.7 为什么使用 Elasticsearch
+
+- ES 很快，近实时的搜索平台。
+- ES 具有分布式的本质特质。
+- ES 包含一系列广泛的功能，比如数据汇总和索引生命周期管理。
+
+官方文档：https://www.elastic.co/cn/what-is/elasticsearch
+
+### 2. ES 基本概念
+
+#### 2.1 Index ( 索引 )
+
+动词：相当于 Mysql 中的 insert
+
+名词：相当于 Mysql 中的 database
+
+与 mysql 的对比
+
+| 序号 | Mysql                      | Elasticsearch             |
+| ---- | -------------------------- | ------------------------- |
+| 1    | Mysql 服务                  | ES 集群服务                |
+| 2    | 数据库 Database            | 索引 Index                |
+| 3    | 表 Table                   | 类型 Type                 |
+| 4    | 记录 Records ( 一行行记录 ) | 文档 Document ( JSON 格式 ) |
+
+#### 2.2 倒排索引
+
+假如数据库有如下电影记录：
+
+1-大话西游
+
+2-大话西游外传
+
+3-解析大话西游
+
+4-西游降魔外传
+
+5-梦幻西游独家解析
+
+**分词：将整句分拆为单词** 
+
+| 序号 | 保存到 ES 的词 | 对应的电影记录序号 |
+| ---- | ------------ | ------------------ |
+| A    | 西游         | 1,2, 3,4, 5      |
+| B    | 大话         | 1,2, 3            |
+| C    | 外传         | 2,4, 5            |
+| D    | 解析         | 3,5               |
+| E    | 降魔         | 4                  |
+| F    | 梦幻         | 5                  |
+| G    | 独家         | 5                  |
+
+**检索：独家大话西游** 
+
+将 ` 独家大话西游 ` 解析拆分成 ` 独家 `、` 大话 `、` 西游 `
+
+ES 中 A、B、G 记录 都有这三个词的其中一种，  所以 1,2, 3,4, 5 号记录都有相关的词被命中。
+
+1 号记录命中 2 次， A、B 中都有 ( 命中 `2` 次 ) ，而且 1 号记录有 `2` 个词，相关性得分：`2` 次/`2` 个词=`1`
+
+2 号记录命中 2 个词 A、B 中的都有 ( 命中 `2` 次 ) ，而且 2 号记录有 `2` 个词，相关性得分：`2` 次/`3` 个词= `0.67`
+
+3 号记录命中 2 个词 A、B 中的都有 ( 命中 `2` 次 ) ，而且 3 号记录有 `2` 个词，相关性得分：`2` 次/`3` 个词= `0.67`
+
+4 号记录命中 2 个词 A 中有 ( 命中 `1` 次 ) ，而且 4 号记录有 `2` 个词，相关性得分：`1` 次/`3` 个词= `0.33`
+
+5 号记录命中 2 个词 A 中有 ( 命中 `2` 次 ) ，而且 4 号记录有 `4` 个词，相关性得分：`2` 次/`4` 个词= `0.5`
+
+**所以检索出来的记录顺序如下：** 
+
+​    1-大话西游 ( 想关性得分：1 )
+
+​    2-大话西游外传 ( 想关性得分：0.67 )
+
+​    3-解析大话西游 ( 想关性得分：0.67 )
+
+​    5-梦幻西游独家解析 ( 想关性得分：0.5 )
+
+​    4-西游降魔 ( 想关性得分：0.33 )
+
+### 3. Docker 搭建环境
+
+#### 3.1. 搭建 Elasticsearch 环境
+
+搭建虚拟机环境和安装 docker 可以参照之前写的文档：
+
+-   [01. 快速搭建 Linux 环境-运维必备](http://www.passjava.cn/#/05.安装部署篇/01.环境搭建篇)
+-   [02. 配置虚拟机网络](http://www.passjava.cn/#/05.安装部署篇/02.配置虚拟机网络)
+-   [03. 安装 Docker](http://www.passjava.cn/#/05.安装部署篇/03.安装docker)
+
+##### 1 ) 下载镜像文件
+
+```sh
+docker pull elasticsearch:7.4.2
+```
+
+##### 2 ) 创建实例
+
+-   1. 映射配置文件
+
+```sh
+配置映射文件夹
+mkdir -p /mydata/elasticsearch/config
+
+配置映射文件夹
+mkdir -p /mydata/elasticsearch/data
+
+设置文件夹权限任何用户可读可写
+chmod 777 /mydata/elasticsearch -R
+
+配置 http.host
+echo "http.host: 0.0.0.0" >> /mydata/elasticsearch/config/elasticsearch.yml
+```
+
+-   2. 启动 elasticsearch 容器
+
+``` sh
+docker run --name elasticsearch -p 9200:9200 -p 9300:9300 \
+-e "discovery.type"="single-node" \
+-e ES_JAVA_OPTS="-Xms64m -Xmx128m" \
+-v /mydata/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml \
+-v /mydata/elasticsearch/data:/usr/share/elasticsearch/data \
+-v /mydata/elasticsearch/plugins:/usr/share/elasticsearch/plugins \
+-d elasticsearch:7.4.2
+```
+
+-   3. 访问 elasticsearch 服务
+
+访问：http://192.168.56.10:9200
+
+返回的 reponse
+
+``` json
+{
+  "name" : "8448ec5f3312",
+  "cluster_name" : "elasticsearch",
+  "cluster_uuid" : "xC72O3nKSjWavYZ-EPt9Gw",
+  "version" : {
+    "number" : "7.4.2",
+    "build_flavor" : "default",
+    "build_type" : "docker",
+    "build_hash" : "2f90bbf7b93631e52bafb59b3b049cb44ec25e96",
+    "build_date" : "2019-10-28T20:40:44.881551Z",
+    "build_snapshot" : false,
+    "lucene_version" : "8.2.0",
+    "minimum_wire_compatibility_version" : "6.8.0",
+    "minimum_index_compatibility_version" : "6.0.0-beta1"
+  },
+  "tagline" : "You Know, for Search"
+}
+```
+
+访问：http://192.168.56.10:9200/_cat 访问节点信息
+
+``` sh
+127.0.0.1 62 90 0 0.06 0.10 0.05 dilm * 8448ec5f3312
+```
+
+#### 3.2. 搭建 Kibana 环境
+
+``` sh
+docker pull kibana:7.4.2
+
+docker run --name kibana -e ELASTICSEARCH_HOSTS=http://192.168.56.10:9200 -p 5601:5601 -d kibana:7.4.2
+
+```
+
+访问 kibana: http://192.168.56.10:5601/
+
+![kibana](http://cdn.jayh.club/blog/20200618/KdLmdaHR2etK.png?imageslim)
+
+### 4、初阶检索玩法
+
+#### 4.1._cat 用法
+
+``` sh
+GET /_cat/nodes: 查看所有节点
+GET /_cat/health: 查看 es 健康状况
+GET /_cat/master: 查看主节点
+GET /_cat/indices: 查看所有索引
+
+查询汇总：
+/_cat/allocation
+/_cat/shards
+/_cat/shards/{index}
+/_cat/master
+/_cat/nodes
+/_cat/tasks
+/_cat/indices
+/_cat/indices/{index}
+/_cat/segments
+/_cat/segments/{index}
+/_cat/count
+/_cat/count/{index}
+/_cat/recovery
+/_cat/recovery/{index}
+/_cat/health
+/_cat/pending_tasks
+/_cat/aliases
+/_cat/aliases/{alias}
+/_cat/thread_pool
+/_cat/thread_pool/{thread_pools}
+/_cat/plugins
+/_cat/fielddata
+/_cat/fielddata/{fields}
+/_cat/nodeattrs
+/_cat/repositories
+/_cat/snapshots/{repository}
+/_cat/templates
+```
+
+#### 4.2. 索引一个文档 ( 保存 )
+
+例子：在 `customer` 索引下的 `external` 类型下保存标识为 `1` 的数据。
+
+-   使用 Kibana 的 Dev Tools 来创建
+
+``` sh
+PUT member/external/1
+
+{
+"name":"jay huang"
+}
+```
+
+Reponse:
+
+``` json
+{
+    "_index": "member", //在哪个索引
+    "_type": "external",//在那个类型
+    "_id": "2",//记录 id
+    "_version": 7,//版本号
+    "result": "updated",//操作类型
+    "_shards": {
+        "total": 2,
+        "successful": 1,
+        "failed": 0
+    },
+    "_seq_no": 9,
+    "_primary_term": 1
+}
+```
+
+-   也可以通过 Postman 工具发送请求来创建记录。
+
+![创建一条记录](http://cdn.jayh.club/blog/20200617/Kab9WijNRF8t.png?imageslim)
+
+注意：
+
+PUT 和 POST 都可以创建记录。
+
+POST：如果不指定 id，自动生成 id。如果指定 id，则修改这条记录，并新增版本号。
+
+PUT：必须指定 id，如果没有这条记录，则新增，如果有，则更新。
+
+#### 4.3 查询文档
+
+``` json
+请求：http://192.168.56.10:9200/member/external/2
+
+Reposne:
+{
+    "_index": "member",   //在哪个索引
+    "_type": "external",  //在那个类型
+    "_id": "2",           //记录 id
+    "_version": 7,        //版本号
+    "_seq_no": 9,         //并发控制字段，每次更新就会+1，用来做乐观锁
+    "_primary_term": 1,   //同上，主分片重新分配，如重启，就会变化
+    "found": true,
+    "_source": { //真正的内容
+        "name": "jay huang"
+ }
+}
+```
+
+_seq_no 用作乐观锁
+
+每次更新完数据后，_seq_no 就会+1，所以可以用作并发控制。
+
+当更新记录时，如果_seq_no 与预设的值不一致，则表示记录已经被至少更新了一次，不允许本次更新。
+
+用法如下：
+
+``` json
+请求更新记录 2: http://192.168.56.10:9200/member/external/2?if_seq_no=9&&if_primary_term=1
+返回结果：
+{
+    "_index": "member",
+    "_type": "external",
+    "_id": "2",
+    "_version": 9,
+    "result": "updated",
+    "_shards": {
+        "total": 2,
+        "successful": 1,
+        "failed": 0
+    },
+    "_seq_no": 11,
+    "_primary_term": 1
+}
+```
+
+_seq_no 等于 10，且_primary_term=1 时更新数据，执行一次请求后，再执行上面的请求则会报错：版本冲突
+
+``` json
+{
+    "error": {
+        "root_cause": [
+ {
+                "type": "version_conflict_engine_exception",
+                "reason": "[2]: version conflict, required seqNo [10], primary term [1]. current document has seqNo [11] and primary term [1]",
+                "index_uuid": "CX6uwPBKRByWpuym9rMuxQ",
+                "shard": "0",
+                "index": "member"
+ }
+        ],
+        "type": "version_conflict_engine_exception",
+        "reason": "[2]: version conflict, required seqNo [10], primary term [1]. current document has seqNo [11] and primary term [1]",
+        "index_uuid": "CX6uwPBKRByWpuym9rMuxQ",
+        "shard": "0",
+        "index": "member"
+    },
+    "status": 409
+}
+```
+
+#### 4.4 更新文档
+
+-   用法
+
+POST 带 `_update` 的更新操作，如果原数据没有变化，则 repsonse 中的 result 返回 noop ( 没有任何操作 ) ，version 也不会变化。
+
+请求体中需要用 `doc` 将请求数据包装起来。
+
+```
+POST 请求：http://192.168.56.10:9200/member/external/2/_update
+{
+    "doc":{
+        "name":"jay huang"
+ }
+}
+响应：
+{
+    "_index": "member",
+    "_type": "external",
+    "_id": "2",
+    "_version": 12,
+    "result": "noop",
+    "_shards": {
+        "total": 0,
+        "successful": 0,
+        "failed": 0
+    },
+    "_seq_no": 14,
+    "_primary_term": 1
+}
+```
+
+使用场景：对于大并发更新，建议不带 `_update`。对于大并发查询，少量更新的场景，可以带_update，进行对比更新。
+
+-   更新时增加属性
+
+  请求体中增加 `age` 属性
+
+``` json
+http://192.168.56.10:9200/member/external/2/_update
+request:
+{
+    "doc":{
+        "name":"jay huang",
+        "age": 18
+ }
+}
+response:
+{
+    "_index": "member",
+    "_type": "external",
+    "_id": "2",
+    "_version": 13,
+    "result": "updated",
+    "_shards": {
+        "total": 2,
+        "successful": 1,
+        "failed": 0
+    },
+    "_seq_no": 15,
+    "_primary_term": 1
+}
+```
+
+#### 4.5 删除文档和索引
+
+-   删除文档
+
+``` json
+DELETE 请求：http://192.168.56.10:9200/member/external/2
+response:
+{
+    "_index": "member",
+    "_type": "external",
+    "_id": "2",
+    "_version": 2,
+    "result": "deleted",
+    "_shards": {
+        "total": 2,
+        "successful": 1,
+        "failed": 0
+    },
+    "_seq_no": 1,
+    "_primary_term": 1
+}
+```
+
+-   删除索引
+
+``` json
+DELETE 请求：http://192.168.56.10:9200/member
+repsonse:
+{
+    "acknowledged": true
+}
+```
+
+-   没有删除类型的功能
+
+#### 4.6 批量导入数据
+
+  使用 kinaba 的 dev tools 工具，输入以下语句
+
+``` json
+POST /member/external/_bulk
+{"index":{"_id":"1"}}
+{"name":"Jay Huang"}
+{"index":{"_id":"2"}}
+{"name":"Jackson Huang"}
+```
+
+执行结果如下图所示：
+
+![批量插入数据](http://cdn.jayh.club/blog/20200619/uqJhXNxRa4Dp.png?imageslim)
+
+-   拷贝官方样本数据
+
+  ``` http
+  https://raw.githubusercontent.com/elastic/elasticsearch/master/docs/src/test/resources/accounts.json
+  ```
+
+  ![官方样本数据](http://cdn.jayh.club/blog/20200619/iye5YjQSE8EI.png?imageslim)
+
+-   在 kibana 中执行脚本
+
+``` json
+POST /bank/account/_bulk
+{"index":{"_id":"1"}}
+{"account_number":1,"balance":39225,"firstname":"Amber","lastname":"Duke","age":32,"gender":"M","address":"880 Holmes Lane","employer":"Pyrami","email":"amberduke@pyrami.com","city":"Brogan","state":"IL"}
+{"index":{"_id":"6"}}
+......
+```
+
+![批量插入样本数据的执行结果](http://cdn.jayh.club/blog/20200619/MQn9QhpBHr3W.png?imageslim)
+
+-   查看所有索引
+
+  ![查看所有索引](http://cdn.jayh.club/blog/20200619/sbe64743CK9W.png?imageslim)
+
+可以从返回结果中看到 bank 索引有 1000 条数据，占用了 440.2kb 存储空间。
+
+### 5. 高阶检索玩法
+
+#### 5.1 两种查询方式
+
+##### 5.1.1  URL 后接参数
+
+``` json
+GET bank/_search?q=*&sort=account_number: asc
+```
+
+```/_search?q=*&sort=account_number: asc`
+
+查询出所有数据，共 1000 条数据，耗时 1ms，只展示 10 条数据 ( ES 分页 )
+
+![URL 后接参数](http://cdn.jayh.club/blog/20200620/BvHAoaDumBk7.png?imageslim)
+
+  属性值说明：
+
+``` javascript
+took – ES 执行搜索的时间 ( 毫秒 )
+timed_out – ES 是否超时
+_shards – 有多少个分片被搜索了，以及统计了成功/失败/跳过的搜索的分片
+max_score – 最高得分
+hits.total.value - 命中多少条记录
+hits.sort - 结果的排序 key 键，没有则按 score 排序
+hits._score - 相关性得分
+参考文档：
+https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started-search.html
+```
+
+##### 5.1.2 URL 加请求体进行检索 ( QueryDSL )
+
+请求体中写查询条件
+
+语法：
+
+```json
+GET bank/_search
+{
+  "query":{"match_all": {}},
+  "sort": [
+    {"account_number": "asc" }
+ ]
+}
+```
+
+示例：查询出所有，先按照 accout_number 升序排序，再按照 balance 降序排序
+
+![URL 加请求体进行检索](http://cdn.jayh.club/blog/20200620/HaSgoLuCjamf.png?imageslim)
+
+#### 5.2 详解 QueryDSL 查询
+
+> DSL: Domain Specific Language
+
+##### 5.2.1 全部匹配 match_all
+
+示例：查询所有记录，按照 balance 降序排序，只返回第 11 条记录到第 20 条记录，只显示 balance 和 firstname 字段。
+
+``` json
+GET bank/_search
+{
+  "query": {
+    "match_all": {}
+  },
+  "sort": [
+ {
+      "balance": {
+        "order": "desc"
+ }
+ }
+  ],
+  "from": 10,
+  "size": 10,
+  "_source": ["balance", "firstname"]
+}
+```
+
+##### 5.2.2 匹配查询 match
+
+-   基本类型 ( 非字符串 ) ，精确匹配
+
+``` json
+GET bank/_search
+{
+  "query": {
+    "match": {"account_number": "30"}
+ }
+}
+```
+
+-   字符串，全文检索
+
+``` json
+GET bank/_search
+{
+  "query": {
+    "match": {
+      "address": "mill road"
+ }
+ }
+}
+```
+
+![字符串全文检索](http://cdn.jayh.club/blog/20200623/OKvUum6PodWJ.png?imageslim)
+
+> 全文检索按照评分进行排序，会对检索条件进行分词匹配。
+>
+> 查询 `address` 中包含 `mill` 或者 `road` 或者 `mill road` 的所有记录，并给出相关性得分。
+
+查到了 32 条记录，最高的一条记录是 Address = "990 Mill Road"，得分：8.926605. Address="198 Mill Lane" 评分 5.4032025，只匹配到了 Mill 单词。
+
+##### 5.2.3 短语匹配 match_phase
+
+将需要匹配的值当成一个整体单词 ( 不分词 ) 进行检索
+
+``` json
+GET bank/_search
+{
+  "query": {
+    "match_phrase": {
+      "address": "mill road"
+ }
+ }
+}
+```
+
+> 查出 address 中包含 `mill road` 的所有记录，并给出相关性得分
+
+##### 5.2.4 多字段匹配 multi_match
+
+``` json
+GET bank/_search
+{
+  "query": {
+    "multi_match": {
+      "query": "mill land",
+      "fields": [
+        "state",
+        "address"
+ ]
+ }
+ }
+}
+```
+
+> multi_match 中的 query 也会进行分词。
+>
+> 查询 `state` 包含 `mill` 或 `land` 或者 `address` 包含 `mill` 或 `land` 的记录。
+
+##### 5.2.5 复合查询 bool
+
+> 复合语句可以合并任何其他查询语句，包括复合语句。复合语句之间可以相互嵌套，可以表达复杂的逻辑。
+
+搭配使用 must,must_not,should
+
+must: 必须达到 must 指定的条件。 ( 影响相关性得分 )
+
+must_not: 必须不满足 must_not 的条件。 ( 不影响相关性得分 )
+
+should: 如果满足 should 条件，则可以提高得分。如果不满足，也可以查询出记录。 ( 影响相关性得分 )
+
+示例：查询出地址包含 mill，且性别为 M，年龄不等于 28 的记录，且优先展示 firstname 包含 Winnie 的记录。
+
+``` json
+GET bank/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+ {
+          "match": {
+            "address": "mill"
+ }
+        },
+ {
+          "match": {
+            "gender": "M"
+ }
+ }
+      ],
+      "must_not": [
+ {
+          "match": {
+            "age": "28"
+ }
+ }
+      ],
+      "should": [
+ {
+          "match": {
+            "firstname": "Winnie"
+ }
+ }
+ ]
+ }
+ }
+}
+```
+
+##### 5.2.6 filter 过滤
+
+> 不影响相关性得分，查询出满足 filter 条件的记录。
+>
+> 在 bool 中使用。
+
+``` json
+GET bank/_search
+{
+  "query": {
+    "bool": {
+      "filter": [
+ {
+          "range": {
+            "age": {
+              "gte":18,
+              "lte":40
+ }
+ }
+ }
+ ]
+ }
+ }
+}
+```
+
+##### 5.2.7 term 查询
+
+> 匹配某个属性的值。
+>
+> 全文检索字段用 match，其他非 text 字段匹配用 term
+>
+> keyword：文本精确匹配 ( 全部匹配 )
+>
+> match_phase：文本短语匹配
+
+``` json
+非 text 字段精确匹配
+GET bank/_search
+{
+  "query": {
+    "term": {
+      "age": "20"
+ }
+ }
+}
+```
+
+##### 5.2.8 aggregations 聚合
+
+> 聚合：从数据中分组和提取数据。类似于 SQL GROUP BY 和 SQL 聚合函数。
+>
+> Elasticsearch 可以将命中结果和多个聚合结果同时返回。
+
+聚合语法：
+
+``` json
+"aggregations" : {
+    "<聚合名称 1>" : {
+        "<聚合类型>" : {
+            <聚合体内容>
+        }
+        [,"元数据" : {  [<meta_data_body>] }]?
+        [,"aggregations" : { [<sub_aggregation>]+ }]?
+    }
+    [,"聚合名称 2>" : { ... }]*
+}
+```
+
+-   示例 1：搜索 address 中包含 big 的所有人的年龄分布 ( 前 10 条 ) 以及平均年龄，以及平均薪资
+
+``` json
+GET bank/_search
+{
+  "query": {
+    "match": {
+      "address": "mill"
+ }
+  },
+  "aggs": {
+    "ageAggr": {
+      "terms": {
+        "field": "age",
+        "size": 10
+       }
+    },
+    "ageAvg": {
+      "avg": {
+        "field": "age"
+      }
+    },
+    "balanceAvg": {
+      "avg": {
+        "field": "balance"
+      }
+   }
+ }
+}
+```
+
+检索结果如下所示：
+
+hits 记录返回了，三种聚合结果也返回了，平均年龄 34 随，平均薪资 25208.0，品骏年龄分布：38 岁的有 2 个，28 岁的有一个，32 岁的有一个
+
+![示例 1](http://cdn.jayh.club/blog/20200629/amT7fuehc6yr.png?imageslim)
+
+如果不想返回 hits 结果，可以在最后面设置 size:0
+
+``` json
+GET bank/_search
+{
+  "query": {
+    "match": {
+      "address": "mill"
+ }
+  },
+  "aggs": {
+    "ageAggr": {
+      "terms": {
+        "field": "age",
+        "size": 10
+      }
+    }
+  },
+  "size": 0
+}
+```
+
+-   示例 2：按照年龄聚合，并且查询这些年龄段的平均薪资
+
+从结果可以看到 31 岁的有 61 个，平均薪资 28312.9，其他年龄的聚合结果类似。
+
+![示例 2](http://cdn.jayh.club/blog/20200629/6BVJ9lMdQPM3.png?imageslim)
+
+-   示例 3：按照年龄分组，然后将分组后的结果按照性别分组，然后查询出这些分组后的平均薪资
+
+``` json
+GET bank/_search
+{
+  "query": {
+    "match_all": {
+ }
+  },
+  "aggs": {
+    "ageAggr": {
+      "terms": {
+        "field": "age",
+        "size": 10
+      },
+      "aggs": {
+        "genderAggr": {
+          "terms": {
+            "field": "gender.keyword",
+            "size": 10
+          },
+          "aggs": {
+            "balanceAvg": {
+              "avg": {
+                "field": "balance"
+          }
+        }
+      }
+    }
+  }
+ }
+  },
+  "size": 0
+}
+```
+
+从结果可以看到 31 岁的有 61 个。其中性别为 `M` 的 35 个，平均薪资 29565.6，性别为 `F` 的 26 个，平均薪资 26626.6。其他年龄的聚合结果类似。
+
+![聚合结果](http://cdn.jayh.club/blog/20200629/fHRH5q2CDMSs.png?imageslim)
+
+##### 5.2.9 Mapping 映射
+
+> Mapping 是用来定义一个文档 ( document ) ，以及它所包含的属性 ( field ) 是如何存储和索引的。
+
+-   定义哪些字符串属性应该被看做全文本属性 ( full text fields )
+-   定义哪些属性包含数字，日期或地理位置
+-   定义文档中的所有属性是否都能被索引 ( _all 配置 )
+-   日期的格式
+-   自定义映射规则来执行动态添加属性
+
+Elasticsearch7 去掉 tpye 概念：
+
+关系型数据库中两个数据库表示是独立的，即使他们里面有相同名称的列也不影响使用，但 ES 中不是这样的。elasticsearch 是基于 Lucence 开发的搜索引擎，而 ES 中不同 type 下名称相同的 field 最终在 Lucence 中的处理方式是一样的。
+
+为了区分不同 type 下的同一名称的字段，Lucence 需要处理冲突，导致检索效率下降
+
+ES7.x 版本：URL 中的 type 参数为可选。
+
+ES8.x 版本：不支持 URL 中的 type 参数
+
+所有类型可以参考文档：https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-types.html
+
+-   查询索引的映射
+
+如查询 my-index 索引的映射
+
+``` json
+GET /my-index/_mapping
+返回结果：
+{
+  "my-index" : {
+    "mappings" : {
+      "properties" : {
+        "age" : {
+          "type" : "integer"
+        },
+        "email" : {
+          "type" : "keyword"
+        },
+        "employee-id" : {
+          "type" : "keyword",
+          "index" : false
+        },
+        "name" : {
+          "type" : "text"
+      }
+    }
+  }
+ }
+}
+```
+
+-   创建索引并指定映射
+
+如创建 my-index 索引，有三个字段 age,email,name，指定类型为 interge, keyword, text
+
+``` json
+PUT /my-index
+{
+  "mappings": {
+    "properties": {
+      "age": { "type": "integer" },
+      "email": { "type": "keyword"  },
+      "name": { "type": "text" }
+    }
+ }
+返回结果：
+{
+  "acknowledged" : true,
+  "shards_acknowledged" : true,
+  "index" : "my-index"
+}
+
+```
+
+-   添加新的字段映射
+
+如在 my-index 索引里面添加 employ-id 字段，指定类型为 keyword
+
+``` json
+PUT /my-index/_mapping
+{
+  "properties": {
+    "employee-id": {
+      "type": "keyword",
+      "index": false
+    }
+ }
+}
+```
+
+-   更新映射
+
+> 我们不能更新已经存在的映射字段，必须创建新的索引进行数据迁移。
+
+-   数据迁移
+
+``` json
+
+POST _reindex
+{
+  "source": {
+    "index": "twitter"
+  },
+  "dest": {
+    "index": "new_twitter"
+ }
+}
+```
+
+### 6. 中文分词
+
+ES 内置了很多种分词器，但是对中文分词不友好，所以我们需要借助第三方中文分词工具包。
+
+#### 6.1 ES 中的分词的原理
+
+##### 6.1.1 ES 的分词器概念
+
+ES 的一个分词器 ( tokenizer ) 接收一个字符流，将其分割为独立的词元 ( tokens ) ，然后输出词元流。
+
+ES 提供了很多内置的分词器，可以用来构建自定义分词器 ( custom ananlyzers )
+
+##### 6.1.2 标准分词器原理
+
+比如 stadard tokenizer 标准分词器，遇到空格进行分词。该分词器还负责记录各个词条 ( term ) 的顺序或 position 位置 ( 用于 phrase 短语和 word proximity 词近邻查询 ) 。每个单词的字符偏移量 ( 用于高亮显示搜索的内容 ) 。
+
+##### 6.1.3 英文和标点符号分词示例
+
+查询示例如下：
+
+``` json
+POST _analyze
+{
+  "analyzer": "standard",
+  "text": "Do you know why I want to study ELK? 2 3 33..."
+}
+```
+
+查询结果：
+
+``` sh
+do, you, know, why, i, want, to, study, elk, 2,3,33
+```
+
+从查询结果可以看到：
+
+（1）标点符号没有分词。
+
+（2）数字会进行分词。
+
+![英文句子分词](http://cdn.jayh.club/blog/20200708/msWLHBLAdo3c.png?imageslim)
+
+##### 6.1.4 中文分词示例
+
+但是这种分词器对中文的分词支持不友好，会将词语分词为单独的汉字。比如下面的示例会将 ` 悟空聊架构 ` 分词为 ` 悟 `,` 空 `,` 聊 `,` 架 `,` 构 `，期望分词为 ` 悟空 `，` 聊 `，` 架构 `。
+
+``` json
+POST _analyze
+{
+  "analyzer": "standard",
+  "text": "悟空聊架构"
+}
+```
+
+![中文分词悟空聊架构](http://cdn.jayh.club/blog/20200708/I8dhOuSVoXem.png?imageslim)
+
+我们可以安装 ik 分词器来更加友好的支持中文分词。
+
+#### 6.2  安装 ik 分词器
+
+##### 6.2.1 ik 分词器地址
+
+ik 分词器地址：
+
+``` js
+https://github.com/medcl/elasticsearch-analysis-ik/releases
+```
+
+先检查 ES 版本，我安装的版本是 `7.4.2`，所以我们安装 ik 分词器的版本也选择 7.4.2
+
+``` json
+http://192.168.56.10:9200/
+{
+  "name" : "8448ec5f3312",
+  "cluster_name" : "elasticsearch",
+  "cluster_uuid" : "xC72O3nKSjWavYZ-EPt9Gw",
+  "version" : {
+    "number" : "7.4.2",
+    "build_flavor" : "default",
+    "build_type" : "docker",
+    "build_hash" : "2f90bbf7b93631e52bafb59b3b049cb44ec25e96",
+    "build_date" : "2019-10-28T20:40:44.881551Z",
+    "build_snapshot" : false,
+    "lucene_version" : "8.2.0",
+    "minimum_wire_compatibility_version" : "6.8.0",
+    "minimum_index_compatibility_version" : "6.0.0-beta1"
+  },
+  "tagline" : "You Know, for Search"
+}
+```
+
+![选择 ik 分词器](http://cdn.jayh.club/blog/20200709/MdL36AGYEYDg.png?imageslim)
+
+##### 6.2.2 安装 ik 分词器的方式
+
+###### 6.2.2.1 方式一：容器内安装 ik 分词器
+
+-   进入 es 容器内部 plugins 目录
+
+``` sh
+docker exec -it <容器 id> /bin/bash
+```
+
+-   获取 ik 分词器压缩包
+
+``` sh
+wget https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.4.2/elasticsearch-analysis-ik-7.4.2.zip
+```
+
+-   解压缩 ik 压缩包
+
+``` sh
+unzip 压缩包
+```
+
+-   删除下载的压缩包
+
+``` sh
+rm -rf *.zip
+```
+
+###### 6.2.2.2 方式二：映射文件安装 ik 分词器
+
+进入到映射文件夹
+
+```sh
+cd /mydata/elasticsearch/plugins
+```
+
+下载安装包
+
+```sh
+wget https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.4.2/elasticsearch-analysis-ik-7.4.2.zip
+```
+
+-   解压缩 ik 压缩包
+
+``` sh
+unzip 压缩包
+```
+
+-   删除下载的压缩包
+
+``` sh
+rm -rf *.zip
+```
+
+###### 6.2.2.3 方式三：Xftp 上传压缩包到映射目录
+
+先用 XShell 工具连接虚拟机 ( 操作步骤可以参考之前写的文章 [02. 快速搭建 Linux 环境-运维必备](http://www.passjava.cn/#/05.安装部署篇/01.环境搭建篇)) ，然后用 Xftp 将下载好的安装包复制到虚拟机。
+
+![Xftp 上传压缩包](http://cdn.jayh.club/blog/20200712/aE30LCn3xzXj.png?imageslim)
+
+#### 6.3 解压 ik 分词器到容器中
+
+-   如果没有安装 unzip 解压工具，则安装 unzip 解压工具。
+
+```sh
+apt install unzip
+```
+
+-   解压 ik 分词器到当前目录的 ik 文件夹下。
+
+命令格式：unzip <ik 分词器压缩包>
+
+实例：
+
+``` sh
+unzip ELK-IKv7.4.2.zip -d ./ik
+```
+
+![解压 ik 分词器](http://cdn.jayh.club/blog/20201007/nkVKAH22jB5a.png?imageslim)
+
+-   修改文件夹权限为可读可写。
+
+``` sh
+chmod -R 777 ik/
+```
+
+-   删除 ik 分词器压缩包
+
+``` sh
+rm ELK-IKv7.4.2.zip
+```
+
+#### 6.4 检查 ik 分词器安装
+
+-   进入到容器中
+
+``` sh
+docker exec -it <容器 id> /bin/bash
+```
+
+-   查看 Elasticsearch 的插件
+
+``` sh
+elasticsearch-plugin list
+```
+
+结果如下，说明 ik 分词器安装好了。是不是很简单。
+
+``` sh
+ik
+```
+
+![ik 分词器插件](http://cdn.jayh.club/blog/20201007/qf0NGUF7PBKo.png?imageslim)
+
+然后退出 Elasticsearch 容器，并重启 Elasticsearch 容器
+
+``` sh
+exit
+docker restart elasticsearch
+```
+
+#### 6.5 使用 ik 中文分词器
+
+ik 分词器有两种模式
+
+-   智能分词模式 ( ik_smart )
+
+-   最大组合分词模式 ( ik_max_word )
+
+我们先看下 ` 智能分词 ` 模式的效果。比如对于 ` 一颗小星星 ` 进行中文分词，得到的两个词语：` 一颗 `、` 小星星 `
+
+我们在 Dev Tools Console 输入如下查询
+
+``` json
+POST _analyze
+{
+  "analyzer": "ik_smart",
+  "text": "一颗小星星"
+}
+```
+
+得到如下结果，被分词为 一颗和小星星。
+
+![一颗小星星分词结果](http://cdn.jayh.club/blog/20201007/BGK3x4H9dY9F.png?imageslim)
+
+再来看下 ` 最大组合分词模式 `。输入如下查询语句。
+
+``` json
+POST _analyze
+{
+  "analyzer": "ik_max_word",
+  "text": "一颗小星星"
+}
+```
+
+` 一颗小星星 ` 被分成了 6 个词语：一颗、一、颗、小星星、小星、星星。
+
+![一颗小星星分词结果](http://cdn.jayh.club/blog/20201007/mEXbb8SfTjhB.png?imageslim)
+
+我们再来看下另外一个中文分词。比如搜索悟空哥聊架构，期望结果：悟空哥、聊、架构三个词语。
+
+实际结果：悟、空哥、聊、架构四个词语。ik 分词器将悟空哥分词了，认为 ` 空哥 ` 是一个词语。所以需要让 ik 分词器知道 ` 悟空哥 ` 是一个词语，不需要拆分。那怎么办做呢？
+
+![悟空哥聊架构分词](http://cdn.jayh.club/blog/20201007/D3PCPzGSeR6g.png?imageslim)
+
+#### 6.6 自定义分词词库
+
+##### 6.6.1 自定义词库的方案
+
+-   方案
+
+  新建一个词库文件，然后在 ik 分词器的配置文件中指定分词词库文件的路径。可以指定本地路径，也可以指定远程服务器文件路径。这里我们使用远程服务器文件的方案，因为这种方案可以支持热更新 ( 更新服务器文件，ik 分词词库也会重新加载 ) 。
+
+-   修改配置文件
+
+ik 分词器的配置文件在容器中的路径：
+
+``` sh
+/usr/share/elasticsearch/plugins/ik/config/IKAnalyzer.cfg.xml。
+```
+
+修改这个文件可以通过修改映射文件，文件路径：
+
+``` sh
+/mydata/elasticsearch/plugins/ik/config/IKAnalyzer.cfg.xml
+```
+
+编辑配置文件：
+
+``` sh
+vim /mydata/elasticsearch/plugins/ik/config/IKAnalyzer.cfg.xml
+```
+
+配置文件内容如下所示：
+
+``` xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>IK Analyzer 扩展配置</comment>
+    <!--用户可以在这里配置自己的扩展字典 -->
+    <entry key="ext_dict">custom/mydict.dic;custom/single_word_low_freq.dic</entry>
+     <!--用户可以在这里配置自己的扩展停止词字典-->
+    <entry key="ext_stopwords">custom/ext_stopword.dic</entry>
+     <!--用户可以在这里配置远程扩展字典 -->
+    <entry key="remote_ext_dict">location</entry>
+     <!--用户可以在这里配置远程扩展停止词字典-->
+    <entry key="remote_ext_stopwords">http://xxx.com/xxx.dic</entry>
+</properties>
+```
+
+修改配置 `remote_ext_dict` 的属性值，指定一个 远程网站文件的路径，比如 http://www.xxx.com/ikwords.text。
+
+这里我们可以自己搭建一套 nginx 环境，然后把 ikwords.text 放到 nginx 根目录。
+
+##### 6.6.2 搭建 nginx 环境
+
+方案：首先获取 nginx 镜像，然后启动一个 nginx 容器，然后将 nginx 的配置文件拷贝到根目录，再删除原 nginx 容器，再用映射文件夹的方式来重新启动 nginx 容器。
+
+-   通过 docker 容器安装 nginx 环境。
+
+``` sh
+docker run -p 80:80 --name nginx -d nginx:1.10
+```
+
+-   拷贝 nginx 容器的配置文件到 mydata 目录的 conf 文件夹
+
+``` sh
+cd /mydata
+docker container cp nginx:/etc/nginx ./conf
+```
+
+-   mydata 目录 里面创建 nginx 目录
+
+``` sh
+mkdir nginx
+```
+
+-   移动 conf 文件夹到 nginx 映射文件夹
+
+``` sh
+mv conf nginx/
+```
+
+-   终止并删除原 nginx 容器
+
+``` sh
+docker stop nginx
+docker rm <容器 id>
+```
+
+-   启动新的容器
+
+```sh
+docker run -p 80:80 --name nginx \
+-v /mydata/nginx/html:/usr/share/nginx/html \
+-v /mydata/nginx/logs:/var/log/nginx \
+-v /mydata/nginx/conf:/etc/nginx \
+-d nginx:1.10
+```
+
+-   访问 nginx 服务
+
+``` sh
+192.168.56.10
+```
+
+报 403 Forbidden, nginx/1.10.3 则表示 nginx 服务正常启动。403 异常的原因是 nginx 服务下没有文件。
+
+-   nginx 目录新建一个 html 文件
+
+``` sh
+cd /mydata/nginx/html
+vim index.html
+hello passjava
+```
+
+-   再次访问 nginx 服务
+
+  浏览器打印 hello passjava。说明访问 nginx 服务的页面没有问题。
+
+-   创建 ik 分词词库文件
+
+``` sh
+cd /mydata/nginx/html
+mkdir ik
+cd ik
+vim ik.txt
+```
+
+填写 ` 悟空哥 `，并保存文件。
+
+-   访问词库文件
+
+``` sh
+http://192.168.56.10/ik/ik.txt
+```
+
+浏览器会输出一串乱码，可以先忽略乱码问题。说明词库文件可以访问到。
+
+-   修改 ik 分词器配置
+
+```sh
+cd /mydata/elasticsearch/plugins/ik/config
+vim IKAnalyzer.cfg.xml
+```
+
+![修改 ik 分词器配置](http://cdn.jayh.club/blog/20201008/G8VyYGe9wf9d.png?imageslim)
+
+-   重启 elasticsearch 容器并设置每次重启机器后都启动 elasticsearch 容器。
+
+``` sh
+docker restart elasticsearch
+docker update elasticsearch --restart=always
+```
+
+-   再次查询分词结果
+
+可以看到 ` 悟空哥聊架构 ` 被拆分为 ` 悟空哥 `、` 聊 `、` 架构 ` 三个词语，说明自定义词库中的 ` 悟空哥 ` 有作用。
+
+![自定义词库后的分词结果](http://cdn.jayh.club/blog/20201008/3g6L6SLJ0GVg.png?imageslim)
+
+### 7. 写在最后
+中篇和下篇继续肝，加油冲呀！
+- 中篇： 实战 ES 应用。
+- 下篇： ES 的集群部署。
+
+我是悟空哥，努力变强，变身超级赛亚人！我们下期见！
+
+
+# 八、压测调优篇
+
+## 8.1 压测、性能监控、性能调优
+
+![本文主要内容](https://img-blog.csdnimg.cn/img_convert/0ead02dc0f4529736802d962985ef0cd.png)
+
+> 开源项目 PassJava 地址：https://github.com/Jackson0714/PassJava-Platform
+>
+> 本文已收录至：www.passjava.cn
+
+### 1. 何为压力测试
+
+#### 1.1、 大白话解释
+
+- 性能压测是什么：就是考察当前`软件`和`硬件`环境下，系统所能承受的`最大负荷`，并帮助找出系统的`瓶颈`所在。
+
+- 性能压测的目的：为了系统在线上的`处理能力`和`稳定性`维持在一个`标准范围`内，做到知己知彼，百战不殆。还可以发现内存泄漏、并发与同步的问题。
+
+#### 1.2、性能指标
+
+- RepsonseTime - RT：响应时间，用户从客户端发起一个请求开始计算，到客户端接收到服务端的响应结束，整个过程所耗费的时间。
+- Hits Per Second - HPS：用户每秒点击次数，也就是每秒向后台发送的请求次数。
+- QPS：系统每秒内处理查询的次数。
+- MaxRT：最大响应时间，指用户发出请求到服务端返回响应的最大时间。
+- MiniRT：最少响应时间，指用户发出请求到服务端返回响应的最少时间。
+- 90%响应时间：将所有用户的响应时间进行升序排序，取 90 % 的位置。
+- 性能测试关注点：
+  - 吞吐量：每秒钟系统能处理的请求数、任务数。
+  - 响应时间：服务处理一个请求或一个任务的耗时。
+  - 错误率：一批请求中结果出过错的请求所占比例。
+
+### 2. Jmeter 压测工具
+
+#### 1、Jmeter 工具
+
+- 下载和安装 Jmeter 工具
+
+```bash
+下载地址：https://jmeter.apache.org/download_jmeter.cgi
+我下载的版本是 apache-jmeter-5.3
+```
+
+![](https://img-blog.csdnimg.cn/img_convert/8b33973211e6af588cea4d66427864ed.png)
+
+- 运行 JMeter 程序
+
+打开批处理文件：\apache-jmeter-5.3\bin\jmeter.bat
+
+![](https://img-blog.csdnimg.cn/img_convert/9394eb8e9e21b096dd718aece354d155.png)
+
+- 添加线程组
+
+![添加线程组](https://img-blog.csdnimg.cn/img_convert/fcb5e7b525cf592cbbe2b061cced6914.png)
+
+- 1s 内启动 200 个线程，循环次数 100 次。2w 个请求。
+
+![](https://img-blog.csdnimg.cn/img_convert/343068fbe24af2f51949faa088efa800.png)
+
+- 测试 HTTP 请求
+
+![](https://img-blog.csdnimg.cn/img_convert/2fb320d0fefdfe8c72a9d629b69efc15.png)
+
+配置要测试的协议、服务器地址、端口号
+
+协议：http
+
+服务器名称或 IP: www.baidu.com (只是为了演示)
+
+端口号：80
+
+![](https://img-blog.csdnimg.cn/img_convert/968761e1e6249c12cfca25af6f9e875f.png)
+
+- 添加察看结果树、汇总报告和聚合报告
+
+![](https://img-blog.csdnimg.cn/img_convert/fa8614816e1e6e04df6730796917c895.png)
+
+- 开始压力测试
+
+  点击播放按钮就开始启动了。注意启动之前需要先设置线程组的参数配置和 HTTP 请求的配置。
+
+![](https://img-blog.csdnimg.cn/img_convert/244d6d62e872037e7ee3de8bb6d20c47.png)
+
+- 查看每个请求结果
+
+![](https://img-blog.csdnimg.cn/img_convert/dad8b755fee01265db1ea22e57db3fa2.png)
+
+- 查看汇总报告
+
+  主要关心平均值和吞吐量。
+
+  200 个线程，每个线程调用 100 次，总共 2 w 次，可以看到下图中表格中的样本列也是 2 w，请求所耗费的时间是 151 ms，吞吐量是 880 个请求每秒。
+
+![](https://img-blog.csdnimg.cn/img_convert/e630f82324d4be550eb4c4dc70b06f17.png)
+
+- 查看聚合报告
+
+主要看中位数和90%百分位，如下图所示，
+
+**中位数**是 59 ms，说明大部分请求的响应时间是 59 ms。
+
+**90 % 的请求** 都是在 271 ms 以内响应完成的。
+
+**异常 0.41%** 说明 2 w 个请求中有 82 个请求异常（20000 * 0.0041 = 82 ）。
+
+**吞吐量 880.2/sec** 说明百度这个网站每秒能处理 880 个请求。性能还算可以。
+
+![](https://img-blog.csdnimg.cn/img_convert/5e5089d18ba60620c051fc945f01485c.png)
+
+- 查看汇总图
+
+查看汇总图时，需要先勾选想要查看的信息
+
+![](https://img-blog.csdnimg.cn/img_convert/501784df9c1aba0599899c5a0535e3de.png)
+
+然后查看图形汇总：
+
+![](https://img-blog.csdnimg.cn/img_convert/cf6d85851b1984343598910d3e0a41c0.png)
+
+可以看到勾选的几列在图表中是用不同颜色表示的，比如绿色的柱状条就是 90 % 百分位。
+
+
+
+我们来测试下 佳必过的管理后台的性能，吞吐量接近 2000/s。
+
+![](https://img-blog.csdnimg.cn/img_convert/308de4ba0b94a7f9667780c2e7797e3e.png)
+
+### 3. 性能监控之 jconsole
+
+jconsole 和 jvisualvm 是 Java JDK 的两个小工具，用来监控内存泄漏、跟踪垃圾回收、执行时的内存情况、对 CPU 进行分析、线程的分析。都可以通过命令行启动，而且可以监控本地和远程应用。而 jvisualvm 是升级版的 jconsole。我们先来看下 jconsole 的使用。
+
+首先用 cmd 命令行的方式启动 jconsole。
+
+#### 3.1 启动 jconsole
+
+![命令行启动 jconsole](https://img-blog.csdnimg.cn/img_convert/4d2f4df5b6fea0d0625bf65e86489817.png)
+
+#### 3.2 选择监控哪个应用
+
+然后选择 passjava 项目的 question 服务。
+
+![选择 passjava-question 微服务](https://img-blog.csdnimg.cn/img_convert/8475056b049e5d8a124472bd7255620b.png)
+
+对应的就是下面这个微服务： passjava-question
+
+![对应 passjava-question 微服务](https://img-blog.csdnimg.cn/img_convert/b6f719d9d74b2294bd2d36333a834f09.png)
+
+#### 3.3 概览
+
+从监控界面上有 6 个菜单，首先看到的是概览功能，上面有堆内存使用量、线程数、类的使用情况、CPU 占用率，都是用趋势图来表示的，能很方便的看出当前性能的概览。注意：这些监控都是实时的。
+
+![概览](https://img-blog.csdnimg.cn/img_convert/d96c05f6fa49da0dcdf2e27ae9a929f8.png)
+
+#### 3.4 内存
+
+下面是内存的使用情况，可以从下图中看到有个下拉框，里面可以选择不同的内存维度，然后下面的图标和柱状图也会跟着选择的维度而展示不同。
+
+![](https://img-blog.csdnimg.cn/img_convert/3779a386c80c7ff619a7d36731e87a70.png)
+
+#### 3.5 线程
+
+下面是线程的使用情况，可以看到线程峰值和活动线程的总数量，目前看到的峰值是59，活动线程数是 57。下半部分可以看到具体是哪些线程，以及线程的堆栈信息，非常详细。
+
+![线程使用情况](https://img-blog.csdnimg.cn/img_convert/41add8f3062004f5bbfa0a9f85740f32.png)
+
+#### 3.6 类
+
+下面是类的加载和卸载情况，已加载类总数是 10679，而已卸载的类是 1 个，所以当前已加装当前类的总数是 10679 - 1 = 10678 个。
+
+![类的加载和卸载情况](https://img-blog.csdnimg.cn/img_convert/f3a8d1b410a99abc32f473b41b7df05b.png)
+
+#### 3.7 VM 概要
+
+我们再来看下VM（虚拟机）的情况。如下图所示，可以看到虚拟机情况，线程、类、堆的概要信息，以及 VM 的参数，是不是很方便呀~
+
+![VM 概要](https://img-blog.csdnimg.cn/img_convert/f3ecca538e4d0d613c76d9770e820e25.png)
+
+#### 3.8 MBean 信息
+
+接下来我们来看下 MBean 信息。对于 MBean，可能很多同学不知道是啥，下面做个解释：
+
+MBean就是一种规范的JavaBean，通过集成和实现一套标准的Bean接口，这种叫MBean。MBean可以用来干嘛？就是可以有一套JDK级别的对外的服务接口。比如，你写了一个JVM允许状态辅助查询的Bean,你希望别人下载一个Jconsole就可以看到你写的杰作。那你就可以考虑用MBean规范来实现。很多垃圾收集器算法Bean就这么干的（说的就是这个类sun.management.MemoryImpl）。
+
+![MBean 信息](https://img-blog.csdnimg.cn/img_convert/ac523e4d74a703c41ffba7b2d2d57bee.png)
+
+### 4. 性能监控之 jvisualvm
+
+jvisualvm 比 jconsole 更强大，界面展示的信息更丰富。
+
+#### 4.1 启动 jvisualvm 和概述
+
+启动方式和 jconsole 一样，也是通过 cmd 命令行启动。还是选择 passjava-question 微服务，然后选择第一个菜单栏：概述。可以看到 JVM 的版本，启动参数等信息。
+
+![启动jvisualvm](https://img-blog.csdnimg.cn/img_convert/a187ba33454ebfc8ea6985805ea578b1.png)
+
+#### 4.2 监视
+
+监视 CPU、堆、类、线程的情况。整体显示的效果比 jconsole 更美观。
+
+![监视](https://img-blog.csdnimg.cn/img_convert/06dde70962d0b051d50d05e88ac03854.png)
+
+#### 4.3 线程
+
+再来查下线程的情况。可以看到有 5 种状态的线程：
+
+- 运行：正在运行的线程。
+- 休眠：休眠状态的线程。
+- 等待：等待执行的线程。
+- 驻留：线程里面的空闲线程。
+- 监视：阻塞的线程，正在等待锁。
+
+![](https://img-blog.csdnimg.cn/img_convert/6c6041a687bfb735e305408bc0a8caaa.png)
+
+#### 4.4 抽样器
+
+另外我们也可以抽样器对 CPU 或内存进行抽样。如下图所示，对内存进行抽样。
+
+![抽样](https://img-blog.csdnimg.cn/img_convert/5c793a79a47a6a0805a9f7127092ba88.png) 
+
+#### 4.5 插件的使用
+
+##### 4.5.1 安装Visual GC 插件
+
+安装步骤：工具->插件->可用插件->Visual GC->安装。安装完成后，重启就可以使用插件功能了。
+
+![](https://img-blog.csdnimg.cn/img_convert/00f53ce5f4c81d28222c0fcf6c2c8a53.png)
+
+安装完成后，就可以看到
+
+![Visual GC 插件](https://img-blog.csdnimg.cn/img_convert/f2ef239cd7fb7d75b82a77dfa9bc51fa.png)
+
+下图是实时监控垃圾回收的情况。
+
+![Visual GC](https://img-blog.csdnimg.cn/img_convert/0c5ad825560521e7abfcfc2a2bc0b2e0.png)
+
+### 5. 对网关的性能测试
+
+现在我想对 Passjava 系统的 question 微服务的接口进行一个压测，该如何进行呢？
+
+首先我们来看下 passjava 的架构是怎么样的，如下图所示：
+
+![](https://img-blog.csdnimg.cn/img_convert/25b921d7571d1060d55eb429206f4056.png)
+
+客户端分为手机端和 PC 端，http 请求先经过 API Gateway，然后再转发到 question 微服务。其中涉及到了中间件：Gateway 网关。
+
+我们来对 Gateway 网关进行压力测试。
+
+网关的端口号是 8060，我们配置下 JMeter。如下图所示：
+
+![](https://img-blog.csdnimg.cn/img_convert/3fb46db6fbb595828cc130e65f4695be.png)
+
+配置每秒发送 200 个请求，一直循环执行，直到手动停止压测。如下图所示：
+
+![](https://img-blog.csdnimg.cn/img_convert/a3ce15fcd12e71df4b4cb80ebc5b3a35.png)
+
+可以看下执行结果，吞吐量在 2422 个每秒，还是比较高的。
+
+吞吐量：2422/s 。
+
+90% 响应时间：142 毫秒。
+
+99% 响应时间：281 毫秒。
+
+![](https://img-blog.csdnimg.cn/img_convert/1c71eae0ac70ff4dd1e8e76807bd1a77.png)
+
+我们再来看看垃圾回收的情况，Eden 区垃圾回收用时 2.7 s，用时太长了吧，看看这里怎么能优化下。
+
+通常的优化方向是增大新生代堆内存配置。
+
+![](https://img-blog.csdnimg.cn/img_convert/6b5ff65b79ed67041846944e698deb3f.png)
+
+### 6. 对微服务的性能测试
+
+根据上面的架构原理图，我们知道客户端请求都是经过 Gateway 转发了一次的，如果我们想单独看下微服务的性能该怎么测试呢？下面我来演示下如何测试 passjava-question 微服务的性能。
+
+首先需要在 passjava-question 微服务中添加一个测试方法：
+
+![测试方法](https://img-blog.csdnimg.cn/img_convert/29cdc005a8e928b7c7ce7b7452568d9f.png)
+
+有两种方式测试这个 api 是否添加正确。
+
+第一种用 postman 测试下这个请求是否能正确响应，返回 “test” 则表示响应正确。
+
+![test api 是否能正确响应](https://img-blog.csdnimg.cn/img_convert/fde60206467bfc8951ad6435e6b14a5c.png)
+
+第二种通过浏览器进行测试。浏览器地址栏输入以下链接后，回车，看下浏览器窗口是否显示 “test”，是则表示响应正确。
+
+然后我们需要用 Jmeter 压测工具来测试这个微服务下的 api 的性能究竟如何。
+
+![单独压测微服务的 api的结果](https://img-blog.csdnimg.cn/img_convert/16f5eae40b8988c2730ddf5c97e2dedf.png)
+
+吞吐量：3542/s 。
+
+90% 响应时间：100 毫秒。
+
+99% 响应时间：152 毫秒。
+
+### 7. 对网关+微服务的性能测试
+
+如果我们想对这个整个请求链路进行性能测试该怎么做？
+
+首先请求需要先经过网关，然后由网关转发到微服务。在之前的文章中，我已经将网关配置好了，所以要想通过网关转发到 test 请求，只需要对请求路径稍作修改即可，如下所示：
+
+```HTML
+http://localhost:8060/api/question/v1/admin/question/test
+```
+
+然后在浏览器输入该网址，返回 “test” 即表示响应正确。
+
+然后我们还是用 Jmeter 压测工具测试下 test api 的性能。测试结果如下图所示：
+
+![网关+微服务的压力测试结果](https://img-blog.csdnimg.cn/img_convert/792c42af8583125e1e5b84013ab14469.png)
+
+从结果可以看到：
+
+吞吐量：982/s 。
+
+90% 响应时间：437 毫秒。
+
+99% 响应时间：790毫秒。
+
+这里做个横向对比：
+
+![横向对比](https://img-blog.csdnimg.cn/img_convert/43c2e652bee5ebd5ee5a509ec76a8644.png)
+
+说明微服务 api 经过网关转发一次后，性能至少下降了一半。可以得出结果：中间件越多，性能损失越大，大部分损失都是网络交互导致的。可以通过增强网络通信质量来减少网络的延迟。
+
+### 8. 对数据库查询进行优化
+
+一般情况下，出现性能问题更多的是业务中查询数据库的耗时。接下来看下如何优化数据的查询。
+
+下面是一个查询问题列表的 api：通过问题类型 type 字段过滤问题列表。api 路径如下：
+
+```html
+http://localhost:11000/question/v1/admin/question/list?type=5
+```
+
+这个 api 的代码如下，很容易看懂。
+
+![查询问题列表的 api](https://img-blog.csdnimg.cn/img_convert/899a7637f378aa37de27f72d50ebe45c.png)
+
+我们加些测试代码：统计查询数据库的耗时。如下所示：
+
+![耗时统计](https://img-blog.csdnimg.cn/img_convert/18e11d292f3589bc68f0923f64af96cc.png)
+
+然后重启 passjava-question 服务，再次测试这个 api，耗时 43 ms
+
+![](https://img-blog.csdnimg.cn/img_convert/f4f49bbdbed6360495dbc33438cf6051.png)
+
+怎么对查询进行优化呢？很容易想到加索引，我们来试下加在 question 表加索引后的效果。给 type 字段加上普通索引，如下图所示：
+
+![添加索引](https://img-blog.csdnimg.cn/img_convert/9bc76b5870c0a3b8480f03ec61d72480.png)
+
+我们再来看下加了索引后的耗时情况：耗时 18 ms，确实比之前的 43 ms 快了很多。
+
+![加了索引后的情况](https://img-blog.csdnimg.cn/img_convert/d9f8d38ae103359594134e47da6dd9cd.png)
+
+### 9. 优化垃圾回收
+
+我们可以通过 jvisulavm工具查看垃圾回收的情况，Eden 区频繁发生 GC，短时间（1分钟）内共造成了 480 次 stop the world。另外从压测工具中也可以看到，吞吐量为 275/s。
+
+原因是 Eden 区的内存分配得太小了，只有 32 M，我们来调大一点。
+
+![32M Eden 区频繁进行垃圾回收](https://img-blog.csdnimg.cn/img_convert/7704b030fba57010fbeb91334621e14a.png)
+
+#### 9.1 增大 Eden 区大小
+
+通过在 IDEA 工具中配置以下参数，调整堆内存最大为 1024 M，新生代内存为 512 M。
+
+```
+-Xmx1024m -Xms1024m -Xmn512m
+```
+
+然后可以观察到在短时间（1分钟）内只进行了 92 次垃圾回收，说明垃圾回收的频率降低了。应用程序的性能也提升了。另外从压测工具中也可以看到，吞吐量为 347/s，吞吐量也有较大提升。
+
+![](https://img-blog.csdnimg.cn/img_convert/86cbe05e08def8bbc92d30c9cf1c86e2.png)
+
+### 10. 总结
+
+本文通过压测工具 Jmeter 讲解压测如何实施，然后用性能监控工具 jconsole 和 jvisualvm 来监控 Java 应用程序的性能，以及如何用工具来优化开源项目 passjava 的性能，并且非常详细地介绍了每一步以及执行结果，通过对比的方式，更加清晰地知道如何做性能优化。
+
+下面是对系统性能的常规优化手段：
+
+- 中间件较多时，优化网络通信质量。
+
+- 数据库查询耗时时，需要对查询进行优化，比如添加索引。
+- 模板的渲染速度，可以通过设置模板缓存。
+- 静态资源的获取，可以通过 Nginx 动静分离来解决。（下期再讲）
+- 日志太多，需要减少不必要的打 log 操作。
+
+
+
+巨人的肩膀：
+
+https://blog.csdn.net/u010833547/article/details/92806510
+https://www.bilibili.com/video/BV1np4y1C7Yf
+https://github.com/Jackson0714/PassJava-Platform
+www.passjava.cn
+
+> **作者简介**：悟空，8年一线互联网开发和架构经验，用故事讲解分布式、架构设计、Java 核心技术。《JVM性能优化实战》专栏作者，开源了《Spring Cloud 实战 PassJava》项目，自主开发了一个 PMP 刷题小程序。
