@@ -1,14 +1,15 @@
-# PassJava 刷题小程序开源啦
+本文主要内容如下：
+![](https://img-blog.csdnimg.cn/img_convert/c1ef95d8cccc194b72a7688a0a32bfa9.png)
 
-## 前言
+## 一、缘起
 
 PassJava 开源项目是一个`面试刷题`的开源系统，后端采用 Spring Cloud 微服务可以用零碎时间利用`小程序`查看常见面试题，夯实Java 技术栈，当然题库不限于 Java，还有微服务。
 
-之前有读者问我小程序开源么，因为小程序的代码还不够完善，所以没有开源。
+之前有读者问我小程序开源么，因之前在写分布式算法系列的文章，所以开源项目中断了一段时间，现在继续更新开源项目。
 
 为了让读者朋友们更好地学习该项目，我已经将小程序代码开源。
 
-![](http://cdn.jayh.club/uPic/image-20210408151208528.png)
+![](https://img-blog.csdnimg.cn/img_convert/5a55f92bf35abdb98ecfe528f307aac8.png)
 
 小程序的代码地址在 github 上面，别忘记点个 star，素质三连哈～
 
@@ -16,17 +17,17 @@ PassJava 开源项目是一个`面试刷题`的开源系统，后端采用 Sprin
 
 小程序体验码如下：
 
-![](http://cdn.jayh.club/uPic/687474703a2f2f63646e2e6a6179682e636c75622f626c6f672f32303230303430352f696b386834554974646e53412e6a70673f696d616765736c696d.jpeg)
+![](https://img-blog.csdnimg.cn/img_convert/baa49eb4c0231f3a5edc7bdc2be68159.png)
 
 小程序界面：
 
-![](http://cdn.jayh.club/uPic/687474703a2f2f63646e2e6a6179682e636c75622f626c6f672f32303230303430352f706a664a4e66756958566e462e676966.gif)
+![](https://img-blog.csdnimg.cn/img_convert/540a24d6907aeff93bc053385d1c4eb9.gif)
 
 小程序有两个版本：云开发版和进阶版。下面分别进行介绍。
 
-## 一、云开发版
+## 二、云开发版
 
-### 1.1 小程序简介
+### 2.1 小程序简介
 
 小程序·云开发是微信团队联合腾讯云推出的专业的小程序开发服务。
 
@@ -34,13 +35,15 @@ PassJava 开源项目是一个`面试刷题`的开源系统，后端采用 Sprin
 
 开发者无需搭建服务器，可免鉴权直接使用平台提供的 API 进行业务开发。
 
-**优势**：
+#### 2.1.1 优势：
 
 - 无需搭建服务器，只需使用平台提供的各项能力，即可快速开发业务。
 - 无需管理证书、签名、秘钥，直接调用微信 API 。复用微信私有协议及链路，保证业务安全性。
 - 支持环境共享，一个后端环境可开发多个小程序、公众号、网页等，便捷复用业务代码与数据。
 - 开发者可以使用任意语言和框架进行代码开发，构建为容器后，快速将其托管至云开发。
 - 支持按量计费模式，后端资源根据业务流量自动扩容，先使用后付费，无需支付闲置成本。
+
+#### 2.1.2 特点
 
 **云数据库**：文档型数据库，稳定可靠；支持在小程序端和云函数中调用。
 
@@ -50,37 +53,44 @@ PassJava 开源项目是一个`面试刷题`的开源系统，后端采用 Sprin
 
 **云托管**：支持托管服务容器，不限框架和语言，常驻运行、天然鉴权，可快速进行业务迁移
 
-### 1.2 小程序下载使用
+#### 2.1.3 缺点
 
-### 1.2.1 题库简介
+- 适合个人开发。
+- 按照流量付费，访问人多了的话，需要购买流量。
+- 因服务端是腾讯自带的，所以不能使用其他后端中间件来实现功能增强，比如 Redis，RabbitMQ。
+- 数据库和存储也是腾讯自带的，所以不能使用其他数据库和存储，比如 mysql、阿里云。
+
+### 2.2 小程序下载使用
+
+#### 2.2.1 题库简介
 
 题库功能如下图所示：
 
 - 第一步：进入到选择题目类型。这里有 12 种类别，点击其中一个可跳转到题目列表页。
 
-![题目类型](http://cdn.jayh.club/uPic/image-20210409104555914.png)
+![题目类型](https://img-blog.csdnimg.cn/img_convert/bdeb3527ca89fe05f7505dc7c1411a21.png)
 
 - 第二步：进入到题库列表页。下图是 Spring 题库列表页，可以点击查看进入到题目的详情页。
 
-![Spring 题库](http://cdn.jayh.club/uPic/image-20210409105317188.png)
+![Spring 题库](https://img-blog.csdnimg.cn/img_convert/ae9436f90577cf36f5944d9b14552e72.png)
 
 - 第三步：进入到题目详情页。如下图所示就是 spring 面试题的详情页，加载的内容就是上传到云存储的 markdown 文件。后面会讲解如何上传题目。
 
-![题目详情页](http://cdn.jayh.club/uPic/image-20210409105431567.png)
+![题目详情页](https://img-blog.csdnimg.cn/img_convert/f83181dc35b5b803568923ff2ff0acc5.png)
 
-### 1.2.2 上传题目
+#### 2.2.2 上传题目
 
 要用这套云开发版的小程序的话，需要先上传题目文件到云存储。
 
 如下图所示，我上传了很多 markdown 文件，大家可以自行编写 markdown 文件，每一个文件对应一个题目，里面的内容是题目的问题+答案。
 
-![image-20210408155451254](http://cdn.jayh.club/uPic/image-20210408155451254.png)
+![image-20210408155451254](https://img-blog.csdnimg.cn/img_convert/49bd12de1c695dcc2adf030119bd804b.png)
 
-### 1.2.3 添加题目记录
+#### 2.2.3 添加题目记录
 
 然后需要在数据库中插入数据，来提供给小程序查询。
 
-![](http://cdn.jayh.club/uPic/image-20210408171322177.png)
+![](https://img-blog.csdnimg.cn/img_convert/5c4065288a393d200b7a3dc91098009c.png)
 
 我导出了一条记录，大家可以直接插入到数据库中。
 
@@ -102,11 +112,11 @@ PassJava 开源项目是一个`面试刷题`的开源系统，后端采用 Sprin
 - subTitle：题目的副标题。
 - type：题目的类型，目前有 `javaBasic`、`jvm`、`spring` 等 12 种。也可以自行添加。
 
-![共 12 种](http://cdn.jayh.club/uPic/image-20210409104027249.png)
+![共 12 种](https://img-blog.csdnimg.cn/img_convert/1258270a9f9bbcad347a4e65110ebbe3.png)
 
 markdown 格式的题目已经上传到了 github，目前只有部分，欢迎大家 commit。
 
-``` http
+```http
 https://github.com/Jackson0714/passJavaKnowledge/tree/master
 ```
 
@@ -114,16 +124,66 @@ https://github.com/Jackson0714/passJavaKnowledge/tree/master
 
 因小程序主要是用来刷题，附加的功能比如 banner 广告位、热点推荐我就不在这里介绍了。
 
-## 二、进阶版
+对于有些同学来说，云开发还比较陌生，需要多看看官方文档熟悉下才能熟练进行二次开发。
 
-该项目的小程序进阶版指的是不用云开发，后端采用 Spring Cloud 微服务作为服务支撑，数据库也不是云数据库了，而是 mysql。
+## 三、进阶版
+
+该项目的小程序进阶版指的是不用云开发，后端采用 Spring Cloud 微服务作为服务支撑，数据库也不是云数据库了，而是 mysql。Rest 版本虽然目前还不完善，但已经和后端打通。
+
+### 3.1 使用条件
+
+目前需要以下条件才能将前端和后端连起来一起用：
+
+- 本地后台微服务启动成功。
+
+  目前要求 passjava-gateway、passjava-question、renren 启动成功。
+
+![](https://img-blog.csdnimg.cn/img_convert/ec70fd21f373f2fd12d4add379c96df1.png)
+
+- MySQL 数据库和表结构创建成功。
+
+  数据库文件在 \data\sql 目录，需要都执行。执行成功后，业务表总共有 5 个业务模块， 7 张表，如下图所示：
+
+![](https://img-blog.csdnimg.cn/img_convert/1e3cda87a301c17032766628c81aaecd.png)
+
+- Nacos 服务启动成功且已配置好微服务的相关配置。
+
+  如何配置可参考前面的文章。访问地址：http://192.168.56.1:8848/nacos。访问 Nacos，并登陆 Nacos 后，如下图所示：
+
+![](https://img-blog.csdnimg.cn/img_convert/d7e843262d5a0b48504cf6e97890c76d.png)
+
+- passjava-portal 管理控制台启动成功。
+
+  通过 http://localhost:8001/ 访问。
+
+![](https://img-blog.csdnimg.cn/img_convert/152288df8443882abc3742b28348da57.png)
+
+- 题目管理功能正常使用。
+
+  可以创建题目类型和创建题目。
+
+![](https://img-blog.csdnimg.cn/img_convert/a78a5b4728d2726466e8685d5295a2cf.png)
+
+- 打开小程序代码正常。
+
+  另外需要注意下，Rest 版目前的首页题目类型和题目列表正在开发中，所以还是用的云函数，获取题目用到的 id 是 1。目前阶段仅供学习，本人时间有限，欢迎大家来帮助 commit。
+
+![](https://img-blog.csdnimg.cn/img_convert/71eb562dee22c9614315cacee43aad8b.png)
+
+## 四、开源地址
+
+我把后端、前端、小程序都上传到同一个仓库里面了，大家可以通过 github 或 码云访问。地址如下：
+
+> **Github**: https://github.com/Jackson0714/PassJava-Platform
+>
+> **码云**：https://gitee.com/jayh2018/PassJava-Platform
+>
+> **配套教程**：www.passjava.cn
+
+调试代码是个辛苦活，精力有限，在写技术文章时，还需要抽出时间倒腾这个开源项目，所以是否值得一赞？
 
 
 
-
-
-
-
-参考资料
+参考资料：
 
 https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html
