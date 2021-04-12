@@ -78,7 +78,7 @@ PassJava 开源项目是一个`面试刷题`的开源系统，后端采用 Sprin
 
 ![题目详情页](https://img-blog.csdnimg.cn/img_convert/f83181dc35b5b803568923ff2ff0acc5.png)
 
-#### 2.2.2 上传题目
+#### 2.2.3 上传题目
 
 要用这套云开发版的小程序的话，需要先上传题目文件到云存储。
 
@@ -122,7 +122,29 @@ https://github.com/Jackson0714/passJavaKnowledge/tree/master
 
 另外我还有 1000 道面试题的 pdf 也可以用作题库，需要的同学在公众号后台回复`悟空`领取下。
 
-因小程序主要是用来刷题，附加的功能比如 banner 广告位、热点推荐我就不在这里介绍了。
+### 2.3 小程序原理
+
+小程序原理图如下：
+
+![](http://cdn.jayh.club/uPic/image-20210411092400523.png)
+
+原理图说明：
+
+1）调用 自己编写的云函数 getJavaQuestionList 获取列表；
+
+2）调用 自己编写的云函数 getJavaQuestionDetail 获取详情的 Markdown文件路径；
+
+3）调用 系统自带的云函数 downloadFile 下载 Markdown文件保存为临时文件；
+
+4）调用 小程序自带的 saveFileSync 将临时文件保存到本地；
+
+5）调用 小程序自带的 readFileSync 将本地文件读入缓存（注意：开发者工具上不需要保存到本地也可以正常读取）；
+
+6）使用 towxml 开源组件将缓存中markdown内容转成小程序可以识别的元素
+
+7）给 图片元素添加预览事件
+
+因小程序主要是用来刷题，附加的功能比如 banner 广告位、热点推荐等就不在这里介绍了。
 
 对于有些同学来说，云开发还比较陌生，需要多看看官方文档熟悉下才能熟练进行二次开发。
 
