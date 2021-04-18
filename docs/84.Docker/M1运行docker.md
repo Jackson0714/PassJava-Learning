@@ -1,0 +1,246 @@
+# M1 和 Docker 谈了个恋爱
+
+## 前言
+
+出于开源项目的需要，我准备把之前在 Windows 下运行的开源项目`移植`到 Mac 上跑得试下，但是 Mac M1 芯片并不能很好地支持 Docker，这不，发现 Docker 也`正式`支持 Mac 了，M1 看了 Docker 的芳容，竟悄悄爱上了 Docker。
+
+本文主要内容如下：
+
+![](http://cdn.jayh.club/uPic/image-20210417230452474.png)
+
+## 一、官宣
+
+### 1.1 官宣版
+
+之前 Docker 只支持在 Intel 芯片的 X86 架构上运行，Docker 已经正式支持苹果 M1 芯片了，而 M1 芯片是 ARM 架构的，所以说 Docker 真的是太强大了，短短几个月就适配了苹果最新的系统！
+
+**这不就是官宣 Docker 帅哥要追 M1 妹纸么？**
+
+悟空到官网上看了下，2021-04-15 发布的正式版：Docker Desktop 3.3.1，而且可以直接下载。
+
+> 官网地址：https://docs.docker.com/docker-for-mac/apple-silicon/
+
+![](http://cdn.jayh.club/uPic/image-20210417092714074.png)
+
+这个 Desktop 包含很多功能：
+
+- Docker Engine
+- Docker CLI client
+- Docker Compose
+- Notary
+- Kubernetes
+- Credential Helper
+
+另外在 M1 上运行 Docker 还有些条件需要满足。
+
+### 1.2 要求
+
+因为 M1 比较前卫，所以需要安装 Rosetta 软件来进行兼容。
+
+必须安装 Rosetta ，因为某些二进制文件仍是Darwin / AMD64。要从命令行手动安装Rosetta 2，请运行以下命令：
+
+```
+softwareupdate --install-rosetta
+```
+
+Docker 官方有望在将来的版本中修复此问题。
+
+### 1.3 磨合
+
+Docker 和 M1 还有许多地方需要磨合：
+
+- 并不是所有镜像都可以用于 M1 的 ARM64 架构，比如 mysql 镜像就不适合。但可以通过使用 mariadb 镜像来解决此问题。
+
+我试了下，确实没有合适的 mysql 镜像。
+
+![](http://cdn.jayh.club/uPic/image-20210417220616837.png)
+
+- 由于QEMU有时无法运行容器，因此在 Apple Silicon计算机上运行基于Intel的容器可能会导致崩溃。我们建议您在Apple Silicon计算机上运行 ARM64  容器。与基于Intel的容器相比，这些容器还更快并且使用的内存更少。
+- `ping`从容器内部到 Internet 的连接无法正常工作。要测试网络，我们建议使用`curl`或`wget`。
+- 当TCP流半关闭时，用户有时可能会遇到数据丢失的情况。
+
+## 二、手拉手
+
+### 2.1 左手拉右手
+
+之前在 Linux 环境安装 Docker 是通过命令行安装的，但是在 Mac 上有客户端可以使用，确实方便很多。安装 Mac 版的 Docker非常方便，下载完成后的文件名叫做 Docker.dmg。双击文件后，弹出如下界面，把 Docker.app 图标拖到右边 Appliactions 就可以了，就像`左手拉右手`。
+
+**Docker 帅哥成功牵手 M1。**
+
+![](http://cdn.jayh.club/uPic/image-20210417204005532.png)
+
+安装完成后，在应用程序中找到 Docker，双击打开就可以了。
+
+![](http://cdn.jayh.club/uPic/docker-app-in-apps.png)
+
+接着就可以看到 Docker 在菜单栏中有显示。
+
+![](http://cdn.jayh.club/uPic/image-20210417201245474.png)
+
+### 2.2 启动容器
+
+打开的界面，会提示没有容器正在运行，客户端提示执行以下命令启动一个新的容器。
+
+``` sh
+docker run -d -p 80:80 docker/getting-started
+```
+
+![](http://cdn.jayh.club/uPic/image-20210417201832116.png)
+
+我们将命令拷贝到控制台后运行，如下图所示：
+
+![](http://cdn.jayh.club/uPic/image-20210417202254073.png)
+
+然后我们来check 下容器是否创建和启动成功。通过以下命令来查看 docker 容器的运行状态。
+
+``` sh
+docker ps
+```
+
+![](http://cdn.jayh.club/uPic/image-20210417202818190.png)
+
+我们同样可以通过 Docker 客户端来查看容器状态：容器正在运行中，对应的端口号是 80。如下图所示：
+
+![](http://cdn.jayh.club/uPic/image-20210417203007992.png)
+
+另外我们也可以看下有哪些镜像已经下载好了，如下图所示，目前有一个镜像：docker/getting-started。
+
+![](http://cdn.jayh.club/uPic/image-20210417213349739.png)
+
+### 2.3 Intel & Apple
+
+我们打开活动监视器，可以看到打开的 docker 进程既有 Apple 架构的，也有 Intel 架构的，比如桌面 UI 用的是 Intel 架构的，但 Docker 核心应用程序用的 Apple 架构，说明虽然有部分用的 Intel 架构，但核心还是 Apple 架构，不影响使用。
+
+![](http://cdn.jayh.club/uPic/image-20210417081948536.png)
+
+再来看下内存使用情况，12 个进程，总共占用 430 M 内存，说明占用的内存并不高，性能还是可以的。
+
+![](http://cdn.jayh.club/uPic/image-20210417230901123.png)
+
+## 三、暖男
+
+Docker 客户端还有一系列人性化的配置，优质暖男一枚。来看下有什么配置吧。
+
+### 3.1 通用偏好设置
+
+Docker 客户端，有很多人性化的通用设置。如下图所示：
+
+![](http://cdn.jayh.club/uPic/image-20210417213925595.png)
+
+- **自动检查更新**：默认情况下，Docker Desktop配置为自动检查较新版本。如果您作为组织的一员安装了Docker Desktop，则可能无法自己更新 Docker Desktop。在这种情况下，请将您现有的组织升级为团队计划，然后清除此复选框以禁用自动检查更新。
+- **登录时启动 Docker Desktop**：打开会话时自动启动Docker Desktop。
+- **在 Time Machine 备份中包括 VM**：选择此选项以备份 Docker Desktop 虚拟机。默认情况下未勾选此选项。
+- **使用 gRPC FUSE 进行文件共享**：清除此复选框可改用旧版 osxfs 文件共享。
+- **发送使用情况统计信息**：Docker Desktop发送诊断、崩溃报告和使用情况数据。此信息可帮助Docker 改善应用程序并进行故障排除。
+- **显示每周提示**：显示有关使用Docker的有用建议。
+- **启动时打开 Docker Desktop 仪表板**：启动 Docker Desktop 时自动打开仪表板。
+
+### 3.2 资源高级配置
+
+还有些关于资源的高级配置也非常强大，来瞧一瞧吧。
+
+![](http://cdn.jayh.club/uPic/image-20210417215444423.png)
+
+- **CPU**：默认情况下，Docker Desktop设置为使用主机上可用处理器数量的一半。要提高处理能力，请将其设置为更高的数字。
+- **内存**：默认情况下，Docker Desktop设置为使用`2`GB运行时内存，该内存是从Mac上的总可用内存分配的。要增加RAM，请将其设置为更大的数字，如果要减少它，请降低数字。
+- **交换**：根据需要配置交换文件的大小，默认值为1 GB。
+- **磁盘映像大小**：指定**磁盘映像的大小**。
+- **磁盘映像位置**：指定Linux卷的容器和映像的存储位置。
+
+microzheng，早上好～我的#公众号：悟空聊架构，投稿一篇文章：
+
+文章标题：M1 和 Docker 谈了个恋爱...
+
+文章链接：https://mp.weixin.qq.com/s/zrYC_E4-3aMPwqF4X2uabg
+
+文章亮点：
+
+1.趣谈正式版 Docker 在 M1 上的使用。
+
+2.与您的号的内容有相似之处，如果转载相信也能产生不错的效果。
+
+
+
+
+
+### 3.3 K8S
+
+Docker Desktop 竟然直接支持 kubernets(K8S) ，太酷了吧！
+
+![](http://cdn.jayh.club/uPic/image-20210417215941186.png)
+
+Docker Desktop 包含一个可在 Mac 上运行的独立 Kubernetes 服务器，因此可以测试在Kubernetes上部署 Docker 的工作负载。要启用Kubernetes支持并安装作为Docker容器运行的Kubernetes独立实例，请选择**Enable Kubernetes**。
+
+还有很多非常有用的功能，这里就不一一介绍了，感兴趣的可以到官网上查看哦～
+
+Docker 对于 M1 来说，绝对是优质暖男一枚！实锤了！🔨
+
+## 四、约会
+
+说了 Docker 的那么多优点，M1 终于愿意和 Docker 谈恋爱了，他们第一个`约会活动`就是**实战 Redis**。
+
+### 4.1 下载 Redis 镜像
+
+先让 Docker 下载个 Redis 镜像试下：
+
+```sh
+sudo docker pull redis
+```
+
+![](http://cdn.jayh.club/uPic/image-20210417230149880.png)
+
+我们可以通过 Docker 客户端来看下镜像是否下载成功，如下图所示，确实下载成功。另外也可以通过命令 docker ps 查看。
+
+![](http://cdn.jayh.club/uPic/image-20210417222732818.png)
+
+### 4.2 启动 Redis
+
+- 启动 redis
+
+```sh
+docker run -d -p 6379:6379 redis
+```
+
+![](http://cdn.jayh.club/uPic/image-20210417223500915.png)
+
+### 4.3 连接redis
+
+```sh
+docker exec -it <容器 id> redis-cli
+```
+
+需要通过 docker ps 找到 redis 容器 id，我的机器上运行的 redis 容器 id 是 17c...，命令中可以简写，只要能识别这个容器就可以。
+
+![](http://cdn.jayh.club/uPic/image-20210417224004684.png)
+
+连接成功后，会进入到 redis 命令行。
+
+### 4.4 测试 Redis
+
+设置a=100，返回OK
+
+```sh
+set a 100
+```
+
+获取a的值，返回"100"
+
+```sh
+get a
+```
+
+![](http://cdn.jayh.club/uPic/image-20210417224408580.png)
+
+说明 docker 在 M1 上 完美运行 Redis。
+
+另外我的开源项目中要用 Elasticsearch 和 Kibana，但是都没有适配的镜像，这就很难受了啊！
+
+![](http://cdn.jayh.club/uPic/image-20210417225617807.png)
+
+**看来 Docker 和 M1 还有很长的路要走**，谈恋爱`磕磕碰碰`很正常，需要`磨合`的还有很多，但悟空相信他们最终一定会走到一起，并过上幸福的日子～
+
+参考资料：
+
+www.passjava.cn
+https://github.com/Jackson0714/PassJava-Platform
+https://docs.docker.com/docker-for-mac/apple-silicon
