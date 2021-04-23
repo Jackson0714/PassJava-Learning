@@ -5,6 +5,7 @@
     * [3.微服务划分图](01.项目简介/3.微服务划分图.md)
     * [4.项目技术和特色](01.项目简介/4.项目技术和特色.md)
     * [5.项目前置要求](01.项目简介/5.项目前置要求.md)
+    * [7.项目前置要求](01.项目简介/7.本地部署项目Mac版.md)
 
 * 二、PassJava 架构篇
     * [01.创建项目和添加模块](02.PassJava架构篇/01.创建项目和添加模块.md)
@@ -21,10 +22,11 @@
     * [12.SpringCloud整合OSS对象存储](02.PassJava架构篇/12.SpringCloud整合OSS对象存储.md)
     * [13.SpringCloud整合统一异常处理](02.PassJava架构篇/13.整合统一异常处理.md)
     * [14.Elasticsearch上篇（原理）](02.PassJava架构篇/14.Elasticsearch原理.md)
-    * [15.Elasticsearch中篇（实战）更新中](02.PassJava架构篇/14.Elasticsearch实战)
-    * [16.Elasticsearch下篇（集群部署）更新中](02.PassJava架构篇/14.Elasticsearch集群部署)
+    * [15.Elasticsearch中篇（实战）](02.PassJava架构篇/15.Elasticsearch实战)
+    * [16.Elasticsearch下篇（集群部署）更新中](02.PassJava架构篇/16.Elasticsearch集群部署)
     * [17.微服务架构中的链路追踪](02.PassJava架构篇/17.微服务架构中的链路追踪.md)
     * [18.48张图手摸手教你性能压测](02.PassJava架构篇/18.48张图手摸手教你性能压测.md)
+    * [19.缓存实战（上篇）](02.PassJava架构篇/19.缓存实战（上篇）.md)
 
 * 三、并发多线程
     * [01.反制面试官-14张原理图-再也不怕被问volatile!](10.并发多线程/01.反制面试官-14张原理图-再也不怕被问volatile!.md)
@@ -98,6 +100,8 @@
     - [05.docker安装redis](05.安装部署篇/05.docker安装redis.md)
     - [06.本地开发环境配置](05.安装部署篇/06.本地开发环境配置.md)
     - [07.配置git](05.安装部署篇/07.配置git.md)
+    - [08.Windows安装mysql](05.安装部署篇/08.Windows安装mysql.md)
+    - [09.配置git](05.安装部署篇/09.M1运行Docker.md)
 
 * 九、PassJava业务篇
 
