@@ -4,6 +4,12 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 
 # PassJava 学习教程
 
+## 部署教程
+
+- [Mac M1 部署项目](http://www.passjava.cn/#/01.项目简介/7.本地部署项目Mac版)
+
+Windows 版正在更新中，可参考 Mac 版的部署教程。
+
 ## 简介
 
 - PassJava-Learning项目是PassJava（佳必过）项目的学习教程。对架构、业务、技术要点进行讲解。
@@ -174,6 +180,8 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 - [05.Docker安装redis](http://www.passjava.cn/#/05.安装部署篇/05.docker安装redis)
 - [06.本地开发环境配置](http://www.passjava.cn/#/05.安装部署篇/06.本地开发环境配置)
 - [07.配置Git](http://www.passjava.cn/#/05.安装部署篇/07.配置git)
+
+- [08.Mac 部署项目](http://www.passjava.cn/#/01.项目简介/7.本地部署项目Mac版)
 
 ## 架构图解
   
