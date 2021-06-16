@@ -1423,7 +1423,7 @@ pom文件添加依赖
 - lombok依赖
 
   ``` xml
-<!--lombok 不需要写getter,setter方法了-->
+  <!--lombok 不需要写getter,setter方法了-->
   <dependency>
     <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
