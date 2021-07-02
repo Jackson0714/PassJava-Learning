@@ -75,6 +75,7 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 - [29.缓存实战（一）](http://www.passjava.cn/#/02.PassJava架构篇/19.缓存实战（一）.md)
 - [30.缓存实战（二）Redis分布式锁](http://www.passjava.cn/#/02.PassJava架构篇/22.缓存实战（二）Redis分布式锁.md)
 - [31.缓存实战（三）Redisson分布式锁](http://www.passjava.cn/#/02.PassJava架构篇/23.缓存实战（三）Redisson分布式锁.md)
+- [32.缓存实战（四）实战 Spring Cache](http://www.passjava.cn/#/02.PassJava架构篇/24.缓存实战（四）SpringCache.md)
 
 ## 小程序演示
 
@@ -117,7 +118,8 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 - [29.缓存实战（一）](http://www.passjava.cn/#/02.PassJava架构篇/19.缓存实战（一）.md)
 - [30.缓存实战（二）Redis分布式锁](http://www.passjava.cn/#/02.PassJava架构篇/22.缓存实战（二）Redis分布式锁.md)
 - [31.缓存实战（三）Redisson分布式锁](http://www.passjava.cn/#/02.PassJava架构篇/23.缓存实战（三）Redisson分布式锁.md)
-- 
+- [缓存实战（四）实战 Spring Cache](http://www.passjava.cn/#/02.PassJava架构篇/24.缓存实战（四）SpringCache.md)
+
 ## Java并发多线程
 
 > 从源码层面详细讲解并发多线程
@@ -207,6 +209,9 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 ## 架构图解
   
 - [01.微服务架构中的两款流量防卫兵](http://www.passjava.cn/#/89.架构图解/01.微服务架构中的两款流量防卫兵.md)
+- [02.浅析扣减库存的方案设计](http://www.passjava.cn/#/89.架构图解/02.浅析扣减库存的方案设计.md)
+- [03.订单系统中的补偿事务设计](http://www.passjava.cn/#/89.架构图解/03.订单系统中的补偿事务设计.md)
+- [04.请警惕Elasticsearch的三大坑](http://www.passjava.cn/#/89.架构图解/04.请警惕Elasticsearch的三大坑.md)
 
 ## LeetCode刷题
 - [LeetCode数组第一题](http://www.passjava.cn/#/92.LeetCode算法题/01.数组/001.两数之和-数组-LeetCode第1题)
