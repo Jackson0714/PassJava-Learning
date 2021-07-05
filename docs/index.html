@@ -114,6 +114,7 @@
     if (title != null) {
       title = location.hash.match(/#(.*?)([?]|$)/)[1]
     }
+    title = decodeURI(title.substring(1, title.length))
 
     const gitalk = new Gitalk({
       clientID: '7de8e380bec2231f0544',
