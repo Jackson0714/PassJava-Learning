@@ -110,6 +110,11 @@
   <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
   <script>
     // 生成 gitalk 插件
+    title = location.hash.match(/#(.*?)([?]|$)/)
+    if (title != null) {
+      title = location.hash.match(/#(.*?)([?]|$)/)[1]
+    }
+
     const gitalk = new Gitalk({
       clientID: '7de8e380bec2231f0544',
       clientSecret: '04347ec3cc38b5cef2c15938a3142c1836ed54fd',
@@ -118,9 +123,9 @@
       admin: ['Jackson0714'],
       // facebook-like distraction free mode
       distractionFreeMode: false,
-      //title: location.hash.match(/#(.*?)([?]|$)/)[1],
-      //id: location.hash.match(/#(.*?)([?]|$)/)[1],
-      id: location.pathname
+      title: title,
+      id: title,
+      //id: location.pathname
     })
     // 监听URL中hash的变化，如果发现换了一个MD文件，那么刷新页面，解决整个网站使用一个gitalk评论issues的问题。
     window.onhashchange = function(event){
