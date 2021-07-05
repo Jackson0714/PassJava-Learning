@@ -116,7 +116,10 @@
     }
     
     if (title != null) {
-      decodeURI(title.substring(1, title.length))
+      title = decodeURI(title.substring(1, title.length))
+      if (title.length >= 50) {
+        title = title.substring(title.length - 50, title.length)
+      }
     } else {
       title = 'home page'
     }
