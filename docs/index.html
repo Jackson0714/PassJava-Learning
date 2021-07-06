@@ -115,6 +115,7 @@
       title = location.hash.match(/#(.*?)([?]|$)/)[1]
     }
     
+    // 限制 50 个字符
     if (title != null) {
       title = decodeURI(title.substring(1, title.length))
       if (title.length >= 50) {
@@ -131,7 +132,7 @@
       owner: 'Jackson0714',
       admin: ['Jackson0714'],
       // facebook-like distraction free mode
-      distractionFreeMode: false,
+      distractionFreeMode: true,
       title: title,
       id: title,
       //id: location.pathname
