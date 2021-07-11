@@ -26,7 +26,6 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 
 :heavy_check_mark: [小程序部署教程](https://github.com/Jackson0714/PassJava-Platform/blob/master/passjava-miniApp/README.md)
 
-
 ## 简介
 
 - PassJava-Learning项目是PassJava（佳必过）项目的学习教程。对架构、业务、技术要点进行讲解。
@@ -145,7 +144,7 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 - [10.区块链12问和Pow算法](http://www.passjava.cn/#/92.分布式/10.区块链12问.md)
 
 ## 架构设计
-  
+
 - [01.微服务架构中的两款流量防卫兵](http://www.passjava.cn/#/89.架构图解/01.微服务架构中的两款流量防卫兵.md)
 - [02.浅析扣减库存的方案设计](http://www.passjava.cn/#/89.架构图解/02.浅析扣减库存的方案设计.md)
 - [03.订单系统中的补偿事务设计](http://www.passjava.cn/#/89.架构图解/03.订单系统中的补偿事务设计.md)
