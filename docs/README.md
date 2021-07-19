@@ -149,6 +149,7 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 - [02.浅析扣减库存的方案设计](http://www.passjava.cn/#/89.架构图解/02.浅析扣减库存的方案设计.md)
 - [03.订单系统中的补偿事务设计](http://www.passjava.cn/#/89.架构图解/03.订单系统中的补偿事务设计.md)
 - [04.请警惕Elasticsearch的三大坑](http://www.passjava.cn/#/89.架构图解/04.请警惕Elasticsearch的三大坑.md)
+- [05.B站崩了，聊聊高可用和异地多活](http://www.passjava.cn/#/89.架构图解/05.B站崩了，聊聊高可用和异地多活.md)
 
 ## 用故事讲解技术
 
