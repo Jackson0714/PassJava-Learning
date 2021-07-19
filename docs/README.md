@@ -160,6 +160,10 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 - [05.订单系统中的补偿事务设计](http://www.passjava.cn/#/91.悟空讲故事/05.订单系统中的补偿事务设计.md)
 
 
+## 面试必背
+- [01.Redis 面试题汇总 第一季](http://www.passjava.cn/#/88.Interview/01.Redis/Redis1.md)
+
+
 ## 悟空学习群问题汇总
 - [01.悟空群聊问题20201026-删除binlog问题](http://www.passjava.cn/#/102.学习群问题汇总/01.20201026_删除binlog问题.md)
 - [02.悟空群聊问题20201028_导出报表问题](http://www.passjava.cn/#/102.学习群问题汇总/02.20201028_导出报表问题.md)
