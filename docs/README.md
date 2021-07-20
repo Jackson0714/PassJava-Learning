@@ -41,6 +41,8 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 
 ## PassJava 教程连载目录
 
+关注公众号：悟空聊架构，回复 PDF 获取离线版教程。
+
 - [打造一款 刷Java 知识的小程序](https://www.cnblogs.com/jackson0714/p/passJava1.html)
 - [打造一款 刷Java 知识的小程序（二）](https://www.cnblogs.com/jackson0714/p/passJava2.html)
 - [01.五分钟搞懂分布式基础概念](http://www.passjava.cn/#/04.SpringCloud学习篇/01.分布式基础概念)
@@ -95,29 +97,22 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 
 > 手把手教你搭建一个PassJava 中使用的 SpringCloud框架
 
-- [01.初始化项目和添加微服务](http://www.passjava.cn/#/02.PassJava架构篇/01.创建项目和添加模块)
-- [02.PassJava-微服务划分图](http://www.passjava.cn/#/01.项目简介/3.微服务划分图)
-- [03.初始化数据库和表](http://www.passjava.cn/#/02.PassJava架构篇/02.创建数据库和表)
-- [04.搭建管理后台](http://www.passjava.cn/#/02.PassJava架构篇/03.搭建管理后台)
-- [05.自动生成前后端代码](http://www.passjava.cn/#/02.PassJava架构篇/04.自动生成前后端代码)
-- [06.整合MyBatis-Plus实现CRUD](http://www.passjava.cn/#/02.PassJava架构篇/05.整合MyBatis-Plus实现CRUD)
-- [07.生成所有微服务的CRUD代码](http://www.passjava.cn/#/02.PassJava架构篇/06.生成所有微服务的CRUD代码)
-- [08.Spring Cloud Alibaba 组件简介](http://www.passjava.cn/#/02.PassJava架构篇/07.SpringCloudAlibaba组件简介)
-- [09.SpringCloud整合Alibaba-Nacos注册中心](http://www.passjava.cn/#/02.PassJava架构篇/08.SpringCloud整合Alibaba-Nacos组件)
-- [10.SpringCloud整合OpenFeign组件](http://www.passjava.cn/#/02.PassJava架构篇/09.SpringCloud整合OpenFeign组件)
-- [11.SpringCloud整合Alibaba-Nacos配置中心](http://www.passjava.cn/#/02.PassJava架构篇/10.SpringCloud整合Nacos配置中心)
-- [12.SpringCloud整合Gateway网关](http://www.passjava.cn/#/02.PassJava架构篇/11.SpringCloud整合Gateway网关)
-- [13.SpringCloud整合OSS对象存储](http://www.passjava.cn/#/02.PassJava架构篇/12.SpringCloud整合OSS对象存储)
-- [14.整合统一异常处理](http://www.passjava.cn/#/02.PassJava架构篇/13.整合统一异常处理)
-- [14.Elasticsearch上篇（原理）](http://www.passjava.cn/#/02.PassJava架构篇/14.Elasticsearch原理)
-- [15.Elasticsearch中篇（实战）](http://www.passjava.cn/#/02.PassJava架构篇/15.Elasticsearch实战.md)
-- [16.Elasticsearch下篇（集群部署）更新中](http://www.passjava.cn/#/02.PassJava架构篇/16.Elasticsearch集群部署.md)
-- [17.微服务架构中的链路追踪](http://www.passjava.cn/#/02.PassJava架构篇/17.微服务架构中的链路追踪.md)
-- [18.48张图手摸手教你性能压测](http://www.passjava.cn/#/02.PassJava架构篇/18.48张图手摸手教你性能压测.md)
-- [29.缓存实战（一）](http://www.passjava.cn/#/02.PassJava架构篇/19.缓存实战（一）.md)
-- [30.缓存实战（二）Redis分布式锁](http://www.passjava.cn/#/02.PassJava架构篇/22.缓存实战（二）Redis分布式锁.md)
-- [31.缓存实战（三）Redisson分布式锁](http://www.passjava.cn/#/02.PassJava架构篇/23.缓存实战（三）Redisson分布式锁.md)
-- [32.缓存实战（四）实战 Spring Cache](http://www.passjava.cn/#/02.PassJava架构篇/24.缓存实战（四）SpringCache.md)
+- [01.Spring Cloud Alibaba 组件简介](http://www.passjava.cn/#/02.PassJava架构篇/07.SpringCloudAlibaba组件简介)
+- [02.SpringCloud整合Alibaba-Nacos注册中心](http://www.passjava.cn/#/02.PassJava架构篇/08.SpringCloud整合Alibaba-Nacos组件)
+- [03.SpringCloud整合OpenFeign组件](http://www.passjava.cn/#/02.PassJava架构篇/09.SpringCloud整合OpenFeign组件)
+- [04.SpringCloud整合Alibaba-Nacos配置中心](http://www.passjava.cn/#/02.PassJava架构篇/10.SpringCloud整合Nacos配置中心)
+- [05.SpringCloud整合Gateway网关](http://www.passjava.cn/#/02.PassJava架构篇/11.SpringCloud整合Gateway网关)
+- [06.SpringCloud整合OSS对象存储](http://www.passjava.cn/#/02.PassJava架构篇/12.SpringCloud整合OSS对象存储)
+- [07.整合统一异常处理](http://www.passjava.cn/#/02.PassJava架构篇/13.整合统一异常处理)
+- [08.Elasticsearch上篇（原理）](http://www.passjava.cn/#/02.PassJava架构篇/14.Elasticsearch原理)
+- [09.Elasticsearch中篇（实战）](http://www.passjava.cn/#/02.PassJava架构篇/15.Elasticsearch实战.md)
+- [10.Elasticsearch下篇（集群部署）更新中](http://www.passjava.cn/#/02.PassJava架构篇/16.Elasticsearch集群部署.md)
+- [11.微服务架构中的链路追踪](http://www.passjava.cn/#/02.PassJava架构篇/17.微服务架构中的链路追踪.md)
+- [12.48张图手摸手教你性能压测](http://www.passjava.cn/#/02.PassJava架构篇/18.48张图手摸手教你性能压测.md)
+- [13.缓存实战（一）](http://www.passjava.cn/#/02.PassJava架构篇/19.缓存实战（一）.md)
+- [14.缓存实战（二）Redis分布式锁](http://www.passjava.cn/#/02.PassJava架构篇/22.缓存实战（二）Redis分布式锁.md)
+- [15.缓存实战（三）Redisson分布式锁](http://www.passjava.cn/#/02.PassJava架构篇/23.缓存实战（三）Redisson分布式锁.md)
+- [16.缓存实战（四）实战 Spring Cache](http://www.passjava.cn/#/02.PassJava架构篇/24.缓存实战（四）SpringCache.md)
 
 ## Java并发多线程
 
@@ -131,6 +126,8 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 - [06.干货 | 45张图庖丁解牛18种Queue，你知道几种？](https://juejin.im/post/6870298844425371655)
 
 ## 分布式
+
+关注公众号：悟空聊架构，回复`分布式`获取离线版教程。
 
 - [01.分布式基础概念](http://www.passjava.cn/#/92.分布式/01.分布式基础概念.md)
 - [02.这三年被分布式坑惨了，曝光十大坑](http://www.passjava.cn/#/92.分布式/02.分布式中的十种坑.md)
