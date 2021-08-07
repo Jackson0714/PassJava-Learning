@@ -3,13 +3,14 @@
 * [x] 线程池的原理？ 07-30
 * [x] 阻塞队列有哪几种？07-31
 * [ ] 线程池如何使用？
-* [ ] 线程池有几种状态？
+* [x] 线程池有几种状态？08-03
 * [x] 线程池的拒绝策略有哪几种？08-02
 * [x] 多线程创建多少个线程合适？08-01
+* [x] Java 线程池有哪几种？08-04
 * [ ] 如何合理配置线程池参数？
 * [ ] 线程池如何监控？
 * [ ] Executor 框架？
-* [ ] Executor 有哪几种线程池？
+* [x] Executor 有哪几种线程池？
 
 # Java 线程池的原理知道吗？
 
@@ -136,5 +137,61 @@ ThreadPoolExecutor 已经提供了以下 4 种策略。
 - TIDYING：所有的任务处理完成，有效的线程数是0
 - TERMINATED：terminated() 方法执行完毕。
 
-![](http://cdn.jayh.club/blog/20210803/jMDbGBMxL7gE.png?imageslim)
+生命周期状态和方法对应的关系：
+
+![](http://cdn.jayh.club/blog/20210803/eLi3jz0AV83c.png?imageslim)
+
+# Java 线程池有哪几种？
+
+通常开发者都是利用 Executors 提供的通用线程池创建方法，去创建不同配置的线程池，主要区别在于不同的 ExecutorService 类型或者不同的初始参数。
+
+Executors 目前提供了 5 种不同的线程池创建配置：
+
+（1）newCachedThreadPool()，它是一种用来处理大量短时间工作任务的线程池，具有几个鲜明特点：它会试图缓存线程并重用，当无缓存线程可用时，就会创建新的工作线程；如果线程闲置的时间超过 60 秒，则被终止并移出缓存；长时间闲置时，这种线程池，不会消耗什么资源。其内部使用 SynchronousQueue 作为工作队列。
+
+（2）newFixedThreadPool(int nThreads)，重用指定数目（nThreads）的线程，其背后使用的是无界的工作队列，任何时候最多有 nThreads 个工作线程是活动的。这意味着，如果任务数量超过了活动队列数目，将在工作队列中等待空闲线程出现；如果有工作线程退出，将会有新的工作线程被创建，以补足指定的数目 nThreads。
+
+（3）newSingleThreadExecutor()，它的特点在于工作线程数目被限制为 1，操作一个无界的工作队列，所以它保证了所有任务的都是被顺序执行，最多会有一个任务处于活动状态，并且不允许使用者改动线程池实例，因此可以避免其改变线程数目。
+
+（4）newSingleThreadScheduledExecutor() 和 newScheduledThreadPool(int corePoolSize)，创建的是个ScheduledExecutorService，可以进行定时或周期性的工作调度，区别在于单一工作线程还是多个工作线程。
+
+（5）newWorkStealingPool(int parallelism)，这是一个经常被人忽略的线程池，Java 8 才加入这个创建方法，其内部会构建ForkJoinPool，利用Work-Stealing算法，并行地处理任务，不保证处理顺序。
+
+
+
+# 如何优雅地终止线程
+
+线程池提供了两个方法来终止线程：shutdown()和shutdownNow()。
+
+**shutdown()** 方法是一种很保守的关闭线程池的方法。线程池执行 shutdown() 后，就会拒绝接收新的任务，但是会等待线程池中正在执行的任务和已经进入阻塞队列的任务都执行完之后才最终关闭线程池。
+
+而 **shutdownNow()** 方法，相对就激进一些了，线程池执行 shutdownNow() 后，会拒绝接收新的任务，同时还会中断线程池中正在执行的任务，已经进入阻塞队列的任务也被剥夺了执行的机会，不过这些被剥夺执行机会的任务会作为 shutdownNow() 方法的返回值返回。因为 shutdownNow() 方法会中断正在执行的线程，所以提交到线程池的任务，如果需要优雅地结束，就需要正确地处理线程中断。
+
+如果提交到线程池的任务不允许取消，那就不能使用 shutdownNow() 方法终止线程池。不过，如果提交到线程池的任务允许后续以补偿的方式重新执行，也是可以使用 shutdownNow() 方法终止线程池的。
+
+# 如何监控线程池
+
+用一个 printStats 方法实现了最简陋的监控，每秒输出一次线程池的基本内部信息：
+
+```JAVA
+private void printStats(ThreadPoolExecutor threadPool) {
+   Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(() -> {
+        log.info("=========================");
+        log.info("Pool Size: {}", threadPool.getPoolSize());
+        log.info("Active Threads: {}", threadPool.getActiveCount());
+        log.info("Number of Tasks Completed: {}", threadPool.getCompletedTaskCount());
+        log.info("Number of Tasks in Queue: {}", threadPool.getQueue().size());
+
+        log.info("=========================");
+    }, 0, 1, TimeUnit.SECONDS);
+}
+```
+
+getPoolSize()：获取线程池的线程数量。如果线程池不销毁的话，线程池里的线程不会自动销毁。
+
+getActiveCount()：获取活跃的线程数。
+
+getCompletedTaskCount：获取线程池再运行过程中已完成的任务数量。
+
+getQueue().size()：获取队列中还有多少积压任务。
 
