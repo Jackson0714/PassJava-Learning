@@ -7,10 +7,29 @@
 * [x] 线程池的拒绝策略有哪几种？08-02
 * [x] 多线程创建多少个线程合适？08-01
 * [x] Java 线程池有哪几种？08-04
-* [ ] 如何合理配置线程池参数？
-* [ ] 线程池如何监控？
+* [x] 线程池如何监控？
 * [ ] Executor 框架？
 * [x] Executor 有哪几种线程池？
+
+
+
+# 什么是 AQS
+
+AbstractQueuedSynchronizer 类如其名，抽象的队列式的同步器，将基础的同步相关操作抽象在 AbstractQueuedSynchronizer 中，利用 AQS 为我们构建同步结构提供了范本。
+
+AQS定义了一套多线程访问共享资源的同步器框架，许多同步类实现都依赖于它，如常用的ReentrantLock/Semaphore/CountDownLatch。
+
+将基础的同步相关操作抽象在 AbstractQueuedSynchronizer 中，利用 AQS 为我们构建同步结构提供了范本。
+
+AQS 内部数据和方法，可以简单拆分为：
+
+- 一个 volatile 的整数成员表征状态，同时提供了 setState 和 getState 方法。
+
+- 一个先入先出（FIFO）的等待线程队列，以实现多线程间竞争和等待，这是 AQS 机制的核心之一。
+
+- 各种基于 CAS 的基础操作方法，以及各种期望具体同步结构去实现的 acquire/release 方法。
+
+利用 AQS 实现一个同步结构，至少要实现两个基本类型的方法，分别是 acquire 操作，获取资源的独占权；还有就是 release 操作，释放对某个资源的独占。
 
 # Java 线程池的原理知道吗？
 
