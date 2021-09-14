@@ -187,6 +187,7 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 - [07.画架构原理图，还是它好使](http://www.passjava.cn/#/99.tools/07.画架构原理图，还是它好使)
 - [08.添加Gitee密钥](http://www.passjava.cn/#/99.tools/08.添加Gitee密钥)
 - [09.给自己的博客docsify加上评论功能](http://www.passjava.cn/#/99.tools/09.给自己的博客docsify加上评论功能)
+- [91.Maven配置](http://www.passjava.cn/#/99.tools/91.Maven配置)
 - [92.Java环境问题](http://www.passjava.cn/#/99.tools/92.Java环境问题)
 - [93.IDEA快捷键](http://www.passjava.cn/#/99.tools/93.IDEA快捷键)
 - [94.Ubuntu16.04安装最新版nodejs](http://www.passjava.cn/#/99.tools/94.Ubuntu16_04安装最新版nodejs)

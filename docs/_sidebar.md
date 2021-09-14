@@ -82,7 +82,10 @@
     - [05.订单系统中的补偿事务设计](91.悟空讲故事/05.订单系统中的补偿事务设计.md)
 
 * 八、面试必背
-    * [01.Redis 面试题汇总 第一季](88.Interview/01.Redis/Redis1.md)
+    * [01.Redis 面试突击](88.Interview/01.Redis/Redis1.md)
+    * [02.并发编程 面试突击](88.Interview/02.Thread/Thread1.md)
+    * [03.MySQL 面试突击](88.Interview/03.Database/MySQL1.md)
+    * [04.JVM 面试突击](88.Interview/04.JVM/JVM1.md)
 
 * 九、Redis 进阶
     - [00.Redis 源码下载](12.Redis/00.DownloadRedis.md)
@@ -105,6 +108,7 @@
     * [07.画架构原理图，还是它好使](99.tools/07.画架构原理图，还是它好使.md)
     * [08.添加Gitee密钥](99.tools/08.添加Gitee密钥.md)
     * [09.给自己的博客docsify加上评论功能](99.tools/09.给自己的博客docsify加上评论功能.md)
+    * [91.Maven配置](99.tools/91.Maven配置)
     * [92.Java环境问题](99.tools/92.Java环境问题)
     * [93.IDEA快捷键](99.tools/93.IDEA快捷键.md)
     * [94.Ubuntu16.04安装最新版nodejs](99.tools/94.Ubuntu16_04安装最新版nodejs.md)
