@@ -6,13 +6,12 @@
 
 请点击下面小程序卡片，进入知识星球查看！
 
-《》
+![](https://img-blog.csdnimg.cn/2021071922263371.png)
 
-
+> 面试题第一时间会发到我的知识星球和群聊里面。
 
 ![](http://cdn.jayh.club/blog/20210909/r0GNNmUoQput.png?imageslim)
 
-[TOC]
 
 - 一、说 MySQL 的 redo log 和 binlog？
 - 二、说说建立索引的优势、负面影响和原则？
