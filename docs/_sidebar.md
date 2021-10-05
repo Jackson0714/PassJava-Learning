@@ -86,6 +86,11 @@
     * [02.并发编程 面试突击](88.Interview/02.Thread/Thread1.md)
     * [03.MySQL 面试突击](88.Interview/03.Database/MySQL1.md)
     * [04.JVM 面试突击](88.Interview/04.JVM/JVM1.md)
+    * [05.设计模式
+        * [01.观察者模式ObserverPattern](88.Interview/05.DesignPattern/01.观察者模式ObserverPattern.md)
+        * [02.备忘录模式MementoPattern](88.Interview/05.DesignPattern/02.备忘录模式MementoPattern.md)
+        * [03.原型模式PrototypePattern](88.Interview/05.DesignPattern/03.原型模式PrototypePattern.md)
+        * [04.中介者模式MediatorPattern](88.Interview/05.DesignPattern/04.中介者模式MediatorPattern.md)
 
 * 九、Redis 进阶
     - [00.Redis 源码下载](12.Redis/00.DownloadRedis.md)
