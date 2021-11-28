@@ -114,6 +114,7 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 - [15.缓存实战（三）Redisson分布式锁](http://www.passjava.cn/#/02.PassJava架构篇/23.缓存实战（三）Redisson分布式锁.md)
 - [16.缓存实战（四）实战 Spring Cache](http://www.passjava.cn/#/02.PassJava架构篇/24.缓存实战（四）SpringCache.md)
 
+
 ## Java并发多线程
 
 > 从源码层面详细讲解并发多线程
@@ -159,6 +160,14 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 
 ## 面试必背
 - [01.Redis 面试题汇总 第一季](http://www.passjava.cn/#/88.Interview/01.Redis/Redis1.md)
+- [02.并发编程 面试突击](http://www.passjava.cn/#/88.Interview/02.Thread/Thread1.md)
+- [03.MySQL 面试突击](http://www.passjava.cn/#/88.Interview/03.Database/MySQL1.md)
+- [04.JVM 面试突击](http://www.passjava.cn/#/88.Interview/04.JVM/JVM1.md)
+- 05.设计模式
+    - [01.观察者模式ObserverPattern](http://www.passjava.cn/#/88.Interview/05.DesignPattern/01.观察者模式ObserverPattern.md)
+    - [02.备忘录模式MementoPattern](http://www.passjava.cn/#/88.Interview/05.DesignPattern/02.备忘录模式MementoPattern.md)
+    - [03.原型模式PrototypePattern](http://www.passjava.cn/#/88.Interview/05.DesignPattern/03.原型模式PrototypePattern.md)
+    -[04.中介者模式MediatorPattern](http://www.passjava.cn/#/88.Interview/05.DesignPattern/04.中介者模式MediatorPattern.md)
 
 
 ## 悟空学习群问题汇总
