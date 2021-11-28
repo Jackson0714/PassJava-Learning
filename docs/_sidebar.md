@@ -58,7 +58,6 @@
         - [06.Eureka源码之客户端首次获取注册表](13.SpringCloudNetflix源码解析/01.Eureka注册中心/06.Eureka源码之客户端首次获取注册表.md)
         - [07.Eureka源码之客户端增量获取注册表](13.SpringCloudNetflix源码解析/01.Eureka注册中心/07.Eureka源码之客户端增量获取注册表.md)
         - [08.Eureka源码之Server端的多级缓存机制](13.SpringCloudNetflix源码解析/01.Eureka注册中心/08.Eureka源码之Server端的多级缓存机制.md)
-        - [09.Eureka源码之客户端获取注册表](13.SpringCloudNetflix源码解析/01.Eureka注册中心/09.Eureka源码之客户端获取注册表.md)
         - [98.Eureka控制台参数说明](13.SpringCloudNetflix源码解析/01.Eureka注册中心/98.Eureka控制台参数说明.md)
     - 负载均衡Ribbon
         - [01.Ribbon架构剖析](13.SpringCloudNetflix源码解析/02.Ribbon负载均衡/01.Ribbon架构剖析.md)
