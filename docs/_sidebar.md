@@ -140,11 +140,11 @@
     * [98.IDEA调试Java多线程](99.tools/98.IDEA调试Java多线程.md)
     * [99.IDEA调试Java源码](99.tools/99.IDEA调试Java源码.md)
 
-* 十二、MacBook 使用技巧
+* 十二、MacBook 使用技巧💻
 
     * [01.Mac需要安装的软件](108.MacBook使用技巧/01.Mac需要安装的软件.md)
-    * [02.Mac控制台美化工具](03.SpringBoot学习篇/02.Mac控制台美化工具.md)
-    * [03.M1安装Java环境2021-11-26](03.SpringBoot学习篇/03.M1安装Java环境2021-11-26.md)
+    * [02.Mac控制台美化工具](108.MacBook使用技巧/02.Mac控制台美化工具.md)
+    * [03.M1安装Java环境2021-11-26](108.MacBook使用技巧/03.M1安装Java环境2021-11-26.md)
     * [04.M1部署SpringCloud项目](01.项目简介/7.本地部署项目Mac版.md)
     * [05.M1运行Docker](05.安装部署篇/09.M1运行Docker.md)
 
