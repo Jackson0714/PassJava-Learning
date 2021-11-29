@@ -85,7 +85,7 @@ class Springboot05DataJdbcApplicationTests {
 
 数据库连接：HikariProxyConnection@1335157064 wrapping com.mysql.cj.jdbc.ConnectionImpl@7ff8a9dc
 
-![img](..\images\spring-boot-05-data-jdbc\6.png)
+![](http://cdn.jayh.club/uPic/image-20211129205228266oaIdph.png)
 
 ## 三、自动配置原理
 
@@ -212,7 +212,7 @@ schema:
 
 创建出的 `department` 表
 
-![img](..\images\spring-boot-05-data-jdbc\7.png)
+![](http://cdn.jayh.club/uPic/image-20211129205136810RdTL6J.png)
 
 ## 四、JdbcTemplate
 
@@ -292,7 +292,7 @@ public class SwaggerConfig {
 
 http://localhost:8081/swagger-ui.html
 
-![img](..\images\spring-boot-05-data-jdbc\swagger.png)
+![](http://cdn.jayh.club/uPic/image-202111292053024977s7YVS.png)
 
 ## 六、测试
 
@@ -311,7 +311,7 @@ public int createDepartment(@RequestParam String name) {
 }
 ```
 
-![img](..\images\spring-boot-05-data-jdbc\create_swagger.png)
+![](http://cdn.jayh.club/uPic/image-20211129205322369PtJB4B.png)
 
 表记录
 
@@ -328,7 +328,7 @@ public List<Map<String, Object>> getAllDepartment() {
 }
 ```
 
-![img](..\images\spring-boot-05-data-jdbc\query_all_swagger.png)
+![](http://cdn.jayh.club/uPic/image-20211129205342044eUwjOE.png)
 
 ### 6.3 根据id查询某个部门
 
@@ -345,7 +345,7 @@ public Map<String, Object> getDepartmentById(@PathVariable Long id) {
 }
 ```
 
-![img](..\images\spring-boot-05-data-jdbc\query_id_swagger.png)
+![](http://cdn.jayh.club/uPic/image-2021112920540345192oCWe.png)
 
 ### 6.4 根据id更新部门名称
 
@@ -363,7 +363,7 @@ public int updateDepartmentById(@RequestParam Long id, @RequestParam String name
 }
 ```
 
-![img](..\images\spring-boot-05-data-jdbc\update_swagger.png)
+![](http://cdn.jayh.club/uPic/image-20211129205419184jyNPy7.png)
 
 ### 6.5 根据id删除部门
 
@@ -380,7 +380,7 @@ public int deleteDepartment(@RequestParam Long id) {
 }
 ```
 
-![img](..\images\spring-boot-05-data-jdbc\delete_swagger.png)
+![](http://cdn.jayh.club/uPic/image-20211129205436421XMDVdv.png)
 
 
 
@@ -392,7 +392,7 @@ public int deleteDepartment(@RequestParam Long id) {
 
 java.sql.SQLException:null, message from server: "Host 'Siri' is not allowed to connect to this MySQL server"
 
-![img](..\images\spring-boot-05-data-jdbc\2.png)
+![](http://cdn.jayh.club/uPic/image-20211129205451782M5h9XW.png)
 
 解决方案：
 
@@ -412,17 +412,17 @@ Query OK, 1 row affected
 
 如下图所示：
 
-![img](..\images\spring-boot-05-data-jdbc\4.png)
+![](http://cdn.jayh.club/uPic/image-202111292055070630f4nHh.png)
 
 ### 问题2
 
 Caused by: com.mysql.cj.exceptions.InvalidConnectionAttributeException: The server time zone value '�й���׼ʱ��' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specifc time zone value if you want to utilize time zone support.
 
-![img](..\images\spring-boot-05-data-jdbc\3.png)
+![](http://cdn.jayh.club/uPic/image-20211129205519517Qk9qF4.png)
 
 解决方案：
 
 配置spring.datasource.url 时，增加参数：serverTimezone=UTC
 
-![img](..\images\spring-boot-05-data-jdbc\5.png)
+![](http://cdn.jayh.club/uPic/image-20211129205532829oU3luy.png)
 

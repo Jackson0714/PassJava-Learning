@@ -8,7 +8,7 @@
 
 2、数据库、数据源、数据库连接池、JDBC、JDBC实现是什么关系？
 
-![img](..\images\spring-boot-06-druid-jdbc\数据库连接.png)
+![](http://cdn.jayh.club/uPic/image-20211129205928306XCtKHV.png)
 
 - JDBC：Java和关系型数据库的桥梁，是一个桂芳，不是实现。不同类型的数据库需要有自己的JDBC实现
 - 数据源：包含数据库连接池，连接池管理。常见的有C3P0、HikariDataSoiurce、Druid等
@@ -24,7 +24,7 @@
 
 https://mvnrepository.com/search?q=druid
 
-![img](..\images\spring-boot-06-druid-jdbc\Druid_Maven_Repository2.png)
+![](http://cdn.jayh.club/uPic/image-20211129205913101CprULA.png)
 
 ## 2. 引入druid依赖
 
@@ -133,7 +133,7 @@ public class DruidConfig {
 
 运行测试程序，可以看到DataSource中的属性值已经与配置文件中的相同
 
-![img](..\images\spring-boot-06-druid-jdbc\Druid_Setting.png)
+![](http://cdn.jayh.club/uPic/image-20211129205849392EweFaL.png)
 
 ## 5. Druid监控
 
@@ -147,19 +147,19 @@ http://192.168.10.160:8082/druid
 
 - 正常进入后可以看到监控后台
 
-![img](..\images\spring-boot-06-druid-jdbc\Druid_Monitor1.png)
+![](http://cdn.jayh.club/uPic/image-20211129205825449wPnau6.png)
 
 
 
 - 执行SQL语句
 
-  ![img](..\images\spring-boot-06-druid-jdbc\select1.png)
+  ![](http://cdn.jayh.club/uPic/image-20211129205807465SMFtnT.png)
 
 查看监控：
 
 有一条查询请求的记录
 
-![img](..\images\spring-boot-06-druid-jdbc\monitor1.png)
+![](http://cdn.jayh.club/uPic/image-20211129205753237BFAqOT.png)
 
 # 三、技术问题
 
@@ -205,7 +205,7 @@ servletInitParams.put("loginUsername", "Admin");
 servletInitParams.put("loginPassword", "abc123");
 ```
 
-![img](..\images\spring-boot-06-druid-jdbc\login.png)
+![](http://cdn.jayh.club/uPic/image-20211129205733420eOytID.png)
 
 
 
