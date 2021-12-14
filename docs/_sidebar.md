@@ -97,7 +97,7 @@
     - [04.为什么要除夕，原来是内存爆了](91.悟空讲故事/04.为什么要除夕，原来是内存爆了.md)
     - [05.订单系统中的补偿事务设计](91.悟空讲故事/05.订单系统中的补偿事务设计.md)
 
-* 八、面试必背👍
+* 八、面试必背👍👍👍
     * [01.Redis 面试突击](88.Interview/01.Redis/Redis1.md)
     * [02.并发编程 面试突击](88.Interview/02.Thread/Thread1.md)
     * [03.MySQL 面试突击](88.Interview/03.Database/MySQL1.md)
@@ -107,6 +107,24 @@
         * [02.备忘录模式MementoPattern](88.Interview/05.DesignPattern/02.备忘录模式MementoPattern.md)
         * [03.原型模式PrototypePattern](88.Interview/05.DesignPattern/03.原型模式PrototypePattern.md)
         * [04.中介者模式MediatorPattern](88.Interview/05.DesignPattern/04.中介者模式MediatorPattern.md)
+        * [05.责任链模式](88.Interview/05.DesignPattern/05.责任链模式.md)
+        * [06.单例模式](88.Interview/05.DesignPattern/06.单例模式.md)
+        * [24.接口和抽象的区别](88.Interview/05.DesignPattern/24.接口和抽象的区别.md)
+        * [25.为什么要少用继承多用组合](88.Interview/05.DesignPattern/25.为什么要少用继承多用组合.md)
+        * [26.充血模型](88.Interview/05.DesignPattern/26.充血模型.md)
+        * [99.设计模式中英文对照](88.Interview/05.DesignPattern/99.设计模式中英文对照.md)
+        * [101.为什么要学设计模式](88.Interview/05.DesignPattern/101.为什么要学设计模式.md)
+        * [102.如何评价代码的质量](88.Interview/05.DesignPattern/102.如何评价代码的质量.md)
+        * [103.编写高质量代码](88.Interview/05.DesignPattern/103.编写高质量代码.md)
+    * [06.网络](88.Interview/06.Network/01.Network.md)
+    * 07.Java基础
+        * [01.Java基础1](88.Interview/07.JavaBasic/01.JavaBasic.md)
+        * [02.Java基础2](88.Interview/07.JavaBasic/01.JavaBasic.md)
+    * 08.消息队列
+        * [01.Kafka](88.Interview/08.MessageQueue/01.Kafka.md)
+        * [02.消息队列常考面试题](88.Interview/08.MessageQueue/02.MQ_Basic.md)
+    * [09.Spring](88.Interview/09.Spring/01.Spring.md)
+    * [10.Dubbo](88.Interview/10.Dubbo/01.Dubbo.md)
 
 * 九、Redis 进阶
     - [00.Redis 源码下载](12.Redis/00.DownloadRedis.md)
