@@ -316,15 +316,21 @@ JVM可以分为运行时数据区以及类加载器、执行引擎、本地方�
 清理的第一步，就是为了找出产生全量垃圾根对象，并打上标记为初始标记（耗时短，STW），同时把用户访问线程打开，并让后台线程去执行第二步并发标记，这些其实就是找出我们全量垃圾。
 然后找出在我们执行并发标记这段时间由用户线程产生的增量垃圾进行重新标记（耗时短，STW），这个时候的GC标记，就是截止到当前时间，完整的垃圾信息，再执行并发清理。
 
-##  六、字节二面：System.gc() 和 Runtime. getRuntime(). gc()会做什么事情？
+##  七、字节二面：System.gc() 和 Runtime. getRuntime(). gc()会做什么事情？
 
 #每天一道面试题# 61
 
 > system.gc 和 runtime. getRuntime(). gc() 会做些什么事？
 
-System.gc() 在内部调用 Runtime.gc()。 硬要说区别的话 Runtime.gc() 是 native method，而 System.gc() 是非 native method，它依次调用 Runtime.gc()；调用gc方法在默认情况下，会显示触发full gc，同时对老年代和新生代进行回收，尝试释放被丢弃对象占用的内存。system.gc 调用附带一个免责声明，无法保证垃圾收集器的调用。即gc()函数的作用只是提醒虚拟机，程序员希望进行一次垃圾回收。但是这次回收不能保证一定进行，具体什么时候回收取决于jvm。如果每次调用gc方法后想让gc必须执行，可以追加调用system. runFinalization方法。
+System.gc() 在内部调用 Runtime.gc()。
 
-## 七、京东二面：讲下 jvm 调优思路？
+ 硬要说区别的话 Runtime.gc() 是 native method。
+
+而 System.gc() 是非 native method，它依次调用 Runtime.gc()；调用gc方法在默认情况下，会显示触发full gc，同时对老年代和新生代进行回收，尝试释放被丢弃对象占用的内存。
+
+system.gc 调用附带一个免责声明，无法保证垃圾收集器的调用。即gc()函数的作用只是提醒虚拟机，程序员希望进行一次垃圾回收。但是这次回收不能保证一定进行，具体什么时候回收取决于jvm。如果每次调用gc方法后想让gc必须执行，可以追加调用system. runFinalization方法。
+
+## 八、京东二面：讲下 jvm 调优思路？
 
 其实工作中，很少有机会能接触到 jvm 调优，大部分时间都是在写 CRUD 代码，但如果万一线上真的出问题了，那么再去想 jvm 调优就有点晚了，所以我们需要先把这部分知识储备起来。
 
@@ -415,7 +421,7 @@ jstat -gc pid 5000 10
 
 - 设置-XX:+DisableExplicitGC禁止系统System.gc()，防止手动误触发FGC造成问题。
 
-## 八、阿里一面：什么情况下触发垃圾回收？
+## 九、阿里一面：什么情况下触发垃圾回收？
 
 一般就分为 Minor GC 和 Full GC 两种情况。
 
@@ -430,9 +436,7 @@ jstat -gc pid 5000 10
 - 当元空间不足时（JDK1.7永久代不足）
 - 调用 System.gc() 时，系统建议执行 Full GC，但是不必然执行。
 
-![](https://images.zsxq.com/FqQn5oii5rPxQmEK9rx66eb6YhK-?imageMogr2/auto-orient/quality/100!/ignore-error/1&e=1635695999&token=kIxbL07-8jAj8w1n4s9zv64FuZZNEATmlU_Vm6zD:BinlpcRs6HPNhhSyWH2x6HyuYzo=)
-
-## 九、美团一面：有在⼯作时间中使⽤过 jstat, jmap, mat⼯具吗？ 能给⼀个实际的例⼦说明⼀下吗？
+## 十、美团一面：有在⼯作时间中使⽤过 jstat, jmap, mat⼯具吗？ 能给⼀个实际的例⼦说明⼀下吗？
 
 ![](http://cdn.jayh.club/blog/20210914/D8AlCbMyeS36.png?imageslim)
 
@@ -533,7 +537,7 @@ eclipse 插件安装下这个工具就可以使用了。
 
 MAT 插件会给出一份可疑的分析报告，结合源代码稍加分析就可以快速定位是哪段代码出问题了。
 
-## 十、增加 Eden 区，Minor GC 的间隔变长了，会不会导致 Minor GC 的时间增加？
+## 十一、增加 Eden 区，Minor GC 的间隔变长了，会不会导致 Minor GC 的时间增加？
 
 之前技术交流群有同学提问：
 

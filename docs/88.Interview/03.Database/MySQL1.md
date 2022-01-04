@@ -16,7 +16,7 @@
 
 （注意：每道题下面都会有标签：每天一道面试题，只是作为星球的标签记录。）
 
-##  一、说 MySQL 的 redo log 和 binlog？
+##  一、说下 MySQL 的 redo log 和 binlog？
 
 #每天一道面试题# 35
 
