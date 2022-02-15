@@ -96,7 +96,7 @@
     * [09.QuorumNWR算法](92.分布式/09.QuorumNWR算法.md)
     * [10.区块链12问和Pow算法](92.分布式/10.区块链12问.md)
 
-* 六、架构设计
+* 六、架构设计🆕
     * [01.微服务架构中的两款流量防卫兵](89.架构图解/01.微服务架构中的两款流量防卫兵.md)
     * [02.浅析扣减库存的方案设计](89.架构图解/02.浅析扣减库存的方案设计.md)
     * [03.订单系统中的补偿事务设计](89.架构图解/03.订单系统中的补偿事务设计.md)
@@ -140,7 +140,7 @@
     * [09.Spring](88.Interview/09.Spring/01.Spring.md)
     * [10.Dubbo](88.Interview/10.Dubbo/01.Dubbo.md)
 
-* 九、Redis 进阶
+* 九、Redis 进阶🆕
     - [00.Redis 源码下载](12.Redis/00.DownloadRedis.md)
     - [01.趣谈Redis之SDS](12.Redis/01.趣谈Redis之SDS.md)
     - [03.Redis的主从架构原理和部署](12.Redis/03.Redis的主从架构原理和部署.md)
