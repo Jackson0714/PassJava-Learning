@@ -66,13 +66,12 @@
         - [01.Feign远程调用基本原理和使用](13.SpringCloud架构剖析/03.Feign远程调用/01.Feign远程调用基本原理和使用.md)
         - [02.Feign架构剖析](13.SpringCloud架构剖析/03.Feign远程调用/02.Feign架构剖析.md)
     - 熔断限流Hystrix
-      - [01.Feign远程调用基本原理和使用](13.SpringCloud架构剖析/04.Hystrix限流熔断器/01.Hystrix架构剖析.md)
+      - [01.Hystrix架构剖析](13.SpringCloud架构剖析/04.Hystrix限流熔断器/01.Hystrix架构剖析.md)
     - Gateway网关
-      - [01.Feign架构剖析](13.SpringCloud架构剖析/06.Gateway网关/01.SpringCloud整合Gateway网关.md)
+      - [01.SpringCloud整合Gateway网关](13.SpringCloud架构剖析/06.Gateway网关/01.SpringCloud整合Gateway网关.md)
       - [02.深入浅入Gateway](13.SpringCloud架构剖析/06.Gateway网关/02.深入浅入Gateway.md)
     - Nacos配置注册中心
-      - [01.使用Nacos作为注册中心](13.SpringCloud架构剖析/07.Nacos配置注册中心/01.使用Nacos作为注册中心.md)
-      - [02.使用Nacos作为配置中心](13.SpringCloud架构剖析/07.Nacos配置注册中心/02.使用Nacos作为配置中心.md)
+      - [01.使用Nacos作为注册中心](13.SpringCloud架构剖析/07.Nacos配置注册中心/01.使用Nacos作为注册中心和配置中心.md)
     - Sentinel限流
       - [01.Hystrix和Sentinel选型对比](13.SpringCloud架构剖析/08.Sentinel限流/01.Hystrix和Sentinel选型对比.md)
 
