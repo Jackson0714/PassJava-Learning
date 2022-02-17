@@ -112,7 +112,9 @@
 
 * 八、面试必背👍👍👍
     * [01.Redis 面试突击](88.Interview/01.Redis/Redis1.md)
-    * [02.并发编程 面试突击](88.Interview/02.Thread/Thread1.md)
+    * 02.并发编程 面试突击
+      * [01.并发编程 面试突击](88.Interview/02.Thread/Thread1.md)
+      * [02.线程的状态-2022.02.17](88.Interview/02.Thread/02.线程的状态-2022.02.17.md)
     * [03.MySQL 面试突击](88.Interview/03.Database/MySQL1.md)
     * [04.JVM 面试突击](88.Interview/04.JVM/JVM1.md)
     * 05.设计模式
