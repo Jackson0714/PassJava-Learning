@@ -74,7 +74,7 @@ No，操作系统控制的写回：每个写命令执行完，只是先把日志
 
 String 类型的底层实现只有一种数据结构，也就是简单动态字符串。而 List、Hash、Set 和 Sorted Set 这四种数据类型，都有两种底层实现结构。
 
-![在这里插入图片描述](http://cdn.jayh.club/uPic/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5oKf56m66IGK5p625p6E,size_20,color_FFFFFF,t_70,g_se,x_16WmymNf.png)
+![](http://cdn.jayh.club/uPic/image-20220318184632416g75Ctz.png)
 
 ## 5、Redis 如何实现事务？
 
