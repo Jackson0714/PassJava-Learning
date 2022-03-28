@@ -83,7 +83,7 @@
     * [05.5000字-24张图带你彻底理解Java中的21种锁](10.并发多线程/05.5000字-24张图带你彻底理解Java中的21种锁.md)
     * [06.干货-45张图庖丁解牛18种Queue，你知道几种？](10.并发多线程/06.干货-45张图庖丁解牛18种Queue，你知道几种.md)
 
-* 六、分布式协议
+* 六、分布式协议 🔥
     * [01.五分钟搞懂分布式基础概念](92.分布式/01.分布式基础概念.md)
     * [02.这三年被分布式坑惨了，曝光十大坑](92.分布式/02.分布式中的十种坑.md)
     * [03.用三国杀讲分布式算法，舒适了吧？](92.分布式/03.用三国杀讲分布式算法，舒适了吧？.md)
@@ -94,6 +94,7 @@
     * [08.Gossip协议](92.分布式/08.Gossip协议.md)
     * [09.QuorumNWR算法](92.分布式/09.QuorumNWR算法.md)
     * [10.区块链12问和Pow算法](92.分布式/10.区块链12问.md)
+    * [11.Zookeeper中的ZAB协议](92.分布式/14.ZAB协议.md)
 
 * 六、架构设计🆕
     * [01.微服务架构中的两款流量防卫兵](89.架构图解/01.微服务架构中的两款流量防卫兵.md)
@@ -154,13 +155,19 @@
     * [09.缓存实战（二）Redis分布式锁](02.PassJava架构篇/22.缓存实战（二）Redis分布式锁.md)
     * [10.缓存实战（三）Redisson分布式锁](02.PassJava架构篇/23.缓存实战（三）Redisson分布式锁.md)
 
-* 十、JVM 进阶
+* 十一、中间件原理剖析 🔥🔥🔥
+  * RocketMQ
+    * [01.一文带你搭建RocketMQ源码调试环境](16.消息队列/01.RocketMQ/03.如何调试RocketMQ源码.md)
+  * Zookeeper
+    * [01.ZAB原子广播协议-2022.03.18](17.Zookeeper/02.ZAB协议.md)
+
+* 十二、JVM 进阶
     * [01.50+道JVM面试题+11张思维导图就是让你懂JVM](09.JVM进阶/01.50+道JVM面试题+11张思维导图就是让你懂JVM.md)
     * [02.秒懂JVM的三大参数类型，就靠这十个小实验了](09.JVM进阶/02.秒懂JVM的三大参数类型，就靠这十个小实验了.md)
     * [98.字节码指令表](09.JVM进阶/98.字节码指令表.md)
     * [99.JVM参数列表](09.JVM进阶/99.JVM参数列表.md)
 
-* 十一、工具篇
+* 九七、工具篇
 
     * [01.自定义Markdown神器Typora的主题样式](99.tools/01.自定义Markdown神器Typora的主题样式.md)
     * [02.使用docsify写开源文档](99.tools/02.使用docsify写开源文档.md)
@@ -181,7 +188,7 @@
     * [98.IDEA调试Java多线程](99.tools/98.IDEA调试Java多线程.md)
     * [99.IDEA调试Java源码](99.tools/99.IDEA调试Java源码.md)
 
-* 十二、MacBook 使用技巧💻
+* 九八、MacBook 使用技巧💻
 
     * [01.Mac需要安装的软件](108.MacBook使用技巧/01.Mac需要安装的软件.md)
     * [02.Mac控制台美化工具](108.MacBook使用技巧/02.Mac控制台美化工具.md)
@@ -193,7 +200,7 @@
     * [08.M1运行Docker](05.安装部署篇/09.M1运行Docker.md)
 
 
-* 十三、SpringBoot 学习篇
+* 九九、SpringBoot 学习篇
 
     * [05.SpringBoot整合JDBC](03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)
     * [06.SpringBoot整合Druid](03.SpringBoot学习篇/spring-boot-06-data-druid.md)
