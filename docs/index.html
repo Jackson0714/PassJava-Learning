@@ -10,19 +10,112 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-dark-mode@0.6.1/dist/style.css" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" />
+<!-- 自定义特色样式：by myself -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/css/me.css">
+
+<style>
+
+  /*加重描述strong*/
+  .markdown-section strong {
+    color: rgb(239, 112, 96);
+  }
+
+
+  h2 span {
+      display:inline-block;
+      background: rgb(66, 185, 131);
+      color:#ffffff;
+      padding:  10px  16px;
+      border-radius:5px;
+      box-shadow: 1px 1px 3px black;
+    }
+
+    ol, ul, li{
+      line-height: 27px !important;
+      font-size: 16px !important;
+    }
+
+    section.cover h1 {
+      margin: 0;
+    }
+
+    @media (max-width:600px) {
+      pre {
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+        margin-left: -20px !important;
+        margin-right: -20px !important;
+        box-shadow: 0px 0px 20px 0px #f7f7f7 !important;
+      }
+
+      /*代码块复制按钮默认隐藏*/
+      .docsify-copy-code-button {
+        display: none;
+      }
+
+      .advertisement{
+        display: none;
+      }
+
+    }
+
+    .markdown-section pre {
+      padding-left: 0 !important;
+      padding-right: 0px !important;
+    }
+
+    .markdown-section {
+      margin: 0 3.2% !important;
+    }
+
+    a.section-link{
+      font-size: .9rem !important;
+    }
+
+    .advertisement {
+      position: fixed;
+      right: 20px;
+      top: 100px;
+      width: 110px;
+      box-shadow: -1px 0 2px 0px #c5ebda;
+      padding: 10px;
+      z-index: 99;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .advertisement p,
+    h4 {
+      margin: 0;
+      padding: 0;
+    }
+
+    .advertisement .Tencent_code h4 {
+      font-size: 15px;
+      color: #25a46a;
+      margin-bottom: 10px;
+    }
+
+    /*滚动条样式 start*/
+    /* 滚动条宽度 */
+    ::-webkit-scrollbar{width:5px;}
+    /* 滚动条颜色 */
+    ::-webkit-scrollbar-thumb{
+      background: #33a9dc;
+      background-image: linear-gradient(#6ecd56, #33a9dc, #cb6196, #c16290);
+      border-radius: 2em;
+    }
+
+  </style>
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
   
   <!-- alert 样式 -->
   <link rel="stylesheet" href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" type='text/css' media='all' />
-
   <!-- 复制提醒 -->
   <script src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
-  <script>
-    document.body.oncopy = function () {
-      swal("复制成功 🎉",
-              "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 GitHub 给个 Star 吧 😊   - by 悟空哥",
-              "success"); };
-  </script>
+
+  <!-- 访问量统计 -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   
   <script>
 	var _hmt = _hmt || [];
@@ -38,7 +131,16 @@
   
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">🏃‍🏃‍🏃‍💨 加载中..</div>
+  <div class="aside_container">
+    <div class="advertisement">
+      <div class="Tencent_code">
+        <h4>关注作者公众号</h4>
+        <p style="font-size: 12px;">从零开始学架构</p>
+        <img src="http://cdn.jayh.club/uPic/qrcodeyQmYxt.jpg" alt="EnjoyToShare" />
+      </div>
+    </div>
+</div>
   <div id="gitalk-container"></div>
   <script>
     window.$docsify = {
@@ -91,6 +193,7 @@
               '<img src="https://img-blog.csdnimg.cn/20210522084205664.png" alt="公众号" width="557px" height="294px">',
               '<img src="https://oscimg.oschina.net/oscnet/up-a2f2ba3e2ec0d84f7b895c5476d98f202dc.png" alt="微信" width="557px" height="294px">',
             '</p>',
+            '<p id="sitetime"></p>',
             '<span><a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备19010052号-2</a></span>',
             '</footer>'
           ].join('');
@@ -120,6 +223,11 @@
   <script src="//cdn.jsdelivr.net/npm/docsify-dark-mode@0.6.1/dist/index.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- mouse click -->
+  <script src="//cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/click_heart.js"></script>
+
+  <!-- 美化提示样式 -->
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> -->
   <!-- 访问量统计 -->
@@ -160,5 +268,113 @@
     //   }
     // }
   </script>
+  <script>
+    document.body.oncopy = function () {
+      swal("复制成功 🎉",
+              "若要转载或引用请务必保留原文链接，并申明来源。如果你觉得本仓库不错，那就来 GitHub 给个 Star 吧 😊   - by 悟空哥",
+              "success"); };
+  </script>
+
+  <!-- 运行时间统计 -->
+<script language=javascript>
+  function siteTime() {
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth() + 1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+    year - 作为date对象的年份，为4位年份值
+    month - 0-11之间的整数，做为date对象的月份
+    day - 1-31之间的整数，做为date对象的天数
+    hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+    minutes - 0-59之间的整数，做为date对象的分钟数
+    seconds - 0-59之间的整数，做为date对象的秒数
+    microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+    var t1 = Date.UTC(2020, 08, 17, 00, 00, 00); //北京时间2020-02-10 00:00:00
+    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+    var diff = t2 - t1;
+    var diffYears = Math.floor(diff / years);
+    var diffDays = Math.floor((diff / days) - diffYears * 365);
+    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+    document.getElementById("sitetime").innerHTML = " 本网站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒 ";
+  }
+  siteTime();
+</script>
+
+
+<!-- 回到顶部
+<script src="https://github.com/Jackson0714/NoteBook/blob/master/plugin/jquery.js"></script>
+<script src="https://github.com/Jackson0714/NoteBook/blob/master/plugin/jquery.goup.js"></script>
+  
+<script type="text/javascript">
+  $(document).ready(function () {
+    $.goup({
+      trigger: 100,
+      bottomOffset: 32,
+      locationOffset: 32,
+      title: 'TOP',
+      titleAsText: true
+    });
+  });
+</script> -->
+
+
+
+<!-- 右下角看板娘动漫 -->
+<script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+
+<script>
+  L2Dwidget.init({
+    "model": {
+      //jsonpath控制显示那个小萝莉模型，
+      //(切换模型需要改动)
+      jsonPath: "https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json",
+      "scale": 1
+    },
+    "display": {
+      "position": "right", //看板娘的表现位置
+      "width": 70,  //小萝莉的宽度
+      "height": 140, //小萝莉的高度
+      "hOffset": 35,
+      "vOffset": -20
+    },
+    "mobile": {
+      "show": true,
+      "scale": 1
+    },
+    "react": {
+      "opacityDefault": 0.7,
+      "opacityOnHover": 0.2
+    }
+  });
+</script>
+
+
+<script src="http://cdn.jayh.club/js/autoload.js"></script>
+
+<style>
+  #waifu {
+    bottom: -1000px;
+    right: 0;
+    line-height: 0;
+    margin-bottom: -10px;
+    position: fixed;
+    transform: translateY(3px);
+    transition: transform .3s ease-in-out, bottom 3s ease-in-out;
+    z-index: 1;
+}
+</style>
+
 </body>
 </html>
