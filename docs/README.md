@@ -4,6 +4,10 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 
 # PassJava 学习教程
 
+## Java 学习路线（赛亚人版）
+
+[Java 学习路线（赛亚人版）](http://passjava.cn/#/01.%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B/9.Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF)
+
 ## 部署教程
 
 - [Mac M1 部署项目](http://www.passjava.cn/#/01.项目简介/7.本地部署项目Mac版)
