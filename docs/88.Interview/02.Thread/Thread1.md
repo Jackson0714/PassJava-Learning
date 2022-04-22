@@ -128,13 +128,8 @@ ABA 问题的解决思路就是使用版本号。在变量前面追加上版本�
 ###  volatile 和 synchornized 对比
 
 - volatile 只能修饰实例变量和类变量，synchronized 可以修饰方法和代码块。
-
 - volatile 不保证原子性，而 synchronized 保证原子性
-
 - volatile 不会造成阻塞，而 synchronized 可能会造成阻塞
-
-- volatile 轻量级锁，synchronized 重量级锁
-
 - volatile 和 synchronized 都保证了可见性和有序性。
 
 ## 什么是Java内存模型？
