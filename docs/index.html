@@ -90,10 +90,22 @@
       padding: 0;
     }
 
-    .advertisement .Tencent_code h4 {
+    .advertisement .tencent_code h4 {
       font-size: 15px;
       color: #25a46a;
       margin-bottom: 10px;
+    }
+
+    .wechat {
+      position: fixed;
+      right: 20px;
+      top: 200px;
+      width: 150px;
+      box-shadow: -1px 0 2px 0px #c5ebda;
+      padding: 10px;
+      z-index: 99;
+      background-color: #fff;
+      text-align: center;
     }
 
     /*滚动条样式 start*/
@@ -134,13 +146,22 @@
   <div id="app">🏃‍🏃‍🏃‍💨 加载中..</div>
   <div class="aside_container">
     <div class="advertisement">
-      <div class="Tencent_code">
+      <div class="tencent_code">
         <h4>关注公众号</h4>
-        <p style="font-size: 12px;">悟空聊架构</p>
-        <img src="http://cdn.jayh.club/uPic/qrcodeyQmYxt.jpg" alt="EnjoyToShare" />
+        <p style="font-size: 12px; color: #c04802;">悟空聊架构</p>
+        <img src="http://cdn.jayh.club/uPic/qrcode28EYPSJ.jpg" alt="EnjoyToShare" />
       </div>
     </div>
-</div>
+  </div>
+  <div class="aside_container2">
+    <div class="wechat">
+      <div class="wechat_code">
+        <h4>加我好友</h4>
+        <p style="font-size: 12px; color: #c04802;">悟空呀</p>
+        <img src="http://cdn.jayh.club/uPic/wechat_qrcodeKkPxBh.jpg" alt="EnjoyToShare" />
+      </div>
+    </div>
+  </div>
   <div id="gitalk-container"></div>
   <script>
     window.$docsify = {
@@ -331,7 +352,7 @@
 
 
 
-<!-- 右下角看板娘动漫 -->
+<!-- 左下角看板娘动漫 -->
 <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
 
 <script>
@@ -360,21 +381,8 @@
   });
 </script>
 
-
+<!-- 右下角看板娘 -->
 <script src="http://cdn.jayh.club/js/autoload1.0.js"></script>
-
-<style>
-  #waifu {
-    bottom: -1000px;
-    right: 0;
-    line-height: 0;
-    margin-bottom: -10px;
-    position: fixed;
-    transform: translateY(3px);
-    transition: transform .3s ease-in-out, bottom 3s ease-in-out;
-    z-index: 1;
-}
-</style>
 
 </body>
 </html>
