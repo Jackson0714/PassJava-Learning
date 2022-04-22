@@ -7,6 +7,7 @@
     * [5.项目前置要求](01.项目简介/5.项目前置要求.md)
     * [7.本地部署项目Mac版](01.项目简介/7.本地部署项目Mac版.md)
     * [8.本地部署问题汇总](01.项目简介/8.本地部署问题汇总.md)
+    * [9.Java学习路线](01.项目简介/9.Java学习路线.md)
 
 * 二、PassJava 架构篇
     * [01.创建项目和添加模块](02.PassJava架构篇/01.创建项目和添加模块.md)
@@ -136,6 +137,9 @@
         * [102.如何评价代码的质量](88.Interview/05.DesignPattern/102.如何评价代码的质量.md)
         * [103.编写高质量代码](88.Interview/05.DesignPattern/103.编写高质量代码.md)
     * [06.网络](88.Interview/06.Network/01.Network.md)
+        * [03.TCP长连接](88.Interview/06.Network/03.TCP长连接.md)
+        * [04.GRPC_KeepAlive](88.Interview/06.Network/04.GRPC_KeepAlive.md)
+        * [05.Netty心跳检测机制](88.Interview/06.Network/05.Netty心跳检测机制)
     * 07.Java基础
         * [01.Java基础1](88.Interview/07.JavaBasic/01.JavaBasic.md)
         * [02.Java基础2](88.Interview/07.JavaBasic/01.JavaBasic.md)
