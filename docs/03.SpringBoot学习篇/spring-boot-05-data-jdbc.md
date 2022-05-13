@@ -12,7 +12,7 @@ JDBC API 属于Java APIJDBC用于以下几种功能：连接到数据库、执�
 
 ### 2.1 创建 Spring Boot Project 时引入 JDBC API 依赖和 MySQL Driver依赖
 
-![mark](http://cdn.jayh.club/blog/20200405/u0aQQl6asDKX.png?imageslim)
+![mark](http://cdn.jayh.club/uPic/36a82cfc8610165bd569c805483d5dc8lWx0WQ.png)
 可以在POM中找到引入的JDBC依赖和mysql依赖：
 JDBC 依赖：
 
@@ -25,7 +25,7 @@ JDBC 依赖：
 
 MySql 驱动依赖：
 
-``` xml
+```xml
 <dependency>
   <groupId>mysql</groupId>
   <artifactId>mysql-connector-java</artifactId>
@@ -37,7 +37,7 @@ MySql 驱动依赖：
 
 新增配置文件：src/main/resources/application.yml
 
-``` yaml
+```yaml
 spring:
   datasource:
     username: root
@@ -50,7 +50,7 @@ spring:
 
 ### 2.3 查看使用的数据源和数据库连接
 
-``` java
+```java
 package com.jackson0714.springboot;
 
 import org.junit.jupiter.api.Test;
@@ -85,7 +85,7 @@ class Springboot05DataJdbcApplicationTests {
 
 数据库连接：HikariProxyConnection@1335157064 wrapping com.mysql.cj.jdbc.ConnectionImpl@7ff8a9dc
 
-![](http://cdn.jayh.club/uPic/image-20211129205228266oaIdph.png)
+![](http://cdn.jayh.club/uPic/d9f8e7fb58f5837218069687a3589cee5hezfS.png)
 
 ## 三、自动配置原理
 
@@ -93,7 +93,7 @@ class Springboot05DataJdbcApplicationTests {
 
 DataSourceConfiguration用来自动导入数据源（根据各种判断）
 
-``` java
+```java
 /**
 	 * Tomcat Pool DataSource configuration.
 	 */
@@ -118,7 +118,7 @@ DataSourceConfiguration用来自动导入数据源（根据各种判断）
 
 ### 3.4 默认支持以下数据源
 
-``` java
+```java
 org.apache.tomcat.jdbc.pool、HikariDataSource、org.apache.commons.dbcp2
 ```
 
@@ -126,7 +126,7 @@ org.apache.tomcat.jdbc.pool、HikariDataSource、org.apache.commons.dbcp2
 
 使用DataSourceBuilder创建数据源，利用反射创建响应type的数据源，并且绑定相关属性
 
-``` java
+```java
 	/**
 	 * Generic DataSource configuration.
 	 */
@@ -165,7 +165,7 @@ initSchema() 执行数据脚本 （文件名规则 data-*.sql）
 
 getScripts() 来获取需要执行的脚本
 
-``` java
+```java
 private List<Resource> getScripts(String propertyName, List<String> resources, String fallback) {
   if (resources != null) {
     return getResources(propertyName, resources, true);
@@ -190,7 +190,7 @@ isEnabled() 方法判断是否开启了自动执行脚本
 
 用Always模式则每次启动spring boot重复执行脚本（创建表脚本都是先判断有没有表，有则删除后重建）
 
-``` java
+```java
 private boolean isEnabled() {
   DataSourceInitializationMode mode = this.properties.getInitializationMode();
   if (mode == DataSourceInitializationMode.NEVER) {
@@ -212,13 +212,13 @@ schema:
 
 创建出的 `department` 表
 
-![](http://cdn.jayh.club/uPic/image-20211129205136810RdTL6J.png)
+![](http://cdn.jayh.club/uPic/82fde24378fa650e3b46367549509ef5kEPCRN.png)
 
 ## 四、JdbcTemplate
 
 JdbcTemplateAutoConfiguration.java 文件 自动注入了JdbcTemplate。（JdbcTemplate用来操作数据库）
 
-``` java
+```java
 @Configuration(proxyBeanMethods = false)
 @ConditionalOnClass({ DataSource.class, JdbcTemplate.class })
 @ConditionalOnSingleCandidate(DataSource.class)
@@ -236,7 +236,7 @@ public class JdbcTemplateAutoConfiguration {
 
 ### 5.1 pom.xml文件 添加swagger依赖
 
-``` xml
+```xml
 <!-- swagger -->
 <dependency>
   <groupId>io.springfox</groupId>
@@ -252,7 +252,7 @@ public class JdbcTemplateAutoConfiguration {
 
 ### 5.2 添加SwaggerConfig.java文件
 
-``` java
+```java
 package com.jackson0714.springboot.config;
 
 import org.springframework.context.annotation.Bean;
@@ -292,13 +292,13 @@ public class SwaggerConfig {
 
 http://localhost:8081/swagger-ui.html
 
-![](http://cdn.jayh.club/uPic/image-202111292053024977s7YVS.png)
+![](http://cdn.jayh.club/uPic/fcc40fd2fb298785e2784db9f522867eIIm6Q7.png)
 
 ## 六、测试
 
 ### 6.1 新增部门
 
-``` java
+```java
 @ApiOperation(value = "1.新增部门")
 @ApiImplicitParams({
   @ApiImplicitParam(name = "name", value = "部门名称")
@@ -311,15 +311,15 @@ public int createDepartment(@RequestParam String name) {
 }
 ```
 
-![](http://cdn.jayh.club/uPic/image-20211129205322369PtJB4B.png)
+![](http://cdn.jayh.club/uPic/960172f49734bff8c2849a8bc12d47afX0AOwS.png)
 
 表记录
 
-![img](..\images\spring-boot-05-data-jdbc\create_table.png)
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-vSXwzVym-1652094311265)(..\images\spring-boot-05-data-jdbc\create_table.png)]
 
 ### 6.2 查询所有部门
 
-``` java
+```java
 @ApiOperation(value = "2.查询所有部门")
 @GetMapping("/getAllDepartment")
 public List<Map<String, Object>> getAllDepartment() {
@@ -328,11 +328,11 @@ public List<Map<String, Object>> getAllDepartment() {
 }
 ```
 
-![](http://cdn.jayh.club/uPic/image-20211129205342044eUwjOE.png)
+![](http://cdn.jayh.club/uPic/590d9985b17fc00818347f96a0dc21ffZxFkq4.png)
 
 ### 6.3 根据id查询某个部门
 
-``` java
+```java
 @ApiOperation(value = "3.根据id查询某个部门")
 @ApiImplicitParams({
   @ApiImplicitParam(name = "id", value = "需要查询的部门id")
@@ -345,11 +345,11 @@ public Map<String, Object> getDepartmentById(@PathVariable Long id) {
 }
 ```
 
-![](http://cdn.jayh.club/uPic/image-2021112920540345192oCWe.png)
+![](http://cdn.jayh.club/uPic/3bb95720c506959f1ca40e7f97896a58AMA5Fv.png)
 
 ### 6.4 根据id更新部门名称
 
-``` java
+```java
 @ApiOperation(value = "根据id更新部门名称")
 @ApiImplicitParams({
   @ApiImplicitParam(name = "id", value = "需要更新的部门id"),
@@ -363,11 +363,11 @@ public int updateDepartmentById(@RequestParam Long id, @RequestParam String name
 }
 ```
 
-![](http://cdn.jayh.club/uPic/image-20211129205419184jyNPy7.png)
+![](http://cdn.jayh.club/uPic/ec1ce3c0523be48b317585a8c30fc07aKs48mw.png)
 
 ### 6.5 根据id删除部门
 
-``` java
+```java
 @ApiOperation(value = "根据id删除部门")
 @ApiImplicitParams({
   @ApiImplicitParam(name = "id", value = "需要删除的部门id")
@@ -380,7 +380,7 @@ public int deleteDepartment(@RequestParam Long id) {
 }
 ```
 
-![](http://cdn.jayh.club/uPic/image-20211129205436421XMDVdv.png)
+![](http://cdn.jayh.club/uPic/a4448fa086ecfec6004396b44b080fc1ViBJVh.png)
 
 
 
@@ -392,13 +392,13 @@ public int deleteDepartment(@RequestParam Long id) {
 
 java.sql.SQLException:null, message from server: "Host 'Siri' is not allowed to connect to this MySQL server"
 
-![](http://cdn.jayh.club/uPic/image-20211129205451782M5h9XW.png)
+![](http://cdn.jayh.club/uPic/157e6531147bb1b29e39940734e22a11glaz9E.png)
 
 解决方案：
 
 执行命令：
 
-``` shell
+```shell
 use mysql;
 select host from user;
 update user set host = '%' where user = 'root'
@@ -406,23 +406,20 @@ update user set host = '%' where user = 'root'
 
 执行结果：
 
-``` shell
+```shell
 Query OK, 1 row affected
 ```
 
 如下图所示：
 
-![](http://cdn.jayh.club/uPic/image-202111292055070630f4nHh.png)
+![](http://cdn.jayh.club/uPic/37754c7db1a01eb831c948da4d3e0519MwXtL1.png)
 
 ### 问题2
 
 Caused by: com.mysql.cj.exceptions.InvalidConnectionAttributeException: The server time zone value '�й���׼ʱ��' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specifc time zone value if you want to utilize time zone support.
 
-![](http://cdn.jayh.club/uPic/image-20211129205519517Qk9qF4.png)
+![](http://cdn.jayh.club/uPic/2d346c388bf354bf008b0776a02b55fcHXOm5R.png)
 
 解决方案：
 
 配置spring.datasource.url 时，增加参数：serverTimezone=UTC
-
-![](http://cdn.jayh.club/uPic/image-20211129205532829oU3luy.png)
-

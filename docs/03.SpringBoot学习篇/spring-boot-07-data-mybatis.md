@@ -1,4 +1,6 @@
-[TOC]
+
+
+# 深入浅出 Spring Boot - 数据访问之 MyBatis
 
 > MyBatis 在Spring Boot应用非常广，非常强大的一个半自动的ORM框架。
 
@@ -324,7 +326,7 @@ public class User {
 </dependency>
 ```
 
-​
+
 
 ## 5. 创建调用User方法的 UserMapper 接口
 
