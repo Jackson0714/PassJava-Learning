@@ -524,9 +524,9 @@ RR 的可重复读怎么做到的？
 
 1. master服务器将数据的改变记录到binlog中；
 
-2. slave服务器会在一定时间间隔内对master 的binlog进行检查，如果发生改变，则开始一个I/OThread请求读取master中binlog；
+2. slave服务器会在一定时间间隔内对master 的binlog进行检查，如果发生改变，则开始一个 I/O Thread 请求读取 master 中 binlog；
 
-3. 同时主节点为每个I/O线程启动一个dump线程，用于向其发送二进制事件，并保存至从节点本地的中继日志中，从节点将启动SQL线程从中继日志中读取二进制日志，在本地重放，使得其数据和主节点的保持一致，最后I/OThread和SQLThread将进入睡眠状态，等待下一次被唤醒；
+3. 同时主节点为每个 I/O 线程启动一个dump线程，用于向其发送二进制日志，并保存至从节点本地的中继日志中，从节点将启动 SQL 线程从中继日志中读取二进制日志，在本地重放，使得其数据和主节点的保持一致，最后 I/O Thread和 SQL Thread将进入睡眠状态，等待下一次被唤醒；
 
 ![](http://cdn.jayh.club/blog/20210906/0bKMjNfTH2oL.png?imageslim)
 

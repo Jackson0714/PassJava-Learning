@@ -46,6 +46,7 @@
     - [08.Windows安装mysql](05.安装部署篇/08.Windows安装mysql.md)
     - [09.M1运行Docker](05.安装部署篇/09.M1运行Docker.md)
     - [10.部署ELK日志检索平台](05.安装部署篇/10.部署ELK日志检索平台.md)
+    - [11.部署MySQL高可用架构](05.安装部署篇/11.部署MySQL高可用.md)
 
 * 四、PassJava业务篇
     * [01.管理后台-题目类型功能](06.PassJava业务篇/01.管理后台-题目类型功能.md)
