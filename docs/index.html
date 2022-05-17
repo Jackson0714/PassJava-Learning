@@ -128,7 +128,7 @@
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
   
   <!-- alert 样式 -->
-  <link rel="stylesheet" href="http://cdn.jayh.club/js/sweetalert.min.css" type='text/css' media='all' />
+  <link rel="stylesheet" href="http://cdn.jayh.club/css/sweetalert.min.css" type='text/css' media='all' />
   <!-- 复制提醒 -->
   <script src="http://cdn.jayh.club/js/sweetalert.min.js"></script>
 
@@ -330,7 +330,7 @@
     var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
     var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
     var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
-    document.getElementById("sitetime").innerHTML = " 本网站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒 ";
+    //document.getElementById("sitetime").innerHTML = " 本网站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒 ";
   }
   siteTime();
 </script>
@@ -362,7 +362,7 @@
     "model": {
       //jsonpath控制显示那个小萝莉模型，
       //(切换模型需要改动)
-      jsonPath: "http://cdn.jayh.club/json/shizuku.model.json",
+      jsonPath: "https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json",
       "scale": 1
     },
     "display": {
