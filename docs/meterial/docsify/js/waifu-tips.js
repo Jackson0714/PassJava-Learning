@@ -288,3 +288,6 @@ function initWidget(config, apiPath) {
 		loadWidget(config);
 	}
 }
+
+
+// 看板娘 cdn 资源路径：https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/model/Potion-Maker/Tia/index.json
