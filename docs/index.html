@@ -74,15 +74,22 @@
 
     .close-advertisement {
       position: fixed;
-      right: 52px;
+      right: 30px;
       top: 70px;
       z-index: 99;
+      display: flex;
+      flex-direction: row;
     }
 
     .close-advertisement .image {
       width: 29px;
       height: 29px;
       max-width: 50px;
+    }
+
+    .close-advertisement .text {
+      font-size: 10px;
+      align-self: center;
     }
 
     .advertisement {
@@ -160,8 +167,10 @@
 </head>
 <body>
   <div id="app">🏃‍🏃‍🏃‍💨 加载中...</div>
-  <div class="close-advertisement">
-    <img class="image" id="closeQrcode" title="显示/隐藏" onclick="closeQrcode()" src="./images/common/hidden.png"> </img>
+  <div class="close-advertisement" id="closeAdvertisement">
+    <img class="image" id="hiddenQrcode" title="隐藏"  onclick="hiddenQrcode()" src="./images/common/hidden.png"> </img>
+    <img class="image" id="displayQrcode" title="显示"  onclick="displayQrcode()" src="./images/common/display.png"> </img>
+    <span class="text">显示/隐藏</span>
   </div>
   <div class="aside_container" id="asideContainer1">
     <div class="advertisement">
@@ -275,10 +284,19 @@
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <script>
 
-    function closeQrcode() {
-      var closeElement = document.getElementById("closeQrcode");
-      $("#asideContainer1").toggle(1000);
-      $("#asideContainer2").toggle(1000);
+    $("#displayQrcode").hide()
+    function hiddenQrcode() {
+      $("#asideContainer1").toggle(500);
+      $("#asideContainer2").toggle(500);
+      $("#displayQrcode").show();
+      $("#hiddenQrcode").hide()
+    }
+
+    function displayQrcode() {
+      $("#asideContainer1").toggle(500);
+      $("#asideContainer2").toggle(500);
+      $("#displayQrcode").hide();
+      $("#hiddenQrcode").show();
     }
 
 
