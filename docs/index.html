@@ -170,7 +170,7 @@
   <div class="close-advertisement" id="closeAdvertisement">
     <img class="image" id="hiddenQrcode" title="隐藏"  onclick="hiddenQrcode()" src="./images/common/hidden.png"> </img>
     <img class="image" id="displayQrcode" title="显示"  onclick="displayQrcode()" src="./images/common/display.png"> </img>
-    <span class="text">显示/隐藏</span>
+    <span class="text">纯净版</span>
   </div>
   <div class="aside_container" id="asideContainer1">
     <div class="advertisement">
@@ -289,7 +289,9 @@
       $("#asideContainer1").toggle(500);
       $("#asideContainer2").toggle(500);
       $("#displayQrcode").show();
-      $("#hiddenQrcode").hide()
+      $("#hiddenQrcode").hide();
+      $("#live2d").hide();
+      $("#live2dcanvas").hide();
     }
 
     function displayQrcode() {
@@ -297,6 +299,8 @@
       $("#asideContainer2").toggle(500);
       $("#displayQrcode").hide();
       $("#hiddenQrcode").show();
+      $("#live2d").show();
+      $("#live2dcanvas").show();
     }
 
 

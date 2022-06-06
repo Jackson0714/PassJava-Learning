@@ -25,7 +25,7 @@
     * [13.SpringCloud整合统一异常处理](02.PassJava架构篇/13.整合统一异常处理.md)
     * [14.Elasticsearch上篇（原理）](02.PassJava架构篇/14.Elasticsearch原理.md)
     * [15.Elasticsearch中篇（实战）](02.PassJava架构篇/15.Elasticsearch实战)
-    * [16.Elasticsearch下篇（集群部署）更新中](02.PassJava架构篇/16.Elasticsearch集群部署)
+    * [16.Elasticsearch下篇（集群部署）更新中](02.PassJava架构篇/16.Elasticsearch集群部署.md)
     * [17.ES中文分词](02.PassJava架构篇/21.ES中文分词.md)
     * [18.微服务架构中的链路追踪](02.PassJava架构篇/17.微服务架构中的链路追踪.md)
     * [19.48张图手摸手教你性能压测](02.PassJava架构篇/18.48张图手摸手教你性能压测.md)
