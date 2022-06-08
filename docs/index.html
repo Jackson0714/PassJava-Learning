@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="http://cdn.jayh.club/css/sidebar-folder.min.css" />
   <!-- 自定义特色样式：by myself -->
   <link rel="stylesheet" href="http://cdn.jayh.club/me.css">
+  <link rel="stylesheet" href="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/light.css">
 
   <style>
 
@@ -152,6 +153,8 @@
   <!-- 复制提醒 -->
   <script src="http://cdn.jayh.club/js/sweetalert.min.js"></script>
 
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+
   <script>
 	var _hmt = _hmt || [];
 	(function() { 
@@ -191,10 +194,34 @@
 
   </div>
   <div id="gitalk-container"></div>
+
+  
+
   <script>
     window.$docsify = {
       name: 'PassJava 博客连载中',
       repo: 'https://github.com/jackson0714/PassJava-Learning',
+      toc: {
+        tocMaxLevel: 5,
+        target: 'h2, h3, h4, h5, h6'
+      },
+      'flexible-alerts': {
+        style: 'flat'
+      },
+      count:{
+        countable: true,
+        position: 'top',
+        margin: '10px',
+        float: 'right',
+        fontsize:'0.9em',
+        color:'rgb(90,90,90)',
+        language:'chinese',
+        localization: {
+          words: "",
+          minute: ""
+        },
+        isExpected: true
+      },
       loadNavbar: true,
       loadSidebar: true, // 加载自定义侧边栏
       maxLevel: 2, // 默认情况下会抓取文档中所有标题渲染成目录，可配置最大支持渲染的标题层级。
@@ -259,6 +286,8 @@
     }
   </script>
   <script src="http://cdn.jayh.club/js/docsify.min.js"></script>
+  <script src="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/docsify-plugin-toc.min.js"></script>
+  <script src="http://cdn.jayh.club/js/countable.min.js"></script>
   <script src="http://cdn.jayh.club/js/prism-c.min.js"></script>
   <script src="http://cdn.jayh.club/js/prism-bash.min.js"></script>
   <script src="http://cdn.jayh.club/js/prism-cpp.min.js"></script>
@@ -284,6 +313,7 @@
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <script>
 
+    // 纯净版功能
     $("#displayQrcode").hide()
     function hiddenQrcode() {
       $("#asideContainer1").toggle(500);
