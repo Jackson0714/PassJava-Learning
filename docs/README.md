@@ -49,7 +49,7 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 
 - [打造一款 刷Java 知识的小程序](https://www.cnblogs.com/jackson0714/p/passJava1.html)
 - [打造一款 刷Java 知识的小程序（二）](https://www.cnblogs.com/jackson0714/p/passJava2.html)
-- [01.五分钟搞懂分布式基础概念](http://www.passjava.cn/#/04.SpringCloud学习篇/01.分布式基础概念)
+- [01.五分钟搞懂分布式基础概念](http://www.passjava.cn/#/92.分布式/01.分布式基础概念)
 - [02.快速搭建Linux环境-运维必备](http://www.passjava.cn/#/05.安装部署篇/01.环境搭建篇)
 - [03.配置虚拟机网络](http://www.passjava.cn/#/05.安装部署篇/02.配置虚拟机网络)
 - [04.安装Docker](http://www.passjava.cn/#/05.安装部署篇/03.安装docker)
