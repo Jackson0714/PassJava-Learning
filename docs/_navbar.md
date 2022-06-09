@@ -17,5 +17,5 @@
   * [后台平台](https://github.com/Jackson0714/PassJava-Platform)
   * [学习教程](https://github.com/Jackson0714/PassJava-Learning)
   
-* [友链](http://localhost:3000/#/112.双赢/01.友链)
+* [兄弟连](http://passjava.cn/#/112.双赢/01.友链)
   
