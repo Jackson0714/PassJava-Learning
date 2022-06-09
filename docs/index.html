@@ -7,7 +7,7 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="http://cdn.jayh.club/css/vue2.css">
-  <link rel="stylesheet" href="http://cdn.jayh.club/" />
+  <link rel="stylesheet" href="http://cdn.jayh.club/css/style.css" />
   <link rel="stylesheet" href="http://cdn.jayh.club/css/sidebar.min.css" />
   <link rel="stylesheet" href="http://cdn.jayh.club/css/sidebar-folder.min.css" />
   <!-- 自定义特色样式：by myself -->
@@ -281,6 +281,11 @@
           toggleBtnBg: '#42b983'
         }
       },
+      copyCode: {
+        buttonText : '复制',
+        errorText  : '复制失败',
+        successText: '复制成功'
+      },
       plugins: [
         function (hook) {
           var header = [
@@ -326,7 +331,7 @@
   <script src="http://cdn.jayh.club/js/prism-json.min.js"></script>
   <script src="http://cdn.jayh.club/js/prism-java.min.js"></script>
   <script src="http://cdn.jayh.club/js/prism-python.min.js"></script>
-  <!-- <script src="http://cdn.jayh.club/js/docsify-copy-code"></script> -->
+  <script src="http://cdn.jayh.club/js/docsify-copy-code"></script>
   <script src="http://cdn.jayh.club/js/search.js"></script>
   <script src="http://cdn.jayh.club/js/emoji.js"></script>
   <script src="http://cdn.jayh.club/js/zoom-image.js"></script>
