@@ -202,6 +202,7 @@
     * [07.画架构原理图，还是它好使](99.tools/07.画架构原理图，还是它好使.md)
     * [08.添加Gitee密钥](99.tools/08.添加Gitee密钥.md)
     * [09.给自己的博客docsify加上评论功能](99.tools/09.给自己的博客docsify加上评论功能.md)
+    * [12.用Jenkins部署项目](99.tools/12.用Jenkins部署项目.md)
     * [91.Maven配置](99.tools/91.Maven配置)
     * [92.Java环境问题](99.tools/92.Java环境问题)
     * [93.IDEA快捷键](99.tools/93.IDEA快捷键.md)
