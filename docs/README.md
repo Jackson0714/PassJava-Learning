@@ -14,8 +14,7 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 
 🍎目前在一家上市公司从事基础架构建设工作。
 
-![目录](https://mmbiz.qpic.cn/mmbiz_png/SfAHMuUxqJ2pEx8TXAgT3nqsfPBpXicrWsdgrhzhsn6rlG5pq56E2t8W7SjmgsWPMAN1Zib8raJlkGSBkYpvhkibw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-
+![目录](http://cdn.jayh.club/uPic/640tw1bSU.jpg)
 ## Java 学习路线（赛亚人版）
 
 [Java 学习路线（赛亚人版）](http://passjava.cn/#/01.%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B/9.Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF)
