@@ -66,6 +66,7 @@
         - [06.Eureka源码之客户端首次获取注册表](13.SpringCloud架构剖析/01.Eureka注册中心/06.Eureka源码之客户端首次获取注册表.md)
         - [07.Eureka源码之客户端增量获取注册表](13.SpringCloud架构剖析/01.Eureka注册中心/07.Eureka源码之客户端增量获取注册表.md)
         - [08.Eureka源码之Server端的多级缓存机制](13.SpringCloud架构剖析/01.Eureka注册中心/08.Eureka源码之Server端的多级缓存机制.md)
+        - [09.Eureka源码之心跳机制](13.SpringCloud架构剖析/01.Eureka注册中心/09.Eureka源码之心跳机制.md)
         - [98.Eureka控制台参数说明](13.SpringCloud架构剖析/01.Eureka注册中心/98.Eureka控制台参数说明.md)
     - 负载均衡Ribbon
         - [01.Ribbon架构剖析](13.SpringCloud架构剖析/02.Ribbon负载均衡/01.Ribbon架构剖析.md)
@@ -220,8 +221,10 @@
     * [04.M1安装Win10](108.MacBook使用技巧/04.M1安装Win10.md)
     * [05.Mac常见命令](108.MacBook使用技巧/05.Mac常见命令.md)
     * [06.Mac远程连接2021-12-03](108.MacBook使用技巧/06.Mac远程连接2021-12-03.md)
-    * [07.M1部署SpringCloud项目](01.项目简介/7.本地部署项目Mac版.md)
-    * [08.M1运行Docker](05.安装部署篇/09.M1运行Docker.md)
+    * [07.Alfred使用2022-03-25](01.项目简介/07.Alfred使用2022-03-25.md)
+    * [08.Bob翻译工具](108.MacBook使用技巧/08.Bob翻译工具.md)
+    * [09.Mac应用问题](108.MacBook使用技巧/09.Mac应用问题.md)
+    * [10.Mac系统问题](108.MacBook使用技巧/10.Mac系统问题.md)
 
 
 * 九九、SpringBoot 学习篇

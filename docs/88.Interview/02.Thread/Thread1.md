@@ -248,7 +248,7 @@ AQS 内部数据和方法，可以简单拆分为：
 
 3. keepAliveTime：线程活动保持时间 ，线程池的工作线程空闲后，保持存活的时间。
 
-4. runnableTaskQueue：任务队列，用于保存等待执行的任务的阻塞队列。有四种：ArrayBlockingQueue、LinkedBlockingQueue、SynchronousQueue、PriorityBlockingQueue。。
+4. runnableTaskQueue：任务队列，用于保存等待执行的任务的阻塞队列。有四种：ArrayBlockingQueue、LinkedBlockingQueue、SynchronousQueue、PriorityBlockingQueue。
 
 5. RejectedExecutionHandler 拒绝策略。当队列和线程满了后，采取一种策略处理提交的新任务。
 
