@@ -46,11 +46,8 @@
     - [08.Windows安装mysql](05.安装部署篇/08.Windows安装mysql.md)
     - [09.M1运行Docker](05.安装部署篇/09.M1运行Docker.md)
     - [10.部署ELK日志检索平台](05.安装部署篇/10.部署ELK日志检索平台.md)
-    - [11.部署MySQL高可用架构](05.安装部署篇/11.部署MySQL高可用.md)
+    - [11.深入理解ELK中Logstash的底层原理和填坑指南](05.安装部署篇/11.深入理解ELK中Logstash的底层原理和填坑指南.md)
     - [12.PassJava网站生产级事故，请放弃这个CDN吧](05.安装部署篇/12.PassJava网站生产级事故，请放弃这个CDN吧.md)
-    - [13.深入理解ELK中Logstash的底层原理和填坑指南](05.安装部署篇/13.深入理解ELK中Logstash的底层原理和填坑指南.md)
-    - [14.从单点 Redis 到 1 主 2 从 3 哨兵的架构演进之路](05.安装部署篇/14.从单点Redis到1主2从3哨兵的架构演进之路.md)
-    - [15.一次MySQL误操作导致的生产级事故，高可用都不顶不住了.md](05.安装部署篇/15.一次MySQL误操作导致的生产级事故，高可用都不顶用了.md)
 
 * 四、PassJava业务篇
     * [01.管理后台-题目类型功能](06.PassJava业务篇/01.管理后台-题目类型功能.md)
@@ -162,7 +159,16 @@
     * [09.Spring](88.Interview/09.Spring/01.Spring.md)
     * [10.Dubbo](88.Interview/10.Dubbo/01.Dubbo.md)
 
-* 九、Redis 进阶🆕
+
+
+
+
+* 九、高可用集群篇
+  - [01.部署MySQL高可用架构](11.高可用集群篇/01.部署MySQL高可用.md)
+  - [02.一次MySQL误操作导致的生产级事故，高可用都不顶不住了.md](11.高可用集群篇/02.一次MySQL误操作导致的生产级事故，高可用都不顶用了.md)
+  - [03.从单点 Redis 到 1 主 2 从 3 哨兵的架构演进之路](05.安装部署篇/03.从单点Redis到1主2从3哨兵的架构演进之路.md)
+
+* 十、Redis 进阶🆕
   * [00.Redis 源码下载](12.Redis/00.DownloadRedis.md)
   * [01.趣谈Redis之SDS](12.Redis/01.趣谈Redis之SDS.md)
   * [03.Redis的主从架构原理和部署](12.Redis/03.Redis的主从架构原理和部署.md)
@@ -174,18 +180,18 @@
   * [09.缓存实战（二）Redis分布式锁](02.PassJava架构篇/22.缓存实战（二）Redis分布式锁.md)
   * [10.缓存实战（三）Redisson分布式锁](02.PassJava架构篇/23.缓存实战（三）Redisson分布式锁.md)
 
-* 十、Elasticsearch🔍
+* 十一、Elasticsearch🔍
   
     * [Elasticsearch 系列](18.Elasticsearch/01.Elasticsearch目录.md)
 
 
-* 十一、中间件原理剖析 🔥🔥🔥
+* 十二、中间件原理剖析 🔥🔥🔥
   * RocketMQ
     * [01.一文带你搭建RocketMQ源码调试环境](16.消息队列/01.RocketMQ/03.如何调试RocketMQ源码.md)
   * Zookeeper
     * [01.ZAB原子广播协议-2022.03.18](17.Zookeeper/02.ZAB协议.md)
 
-* 十二、JVM 进阶
+* 十三、JVM 进阶
     * [01.50+道JVM面试题+11张思维导图就是让你懂JVM](09.JVM进阶/01.50+道JVM面试题+11张思维导图就是让你懂JVM.md)
     * [02.秒懂JVM的三大参数类型，就靠这十个小实验了](09.JVM进阶/02.秒懂JVM的三大参数类型，就靠这十个小实验了.md)
     * [98.字节码指令表](09.JVM进阶/98.字节码指令表.md)
