@@ -37,8 +37,7 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 ## 更好的阅读体验
 
 - 文档地址：[http://www.passjava.cn](http://www.passjava.cn)
-- 备用地址1：[https://jackson0714.github.io/PassJava-Learning](https://jackson0714.github.io/PassJava-Learning/) 
-- 备用地址2：http://jayh2018.gitee.io/passjava-learning/#/README
+- 备用地址1：[http://www.jayh.club](http://www.jayh.club) 
 
 ## PassJava 教程连载目录
 
