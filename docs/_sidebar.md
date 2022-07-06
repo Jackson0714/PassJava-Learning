@@ -153,9 +153,12 @@
     * 07.Java基础
         * [01.Java基础1](88.Interview/07.JavaBasic/01.JavaBasic.md)
         * [02.Java基础2](88.Interview/07.JavaBasic/02.JavaBasic.md)
+        * [03.HashMap](88.Interview/07.JavaBasic/03.HashMap.md)
     * 08.消息队列
-        * [01.Kafka](88.Interview/08.MessageQueue/01.Kafka.md)
-        * [02.消息队列常考面试题](88.Interview/08.MessageQueue/02.MQ_Basic.md)
+        * [01.消息队列基础](88.Interview/08.MessageQueue/01.MQ_Basic.md)
+        * [02.Kafka](88.Interview/08.MessageQueue/02.Kafka.md)
+        * [03.RabbitMQ基础1](88.Interview/08.MessageQueue/03.RabbitMQ1.md)
+        * [04.RabbitMQ基础2](88.Interview/08.MessageQueue/04.RabbitMQ2.md)
     * 09.Spring
         * [01.Spring基础1](88.Interview/09.Spring/01.Spring.md)
         * [02.Spring基础2](88.Interview/09.Spring/02.Spring.md)
@@ -238,7 +241,7 @@
 
 
 * 九九、SpringBoot 学习篇
-
+    * [02.traceId跟踪日志.md](03.SpringBoot学习篇/02.添加traceId跟踪日志)
     * [05.SpringBoot整合JDBC](03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)
     * [06.SpringBoot整合Druid](03.SpringBoot学习篇/spring-boot-06-data-druid.md)
     * [07.SpringBoot整合MyBatis](03.SpringBoot学习篇/spring-boot-07-data-mybatis.md)
