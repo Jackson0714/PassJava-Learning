@@ -45,8 +45,8 @@
     - [07.配置git](05.安装部署篇/07.配置git.md)
     - [08.Windows安装mysql](05.安装部署篇/08.Windows安装mysql.md)
     - [09.M1运行Docker](05.安装部署篇/09.M1运行Docker.md)
-    - [10.部署ELK日志检索平台](05.安装部署篇/10.部署ELK日志检索平台.md)
-    - [11.深入理解ELK中Logstash的底层原理和填坑指南](05.安装部署篇/11.深入理解ELK中Logstash的底层原理和填坑指南.md)
+    - [👍🏻10.部署ELK日志检索平台](05.安装部署篇/10.部署ELK日志检索平台.md)
+    - [👍🏻11.深入理解ELK中Logstash的底层原理和填坑指南](05.安装部署篇/11.深入理解ELK中Logstash的底层原理和填坑指南.md)
     - [12.PassJava网站生产级事故，请放弃这个CDN吧](05.安装部署篇/12.PassJava网站生产级事故，请放弃这个CDN吧.md)
 
 * 四、PassJava业务篇
@@ -75,6 +75,7 @@
     - Gateway网关
       - [01.SpringCloud整合Gateway网关](13.SpringCloud架构剖析/06.Gateway网关/01.SpringCloud整合Gateway网关.md)
       - [02.深入浅入Gateway](13.SpringCloud架构剖析/06.Gateway网关/02.深入浅入Gateway.md)
+      - [03.实战Gateway](13.SpringCloud架构剖析/06.Gateway网关/03.实战Gateway.md)
     - Nacos配置注册中心
       - [01.使用Nacos作为注册中心](13.SpringCloud架构剖析/07.Nacos配置注册中心/01.使用Nacos作为注册中心和配置中心.md)
       - [02.Nacos架构原理①：一条注册请求会经历什么？](13.SpringCloud架构剖析/07.Nacos配置注册中心/02.Nacos架构原理①：一条注册请求会经历什么？.md)
@@ -173,6 +174,7 @@
   - [02.一次MySQL误操作导致的生产级事故，高可用都不顶不住了.md](11.高可用集群篇/02.一次MySQL误操作导致的生产级事故，高可用都不顶用了.md)
   - [03.从单点 Redis 到 1 主 2 从 3 哨兵的架构演进之路](11.高可用集群篇/03.从单点Redis到1主2从3哨兵的架构演进之路.md)
   - [04.Keepalived底层原理(上）](11.高可用集群篇/04.Keepalived底层原理(上）20220629.md)
+  - [05.Keepalived底层原理-路由方案](11.高可用集群篇/05.Keepalived底层原理-路由方案20220719.md)
   - [98.B站20210713宕机事件](11.高可用集群篇/98.B站20210713宕机事件.md)
 
 
@@ -254,6 +256,10 @@
 
 * 前端进阶
     * [01.安装Vue的devtools插件](07.前端进阶/01.安装Vue的devtools插件.md)
+    * [02.AJAX底层原理](07.前端进阶/02.前端AJAX.md)
+    * [03.强缓存和协商缓存](07.前端进阶/03.强缓存和协商缓存.md)
+    * [04.小程序下拉刷新](07.前端进阶/04.小程序下拉刷新.md)
+    * [05.小程序视频播放和弹幕v2](07.前端进阶/05.小程序视频播放和弹幕v2.md)
 
 * SQL进阶
 
