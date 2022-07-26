@@ -82,6 +82,8 @@
       - [03.Nacos架构原理②：揭秘AP架构——Distro一致性协议](13.SpringCloud架构剖析/07.Nacos配置注册中心/03.Nacos架构原理②：揭秘AP架构——Distro一致性协议.md)
     - Sentinel限流
       - [01.Hystrix和Sentinel选型对比](13.SpringCloud架构剖析/08.Sentinel限流/01.Hystrix和Sentinel选型对比.md)
+    - 链路追踪
+      - [01.使用 traceId 实现链路追踪](13.SpringCloud架构剖析/11.链路追踪/01.添加traceId跟踪日志.md)
 
 * 五、并发多线程
     * [01.反制面试官-14张原理图-再也不怕被问volatile!](10.并发多线程/01.反制面试官-14张原理图-再也不怕被问volatile!.md)
@@ -155,6 +157,7 @@
         * [01.Java基础1](88.Interview/07.JavaBasic/01.JavaBasic.md)
         * [02.Java基础2](88.Interview/07.JavaBasic/02.JavaBasic.md)
         * [03.HashMap](88.Interview/07.JavaBasic/03.HashMap.md)
+        * [04.Java 8 中的时间处理](88.Interview/07.JavaBasic/04.Java8Time.md)
     * 08.消息队列
         * [01.消息队列基础](88.Interview/08.MessageQueue/01.MQ_Basic.md)
         * [02.Kafka](88.Interview/08.MessageQueue/02.Kafka.md)
@@ -166,9 +169,6 @@
     * [10.Dubbo](88.Interview/10.Dubbo/01.Dubbo.md)
 
 
-
-
-
 * 九、高可用集群篇
   - [01.部署MySQL高可用架构](11.高可用集群篇/01.部署MySQL高可用.md)
   - [02.一次MySQL误操作导致的生产级事故，高可用都不顶不住了.md](11.高可用集群篇/02.一次MySQL误操作导致的生产级事故，高可用都不顶用了.md)
@@ -176,8 +176,6 @@
   - [04.Keepalived底层原理(上）](11.高可用集群篇/04.Keepalived底层原理(上）20220629.md)
   - [05.Keepalived底层原理-路由方案](11.高可用集群篇/05.Keepalived底层原理-路由方案20220719.md)
   - [98.B站20210713宕机事件](11.高可用集群篇/98.B站20210713宕机事件.md)
-
-
 
 
 * 十、Redis 进阶🆕
@@ -246,7 +244,6 @@
 
 
 * 九九、SpringBoot 学习篇
-    * [02.traceId跟踪日志.md](03.SpringBoot学习篇/02.添加traceId跟踪日志)
     * [05.SpringBoot整合JDBC](03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)
     * [06.SpringBoot整合Druid](03.SpringBoot学习篇/spring-boot-06-data-druid.md)
     * [07.SpringBoot整合MyBatis](03.SpringBoot学习篇/spring-boot-07-data-mybatis.md)
