@@ -158,6 +158,7 @@
         * [02.Java基础2](88.Interview/07.JavaBasic/02.JavaBasic.md)
         * [03.HashMap](88.Interview/07.JavaBasic/03.HashMap.md)
         * [04.Java 8 中的时间处理](88.Interview/07.JavaBasic/04.Java8Time.md)
+        * [04.Java List 去重的六种方案](88.Interview/07.JavaBasic/05.ListDistinct.md)
     * 08.消息队列
         * [01.消息队列基础](88.Interview/08.MessageQueue/01.MQ_Basic.md)
         * [02.Kafka](88.Interview/08.MessageQueue/02.Kafka.md)
@@ -314,7 +315,6 @@
 * LeetCode刷题
   - [001.两数之和【数组】LeetCode第1题](92.LeetCode算法题/01.数组/001.两数之和-数组-LeetCode第1题.md)
   
-
 * 悟空学习群问题汇总
     - [01.删除binlog问题](102.学习群问题汇总/01.20201026_删除binlog问题.md)
     - [02.导出报表问题](102.学习群问题汇总/02.20201028_导出报表问题.md)

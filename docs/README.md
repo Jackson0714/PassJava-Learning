@@ -15,6 +15,22 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 🍎目前在一家上市公司从事基础架构建设工作。
 
 ![目录](http://cdn.jayh.club/uPic/640tw1bSU.jpg)
+欢迎加我好友，提供技术解答、简历修改、500人技术交流群。
+
+![](http://cdn.jayh.club/uPic/6404hSCq5.png)
+
+**悟空的多个技术专题**：
+
+33 篇 SpringCloud 实战，回复PDF获取。
+
+8 篇分布式算法文章，回复分布式获取。
+
+7 篇JVM 专项训练，回复JVM获取。
+
+Elasticsearch 筋斗云版蓝皮书1.0，回复ES获取
+
+面试必备资料，关注公众号即可获取。
+
 ## Java 学习路线（赛亚人版）
 
 [Java 学习路线（赛亚人版）](http://passjava.cn/#/01.%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B/9.Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF)
