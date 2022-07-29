@@ -177,8 +177,8 @@
         * [02.Spring基础2](88.Interview/09.Spring/02.Spring.md)
     * [10.Dubbo](88.Interview/10.Dubbo/01.Dubbo.md)
 
-* 六、Java 核心知识（全面解析）
-  * 6.1、Java 基础
+* 六、Java 核心知识
+  * 6.1、Java 核心知识
     * [01.Java语言概述](19.Java核心知识/01.Java语言概述.md)
     * [02.变量、标识符、保留字、变量](19.Java核心知识/02.变量、标识符、保留字、变量.md)
     * [03.运算符](19.Java核心知识/03.运算符.md)
