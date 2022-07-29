@@ -35,18 +35,18 @@
     * [24.缓存实战（四）实战 Spring Cache](02.PassJava架构篇/24.缓存实战（四）SpringCache.md)
 
   * 1.3、PassJava 安装部署篇
-    - [01.环境搭建篇](05.安装部署篇/01.环境搭建篇.md)
-    - [02.配置虚拟机网络](05.安装部署篇/02.配置虚拟机网络.md)
-    - [03.安装docker](05.安装部署篇/03.安装docker.md)
-    - [04.docker安装mysql](05.安装部署篇/04.docker安装mysql.md)
-    - [05.docker安装redis](05.安装部署篇/05.docker安装redis.md)
-    - [06.本地开发环境配置](05.安装部署篇/06.本地开发环境配置.md)
-    - [07.配置git](05.安装部署篇/07.配置git.md)
-    - [08.Windows安装mysql](05.安装部署篇/08.Windows安装mysql.md)
-    - [09.M1运行Docker](05.安装部署篇/09.M1运行Docker.md)
-    - [👍🏻10.部署ELK日志检索平台](05.安装部署篇/10.部署ELK日志检索平台.md)
-    - [👍🏻11.深入理解ELK中Logstash的底层原理和填坑指南](05.安装部署篇/11.深入理解ELK中Logstash的底层原理和填坑指南.md)
-    - [12.PassJava网站生产级事故，请放弃这个CDN吧](05.安装部署篇/12.PassJava网站生产级事故，请放弃这个CDN吧.md)
+    * [01.环境搭建篇](05.安装部署篇/01.环境搭建篇.md)
+    * [02.配置虚拟机网络](05.安装部署篇/02.配置虚拟机网络.md)
+    * [03.安装docker](05.安装部署篇/03.安装docker.md)
+    * [04.docker安装mysql](05.安装部署篇/04.docker安装mysql.md)
+    * [05.docker安装redis](05.安装部署篇/05.docker安装redis.md)
+    * [06.本地开发环境配置](05.安装部署篇/06.本地开发环境配置.md)
+    * [07.配置git](05.安装部署篇/07.配置git.md)
+    * [08.Windows安装mysql](05.安装部署篇/08.Windows安装mysql.md)
+    * [09.M1运行Docker](05.安装部署篇/09.M1运行Docker.md)
+    * [👍🏻10.部署ELK日志检索平台](05.安装部署篇/10.部署ELK日志检索平台.md)
+    * [👍🏻11.深入理解ELK中Logstash的底层原理和填坑指南](05.安装部署篇/11.深入理解ELK中Logstash的底层原理和填坑指南.md)
+    * [12.PassJava网站生产级事故，请放弃这个CDN吧](05.安装部署篇/12.PassJava网站生产级事故，请放弃这个CDN吧.md)
 
   * 1.4、PassJava业务篇
       * [01.管理后台-题目类型功能](06.PassJava业务篇/01.管理后台-题目类型功能.md)
@@ -54,36 +54,35 @@
 * 二、SpringCloud 架构剖析🔥🔥🔥
 
     - 注册中心Eureka
-        - [01.Eureka基本原理和简单使用](13.SpringCloud架构剖析/01.Eureka注册中心/01.Eureka基本原理和简单使用.md)
-        - [02.Eureka本地集群搭建](13.SpringCloud架构剖析/01.Eureka注册中心/02.Eureka本地集群搭建.md)
-        - [03.Eureka源码之启动过程](13.SpringCloud架构剖析/01.Eureka注册中心/03.Eureka源码之启动过程.md)
-        - [04.Eureka源码之客户端注册](13.SpringCloud架构剖析/01.Eureka注册中心/04.Eureka源码之客户端注册.md)
-        - [05.Eureka源码之服务端接收注册信息](13.SpringCloud架构剖析/01.Eureka注册中心/05.Eureka源码之服务端接收注册信息.md)
-        - [06.Eureka源码之客户端首次获取注册表](13.SpringCloud架构剖析/01.Eureka注册中心/06.Eureka源码之客户端首次获取注册表.md)
-        - [07.Eureka源码之客户端增量获取注册表](13.SpringCloud架构剖析/01.Eureka注册中心/07.Eureka源码之客户端增量获取注册表.md)
-        - [08.Eureka源码之Server端的多级缓存机制](13.SpringCloud架构剖析/01.Eureka注册中心/08.Eureka源码之Server端的多级缓存机制.md)
-        - [09.Eureka源码之心跳机制](13.SpringCloud架构剖析/01.Eureka注册中心/09.Eureka源码之心跳机制.md)
-        - [98.Eureka控制台参数说明](13.SpringCloud架构剖析/01.Eureka注册中心/98.Eureka控制台参数说明.md)
+        * [01.Eureka基本原理和简单使用](13.SpringCloud架构剖析/01.Eureka注册中心/01.Eureka基本原理和简单使用.md)
+        * [02.Eureka本地集群搭建](13.SpringCloud架构剖析/01.Eureka注册中心/02.Eureka本地集群搭建.md)
+        * [03.Eureka源码之启动过程](13.SpringCloud架构剖析/01.Eureka注册中心/03.Eureka源码之启动过程.md)
+        * [04.Eureka源码之客户端注册](13.SpringCloud架构剖析/01.Eureka注册中心/04.Eureka源码之客户端注册.md)
+        * [05.Eureka源码之服务端接收注册信息](13.SpringCloud架构剖析/01.Eureka注册中心/05.Eureka源码之服务端接收注册信息.md)
+        * [06.Eureka源码之客户端首次获取注册表](13.SpringCloud架构剖析/01.Eureka注册中心/06.Eureka源码之客户端首次获取注册表.md)
+        * [07.Eureka源码之客户端增量获取注册表](13.SpringCloud架构剖析/01.Eureka注册中心/07.Eureka源码之客户端增量获取注册表.md)
+        * [08.Eureka源码之Server端的多级缓存机制](13.SpringCloud架构剖析/01.Eureka注册中心/08.Eureka源码之Server端的多级缓存机制.md)
+        * [09.Eureka源码之心跳机制](13.SpringCloud架构剖析/01.Eureka注册中心/09.Eureka源码之心跳机制.md)
+        * [98.Eureka控制台参数说明](13.SpringCloud架构剖析/01.Eureka注册中心/98.Eureka控制台参数说明.md)
     - 负载均衡Ribbon
-        - [01.Ribbon架构剖析](13.SpringCloud架构剖析/02.Ribbon负载均衡/01.Ribbon架构剖析.md)
+        * [01.Ribbon架构剖析](13.SpringCloud架构剖析/02.Ribbon负载均衡/01.Ribbon架构剖析.md)
     - 远程调用Feign
-        - [01.Feign远程调用基本原理和使用](13.SpringCloud架构剖析/03.Feign远程调用/01.Feign远程调用基本原理和使用.md)
-        - [02.Feign架构剖析](13.SpringCloud架构剖析/03.Feign远程调用/02.Feign架构剖析.md)
+        * [01.Feign远程调用基本原理和使用](13.SpringCloud架构剖析/03.Feign远程调用/01.Feign远程调用基本原理和使用.md)
+        * [02.Feign架构剖析](13.SpringCloud架构剖析/03.Feign远程调用/02.Feign架构剖析.md)
     - 熔断限流Hystrix
-      - [01.Hystrix架构剖析](13.SpringCloud架构剖析/04.Hystrix限流熔断器/01.Hystrix架构剖析.md)
+      * [01.Hystrix架构剖析](13.SpringCloud架构剖析/04.Hystrix限流熔断器/01.Hystrix架构剖析.md)
     - Gateway网关
-      - [01.SpringCloud整合Gateway网关](13.SpringCloud架构剖析/06.Gateway网关/01.SpringCloud整合Gateway网关.md)
-      - [02.深入浅入Gateway](13.SpringCloud架构剖析/06.Gateway网关/02.深入浅入Gateway.md)
-      - [03.实战Gateway](13.SpringCloud架构剖析/06.Gateway网关/03.实战Gateway.md)
+      * [01.SpringCloud整合Gateway网关](13.SpringCloud架构剖析/06.Gateway网关/01.SpringCloud整合Gateway网关.md)
+      * [02.深入浅入Gateway](13.SpringCloud架构剖析/06.Gateway网关/02.深入浅入Gateway.md)
+      * [03.实战Gateway](13.SpringCloud架构剖析/06.Gateway网关/03.实战Gateway.md)
     - Nacos配置注册中心
-      - [01.使用Nacos作为注册中心](13.SpringCloud架构剖析/07.Nacos配置注册中心/01.使用Nacos作为注册中心和配置中心.md)
-      - [02.Nacos架构原理①：一条注册请求会经历什么？](13.SpringCloud架构剖析/07.Nacos配置注册中心/02.Nacos架构原理①：一条注册请求会经历什么？.md)
-      - [03.Nacos架构原理②：揭秘AP架构——Distro一致性协议](13.SpringCloud架构剖析/07.Nacos配置注册中心/03.Nacos架构原理②：揭秘AP架构——Distro一致性协议.md)
+      * [01.使用Nacos作为注册中心](13.SpringCloud架构剖析/07.Nacos配置注册中心/01.使用Nacos作为注册中心和配置中心.md)
+      * [02.Nacos架构原理①：一条注册请求会经历什么？](13.SpringCloud架构剖析/07.Nacos配置注册中心/02.Nacos架构原理①：一条注册请求会经历什么？.md)
+      * [03.Nacos架构原理②：揭秘AP架构——Distro一致性协议](13.SpringCloud架构剖析/07.Nacos配置注册中心/03.Nacos架构原理②：揭秘AP架构——Distro一致性协议.md)
     - Sentinel限流
-      - [01.Hystrix和Sentinel选型对比](13.SpringCloud架构剖析/08.Sentinel限流/01.Hystrix和Sentinel选型对比.md)
+      * [01.Hystrix和Sentinel选型对比](13.SpringCloud架构剖析/08.Sentinel限流/01.Hystrix和Sentinel选型对比.md)
     - 链路追踪
-      - [01.使用 traceId 实现链路追踪](13.SpringCloud架构剖析/11.链路追踪/01.添加traceId跟踪日志.md)
-
+      * [01.使用 traceId 实现链路追踪](13.SpringCloud架构剖析/11.链路追踪/01.添加traceId跟踪日志.md)
 
 * 三、分布式协议 🔥
     * [01.五分钟搞懂分布式基础概念](92.分布式/01.分布式基础概念.md)
@@ -98,9 +97,8 @@
     * [10.区块链12问和Pow算法](92.分布式/10.区块链12问.md)
     * [11.Zookeeper中的ZAB协议](92.分布式/14.ZAB协议.md)
 
-
 * 四、架构设计🆕
-  * 7.1、架构剖析
+  * 4.1、架构剖析
     * [01.微服务架构中的两款流量防卫兵](89.架构图解/01.微服务架构中的两款流量防卫兵.md)
     * [02.浅析扣减库存的方案设计](89.架构图解/02.浅析扣减库存的方案设计.md)
     * [03.订单系统中的补偿事务设计](89.架构图解/03.订单系统中的补偿事务设计.md)
@@ -113,25 +111,24 @@
     * [98.春晚红包架构](89.架构图解/98.春晚红包架构.md)
     * [99.淘宝架构10年](89.架构图解/99.淘宝架构10年.md)
 
-  * 7.2、用故事讲解技术
+  * 4.2、用故事讲解技术
     * 中间件选型
-      - [01.如果把4个「消息队列」都在一个群里，他们会聊什么？](91.用故事讲解技术/01.中间件选型/01.如果消息队列都在一个群里，他们会聊什么？.md)
-      - [02.如果把4个「链路追踪」组件放到一个群里，他们会聊些什么？](91.用故事讲解技术/01.中间件选型/02.链路追踪如何选型)
+      * [01.如果把4个「消息队列」都在一个群里，他们会聊什么？](91.用故事讲解技术/01.中间件选型/01.如果消息队列都在一个群里，他们会聊什么？.md)
+      * [02.如果把4个「链路追踪」组件放到一个群里，他们会聊些什么？](91.用故事讲解技术/01.中间件选型/02.链路追踪如何选型)
     * 高可用
       * [01.东汉末年，他们把熔断限流玩到了极致](91.用故事讲解技术/02.高可用/01.东汉末年，他们把熔断限流玩到了极致.md)
       * [02.我是一个秒杀请求，正在逃离这颗星球](91.用故事讲解技术/02.高可用/02.我是一个秒杀请求，正在逃离这颗星球.md)
       * [03.为什么要除夕，原来是内存爆了](91.用故事讲解技术/02.高可用/03.为什么要除夕，原来是内存爆了.md)
 
+  * 4.3、高可用集群篇
+    * [01.部署MySQL高可用架构](11.高可用集群篇/01.部署MySQL高可用.md)
+    * [02.一次MySQL误操作导致的生产级事故，高可用都不顶不住了.md](11.高可用集群篇/02.一次MySQL误操作导致的生产级事故，高可用都不顶用了.md)
+    * [03.从单点 Redis 到 1 主 2 从 3 哨兵的架构演进之路](11.高可用集群篇/03.从单点Redis到1主2从3哨兵的架构演进之路.md)
+    * [04.Keepalived底层原理(上）](11.高可用集群篇/04.Keepalived底层原理(上）20220629.md)
+    * [05.Keepalived底层原理-路由方案](11.高可用集群篇/05.Keepalived底层原理-路由方案20220719.md)
+    * [98.B站20210713宕机事件](11.高可用集群篇/98.B站20210713宕机事件.md)
 
-  * 7.3、高可用集群篇
-    - [01.部署MySQL高可用架构](11.高可用集群篇/01.部署MySQL高可用.md)
-    - [02.一次MySQL误操作导致的生产级事故，高可用都不顶不住了.md](11.高可用集群篇/02.一次MySQL误操作导致的生产级事故，高可用都不顶用了.md)
-    - [03.从单点 Redis 到 1 主 2 从 3 哨兵的架构演进之路](11.高可用集群篇/03.从单点Redis到1主2从3哨兵的架构演进之路.md)
-    - [04.Keepalived底层原理(上）](11.高可用集群篇/04.Keepalived底层原理(上）20220629.md)
-    - [05.Keepalived底层原理-路由方案](11.高可用集群篇/05.Keepalived底层原理-路由方案20220719.md)
-    - [98.B站20210713宕机事件](11.高可用集群篇/98.B站20210713宕机事件.md)
-
-  * 7.4、中间件原理剖析 🔥🔥🔥
+  * 4.4、中间件原理剖析 🔥🔥🔥
     * RocketMQ
       * [01.一文带你搭建RocketMQ源码调试环境](16.消息队列/01.RocketMQ/03.如何调试RocketMQ源码.md)
     * Zookeeper
@@ -180,8 +177,8 @@
         * [02.Spring基础2](88.Interview/09.Spring/02.Spring.md)
     * [10.Dubbo](88.Interview/10.Dubbo/01.Dubbo.md)
 
-* 六、Java 核心知识 🍉🍉🍉
-  * 6.1、Java 核心知识
+* 六、Java 核心知识（全面解析）
+  * 6.1、Java 基础
     * [01.Java语言概述](19.Java核心知识/01.Java语言概述.md)
     * [02.变量、标识符、保留字、变量](19.Java核心知识/02.变量、标识符、保留字、变量.md)
     * [03.运算符](19.Java核心知识/03.运算符.md)
@@ -200,7 +197,7 @@
     * [16.网络编程](19.Java核心知识/16.网络编程.md)
     * [17.反射与动态代理](19.Java核心知识/17.反射与动态代理.md)
     * [18.Java8新特性](19.Java核心知识/18.Java8新特性.md)
-  * 6.2 JVM 核心知识
+  * 6.2、JVM 核心知识
     * [01.50+道JVM面试题+11张思维导图就是让你懂JVM](09.JVM进阶/01.50+道JVM面试题+11张思维导图就是让你懂JVM.md)
     * [02.秒懂JVM的三大参数类型，就靠这十个小实验了](09.JVM进阶/02.秒懂JVM的三大参数类型，就靠这十个小实验了.md)
     * [98.字节码指令表](09.JVM进阶/98.字节码指令表.md)
@@ -344,12 +341,12 @@
         * [14.缓存如何做到高可用](109.学习笔记/99.技术管理/01.如何为团队设定合理的目标.md)
 
 * LeetCode刷题
-  - [001.两数之和【数组】LeetCode第1题](92.LeetCode算法题/01.数组/001.两数之和-数组-LeetCode第1题.md)
+  * [001.两数之和【数组】LeetCode第1题](92.LeetCode算法题/01.数组/001.两数之和-数组-LeetCode第1题.md)
   
 * 悟空学习群问题汇总
-    - [01.删除binlog问题](102.学习群问题汇总/01.20201026_删除binlog问题.md)
-    - [02.导出报表问题](102.学习群问题汇总/02.20201028_导出报表问题.md)
-    - [03.List和ArrayList如何选择](102.学习群问题汇总/03.20201030_List和ArrayList如何选择.md)
+    * [01.删除binlog问题](102.学习群问题汇总/01.20201026_删除binlog问题.md)
+    * [02.导出报表问题](102.学习群问题汇总/02.20201028_导出报表问题.md)
+    * [03.List和ArrayList如何选择](102.学习群问题汇总/03.20201030_List和ArrayList如何选择.md)
 
 * 群成员学习分享
     * [01.Nginx Location 正则](104.群成员学习分享/01.NginxLocation正则.md)
