@@ -230,7 +230,7 @@
 
 
 
-* 九七、工具篇
+* 九一、工具篇
 
     * [01.自定义Markdown神器Typora的主题样式](99.tools/01.自定义Markdown神器Typora的主题样式.md)
     * [02.使用docsify写开源文档](99.tools/02.使用docsify写开源文档.md)
@@ -252,7 +252,7 @@
     * [98.IDEA调试Java多线程](99.tools/98.IDEA调试Java多线程.md)
     * [99.IDEA调试Java源码](99.tools/99.IDEA调试Java源码.md)
 
-* 九八、MacBook 使用技巧💻
+* 九二、MacBook 使用技巧💻
 
     * [01.Mac需要安装的软件](108.MacBook使用技巧/01.Mac需要安装的软件.md)
     * [02.Mac控制台美化工具](108.MacBook使用技巧/02.Mac控制台美化工具.md)
@@ -266,48 +266,7 @@
     * [10.Mac系统问题](108.MacBook使用技巧/10.Mac系统问题.md)
 
 
-* 九九、SpringBoot 学习篇
-    * [05.SpringBoot整合JDBC](03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)
-    * [06.SpringBoot整合Druid](03.SpringBoot学习篇/spring-boot-06-data-druid.md)
-    * [07.SpringBoot整合MyBatis](03.SpringBoot学习篇/spring-boot-07-data-mybatis.md)
-    * [08.SpringBoot-Mybatis逻辑删除](03.SpringBoot学习篇/08.SpringBoot-Mybatis逻辑删除.md)
-    * [09.Object划分](03.SpringBoot学习篇/09.Object划分.md)
-
-
-
-
-
-* 前端进阶
-  * 前端基础知识
-    * [01.安装Vue的devtools插件](07.前端进阶/01.安装Vue的devtools插件.md)
-    * [02.AJAX底层原理](07.前端进阶/02.前端AJAX.md)
-    * [03.强缓存和协商缓存](07.前端进阶/03.强缓存和协商缓存.md)
-  * 小程序篇
-    * [04.小程序下拉刷新](07.前端进阶/04.小程序下拉刷新.md)
-    * [05.小程序视频播放和弹幕v2](07.前端进阶/05.小程序视频播放和弹幕v2.md)
-  * iOS 篇
-    * 01.iOS 基础
-        * [01.Swift语法](96.iOS/01.iOS基础/01.Swift语法.md)
-    * 02.iOS 实战
-        * [01.从零开始用swift开发一个iOS应用（仿微博）1. 第一个demo上手体验](96.iOS/02.iOS实战/01.第一个demo上手体验.md)
-    * 03.iOS 打包和证书教程
-        * [01.iOS打包流程](96.iOS/03.iOS证书/01.iOS打包流程.md)
-        * [02.iOS证书配置流程](96.iOS/03.iOS证书/02.iOS证书配置流程.md)
-
-* SQL进阶
-
-    * [01.30分钟全面解析-SQL事务+隔离级别+阻塞+死锁.md](08.SQL进阶/01.30分钟全面解析-SQL事务+隔离级别+阻塞+死锁.md)
-
-* 想法
-    * [02.打造一款刷Java知识的小程序2](98.idea/02.打造一款刷Java知识的小程序2.md)
-    * [03.2020年中总结」武汉程序员，跳出舒适区](98.idea/03.2020年中总结」武汉程序员，跳出舒适区.md)
-
-* Git
-    * [01.Git常见问题](94.Git/01.Git常见问题.md)
-
-
-
-* 悟空学习笔记-极客时间
+* 九三、悟空学习笔记-极客时间
     * 01.Redis核心技术与实战
         * [03.有哪些与Redis交互的操作](109.学习笔记/01.Redis核心技术与实战/03.有哪些与Redis交互的操作.md)
         * [04.有哪些操作会阻塞Redis？怎么解决？](109.学习笔记/01.Redis核心技术与实战/04.有哪些操作会阻塞Redis？怎么解决？.md)
@@ -340,13 +299,58 @@
     * 99.技术管理
         * [14.缓存如何做到高可用](109.学习笔记/99.技术管理/01.如何为团队设定合理的目标.md)
 
-* LeetCode刷题
-  * [001.两数之和【数组】LeetCode第1题](92.LeetCode算法题/01.数组/001.两数之和-数组-LeetCode第1题.md)
-  
-* 悟空学习群问题汇总
-    * [01.删除binlog问题](102.学习群问题汇总/01.20201026_删除binlog问题.md)
-    * [02.导出报表问题](102.学习群问题汇总/02.20201028_导出报表问题.md)
-    * [03.List和ArrayList如何选择](102.学习群问题汇总/03.20201030_List和ArrayList如何选择.md)
 
-* 群成员学习分享
+* 九四、SpringBoot 学习篇
+    * [05.SpringBoot整合JDBC](03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)
+    * [06.SpringBoot整合Druid](03.SpringBoot学习篇/spring-boot-06-data-druid.md)
+    * [07.SpringBoot整合MyBatis](03.SpringBoot学习篇/spring-boot-07-data-mybatis.md)
+    * [08.SpringBoot-Mybatis逻辑删除](03.SpringBoot学习篇/08.SpringBoot-Mybatis逻辑删除.md)
+    * [09.Object划分](03.SpringBoot学习篇/09.Object划分.md)
+
+
+
+
+
+* 九五、前端进阶
+  * 前端基础知识
+    * [01.安装Vue的devtools插件](07.前端进阶/01.安装Vue的devtools插件.md)
+    * [02.AJAX底层原理](07.前端进阶/02.前端AJAX.md)
+    * [03.强缓存和协商缓存](07.前端进阶/03.强缓存和协商缓存.md)
+  * 小程序篇
+    * [04.小程序下拉刷新](07.前端进阶/04.小程序下拉刷新.md)
+    * [05.小程序视频播放和弹幕v2](07.前端进阶/05.小程序视频播放和弹幕v2.md)
+  * iOS 篇
+    * 01.iOS 基础
+        * [01.Swift语法](96.iOS/01.iOS基础/01.Swift语法.md)
+    * 02.iOS 实战
+        * [01.从零开始用swift开发一个iOS应用（仿微博）1. 第一个demo上手体验](96.iOS/02.iOS实战/01.第一个demo上手体验.md)
+    * 03.iOS 打包和证书教程
+        * [01.iOS打包流程](96.iOS/03.iOS证书/01.iOS打包流程.md)
+        * [02.iOS证书配置流程](96.iOS/03.iOS证书/02.iOS证书配置流程.md)
+
+* 九六、其他
+  
+  * SQL进阶
+
+      * [01.30分钟全面解析-SQL事务+隔离级别+阻塞+死锁.md](08.SQL进阶/01.30分钟全面解析-SQL事务+隔离级别+阻塞+死锁.md)
+
+  * 想法
+      * [02.打造一款刷Java知识的小程序2](98.idea/02.打造一款刷Java知识的小程序2.md)
+      * [03.2020年中总结」武汉程序员，跳出舒适区](98.idea/03.2020年中总结」武汉程序员，跳出舒适区.md)
+
+  * Git
+      * [01.Git常见问题](94.Git/01.Git常见问题.md)
+
+
+
+
+  * LeetCode刷题
+    * [001.两数之和【数组】LeetCode第1题](92.LeetCode算法题/01.数组/001.两数之和-数组-LeetCode第1题.md)
+    
+  * 悟空学习群问题汇总
+      * [01.删除binlog问题](102.学习群问题汇总/01.20201026_删除binlog问题.md)
+      * [02.导出报表问题](102.学习群问题汇总/02.20201028_导出报表问题.md)
+      * [03.List和ArrayList如何选择](102.学习群问题汇总/03.20201030_List和ArrayList如何选择.md)
+
+  * 群成员学习分享
     * [01.Nginx Location 正则](104.群成员学习分享/01.NginxLocation正则.md)
