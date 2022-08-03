@@ -75,8 +75,8 @@
       * [01.深入理解SpringCloudGateway](13.SpringCloud架构剖析/06.Gateway网关/01.深入理解SpringCloudGateway.md)
       * [02.SpringCloud整合Gateway网关](13.SpringCloud架构剖析/06.Gateway网关/02.SpringCloud整合Gateway网关.md)
       * [04.Gateway_JWT鉴权](13.SpringCloud架构剖析/06.Gateway网关/04.Gateway_JWT鉴权.md)
-      * [05.实战Gateway](13.SpringCloud架构剖析/06.Gateway网关/05.SpringCloudGateway内置的过滤器.md)
-      * [06.实战Gateway](13.SpringCloud架构剖析/06.Gateway网关/06.SpringCloudGateway内置的全局过滤器.md)
+      * [05.Gateway内置的过滤器](13.SpringCloud架构剖析/06.Gateway网关/05.SpringCloudGateway内置的过滤器.md)
+      * [06.Gateway内置的全局过滤器](13.SpringCloud架构剖析/06.Gateway网关/06.SpringCloudGateway内置的全局过滤器.md)
     - Nacos配置注册中心
       * [01.使用Nacos作为注册中心](13.SpringCloud架构剖析/07.Nacos配置注册中心/01.使用Nacos作为注册中心和配置中心.md)
       * [02.Nacos架构原理①：一条注册请求会经历什么？](13.SpringCloud架构剖析/07.Nacos配置注册中心/02.Nacos架构原理①：一条注册请求会经历什么？.md)
