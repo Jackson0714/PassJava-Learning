@@ -241,7 +241,7 @@
 
 
 * 九一、工具篇
-
+    * [00.工具推荐](99.tools/00.Tools.md)
     * [01.自定义Markdown神器Typora的主题样式](99.tools/01.自定义Markdown神器Typora的主题样式.md)
     * [02.使用docsify写开源文档](99.tools/02.使用docsify写开源文档.md)
     * [03.Git同时上传到码云和github](99.tools/03.Git同时上传到码云和github.md)
