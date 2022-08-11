@@ -74,7 +74,7 @@
     - Gateway网关
       * [01.深入理解SpringCloudGateway](13.SpringCloud架构剖析/06.Gateway网关/01.深入理解SpringCloudGateway.md)
       * [02.SpringCloud整合Gateway网关](13.SpringCloud架构剖析/06.Gateway网关/02.SpringCloud整合Gateway网关.md)
-      * [04.Gateway_JWT鉴权](13.SpringCloud架构剖析/06.Gateway网关/04.Gateway_JWT鉴权.md)
+      * [96.Gateway_JWT认证参考](13.SpringCloud架构剖析/06.Gateway网关/96.Gateway_JWT认证参考)
       * [05.Gateway内置的过滤器](13.SpringCloud架构剖析/06.Gateway网关/05.SpringCloudGateway内置的过滤器.md)
       * [06.Gateway内置的全局过滤器](13.SpringCloud架构剖析/06.Gateway网关/06.SpringCloudGateway内置的全局过滤器.md)
     - Nacos配置注册中心
