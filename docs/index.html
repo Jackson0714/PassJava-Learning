@@ -351,7 +351,8 @@
   <script>
 
     // 纯净版功能
-    $("#displayQrcode").hide()
+    $("#displayQrcode").hide();
+    checkPhone();
     function hiddenQrcode() {
       $("#asideContainer").toggle(500);
       $("#displayQrcode").show();
@@ -367,6 +368,21 @@
       $("#live2d").show();
       $("#live2dcanvas").show();
     }
+
+    function checkPhone(){  
+     var userAgentInfo = navigator.userAgent;
+     var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");  
+     var flag = true;  
+     for (var v = 0; v < Agents.length; v++) {  
+         if (userAgentInfo.indexOf(Agents[v]) > 0) { 
+          $("#displayQrcode").hide();
+          $("#hiddenQrcode").show();
+          $("#live2d").show();
+          $("#live2dcanvas").show();
+          break; 
+        }  
+     }  
+  }
 
 
     // // 生成 gitalk 插件
