@@ -8,7 +8,6 @@
     * [7.本地部署项目Mac版](01.项目简介/7.本地部署项目Mac版.md)
     * [8.本地部署问题汇总](01.项目简介/8.本地部署问题汇总.md)
     * [9.Java学习路线](01.项目简介/9.Java学习路线.md)
-
   * 1.2、PassJava 架构篇 🔥
     * [01.创建项目和添加模块](02.PassJava架构篇/01.创建项目和添加模块.md)
     * [02.创建数据库和表](02.PassJava架构篇/02.创建数据库和表.md)
@@ -36,8 +35,6 @@
     * [25.深入理解SpringCloudGateway](13.SpringCloud架构剖析/06.Gateway网关/01.深入理解SpringCloudGateway.md)
     * [26.唐玄奘把JWT令牌玩到了机制](13.SpringCloud架构剖析/06.Gateway网关/03.唐玄奘把JWT令牌玩到了机制.md)
     * [27.实战Gateway+JWT实现登录认证](13.SpringCloud架构剖析/06.Gateway网关/04.实战SpringCloud+JWT认证.md)
-
-
   * 1.3、PassJava 安装部署篇
     * [01.环境搭建篇](05.安装部署篇/01.环境搭建篇.md)
     * [02.配置虚拟机网络](05.安装部署篇/02.配置虚拟机网络.md)
@@ -51,7 +48,6 @@
     * [👍🏻10.部署ELK日志检索平台](05.安装部署篇/10.部署ELK日志检索平台.md)
     * [👍🏻11.深入理解ELK中Logstash的底层原理和填坑指南](05.安装部署篇/11.深入理解ELK中Logstash的底层原理和填坑指南.md)
     * [12.PassJava网站生产级事故，请放弃这个CDN吧](05.安装部署篇/12.PassJava网站生产级事故，请放弃这个CDN吧.md)
-
   * 1.4、PassJava业务篇
       * [01.管理后台-题目类型功能](06.PassJava业务篇/01.管理后台-题目类型功能.md)
 
