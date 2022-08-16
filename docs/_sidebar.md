@@ -33,6 +33,10 @@
     * [22.缓存实战（二）Redis分布式锁](02.PassJava架构篇/22.缓存实战（二）Redis分布式锁.md)
     * [23.缓存实战（三）Redisson分布式锁](02.PassJava架构篇/23.缓存实战（三）Redisson分布式锁.md)
     * [24.缓存实战（四）实战 Spring Cache](02.PassJava架构篇/24.缓存实战（四）SpringCache.md)
+    * [25.深入理解SpringCloudGateway](13.SpringCloud架构剖析/06.Gateway网关/01.深入理解SpringCloudGateway.md)
+    * [26.唐玄奘把JWT令牌玩到了机制](13.SpringCloud架构剖析/06.Gateway网关/03.唐玄奘把JWT令牌玩到了机制.md)
+    * [27.实战Gateway+JWT实现登录认证](13.SpringCloud架构剖析/06.Gateway网关/04.实战SpringCloud+JWT认证.md)
+
 
   * 1.3、PassJava 安装部署篇
     * [01.环境搭建篇](05.安装部署篇/01.环境搭建篇.md)
@@ -74,6 +78,8 @@
     - Gateway网关
       * [01.深入理解SpringCloudGateway](13.SpringCloud架构剖析/06.Gateway网关/01.深入理解SpringCloudGateway.md)
       * [02.SpringCloud整合Gateway网关](13.SpringCloud架构剖析/06.Gateway网关/02.SpringCloud整合Gateway网关.md)
+      * [03.实战Gateway+JWT](13.SpringCloud架构剖析/06.Gateway网关/03.实战SpringCloud+JWT认证.md)
+      * [04.唐玄奘把JWT令牌玩到了机制](13.SpringCloud架构剖析/06.Gateway网关/04.唐玄奘把JWT令牌玩到了机制.md)
       * [96.Gateway_JWT认证参考](13.SpringCloud架构剖析/06.Gateway网关/96.Gateway_JWT认证参考)
       * [05.Gateway内置的过滤器](13.SpringCloud架构剖析/06.Gateway网关/05.SpringCloudGateway内置的过滤器.md)
       * [06.Gateway内置的全局过滤器](13.SpringCloud架构剖析/06.Gateway网关/06.SpringCloudGateway内置的全局过滤器.md)

@@ -15,7 +15,9 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 🍎目前在一家上市公司从事基础架构建设工作。
 
 ![目录](http://cdn.jayh.club/uPic/640tw1bSU.jpg)
-欢迎加入我的知识星球，提供`技术1v1解答`、简历修改、500人技术交流群。
+### 技术支持
+
+💪🏻💪🏻💪🏻欢迎加入我的知识星球（下方扫码加入），提供`技术1v1解答`、简历修改、500人技术交流群。当然你也可以加我微信好友：passjava。
 
 ![](http://cdn.jayh.club/uPic/image-20220811172512644H7oAhP.png)
 
@@ -34,11 +36,11 @@ Elasticsearch 筋斗云版蓝皮书1.0，回复ES获取
 
 ## Java 学习路线（赛亚人版）
 
-[Java 学习路线（赛亚人版）](http://passjava.cn/#/01.%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B/9.Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF)
+[🌈Java 学习路线（赛亚人版）](http://passjava.cn/#/01.%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B/9.Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF)
 
-## 部署教程
+## PassJava 部署教程
 
-:heavy_check_mark: [Mac M1 部署项目](http://www.passjava.cn/#/01.项目简介/7.本地部署项目Mac版)
+:heavy_check_mark: [1、Mac M1 部署项目](http://www.passjava.cn/#/01.项目简介/7.本地部署项目Mac版)
 
 Windows 版正在更新中，可参考 Mac 版的部署教程。
 
@@ -48,15 +50,15 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 
 - 后台代码地址：https://github.com/Jackson0714/PassJava-Platform
 
-:heavy_check_mark: [后端部署教程](http://www.passjava.cn/#/01.项目简介/7.本地部署项目Mac版)
+:heavy_check_mark: [2、后端部署教程](http://www.passjava.cn/#/01.项目简介/7.本地部署项目Mac版)
 
 - 前端 Vue 代码地址：https://github.com/Jackson0714/PassJava-Platform/tree/master/passjava-portal
 
-:heavy_check_mark: [前端部署教程](https://github.com/Jackson0714/PassJava-Platform/tree/master/passjava-portal)
+:heavy_check_mark: [3、前端部署教程](https://github.com/Jackson0714/PassJava-Platform/tree/master/passjava-portal)
 
 - 小程序代码地址：https://github.com/Jackson0714/PassJava-Platform/tree/master/passjava-miniApp
 
-:heavy_check_mark: [小程序部署教程](https://github.com/Jackson0714/PassJava-Platform/blob/master/passjava-miniApp/README.md)
+:heavy_check_mark: [4、小程序部署教程](https://github.com/Jackson0714/PassJava-Platform/blob/master/passjava-miniApp/README.md)
 
 ## 简介
 
