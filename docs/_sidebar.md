@@ -1,4 +1,4 @@
-* 一、PassJava 实战项目 
+* 一、PassJava 实战项目（49 篇）
   * 1.1、PassJava 项目简介
     * [1.项目背景](01.项目简介/1.项目背景.md)
     * [2.项目微服务架构图](01.项目简介/2.项目微服务架构图.md)
@@ -51,7 +51,7 @@
   * 1.4、PassJava业务篇
       * [01.管理后台-题目类型功能](06.PassJava业务篇/01.管理后台-题目类型功能.md)
 
-* 二、SpringCloud 架构剖析🔥🔥🔥
+* 二、SpringCloud 架构剖析（25篇）🔥🔥🔥
 
     - 注册中心Eureka
         * [01.Eureka基本原理和简单使用](13.SpringCloud架构剖析/01.Eureka注册中心/01.Eureka基本原理和简单使用.md)
@@ -74,8 +74,8 @@
     - Gateway网关
       * [01.深入理解SpringCloudGateway](13.SpringCloud架构剖析/06.Gateway网关/01.深入理解SpringCloudGateway.md)
       * [02.SpringCloud整合Gateway网关](13.SpringCloud架构剖析/06.Gateway网关/02.SpringCloud整合Gateway网关.md)
-      * [03.实战Gateway+JWT](13.SpringCloud架构剖析/06.Gateway网关/03.实战SpringCloud+JWT认证.md)
-      * [04.唐玄奘把JWT令牌玩到了机制](13.SpringCloud架构剖析/06.Gateway网关/04.唐玄奘把JWT令牌玩到了机制.md)
+      * [03.唐玄奘把JWT令牌玩到了机制](13.SpringCloud架构剖析/06.Gateway网关/03.唐玄奘把JWT令牌玩到了机制.md)
+      * [04.实战Gateway+JWT](13.SpringCloud架构剖析/06.Gateway网关/04.实战SpringCloud+JWT认证.md)
       * [96.Gateway_JWT认证参考](13.SpringCloud架构剖析/06.Gateway网关/96.Gateway_JWT认证参考)
       * [05.Gateway内置的过滤器](13.SpringCloud架构剖析/06.Gateway网关/05.SpringCloudGateway内置的过滤器.md)
       * [06.Gateway内置的全局过滤器](13.SpringCloud架构剖析/06.Gateway网关/06.SpringCloudGateway内置的全局过滤器.md)
@@ -88,7 +88,7 @@
     - 链路追踪
       * [01.使用 traceId 实现链路追踪](13.SpringCloud架构剖析/11.链路追踪/01.添加traceId跟踪日志.md)
 
-* 三、分布式协议 🔥
+* 三、分布式协议（11篇） 🔥
     * [01.五分钟搞懂分布式基础概念](92.分布式/01.分布式基础概念.md)
     * [02.这三年被分布式坑惨了，曝光十大坑](92.分布式/02.分布式中的十种坑.md)
     * [03.用三国杀讲分布式算法，舒适了吧？](92.分布式/03.用三国杀讲分布式算法，舒适了吧？.md)
@@ -101,7 +101,7 @@
     * [10.区块链12问和Pow算法](92.分布式/10.区块链12问.md)
     * [11.Zookeeper中的ZAB协议](92.分布式/14.ZAB协议.md)
 
-* 四、架构设计🆕
+* 四、架构设计（26篇）🆕
   * 4.1、架构剖析
     * [01.微服务架构中的两款流量防卫兵](89.架构图解/01.微服务架构中的两款流量防卫兵.md)
     * [02.浅析扣减库存的方案设计](89.架构图解/02.浅析扣减库存的方案设计.md)
@@ -141,7 +141,7 @@
 
 
 
-* 五、面试必背👍👍👍
+* 五、面试必背（37篇）👍👍👍
     * 01.Redis 面试突击
       * [01.Redis 面试突击](88.Interview/01.Redis/Redis1.md)
     * 02.并发编程 面试突击
@@ -216,7 +216,7 @@
     * [98.字节码指令表](09.JVM进阶/98.字节码指令表.md)
     * [99.JVM参数列表](09.JVM进阶/99.JVM参数列表.md)
 
-* 七、并发多线程
+* 七、并发多线程（6篇）
     * [01.反制面试官-14张原理图-再也不怕被问volatile!](10.并发多线程/01.反制面试官-14张原理图-再也不怕被问volatile!.md)
     * [02.我跟老婆讲CAS原理，被鄙视太简单！15张图-源码调试](10.并发多线程/02.我跟老婆讲CAS原理-被鄙视太简单-15张图-源码调试.md)
     * [03.Java并发必知必会第三弹：用积木讲解ABA原理](10.并发多线程/03.Java并发必知必会第三弹：用积木讲解ABA原理.md)
@@ -224,7 +224,7 @@
     * [05.5000字-24张图带你彻底理解Java中的21种锁](10.并发多线程/05.5000字-24张图带你彻底理解Java中的21种锁.md)
     * [06.干货-45张图庖丁解牛18种Queue，你知道几种？](10.并发多线程/06.干货-45张图庖丁解牛18种Queue，你知道几种.md)
 
-* 八、Redis 进阶🆕
+* 八、Redis 进阶（10篇）🆕
   * [00.Redis 源码下载](12.Redis/00.DownloadRedis.md)
   * [01.趣谈Redis之SDS](12.Redis/01.趣谈Redis之SDS.md)
   * [03.Redis的主从架构原理和部署](12.Redis/03.Redis的主从架构原理和部署.md)
@@ -236,14 +236,14 @@
   * [09.缓存实战（二）Redis分布式锁](02.PassJava架构篇/22.缓存实战（二）Redis分布式锁.md)
   * [10.缓存实战（三）Redisson分布式锁](02.PassJava架构篇/23.缓存实战（三）Redisson分布式锁.md)
 
-* 九、Elasticsearch🔍
+* 九、Elasticsearch（6篇）🔍
   
     * [Elasticsearch 系列](18.Elasticsearch/01.Elasticsearch目录.md)
 
 
 
 
-* 九一、工具篇
+* 九一、工具篇（19篇）
     * [00.工具推荐](99.tools/00.Tools.md)
     * [01.自定义Markdown神器Typora的主题样式](99.tools/01.自定义Markdown神器Typora的主题样式.md)
     * [02.使用docsify写开源文档](99.tools/02.使用docsify写开源文档.md)
@@ -265,7 +265,7 @@
     * [98.IDEA调试Java多线程](99.tools/98.IDEA调试Java多线程.md)
     * [99.IDEA调试Java源码](99.tools/99.IDEA调试Java源码.md)
 
-* 九二、MacBook 使用技巧💻
+* 九二、MacBook 使用技巧（10篇）💻
 
     * [01.Mac需要安装的软件](108.MacBook使用技巧/01.Mac需要安装的软件.md)
     * [02.Mac控制台美化工具](108.MacBook使用技巧/02.Mac控制台美化工具.md)
@@ -322,7 +322,7 @@
 
 
 
-* 九五、前端进阶
+* 九五、前端进阶（9篇）
   * 前端基础知识
     * [01.安装Vue的devtools插件](07.前端进阶/01.安装Vue的devtools插件.md)
     * [02.AJAX底层原理](07.前端进阶/02.前端AJAX.md)
