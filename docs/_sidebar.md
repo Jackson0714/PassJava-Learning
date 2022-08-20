@@ -51,7 +51,7 @@
   * 1.4、PassJava业务篇
       * [01.管理后台-题目类型功能](06.PassJava业务篇/01.管理后台-题目类型功能.md)
 
-* 二、SpringCloud 架构剖析（25篇）🔥🔥🔥
+* 二、SpringCloud 架构剖析（25篇）🔥
 
     - 注册中心Eureka
         * [01.Eureka基本原理和简单使用](13.SpringCloud架构剖析/01.Eureka注册中心/01.Eureka基本原理和简单使用.md)
