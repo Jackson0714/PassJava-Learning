@@ -194,41 +194,42 @@
   
 </head>
 <body>
-  <div id="app">🏃‍🏃‍🏃‍💨 加载中...</div>
-  <div class="close-advertisement" id="closeAdvertisement">
-    <img class="image" id="hiddenQrcode" title="隐藏"  onclick="hiddenQrcode()" src="./images/common/hidden.png"> </img>
-    <img class="image" id="displayQrcode" title="显示"  onclick="displayQrcode()" src="./images/common/display.png"> </img>
-    <span class="text">纯净版</span>
+  <div id="main-div">
+    <div id="app">🏃‍🏃‍🏃‍💨 加载中...</div>
+    <div class="close-advertisement" id="closeAdvertisement">
+      <img class="image" id="hiddenQrcode" title="隐藏"  onclick="hiddenQrcode()" src="./images/common/hidden.png"> </img>
+      <img class="image" id="displayQrcode" title="显示"  onclick="displayQrcode()" src="./images/common/display.png"> </img>
+      <span class="text">纯净版</span>
+    </div>
+    <div id="asideContainer">
+      <div class="aside_container">
+        <div class="advertisement">
+          <div class="tencent_qrcode">
+            <h4>更多精品文章</h4>
+            <p style="font-size: 12px; color: #25a46a;">悟空聊架构</p>
+            <img src="./images/common/wechat_public_qrcode.jpeg" alt="EnjoyToShare" />
+          </div>
+        </div>
+      </div>
+      <div class="aside_container2">
+        <div class="wechat">
+          <div class="wechat_qrcode">
+            <h4>500人技术交流</h4>
+            <img src="./images/common/wechat_personal_qrcode.jpeg" alt="EnjoyToShare" />
+          </div>
+        </div>
+      </div>
+      <div class="aside_container3">
+        <div class="knowledge-planet">
+          <div class="qrcode">
+            <h4>技术1v1指导</h4>
+            <img src="./images/common/knowledge_planet_qrcode.jpg" alt="EnjoyToShare" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="gitalk-container"></div>
   </div>
-  <div id="asideContainer">
-    <div class="aside_container">
-      <div class="advertisement">
-        <div class="tencent_qrcode">
-          <h4>更多精品文章</h4>
-          <p style="font-size: 12px; color: #25a46a;">悟空聊架构</p>
-          <img src="./images/common/wechat_public_qrcode.jpeg" alt="EnjoyToShare" />
-        </div>
-      </div>
-    </div>
-    <div class="aside_container2">
-      <div class="wechat">
-        <div class="wechat_qrcode">
-          <h4>500人技术交流</h4>
-          <img src="./images/common/wechat_personal_qrcode.jpeg" alt="EnjoyToShare" />
-        </div>
-      </div>
-    </div>
-    <div class="aside_container3">
-      <div class="knowledge-planet">
-        <div class="qrcode">
-          <h4>技术1v1指导</h4>
-          <img src="./images/common/knowledge_planet_qrcode.jpg" alt="EnjoyToShare" />
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="gitalk-container"></div>
-
   <script>
     window.$docsify = {
       name: '🌈PassJava 博客连载中',
@@ -519,7 +520,7 @@
 <script>
     const btw = new BTWPlugin();
     btw.init({
-        id: 'main',
+        id: 'main-div',
         blogId: '21170-1661873616163-249',
         name: '悟空聊架构',
         qrcode: 'http://www.passjava.cn/images/common/wechat_public_qrcode.jpeg',
