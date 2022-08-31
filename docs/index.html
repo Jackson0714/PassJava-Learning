@@ -324,14 +324,10 @@
             });
 
             if (isReadme === -1) {
-
-      
               return header + html + footer;
             } else {
               return html + footer;
             }
-
-            
 
           });
         }
@@ -367,10 +363,11 @@
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <script>
 
-cleanQrcode();
+    //cleanQrcode();
 
     // 纯净版功能
     $("#displayQrcode").hide();
+    checkPhone();
 
     function cleanQrcode() {
       $("#asideContainer").toggle(500);
