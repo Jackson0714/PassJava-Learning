@@ -324,8 +324,10 @@
             });
 
             if (isReadme === -1) {
+              cleanQrcode();
               return header + html + footer;
             } else {
+              
               return html + footer;
             }
 
@@ -372,7 +374,7 @@
     function cleanQrcode() {
       $("#asideContainer").toggle(500);
       $("#displayQrcode").show();
-      $("#hiddenQrcode").show();
+      $("#hiddenQrcode").hide();
       $("#live2d").hide();
       $("#live2dcanvas").hide();
     }
