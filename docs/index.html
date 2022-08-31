@@ -367,9 +367,19 @@
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <script>
 
+cleanQrcode();
+
     // 纯净版功能
     $("#displayQrcode").hide();
-    checkPhone();
+
+    function cleanQrcode() {
+      $("#asideContainer").toggle(500);
+      $("#displayQrcode").show();
+      $("#hiddenQrcode").show();
+      $("#live2d").hide();
+      $("#live2dcanvas").hide();
+    }
+
     function hiddenQrcode() {
       $("#asideContainer").toggle(500);
       $("#displayQrcode").show();
