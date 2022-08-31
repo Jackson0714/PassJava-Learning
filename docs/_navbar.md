@@ -15,7 +15,6 @@
 
 * 项目地址
   * [后台平台](https://github.com/Jackson0714/PassJava-Platform)
-  * [学习教程](https://github.com/Jackson0714/PassJava-Learning)
   
 * [兄弟连](http://passjava.cn/#/112.双赢/01.友链)
   
