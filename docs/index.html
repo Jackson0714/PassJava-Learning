@@ -211,7 +211,7 @@
           <div class="tencent_qrcode">
             <h4>更多精品文章</h4>
             <p style="font-size: 12px; color: #25a46a;">悟空聊架构</p>
-            <img id="publicWechatQrcode" src="" alt="EnjoyToShare" />
+            <img id="publicWechatQrcode" src="./images/common/wechat_public_qrcode.jpeg" alt="EnjoyToShare" />
           </div>
         </div>
       </div>
@@ -219,7 +219,7 @@
         <div class="wechat">
           <div class="wechat_qrcode">
             <h4>5000人技术交流</h4>
-            <img id="personalWechatQrcode" src="" alt="EnjoyToShare" />
+            <img id="personalWechatQrcode" src="./images/common/wechat_personal_qrcode.jpeg" alt="EnjoyToShare" />
           </div>
         </div>
       </div>
@@ -227,7 +227,7 @@
         <div class="knowledge-planet">
           <div class="qrcode">
             <h4>技术1v1指导</h4>
-            <img id="knowledgePlanetQrcode" src="" alt="EnjoyToShare" />
+            <img id="knowledgePlanetQrcode" src="./images/common/knowledge_planet_qrcode.jpg" alt="EnjoyToShare" />
           </div>
         </div>
       </div>
@@ -328,9 +328,6 @@
 
             if (isReadme === -1) {
               cleanQrcode();
-              $("#publicWechatQrcode").src="./images/common/wechat_public_qrcode.jpeg"
-              $("#personalWechatQrcode").src="./images/common/wechat_personal_qrcode.jpeg"
-              $("#knowledgePlanetQrcode").src="./images/common/knowledge_planet_qrcode.jpg"
               return header + html + footer;
             } else {
               return html + footer;
