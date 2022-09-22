@@ -237,6 +237,8 @@
   * [08.缓存实战（一）](02.PassJava架构篇/19.缓存实战（一）.md)
   * [09.缓存实战（二）Redis分布式锁](02.PassJava架构篇/22.缓存实战（二）Redis分布式锁.md)
   * [10.缓存实战（三）Redisson分布式锁](02.PassJava架构篇/23.缓存实战（三）Redisson分布式锁.md)
+  * [11.缓存实战（三）Redisson分布式锁](02.PassJava架构篇/23.缓存实战（三）Redisson分布式锁.md)
+  * [12.缓存实战（三）Redisson分布式锁](02.PassJava架构篇/23.缓存实战（三）Redisson分布式锁.md)
 
 * 九、Elasticsearch（6篇）🔍
   
