@@ -17,7 +17,7 @@
 
 - 后台管理系统
 
-![添加题目管理菜单](SpringCloud实战项目《佳必过 PassJava》.assets/image-20200918165327441.png)
+![添加题目管理菜单](http://cdn.jayh.club/uPic/image-2020091816532744149rB2M.png)
 
 - 小程序
 
