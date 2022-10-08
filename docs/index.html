@@ -100,7 +100,7 @@
       position: fixed;
       right: 10px;
       top: 100px;
-      width: 120px;
+      width: 80px;
       box-shadow: -1px 0 2px 0px #c5ebda;
       padding: 10px;
       z-index: 99;
@@ -115,13 +115,13 @@
     }
 
     .advertisement .tencent_qrcode h4 {
-      font-size: 12px;
+      font-size: 8px;
       color: #25a46a;
-      margin-bottom: 10px;
+      /* margin-bottom: 10px; */
     }
 
     .wechat .wechat_qrcode h4 {
-      font-size: 12px;
+      font-size: 10px;
       color: #25a46a;
       margin-bottom: 10px;
     }
@@ -129,8 +129,8 @@
     .wechat {
       position: fixed;
       right: 10px;
-      top: 270px;
-      width: 120px;
+      top: 220px;
+      width: 80px;
       box-shadow: -1px 0 2px 0px #c5ebda;
       padding: 10px;
       z-index: 99;
@@ -141,8 +141,8 @@
     .knowledge-planet {
       position: fixed;
       right: 10px;
-      top: 424px;
-      width: 120px;
+      top: 330px;
+      width: 80px;
       box-shadow: -1px 0 2px 0px #c5ebda;
       padding: 10px;
       z-index: 99;
@@ -157,7 +157,7 @@
     }
 
     .knowledge-planet .qrcode h4 {
-      font-size: 12px;
+      font-size: 10px;
       color: #25a46a;
       margin-bottom: 10px;
     }
@@ -205,12 +205,13 @@
       <img class="image" id="displayQrcode" title="显示"  onclick="displayQrcode()" src="./images/common/display.png"> </img>
       <span class="text">纯净版</span>
     </div>
-    <div id="asideContainer" style="display:none;">
+    <!-- <div id="asideContainer" style="display:none;"> -->
+    <div id="asideContainer"></div>
       <div class="aside_container">
         <div class="advertisement">
           <div class="tencent_qrcode">
-            <h4>更多精品文章</h4>
-            <p style="font-size: 12px; color: #25a46a;">悟空聊架构</p>
+            <h4>更多精品</h4>
+            <span style="font-size: 9px; color: #25a46a;">悟空聊架构</span>
             <img id="publicWechatQrcode" src="./images/common/wechat_public_qrcode.jpeg" alt="EnjoyToShare" />
           </div>
         </div>
@@ -218,7 +219,7 @@
       <div class="aside_container2">
         <div class="wechat">
           <div class="wechat_qrcode">
-            <h4>5000人技术交流</h4>
+            <h4>技术交流群</h4>
             <img id="personalWechatQrcode" src="./images/common/wechat_personal_qrcode.jpeg" alt="EnjoyToShare" />
           </div>
         </div>
@@ -226,7 +227,7 @@
       <div class="aside_container3">
         <div class="knowledge-planet">
           <div class="qrcode">
-            <h4>技术1v1指导</h4>
+            <h4>专业指导</h4>
             <img id="knowledgePlanetQrcode" src="./images/common/knowledge_planet_qrcode.jpg" alt="EnjoyToShare" />
           </div>
         </div>
