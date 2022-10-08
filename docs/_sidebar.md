@@ -52,7 +52,7 @@
   * 1.4、PassJava业务篇
       * [01.管理后台-题目类型功能](01.PassJava/04.PassJava_Business/01.管理后台-题目类型功能.md)
 
-* 二、SpringCloud 架构剖析（25篇）🔥
+* 二、SpringCloud 架构（25篇）🔥
 
     - 注册中心Eureka
         * [01.Eureka基本原理和简单使用](02.SpringCloud/01.Eureka注册中心/01.Eureka基本原理和简单使用.md)
@@ -241,8 +241,6 @@
   * [08.缓存实战（一）](01.PassJava/02.PassJava_Architecture/19.缓存实战（一）.md)
   * [09.缓存实战（二）Redis分布式锁](01.PassJava/02.PassJava_Architecture/22.缓存实战（二）Redis分布式锁.md)
   * [10.缓存实战（三）Redisson分布式锁](01.PassJava/02.PassJava_Architecture/23.缓存实战（三）Redisson分布式锁.md)
-  * [11.缓存实战（三）Redisson分布式锁](01.PassJava/02.PassJava_Architecture/23.缓存实战（三）Redisson分布式锁.md)
-  * [12.缓存实战（三）Redisson分布式锁](01.PassJava/02.PassJava_Architecture/23.缓存实战（三）Redisson分布式锁.md)
 
 * 九、Elasticsearch（6篇）🔍
   
