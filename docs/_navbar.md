@@ -1,13 +1,13 @@
 
-* [SpringCloud源码剖析](http://passjava.cn/#/13.SpringCloud架构剖析/01.Eureka注册中心/03.Eureka源码之启动过程)
+* [SpringCloud源码剖析](http://www.passjava.cn/#/02.SpringCloud/02.Ribbon负载均衡/01.Ribbon架构剖析)
 
-* [分布式](http://passjava.cn/#/92.分布式/01.分布式基础概念)
+* [分布式](http://www.passjava.cn/#/03.Distributed/01.分布式基础概念)
 
 * 面试必背 
-  * [Redis](http://passjava.cn/#/88.Interview/01.Redis/Redis1)
-  * [并发多线程](http://passjava.cn/#/88.Interview/02.Thread/Thread1)
-  * [MySQL](http://passjava.cn/#/88.Interview/03.Database/MySQL1)
-  * [JVM](http://passjava.cn/#/88.Interview/04.JVM/JVM1)
+  * [Redis](http://passjava.cn/#/05.Interview/01.Redis/Redis1)
+  * [并发多线程](http://passjava.cn/#/05.Interview/02.Thread/Thread1)
+  * [MySQL](http://passjava.cn/#/05.Interview/03.Database/MySQL1)
+  * [JVM](http://passjava.cn/#/05.Interview/04.JVM/JVM1)
 
 * 演示
   * [后台管理](https://github.com/Jackson0714/PassJava-Portal)
