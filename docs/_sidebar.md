@@ -130,7 +130,6 @@
       * [01.东汉末年，他们把熔断限流玩到了极致](04.Architecture/03.用故事讲解技术/02.高可用/01.东汉末年，他们把熔断限流玩到了极致.md)
       * [02.我是一个秒杀请求，正在逃离这颗星球](04.Architecture/03.用故事讲解技术/02.高可用/02.我是一个秒杀请求，正在逃离这颗星球.md)
       * [03.为什么要除夕，原来是内存爆了](04.Architecture/03.用故事讲解技术/02.高可用/03.为什么要除夕，原来是内存爆了.md)
-  
   * 4.4、高可用集群篇
     * [01.部署MySQL高可用架构](04.Architecture/04.高可用集群篇/01.部署MySQL高可用.md)
     * [02.一次MySQL误操作导致的生产级事故，高可用都不顶不住了.md](04.Architecture/04.高可用集群篇/02.一次MySQL误操作导致的生产级事故，高可用都不顶用了.md)
@@ -138,7 +137,6 @@
     * [04.Keepalived底层原理(上）](04.Architecture/04.高可用集群篇/04.Keepalived底层原理(上）20220629.md)
     * [05.Keepalived底层原理-路由方案](04.Architecture/04.高可用集群篇/05.Keepalived底层原理-路由方案20220719.md)
     * [98.B站20210713宕机事件](04.Architecture/04.高可用集群篇/98.B站20210713宕机事件.md)
-
   * 4.5、中间件原理剖析 🔥🔥🔥
     * RocketMQ
       * [01.一文带你搭建RocketMQ源码调试环境](04.Architecture/05.中间件原理剖析/02.消息队列/01.RocketMQ/03.如何调试RocketMQ源码.md)
@@ -195,7 +193,7 @@
     * 11.Elasticsearch
       * [11.Elasticsearch](05.Interview/12.Elasticsearch/01.Elasticsearch.md)
 
-* 六、Java 核心知识
+* 六、Java 核心知识（22篇）
   * 6.1、Java 核心知识
     * [01.Java语言概述](06.Java核心知识/01.Java语言概述.md)
     * [02.变量、标识符、保留字、变量](06.Java核心知识/02.变量、标识符、保留字、变量.md)
@@ -229,7 +227,7 @@
     * [05.5000字-24张图带你彻底理解Java中的21种锁](07.并发多线程/05.5000字-24张图带你彻底理解Java中的21种锁.md)
     * [06.干货-45张图庖丁解牛18种Queue，你知道几种？](07.并发多线程/06.干货-45张图庖丁解牛18种Queue，你知道几种.md)
 
-* 八、Redis 进阶（10篇）🆕
+* 八、Redis 进阶（14篇）🆕
   * [00.Redis 源码下载](08.Redis/00.DownloadRedis.md)
   * [01.趣谈Redis之SDS](08.Redis/01.趣谈Redis之SDS.md)
   * [03.Redis的主从架构原理和部署](08.Redis/03.Redis的主从架构原理和部署.md)
@@ -237,12 +235,14 @@
   * [05.真枪实弹：RDB持久化配置和数据恢复](08.Redis/05.真枪实弹：RDB持久化配置和数据恢复.md)
   * [06.真枪实弹：Redis冷备如何做](08.Redis/06.真枪实弹：Redis冷备如何做.md)
   * [07.Redis主从架构搭建和压测](08.Redis/07.Redis主从架构搭建和压测.md)
-  * [08.缓存实战（一）](01.PassJava/02.PassJava_Architecture/19.缓存实战（一）.md)
-  * [09.缓存实战（二）Redis分布式锁](01.PassJava/02.PassJava_Architecture/22.缓存实战（二）Redis分布式锁.md)
-  * [10.缓存实战（三）Redisson分布式锁](01.PassJava/02.PassJava_Architecture/23.缓存实战（三）Redisson分布式锁.md)
-
-* 九、Elasticsearch（6篇）🔍
+  * [08.从单点 Redis 到 1 主 2 从 3 哨兵的架构演进之路](08.Redis/09.Redis开发手册.md)
+  * [00.Redis 源码下载](08.Redis/10.Redis面试.md)
+  * [11.缓存实战（一）](08.Redis/11.缓存实战（一）.md)
+  * [12.缓存实战（二）Redis分布式锁](08.Redis/12.缓存实战（二）Redis分布式锁.md)
+  * [13.缓存实战（三）Redisson分布式锁](08.Redis/13.缓存实战（三）Redisson分布式锁.md)
+  * [14.缓存实战（四）SpringCache](08.Redis/14.缓存实战（四）SpringCache.md)
   
+* 九、Elasticsearch（6篇）🔍
     * [Elasticsearch 系列](18.Elasticsearch/01.Elasticsearch目录.md)
 
 * 九一、工具篇（19篇）
@@ -319,10 +319,6 @@
     * [07.SpringBoot整合MyBatis](03.SpringBoot学习篇/spring-boot-07-data-mybatis.md)
     * [08.SpringBoot-Mybatis逻辑删除](03.SpringBoot学习篇/08.SpringBoot-Mybatis逻辑删除.md)
     * [09.Object划分](03.SpringBoot学习篇/09.Object划分.md)
-
-
-
-
 
 * 九五、前端进阶（9篇）
   * 前端基础知识
