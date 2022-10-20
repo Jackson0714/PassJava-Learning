@@ -4252,9 +4252,9 @@ ES 中 A、B、G 记录 都有这三个词的其中一种，  所以 1,2, 3,4, 5
 
 搭建虚拟机环境和安装 docker 可以参照之前写的文档：
 
--   [01. 快速搭建 Linux 环境-运维必备](http://www.passjava.cn/#/05.安装部署篇/01.环境搭建篇)
--   [02. 配置虚拟机网络](http://www.passjava.cn/#/05.安装部署篇/02.配置虚拟机网络)
--   [03. 安装 Docker](http://www.passjava.cn/#/05.安装部署篇/03.安装docker)
+-   [01. 快速搭建 Linux 环境-运维必备](http://www.passjava.cn/#/01.PassJava/03.Deploy/01.环境搭建篇)
+-   [02. 配置虚拟机网络](http://www.passjava.cn/#/01.PassJava/03.Deploy/02.配置虚拟机网络)
+-   [03. 安装 Docker](http://www.passjava.cn/#/01.PassJava/03.Deploy/03.安装docker)
 
 ##### 1 ) 下载镜像文件
 
@@ -5266,7 +5266,7 @@ rm -rf *.zip
 
 ###### 6.2.2.3 方式三：Xftp 上传压缩包到映射目录
 
-先用 XShell 工具连接虚拟机 ( 操作步骤可以参考之前写的文章 [02. 快速搭建 Linux 环境-运维必备](http://www.passjava.cn/#/05.安装部署篇/01.环境搭建篇)) ，然后用 Xftp 将下载好的安装包复制到虚拟机。
+先用 XShell 工具连接虚拟机 ( 操作步骤可以参考之前写的文章 [02. 快速搭建 Linux 环境-运维必备](http://www.passjava.cn/#/01.PassJava/03.Deploy/01.环境搭建篇)) ，然后用 Xftp 将下载好的安装包复制到虚拟机。
 
 ![Xftp 上传压缩包](http://cdn.jayh.club/blog/20200712/aE30LCn3xzXj.png?imageslim)
 
