@@ -154,10 +154,10 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 - [01.Nginx Location 正则](http://www.passjava.cn/#/104.群成员学习分享/01.NginxLocation正则.md)
 
 ## JVM
-- [01.50+道JVM面试题+11张思维导图就是让你懂JVM](http://www.passjava.cn/#/09.JVM进阶/01.50+道JVM面试题+11张思维导图就是让你懂JVM.md)
-- [02.秒懂JVM的三大参数类型，就靠这十个小实验了](http://www.passjava.cn/#/09.JVM进阶/02.秒懂JVM的三大参数类型，就靠这十个小实验了.md)
-- [98.字节码指令表](http://www.passjava.cn/#/09.JVM进阶/98.字节码指令表.md)
-- [99.JVM参数列表](http://www.passjava.cn/#/09.JVM进阶/99.JVM参数列表.md)
+- [01.50+道JVM面试题+11张思维导图就是让你懂JVM](http://www.passjava.cn/#/06.Java核心知识/04.JVM进阶/01.50+道JVM面试题+11张思维导图就是让你懂JVM.md)
+- [02.秒懂JVM的三大参数类型，就靠这十个小实验了](http://www.passjava.cn/#/06.Java核心知识/04.JVM进阶/02.秒懂JVM的三大参数类型，就靠这十个小实验了.md)
+- [98.字节码指令表](http://www.passjava.cn/#/06.Java核心知识/04.JVM进阶/98.字节码指令表.md)
+- [99.JVM参数列表](http://www.passjava.cn/#/06.Java核心知识/04.JVM进阶/99.JVM参数列表.md)
 
 ## 工具篇
 
