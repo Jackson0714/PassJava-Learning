@@ -103,7 +103,7 @@
     * [10.区块链12问和Pow算法](03.Distributed/10.区块链12问.md)
     * [11.Zookeeper中的ZAB协议](03.Distributed/14.ZAB协议.md)
 
-* 四、架构设计（27篇）🆕
+* 四、架构设计（29篇）🆕
   * 4.1、架构剖析
     * [01.微服务架构中的两款流量防卫兵](04.Architecture/01.架构图解/01.微服务架构中的两款流量防卫兵.md)
     * [02.浅析扣减库存的方案设计](04.Architecture/01.架构图解/02.浅析扣减库存的方案设计.md)
@@ -122,6 +122,8 @@
     * [97.京东白条数据架构演进](04.Architecture/02.大厂案例/97.京东白条数据架构演进.md)
     * [98.春晚红包架构](04.Architecture/02.大厂案例/98.春晚红包架构.md)
     * [99.淘宝架构10年](04.Architecture/02.大厂案例/99.淘宝架构10年.md)
+    * [100.字节跳动kube-apiserver高可用方案KubeGateway](04.Architecture/02.大厂案例/100.字节跳动kube-apiserver高可用方案KubeGateway.md)
+    * [100.字节跳动kube-apiserver高可用方案KubeGateway](04.Architecture/02.大厂案例/101.闲鱼如何计算实时优惠.md)
   * 4.3、用故事讲解技术
     * 中间件选型
       * [01.如果把4个「消息队列」都在一个群里，他们会聊什么？](04.Architecture/03.用故事讲解技术/01.中间件选型/01.如果消息队列都在一个群里，他们会聊什么？.md)
@@ -242,7 +244,7 @@
   * [06.真枪实弹：Redis冷备如何做](08.Redis/06.真枪实弹：Redis冷备如何做.md)
   * [07.Redis主从架构搭建和压测](08.Redis/07.Redis主从架构搭建和压测.md)
   * [08.从单点 Redis 到 1 主 2 从 3 哨兵的架构演进之路](08.Redis/09.Redis开发手册.md)
-  * [00.Redis 源码下载](08.Redis/10.Redis面试.md)
+  * [面试题汇总 Redis 篇 第一季](08.Redis/10.Redis面试.md)
   * [11.缓存实战（一）](08.Redis/11.缓存实战（一）.md)
   * [12.缓存实战（二）Redis分布式锁](08.Redis/12.缓存实战（二）Redis分布式锁.md)
   * [13.缓存实战（三）Redisson分布式锁](08.Redis/13.缓存实战（三）Redisson分布式锁.md)
