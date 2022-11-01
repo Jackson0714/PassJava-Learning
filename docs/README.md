@@ -40,25 +40,32 @@ Elasticsearch 筋斗云版蓝皮书1.0，回复ES获取
 
 ## PassJava 部署教程
 
-:heavy_check_mark: [1、Mac M1 部署项目](http://www.passjava.cn/#/01.项目简介/7.本地部署项目Mac版)
+### 1、Mac M1 部署项目
+
+[Mac M1 部署项目](http://www.passjava.cn/#/01.项目简介/7.本地部署项目Mac版):heavy_check_mark:
 
 Windows 版正在更新中，可参考 Mac 版的部署教程。
 
 
 前后端都在这个仓库：
 
+后台代码地址：https://github.com/Jackson0714/PassJava-Platform
 
-- 后台代码地址：https://github.com/Jackson0714/PassJava-Platform
+### 2、后端部署教程
 
-:heavy_check_mark: [2、后端部署教程](http://www.passjava.cn/#/01.项目简介/7.本地部署项目Mac版)
+[后端部署教程](http://www.passjava.cn/#/01.PassJava/01.Introduction/7.%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AEMac%E7%89%88):heavy_check_mark: 
 
-- 前端 Vue 代码地址：https://github.com/Jackson0714/PassJava-Platform/tree/master/passjava-portal
+### 3、前端部署教程
 
-:heavy_check_mark: [3、前端部署教程](https://github.com/Jackson0714/PassJava-Platform/tree/master/passjava-portal)
+[前端部署教程](https://github.com/Jackson0714/PassJava-Platform/tree/master/passjava-portal):heavy_check_mark:
 
-- 小程序代码地址：https://github.com/Jackson0714/PassJava-Platform/tree/master/passjava-miniApp
+前端 Vue 代码地址：https://github.com/Jackson0714/PassJava-Platform/tree/master/passjava-portal
 
-:heavy_check_mark: [4、小程序部署教程](https://github.com/Jackson0714/PassJava-Platform/blob/master/passjava-miniApp/README.md)
+### 小程序部署教程
+
+ [小程序部署教程](https://github.com/Jackson0714/PassJava-Platform/blob/master/passjava-miniApp/README.md):heavy_check_mark:
+
+小程序代码地址：https://github.com/Jackson0714/PassJava-Platform/tree/master/passjava-miniApp
 
 ## 简介
 
