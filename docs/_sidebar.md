@@ -324,12 +324,14 @@
         * [14.缓存如何做到高可用](109.学习笔记/99.技术管理/01.如何为团队设定合理的目标.md)
 
 * 九四、SpringBoot 学习篇
-    * [05.SpringBoot整合JDBC](03.SpringBoot学习篇/spring-boot-05-data-jdbc.md)
-    * [06.SpringBoot整合Druid](03.SpringBoot学习篇/spring-boot-06-data-druid.md)
-    * [07.SpringBoot整合MyBatis](03.SpringBoot学习篇/spring-boot-07-data-mybatis.md)
-    * [08.SpringBoot-Mybatis逻辑删除](03.SpringBoot学习篇/08.SpringBoot-Mybatis逻辑删除.md)
-    * [09.Object划分](03.SpringBoot学习篇/09.Object划分.md)
-
+    
+    * [02.Maven打包](03.SpringBoot/02.maven_thirdpart_jar.md)
+    * [05.SpringBoot整合JDBC](03.SpringBoot/spring-boot-05-data-jdbc.md)
+    * [06.SpringBoot整合Druid](03.SpringBoot/spring-boot-06-data-druid.md)
+    * [07.SpringBoot整合MyBatis](03.SpringBoot/spring-boot-07-data-mybatis.md)
+    * [08.SpringBoot-Mybatis逻辑删除](03.SpringBoot/08.SpringBoot-Mybatis逻辑删除.md)
+    * [09.Object划分](03.SpringBoot/09.Object划分.md)
+    
 * 九五、前端进阶（9篇）
   * 前端基础知识
     * [01.安装Vue的devtools插件](07.前端进阶/01.安装Vue的devtools插件.md)

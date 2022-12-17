@@ -14,6 +14,8 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 
 🍎目前在一家上市公司从事基础架构建设工作。
 
+[我的 B站](https://space.bilibili.com/493005591?spm_id_from=333.999.0.0)
+
 ![目录](http://cdn.jayh.club/uPic/640tw1bSU.jpg)
 ### 技术支持
 

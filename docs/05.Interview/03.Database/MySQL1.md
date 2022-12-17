@@ -128,7 +128,9 @@ select 的数据列只用从索引中就能够取得，不必从数据表中读�
 
 ![](http://cdn.jayh.club/blog/20210906/HkguNxMjBAlC.png?imageslim)
 
+注意：8.0.13 可以使用跳跃索引，bc 和 c 可以使用到索引。
 
+官网：https://dev.mysql.com/doc/refman/8.0/en/range-optimization.html#range-access-skip-scan%EF%BC%89%EF%BC%9A
 
 ## 七、说下 MySQL 回表？
 
