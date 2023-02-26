@@ -216,6 +216,7 @@
     * [16.网络编程](06.Java核心知识/01.JavaCore/16.网络编程.md)
     * [17.反射与动态代理](06.Java核心知识/01.JavaCore/17.反射与动态代理.md)
     * [18.Java8新特性](06.Java核心知识/01.JavaCore/18.Java8新特性.md)
+    * [19.Java Stream](06.Java核心知识/01.JavaCore/19.JavaStream.md)
   * 6.2、Spring
     * Spring 核心知识
       * [98.RestTemplate教程](06.Java核心知识/02.Spring/01.SpringCore/98.RestTemplate教程.md)
@@ -324,7 +325,7 @@
         * [14.缓存如何做到高可用](109.学习笔记/99.技术管理/01.如何为团队设定合理的目标.md)
 
 * 九四、SpringBoot 学习篇
-    
+  
     * [02.Maven打包](03.SpringBoot/02.maven_thirdpart_jar.md)
     * [05.SpringBoot整合JDBC](03.SpringBoot/spring-boot-05-data-jdbc.md)
     * [06.SpringBoot整合Druid](03.SpringBoot/spring-boot-06-data-druid.md)
@@ -351,7 +352,7 @@
 
 * 九六、其他
   * SQL进阶
-      * [01.30分钟全面解析-SQL事务+隔离级别+阻塞+死锁.md](08.SQL进阶/01.30分钟全面解析-SQL事务+隔离级别+阻塞+死锁.md)
+      * [01.30分钟全面解析-SQL事务+隔离级别+阻塞+死锁.md](08.SQL/01.30分钟全面解析-SQL事务+隔离级别+阻塞+死锁.md)
   * 想法
       * [02.打造一款刷Java知识的小程序2](98.idea/02.打造一款刷Java知识的小程序2.md)
       * [03.2020年中总结」武汉程序员，跳出舒适区](98.idea/03.2020年中总结」武汉程序员，跳出舒适区.md)

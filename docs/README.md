@@ -17,11 +17,17 @@ PassJava 项目全套学习教程连载中，[关注公众号](#公众号)第一
 [我的 B站](https://space.bilibili.com/493005591?spm_id_from=333.999.0.0)
 
 ![目录](http://cdn.jayh.club/uPic/640tw1bSU.jpg)
-### 技术支持
+### 技术支持🌈
 
-💪🏻💪🏻💪🏻欢迎加入我的知识星球（下方扫码加入），提供`技术1v1解答`、简历修改、500人技术交流群。当然你也可以加我微信好友：passjava。
+因作者本人平时很忙，如果需要技术支持，请加入我的 VIP 答疑星球（下方扫码加入）。
 
-![](http://cdn.jayh.club/uPic/image-20220811172512644H7oAhP.png)
+星球提供以下服务：
+
+`PassJava项目技术1v1解答`、简历修改、更多技术专栏持续更新中。
+
+当然你也可以加我微信好友：passjava。
+
+![星球优惠券](http://cdn.jayh.club/uPic/image-20230226122226575AeeEUC.png)
 
 **悟空的多个技术专题**：
 
