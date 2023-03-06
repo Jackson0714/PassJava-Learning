@@ -257,6 +257,18 @@
 * 九、Elasticsearch（6篇）🔍
     * [Elasticsearch 系列](18.Elasticsearch/01.Elasticsearch目录.md)
 
+* 十、SQL（5篇）📚
+    * MySQL 🐬
+      * MySQL 基础
+      * MySQL 基础总结
+        * [01.MySQL 索引](10.SQL/01.MySQL/03.Summary/01.index1.md)
+      * MySQL 进阶
+        * [01.MySQL 慢查询](10.SQL/01.MySQL/02.MySQL_Advanced/01.MySQL_slowquery.md)
+        * [02.MySQL GTID 基础](10.SQL/01.MySQL/02.MySQL_Advanced/02.MySQL_gtid_basic.md)
+        * [03.MySQL GTID 实践](10.SQL/01.MySQL/02.MySQL_Advanced/03.MySQL_GTID_Practice.md)
+    * SQL Server
+      * [01.30分钟全面解析-SQL事务+隔离级别+阻塞+死锁](10.SQL/02.SQLServer//01.30分钟全面解析-SQL事务+隔离级别+阻塞+死锁.md)
+
 * 九一、工具篇（19篇）
     * [00.工具推荐](99.tools/00.Tools.md)
     * [01.自定义Markdown神器Typora的主题样式](99.tools/01.自定义Markdown神器Typora的主题样式.md)
@@ -352,8 +364,6 @@
         * [02.iOS证书配置流程](96.iOS/03.iOS证书/02.iOS证书配置流程.md)
 
 * 九六、其他
-  * SQL进阶
-      * [01.30分钟全面解析-SQL事务+隔离级别+阻塞+死锁.md](08.SQL/01.30分钟全面解析-SQL事务+隔离级别+阻塞+死锁.md)
   * 想法
       * [02.打造一款刷Java知识的小程序2](98.idea/02.打造一款刷Java知识的小程序2.md)
       * [03.2020年中总结」武汉程序员，跳出舒适区](98.idea/03.2020年中总结」武汉程序员，跳出舒适区.md)
