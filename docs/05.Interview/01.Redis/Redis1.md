@@ -191,7 +191,7 @@ WATCH 机制的具体实现是由 WATCH 命令实现的，如下图所示：
 
 某个 key 设置了过期时间，但在正好失效的时候，有大量请求进来了，导致请求都到数据库查询了。就像把一面墙击穿了一个洞。
 
-![](https://img-blog.csdnimg.cn/img_convert/1709976ea1985652f7dfc90edd5d8dec.png)
+![](http://cdn.jayh.club/uPic/1709976ea1985652f7dfc90edd5d8dec-2023032518315845308FCJt.png)
 
 #### 解决方案
 

@@ -1,5 +1,5 @@
 本文主要内容如下：
-![](https://img-blog.csdnimg.cn/img_convert/c1ef95d8cccc194b72a7688a0a32bfa9.png)
+![](http://cdn.jayh.club/uPic/c1ef95d8cccc194b72a7688a0a32bfa9-20230325183314635dn2OlH.png)
 
 ## 一、缘起
 
@@ -9,19 +9,15 @@ PassJava 开源项目是一个`面试刷题`的开源系统，后端采用 Sprin
 
 为了让读者朋友们更好地学习该项目，我已经将小程序代码开源。
 
-![](https://img-blog.csdnimg.cn/img_convert/5a55f92bf35abdb98ecfe528f307aac8.png)
+![](http://cdn.jayh.club/uPic/5a55f92bf35abdb98ecfe528f307aac8-20230325183318614Tt6hK1.png)
 
 小程序的代码地址在 github 上面，别忘记点个 star，素质三连哈～
 
 > https://github.com/Jackson0714/PassJava-Platform/tree/master/passjava-miniApp
 
-小程序体验码如下：
-
-![](https://img-blog.csdnimg.cn/img_convert/baa49eb4c0231f3a5edc7bdc2be68159.png)
-
 小程序界面：
 
-![](https://img-blog.csdnimg.cn/img_convert/540a24d6907aeff93bc053385d1c4eb9.gif)
+![](http://cdn.jayh.club/uPic/540a24d6907aeff93bc053385d1c4eb9-20230325183333993d4zzJZ.gif)
 
 小程序有两个版本：云开发版和进阶版。下面分别进行介绍。
 
@@ -72,11 +68,11 @@ PassJava 开源项目是一个`面试刷题`的开源系统，后端采用 Sprin
 
 - 第二步：进入到题库列表页。下图是 Spring 题库列表页，可以点击查看进入到题目的详情页。
 
-![Spring 题库](https://img-blog.csdnimg.cn/img_convert/ae9436f90577cf36f5944d9b14552e72.png)
+![Spring 题库](http://cdn.jayh.club/uPic/ae9436f90577cf36f5944d9b14552e72-20230325183340097Aty9kw.png)
 
 - 第三步：进入到题目详情页。如下图所示就是 spring 面试题的详情页，加载的内容就是上传到云存储的 markdown 文件。后面会讲解如何上传题目。
 
-![题目详情页](https://img-blog.csdnimg.cn/img_convert/f83181dc35b5b803568923ff2ff0acc5.png)
+![题目详情页](http://cdn.jayh.club/uPic/f83181dc35b5b803568923ff2ff0acc5-202303251857526535YvdgJ.png)
 
 #### 2.2.3 上传题目
 
@@ -84,13 +80,13 @@ PassJava 开源项目是一个`面试刷题`的开源系统，后端采用 Sprin
 
 如下图所示，我上传了很多 markdown 文件，大家可以自行编写 markdown 文件，每一个文件对应一个题目，里面的内容是题目的问题+答案。
 
-![image-20210408155451254](https://img-blog.csdnimg.cn/img_convert/49bd12de1c695dcc2adf030119bd804b.png)
+![image-20210408155451254](http://cdn.jayh.club/uPic/49bd12de1c695dcc2adf030119bd804b-20230325185703286dcD7PfGNMaKh.png)
 
 #### 2.2.3 添加题目记录
 
 然后需要在数据库中插入数据，来提供给小程序查询。
 
-![](https://img-blog.csdnimg.cn/img_convert/5c4065288a393d200b7a3dc91098009c.png)
+![](http://cdn.jayh.club/uPic/5c4065288a393d200b7a3dc91098009c-20230325185708752FmPq49.png)
 
 我导出了一条记录，大家可以直接插入到数据库中。
 
@@ -112,7 +108,7 @@ PassJava 开源项目是一个`面试刷题`的开源系统，后端采用 Sprin
 - subTitle：题目的副标题。
 - type：题目的类型，目前有 `javaBasic`、`jvm`、`spring` 等 12 种。也可以自行添加。
 
-![共 12 种](https://img-blog.csdnimg.cn/img_convert/1258270a9f9bbcad347a4e65110ebbe3.png)
+![共 12 种](http://cdn.jayh.club/uPic/1258270a9f9bbcad347a4e65110ebbe3-20230325185713372aEobnK.png)
 
 markdown 格式的题目已经上传到了 github，目前只有部分，欢迎大家 commit。
 
@@ -126,7 +122,7 @@ https://github.com/Jackson0714/passJavaKnowledge/tree/master
 
 小程序原理图如下：
 
-![](http://cdn.jayh.club/uPic/image-20210411092400523.png)
+![](http://cdn.jayh.club/uPic/image-20210411092400523Dbxtyx.png)
 
 原理图说明：
 
@@ -160,37 +156,37 @@ https://github.com/Jackson0714/passJavaKnowledge/tree/master
 
   目前要求 passjava-gateway、passjava-question、renren 启动成功。
 
-![](https://img-blog.csdnimg.cn/img_convert/ec70fd21f373f2fd12d4add379c96df1.png)
+![](http://cdn.jayh.club/uPic/ec70fd21f373f2fd12d4add379c96df1-20230325185719475OIteYL.png)
 
 - MySQL 数据库和表结构创建成功。
 
   数据库文件在 \data\sql 目录，需要都执行。执行成功后，业务表总共有 5 个业务模块， 7 张表，如下图所示：
 
-![](https://img-blog.csdnimg.cn/img_convert/1e3cda87a301c17032766628c81aaecd.png)
+![](http://cdn.jayh.club/uPic/1e3cda87a301c17032766628c81aaecd-20230325185739865GOGy4K.png)
 
 - Nacos 服务启动成功且已配置好微服务的相关配置。
 
   如何配置可参考前面的文章。访问地址：http://192.168.56.1:8848/nacos。访问 Nacos，并登陆 Nacos 后，如下图所示：
 
-![](https://img-blog.csdnimg.cn/img_convert/d7e843262d5a0b48504cf6e97890c76d.png)
+![](http://cdn.jayh.club/uPic/d7e843262d5a0b48504cf6e97890c76d-20230325185722234nYD2f3zA1ur6.png)
 
 - passjava-portal 管理控制台启动成功。
 
   通过 http://localhost:8001/ 访问。
 
-![](https://img-blog.csdnimg.cn/img_convert/152288df8443882abc3742b28348da57.png)
+![](http://cdn.jayh.club/uPic/152288df8443882abc3742b28348da57-20230325185732578nYJNAA.png)
 
 - 题目管理功能正常使用。
 
   可以创建题目类型和创建题目。
 
-![](https://img-blog.csdnimg.cn/img_convert/a78a5b4728d2726466e8685d5295a2cf.png)
+![](http://cdn.jayh.club/uPic/a78a5b4728d2726466e8685d5295a2cf-202303251857283896gq50w.png)
 
 - 打开小程序代码正常。
 
   另外需要注意下，Rest 版目前的首页题目类型和题目列表正在开发中，所以还是用的云函数，获取题目用到的 id 是 1。目前阶段仅供学习，本人时间有限，欢迎大家来帮助 commit。
 
-![](https://img-blog.csdnimg.cn/img_convert/71eb562dee22c9614315cacee43aad8b.png)
+![](http://cdn.jayh.club/uPic/71eb562dee22c9614315cacee43aad8bfnvhCy.png)
 
 ## 四、开源地址
 

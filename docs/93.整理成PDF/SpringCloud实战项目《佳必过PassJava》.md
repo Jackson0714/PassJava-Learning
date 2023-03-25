@@ -39,8 +39,6 @@
 
 - 小程序
 
-![mark](http://cdn.jayh.club/blog/20200405/ik8h4UItdnSA.jpg?imageslim)
-
 ![mark](http://cdn.jayh.club/blog/20200405/pjfJNfuiXVnF.gif)
 
 ## PassJava 中使用的技术
@@ -5582,17 +5580,17 @@ docker update elasticsearch --restart=always
 我下载的版本是 apache-jmeter-5.3
 ```
 
-![](https://img-blog.csdnimg.cn/img_convert/8b33973211e6af588cea4d66427864ed.png)
+![](http://cdn.jayh.club/uPic/8b33973211e6af588cea4d66427864ed-20230325183613222tiLMJM.png)
 
 - 运行 JMeter 程序
 
 打开批处理文件：\apache-jmeter-5.3\bin\jmeter.bat
 
-![](https://img-blog.csdnimg.cn/img_convert/9394eb8e9e21b096dd718aece354d155.png)
+![](http://cdn.jayh.club/uPic/9394eb8e9e21b096dd718aece354d155-20230325183602405F93pF9K1pekE.png)
 
 - 添加线程组
 
-![添加线程组](https://img-blog.csdnimg.cn/img_convert/fcb5e7b525cf592cbbe2b061cced6914.png)
+![添加线程组](http://cdn.jayh.club/uPic/fcb5e7b525cf592cbbe2b061cced6914-20230325183620323kPqzhg.png)
 
 - 1s 内启动 200 个线程，循环次数 100 次。2w 个请求。
 
@@ -5862,7 +5860,7 @@ http://localhost:8060/api/question/v1/admin/question/test
 
 这里做个横向对比：
 
-![横向对比](https://img-blog.csdnimg.cn/img_convert/43c2e652bee5ebd5ee5a509ec76a8644.png)
+![横向对比](http://cdn.jayh.club/uPic/43c2e652bee5ebd5ee5a509ec76a8644-20230325183631956eSK7tb.png)
 
 说明微服务 api 经过网关转发一次后，性能至少下降了一半。可以得出结果：中间件越多，性能损失越大，大部分损失都是网络交互导致的。可以通过增强网络通信质量来减少网络的延迟。
 
@@ -5878,23 +5876,23 @@ http://localhost:11000/question/v1/admin/question/list?type=5
 
 这个 api 的代码如下，很容易看懂。
 
-![查询问题列表的 api](https://img-blog.csdnimg.cn/img_convert/899a7637f378aa37de27f72d50ebe45c.png)
+![查询问题列表的 api](http://cdn.jayh.club/uPic/899a7637f378aa37de27f72d50ebe45c-20230325183643215QfGSyHBEo2aY.png)
 
 我们加些测试代码：统计查询数据库的耗时。如下所示：
 
-![耗时统计](https://img-blog.csdnimg.cn/img_convert/18e11d292f3589bc68f0923f64af96cc.png)
+![耗时统计](http://cdn.jayh.club/uPic/18e11d292f3589bc68f0923f64af96cc-20230325183649479YcVexz.png)
 
 然后重启 passjava-question 服务，再次测试这个 api，耗时 43 ms
 
-![](https://img-blog.csdnimg.cn/img_convert/f4f49bbdbed6360495dbc33438cf6051.png)
+![](http://cdn.jayh.club/uPic/f4f49bbdbed6360495dbc33438cf6051-20230325183651720C4o7QI.png)
 
 怎么对查询进行优化呢？很容易想到加索引，我们来试下加在 question 表加索引后的效果。给 type 字段加上普通索引，如下图所示：
 
-![添加索引](https://img-blog.csdnimg.cn/img_convert/9bc76b5870c0a3b8480f03ec61d72480.png)
+![添加索引](http://cdn.jayh.club/uPic/9bc76b5870c0a3b8480f03ec61d72480-20230325183656725oJkLDK.png)
 
 我们再来看下加了索引后的耗时情况：耗时 18 ms，确实比之前的 43 ms 快了很多。
 
-![加了索引后的情况](https://img-blog.csdnimg.cn/img_convert/d9f8d38ae103359594134e47da6dd9cd.png)
+![加了索引后的情况](http://cdn.jayh.club/uPic/d9f8d38ae103359594134e47da6dd9cd-20230325183659357jIXPe7.png)
 
 ### 9. 优化垃圾回收
 
@@ -5902,7 +5900,7 @@ http://localhost:11000/question/v1/admin/question/list?type=5
 
 原因是 Eden 区的内存分配得太小了，只有 32 M，我们来调大一点。
 
-![32M Eden 区频繁进行垃圾回收](https://img-blog.csdnimg.cn/img_convert/7704b030fba57010fbeb91334621e14a.png)
+![32M Eden 区频繁进行垃圾回收](http://cdn.jayh.club/uPic/7704b030fba57010fbeb91334621e14a-202303251837016270kZaIT.png)
 
 #### 9.1 增大 Eden 区大小
 
@@ -5914,7 +5912,7 @@ http://localhost:11000/question/v1/admin/question/list?type=5
 
 然后可以观察到在短时间（1分钟）内只进行了 92 次垃圾回收，说明垃圾回收的频率降低了。应用程序的性能也提升了。另外从压测工具中也可以看到，吞吐量为 347/s，吞吐量也有较大提升。
 
-![](https://img-blog.csdnimg.cn/img_convert/86cbe05e08def8bbc92d30c9cf1c86e2.png)
+![](http://cdn.jayh.club/uPic/86cbe05e08def8bbc92d30c9cf1c86e2-20230325183734009Xi6LLc.png)
 
 ### 10. 总结
 

@@ -678,4 +678,4 @@ MySQL支持 XASTART/END/PREPARE/COMMIT 这些SQL语句，通过使用这些命�
 
 更多大厂面试题，请点击下面小程序卡片，进入知识星球查看！
 
-![](https://img-blog.csdnimg.cn/2021071922263371.png)
+![](http://cdn.jayh.club/uPic/2021071922263371-202303251833090626s4g8D.png)

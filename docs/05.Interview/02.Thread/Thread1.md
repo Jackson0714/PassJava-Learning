@@ -39,7 +39,7 @@ Java 在 1.5 版本之前所谓的线程安全的容器，主要指的就是**�
 
 并发容器虽然数量非常多，但依然是前面我们提到的四大类：List、Map、Set 和 Queue，下面的并发容器关系图，基本上把我们经常用的容器都覆盖到了。
 
-![](https://img-blog.csdnimg.cn/img_convert/39419e9d21aed1d474cac82fab0ed8b4.png)
+![](http://cdn.jayh.club/uPic/39419e9d21aed1d474cac82fab0ed8b4wHOv0C.png)
 
 ## 并发编程中的 CAS 原理知道吗？
 
@@ -93,7 +93,7 @@ ABA 问题的解决思路就是使用版本号。在变量前面追加上版本�
 
 比较并替换方法`compareAndSet`。
 
-![compareAndSet 源码](https://img-blog.csdnimg.cn/img_convert/33b08537f3b16fabea18e404aed08a6d.png)
+![compareAndSet 源码](http://cdn.jayh.club/uPic/33b08537f3b16fabea18e404aed08a6d5S4Pew.png)
 
 `expectedReference`：期望值
 
@@ -111,7 +111,7 @@ ABA 问题的解决思路就是使用版本号。在变量前面追加上版本�
 
 当甲线程想改变 A3 为五边形时报错，因为三角形经过已线程修改后，前后版本号不一样，被判定为已修改过，其他线程不能修改。这样就防止了 ABA 问题。
 
-![举例说明](https://img-blog.csdnimg.cn/img_convert/1ee534259df1fdd6ca5b34633b6fae76.png)
+![举例说明](http://cdn.jayh.club/uPic/1ee534259df1fdd6ca5b34633b6fae76JmeDuD.png)
 
 
 ## volatile 有什么特点，和 synchornized 相比有什么区别？
@@ -134,7 +134,7 @@ ABA 问题的解决思路就是使用版本号。在变量前面追加上版本�
 
 ## 什么是Java内存模型？
 
-![原理图1-Java内存模型](https://img-blog.csdnimg.cn/img_convert/41368385b5b7a2d39d4aab909b1ece8c.png)
+![原理图1-Java内存模型](http://cdn.jayh.club/uPic/41368385b5b7a2d39d4aab909b1ece8ccpUDG9.png)
 
 ### 3.1 为什么需要Java内存模型？
 
@@ -150,7 +150,7 @@ JMM是Java内存模型，也就是Java Memory Model，简称JMM，本身是一�
 
 ### 3.3 Java内存模型的两大内存是啥？
 
-<img src="http://cdn.jayh.club/blog/20200816/lCr3gHq8fxlV.png?imageslim" alt="原理图2-两大内存" style="zoom:67%;" />
+<img src="http://cdn.jayh.club/uPic/lCr3gHq8fxlV3lzOKc.png" alt="原理图2-两大内存" style="zoom:67%;" />
 
 - 主内存
   - Java堆中对象实例数据部分
@@ -177,7 +177,7 @@ Java内存模型的几个规范：
 
 由于JVM运行程序的实体是线程，而每个线程创建时JVM都会为其创建一个工作内存（有些地方称为栈空间），工作内存是每个线程的私有数据区域，而Java内存模型中规定所有变量都存储在主内存，主内存是共享内存区域，所有线程都可以访问，`但线程对变量的操作（读取赋值等）必须在工作内存中进行，首先要将变量从主内存拷贝到自己的工作内存空间，然后对变量进行操作，操作完成后再将变量写会主内存`，不能直接操作主内存中的变量，各个线程中的工作内存中存储着主内存中的变量副本拷贝，因此不同的线程间无法访问对方的工作内存，线程间的通信（传值）必须通过主内存来完成，其简要访问过程：
 
-![原理图3-Java内存模型](https://img-blog.csdnimg.cn/img_convert/5bf9c9dae6f7b867fc1b4ab7977b593d.png)
+![原理图3-Java内存模型](http://cdn.jayh.club/uPic/5bf9c9dae6f7b867fc1b4ab7977b593dlXG9cG.png)
 
 ### 3.5 Java内存模型的三大特性
 
@@ -271,7 +271,7 @@ AQS 内部数据和方法，可以简单拆分为：
 
 是一个基于数组结构的有界阻塞队列，此队列按 FIFO（先进先出）原则对元素进行排序。
 
-![](https://img-blog.csdnimg.cn/img_convert/9de3b077b8a71e2dfc3058fb05742b53.png)
+![](http://cdn.jayh.club/uPic/9de3b077b8a71e2dfc3058fb05742b53avaqlO.png)
 
 - ArrayBlockingQueue是一个用数组实现的有界阻塞队列。
 - 队列慢时插入操作被阻塞，队列空时，移除操作被阻塞。
@@ -285,7 +285,7 @@ AQS 内部数据和方法，可以简单拆分为：
 
 一个基于链表结构的阻塞队列，此队列按 FIFO 排序元素，吞吐量通常要高于 ArrayBlockingQueue。静态工厂方法 Executors.newFixedThreadPool() 使用了这个队列。（newFixedThreadPool 用于创建固定线程数）
 
-![图片](https://img-blog.csdnimg.cn/img_convert/a7af8345b83d8c22eb7ece641defa140.png)LinkedBlockingQueue 原理
+![图片](http://cdn.jayh.club/uPic/a7af8345b83d8c22eb7ece641defa140CYC8db.png)LinkedBlockingQueue 原理
 
 - LinkedBlockingQueue具有单链表和有界阻塞队列的功能。
 - 队列慢时插入操作被阻塞，队列空时，移除操作被阻塞。
@@ -295,7 +295,7 @@ AQS 内部数据和方法，可以简单拆分为：
 
 一个不存储元素的阻塞队列。每个插入操作必须等到另一个线程调用移除操作，否则插入操作一直处于阻塞状态，吞吐量通常要高于 LinkedBlockingQueue，静态工厂方法 Executors.newCachedThreadPool 使用这个队列。（newCachedThreadPool 用于根据需要创建新线程）
 
-![](https://img-blog.csdnimg.cn/img_convert/b8d9ea1a8448a2569ea582e1a3bb2c6f.png)SynchronousQueue 原理
+![](http://cdn.jayh.club/uPic/b8d9ea1a8448a2569ea582e1a3bb2c6fGlOSds.png)SynchronousQueue 原理
 
 - 我称SynchronousQueue为”传球好手“。想象一下这个场景：小明抱着一个篮球想传给小花，如果小花没有将球拿走，则小明是不能再拿其他球的。
 - SynchronousQueue负责把生产者产生的数据传递给消费者线程。
@@ -308,7 +308,7 @@ AQS 内部数据和方法，可以简单拆分为：
 
 一个具有优先级的无限阻塞队列。
 
-![](https://img-blog.csdnimg.cn/img_convert/e7d502f0234731f4bf3d5d7f14fc5e47.png)PriorityBlockQueue的原理图
+![](http://cdn.jayh.club/uPic/e7d502f0234731f4bf3d5d7f14fc5e47NOQ3Yr.png)PriorityBlockQueue的原理图
 
 - PriorityBlockQueue = PriorityQueue + BlockingQueue
 - 之前我们也讲到了PriorityQueue的原理，支持对元素排序。
@@ -359,7 +359,7 @@ ThreadPoolExecutor 已经提供了以下 4 种策略。
 
 生命周期状态和方法对应的关系：
 
-![](https://img-blog.csdnimg.cn/img_convert/b845cc3606c2448b2ce542752fe3a1d4.png)
+![](http://cdn.jayh.club/uPic/b845cc3606c2448b2ce542752fe3a1d4KC4GYV.png)
 
 ## Java 线程池有哪几种？
 
