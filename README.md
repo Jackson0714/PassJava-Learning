@@ -77,9 +77,7 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 
 ## 小程序演示
 
-![](http://cdn.jayh.club/blog/20200405/ik8h4UItdnSA.jpg?imageslim)
-
-![](http://cdn.jayh.club/blog/20200405/pjfJNfuiXVnF.gif)
+![](https://static001.geekbang.org/infoq/1a/1a00670c3bb10bc125f7b91d9ca169b4.gif)
 
 ## 项目地址
 
@@ -204,7 +202,7 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 - [07.配置Git](http://www.passjava.cn/#/05.安装部署篇/07.配置git)
 
 ## 架构图解
-  
+
 - [01.微服务架构中的两款流量防卫兵](http://www.passjava.cn/#/89.架构图解/01.微服务架构中的两款流量防卫兵.md)
 
 ## LeetCode刷题

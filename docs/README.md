@@ -149,7 +149,7 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 
 ## 小程序演示
 
-![](http://cdn.jayh.club/blog/20200405/pjfJNfuiXVnF.gif)
+![](https://static001.geekbang.org/infoq/1a/1a00670c3bb10bc125f7b91d9ca169b4.gif)
 
 ## 项目地址
 
