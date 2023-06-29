@@ -65,7 +65,8 @@ VIP 版请加入我的星球获取。下方有扫码加入的方式。
 
 六、星球打卡活动，赠书赠书赠书
 
-![星球优惠券](http://cdn.jayh.club/uPic/image-20230226122226575AeeEUC.png)
+![星球优惠券-100](http://cdn.jayh.club/uPic/xingqiu-2025xYGCEX.png)
+
 
 **悟空的多个技术专题**：
 
