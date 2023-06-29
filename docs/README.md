@@ -18,7 +18,7 @@ VIP 版请加入我的星球获取。下方有扫码加入的方式。
 
 ![image-20230326094344901](http://cdn.jayh.club/uPic/image-20230326094344901tF4uTBX6iqFqH8riqnvw656Q.png)
 
-![](http://cdn.jayh.club/uPic/image-20230326094113037SHNANq1ZpU4Aqt9Jg3.png)
+![](http://cdn.jayh.club/uPic/xingqiu-2025xYGCEX.png)
 
 # PassJava 学习教程
 
