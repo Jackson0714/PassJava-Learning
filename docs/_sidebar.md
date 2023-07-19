@@ -240,7 +240,7 @@
     * [05.5000字-24张图带你彻底理解Java中的21种锁](07.并发多线程/05.5000字-24张图带你彻底理解Java中的21种锁.md)
     * [06.干货-45张图庖丁解牛18种Queue，你知道几种？](07.并发多线程/06.干货-45张图庖丁解牛18种Queue，你知道几种.md)
 
-* 八、Redis 进阶（14篇）🆕
+* 八、Redis 进阶（15篇）🆕
   * [00.Redis 源码下载](08.Redis/00.DownloadRedis.md)
   * [01.趣谈Redis之SDS](08.Redis/01.趣谈Redis之SDS.md)
   * [03.Redis的主从架构原理和部署](08.Redis/03.Redis的主从架构原理和部署.md)
@@ -249,6 +249,7 @@
   * [06.真枪实弹：Redis冷备如何做](08.Redis/06.真枪实弹：Redis冷备如何做.md)
   * [07.Redis主从架构搭建和压测](08.Redis/07.Redis主从架构搭建和压测.md)
   * [08.从单点 Redis 到 1 主 2 从 3 哨兵的架构演进之路](08.Redis/09.Redis开发手册.md)
+  * [09.Redis7 哨兵搭建教程](08.Redis/16.Redis7_sentinel.md)
   * [面试题汇总 Redis 篇 第一季](08.Redis/10.Redis面试.md)
   * [11.缓存实战（一）](08.Redis/11.缓存实战（一）.md)
   * [12.缓存实战（二）Redis分布式锁](08.Redis/12.缓存实战（二）Redis分布式锁.md)
