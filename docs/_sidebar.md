@@ -220,6 +220,8 @@
     * [17.反射与动态代理](06.Java核心知识/01.JavaCore/17.反射与动态代理.md)
     * [18.Java8新特性](06.Java核心知识/01.JavaCore/18.Java8新特性.md)
     * [19.Java Stream](06.Java核心知识/01.JavaCore/19.JavaStream.md)
+    * [20.Java日志通关（一） - 前世今生](06.Java核心知识/01.JavaCore/20.log1.md)
+    * 
   * 6.2、Spring
     * Spring 核心知识
       * [98.RestTemplate教程](06.Java核心知识/02.Spring/01.SpringCore/98.RestTemplate教程.md)

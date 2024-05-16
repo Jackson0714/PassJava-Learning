@@ -192,6 +192,30 @@
   
   <!-- alert 样式 -->
   <link rel="stylesheet" href="http://cdn.jayh.club/css/sweetalert.min.css" type='text/css' media='all' />
+  
+  <script>
+    window.CpsADGDT = window.CpsADGDT || {
+      cpsKey: "07d39534383435ca68e64fe7ce0b7974",
+      data: [],
+    };
+  
+    window.CpsADGDT.data.push(
+      {
+        containerId: "cps-container",
+        type: "banner",
+        cpsPromotionId: 100833,
+      },
+    );
+  
+    (function () {
+      const head = document.getElementsByTagName("head")[0];
+      const s = document.createElement("script");
+      s.async = true;
+      s.src = "https://opc-static.qcloud.com/cps/cps-sdk/latest/cps-sdk.js";
+      head && head.appendChild(s);
+    })();
+  </script>
+  
   <!-- 复制提醒 -->
   <script src="http://cdn.jayh.club/js/sweetalert.min.js"></script>
 

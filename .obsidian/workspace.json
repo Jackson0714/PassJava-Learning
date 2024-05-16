@@ -1,0 +1,159 @@
+{
+  "main": {
+    "id": "967d13aaeb0e9a37",
+    "type": "split",
+    "children": [
+      {
+        "id": "42e73ed416780a79",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ab87eda2d9972843",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/01.PassJava/01.Introduction/4.项目技术和特色.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "eea5f1112d895c7e",
+    "type": "split",
+    "children": [
+      {
+        "id": "e8bd8721970887f2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7381692e90ceaada",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0b7f0128b0e500b3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d1e164e45a64478a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6b153f83ac48f360",
+    "type": "split",
+    "children": [
+      {
+        "id": "f018c44060125e8b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cccf38a71d97a03b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/01.PassJava/01.Introduction/4.项目技术和特色.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "66956bb16eb0b6bb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "docs/01.PassJava/01.Introduction/4.项目技术和特色.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0df31b00e58b8a93",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "549a480050bd9ed5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docs/01.PassJava/01.Introduction/4.项目技术和特色.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "ab87eda2d9972843",
+  "lastOpenFiles": [
+    "Pasted image 20240510093217.png",
+    "docs/01.PassJava/01.Introduction/4.项目技术和特色.md",
+    "docs/01.PassJava/01.Introduction/9.Java学习路线.md",
+    "docs/01.PassJava/01.Introduction/10.PassJava小程序使用教程.md",
+    "docs/01.PassJava/01.Introduction/3.微服务划分图.md",
+    "docs/01.PassJava/01.Introduction/1.项目背景.md",
+    "README.md"
+  ]
+}
