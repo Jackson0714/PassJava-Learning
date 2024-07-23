@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Build Success Notification</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1 { color: #4CAF50; }
+        h2 { color: #333; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin: 5px 0; }
+        a { color: #1E88E5; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>CI 报告</h1>
+        <div id="sum2">
+            <h2>Jenkins 运行结果</h2>
+            <ul>
+                <li>Jenkins 的执行结果: <a>Jenkins 执行成功</a></li>
+                <li>Jenkins 的 Job 名称: <a id="url_1">${JOB_NAME} [${BUILD_NUMBER}]</a></li>
+                <li>Jenkins 的 URL: <a href="${BUILD_URL}">${BUILD_URL}</a></li>
+                <li>Jenkins 项目名称: <a>${JOB_NAME}</a></li>
+                <li>Job URL: <a href="${BUILD_URL}">${BUILD_URL}</a></li>
+                <li>构建日志：<a href="${BUILD_URL}console">${BUILD_URL}console</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

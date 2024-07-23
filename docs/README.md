@@ -18,6 +18,27 @@ VIP 版请加入我的星球获取。下方有扫码加入的方式。
 
 ![image-20230326094344901](http://cdn.jayh.club/uPic/image-20230326094344901tF4uTBX6iqFqH8riqnvw656Q.png)
 
+### 学习此项目能在简历上写些什么内容
+
+**项目技术**: SpringBoot、SpringCloud、ElasticSearch、Mybatis、Redis、MySQL、Nacos、OpenFeign、 Gateway； 
+
+**项目描述**: 该项目实现了一个在线答题、背题、刷题等功能的智慧在线学习平台。用户可以在小程序端进行在线在线答题。此项目可支撑 10W 人同时在线使用，并发量最高能达到 3000。
+
+**项目亮点:** 
+
+- 使用 SpringCloud Alibaba 微服务组件 Nacos 作为注册中心，使用 Sentinel 作为限流组件。
+- 使用消息队列 RocketMQ 来进行大并发交卷的削峰，并利用 RocketMQ来实现分布式事务。
+- 使用Spring Cloud Gateway + JWT实现登录认证； 
+- 使用ElasticSearch实现中文题库的搜索功能，并支持高亮提示。 
+- 使用Redisson分布式锁可以确保同一用户在同一时间只能提交一次试卷，避免因重复提交而导致的数据不一致或者重复操作。
+- 使用 Redis 缓存试卷、题目，避免频繁查库，并保证缓存和数据库一致性。
+- 使用ELK Stack进行日志采集，使用链路追踪 Skywalking 实现链路的追踪，性能分析。
+- 使用 XXL-JOB 实现用户活跃度的统计、用户等级的更新、统计题目和试卷的评分等。
+
+### 入场券
+
+下面是一张星球入场券，星球里面有多个专栏小册：《DevOps 持续集成》、《SpringCloud 微服务架构原理》、《分布式协议原理》，无其他套路。
+
 ![](http://cdn.jayh.club/uPic/xingqiu-2025xYGCEX.png)
 
 # PassJava 学习教程
