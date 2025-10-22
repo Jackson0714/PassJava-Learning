@@ -3222,8 +3222,8 @@ spring.cloud.nacos.config.extension-configs[0].refresh=true
 spring:
   cloud:
     alicloud:
-      access-key: LTAI4G3KxBJ26EUbWsenmqhP
-      secret-key: RHtADVlvlKJvVBQnFNNvnne9p4NwnA
+      access-key: xxx
+      secret-key: xxx
       oss:
         endpoint: oss-cn-beijing.aliyuncs.com
 ```
@@ -3313,9 +3313,9 @@ public class OssController {
 ``` json
 http://localhost:14000/api/thirdparty/v1/admin/oss/getPolicy 
 {
-	"accessid": "LTAI4G3KxBJ26EUbWsenmqhP",
-	"policy": "eyJleHBpcmF0aW9uIjoiMjAyMC0wNC0yOFQwMjozMzowNy42NzNaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjAwMF0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCIyMDIwLTA0LTI4LyJdXX0=",
-	"signature": "pfn4cggFTMMNqTs+qUnDN5c+k5M=",
+	"accessid": "xxx",
+	"policy": "xxx",
+	"signature": "xxx",
 	"dir": "2020-04-28/",
 	"host": "https://passjava.oss-cn-beijing.aliyuncs.com",
 	"expire": "1588041187"
@@ -5935,5 +5935,6 @@ https://blog.csdn.net/u010833547/article/details/92806510
 https://www.bilibili.com/video/BV1np4y1C7Yf
 https://github.com/Jackson0714/PassJava-Platform
 www.passjava.cn
+
 
 > **作者简介**：悟空，8年一线互联网开发和架构经验，用故事讲解分布式、架构设计、Java 核心技术。《JVM性能优化实战》专栏作者，开源了《Spring Cloud 实战 PassJava》项目，自主开发了一个 PMP 刷题小程序。
