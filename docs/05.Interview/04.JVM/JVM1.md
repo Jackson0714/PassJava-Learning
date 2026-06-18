@@ -258,7 +258,7 @@ JVM可以分为运行时数据区以及类加载器、执行引擎、本地方�
 
 ## 五、蚂蚁金服一面：说下G1 收集器
 
-![](http://cdn.jayh.club/blog/20210923/NgfITUCj0cUG.png?imageslim)
+![](http://cdn.passjava.cn/blog/20210923/NgfITUCj0cUG.png?imageslim)
 
 ## 六、字节一面：CMS回收停顿了几次，为什么要停顿两次?
 
@@ -291,7 +291,7 @@ JVM可以分为运行时数据区以及类加载器、执行引擎、本地方�
 
 ### cms清理步骤
 
-![](http://cdn.jayh.club/blog/20210914/Fpml9EYnqGuP.png?imageslim)
+![](http://cdn.passjava.cn/blog/20210914/Fpml9EYnqGuP.png?imageslim)
 
 #### 1.初试标记
 初始标记仅仅只是标记一下GC Roots能直接关联到的对象，速度很快。初始标记的过程是需要触发STW的，不过这个过程非常快，而且初试标记的耗时不会因为堆空间的变大而变慢，是可控的，因此可以忽略这个过程导致的短暂停顿。
@@ -434,7 +434,7 @@ jstat -gc pid 5000 10
 
 ## 十、美团一面：有在⼯作时间中使⽤过 jstat, jmap, mat⼯具吗？ 能给⼀个实际的例⼦说明⼀下吗？
 
-![](http://cdn.jayh.club/blog/20210914/D8AlCbMyeS36.png?imageslim)
+![](http://cdn.passjava.cn/blog/20210914/D8AlCbMyeS36.png?imageslim)
 
 真碰到这种面试题，即使没有在生产环境使用过这些工具排查问题，也不要惊慌。把这些基本操作记住，面试就不慌。
 

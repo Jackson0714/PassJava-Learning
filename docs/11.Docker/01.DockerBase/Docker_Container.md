@@ -10,7 +10,7 @@ docker 客户端非常简单 ,我们可以直接输入 docker 命令来查看到
 runoob@runoob:~# docker
 ```
 
-![img](http://cdn.jayh.club/uPic/docker27P0b6zS.png)
+![img](http://cdn.passjava.cn/uPic/docker27P0b6zS.png)
 
 可以通过命令 **docker command --help** 更深入的了解指定的 Docker 命令使用方法。
 
@@ -20,7 +20,7 @@ runoob@runoob:~# docker
 runoob@runoob:~# docker stats --help
 ```
 
-![img](http://cdn.jayh.club/uPic/docker28YPNx4D.png)
+![img](http://cdn.passjava.cn/uPic/docker28YPNx4D.png)
 
 ------
 
@@ -42,7 +42,7 @@ $ docker pull ubuntu
 $ docker run -it ubuntu /bin/bash
 ```
 
-![img](http://cdn.jayh.club/uPic/docker-container-runJbEGwd.png)
+![img](http://cdn.passjava.cn/uPic/docker-container-runJbEGwd.png)
 
 参数说明：
 
@@ -57,7 +57,7 @@ $ docker run -it ubuntu /bin/bash
 root@ed09e4490c57:/# exit
 ```
 
-![img](http://cdn.jayh.club/uPic/docker-container-exit14UYwI.png)
+![img](http://cdn.passjava.cn/uPic/docker-container-exit14UYwI.png)
 
 ### 启动已停止运行的容器
 
@@ -69,7 +69,7 @@ $ docker ps -a
 
 点击图片查看大图：
 
-[![img](http://cdn.jayh.club/uPic/docker-container-psaSdH547.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-container-psa.png)
+[![img](http://cdn.passjava.cn/uPic/docker-container-psaSdH547.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-container-psa.png)
 
 使用 docker start 启动一个已停止的容器：
 
@@ -77,7 +77,7 @@ $ docker ps -a
 $ docker start b750bbbcfd88 
 ```
 
-![img](http://cdn.jayh.club/uPic/docker-container-start34LFn9.png)
+![img](http://cdn.passjava.cn/uPic/docker-container-start34LFn9.png)
 
 ### 后台运行
 
@@ -89,9 +89,9 @@ $ docker run -itd --name ubuntu-test ubuntu /bin/bash
 
 点击图片查看大图：
 
-[![img](http://cdn.jayh.club/uPic/docker-run-dlAkWys.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-run-d.png)
+[![img](http://cdn.passjava.cn/uPic/docker-run-dlAkWys.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-run-d.png)
 
-[![img](http://cdn.jayh.club/uPic/docker-run-d2iJODxP.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-run-d2.png)
+[![img](http://cdn.passjava.cn/uPic/docker-run-d2iJODxP.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-run-d2.png)
 
 **注：**加了 **-d** 参数默认不会进入容器，想要进入容器需要使用指令 **docker exec**（下面会介绍到）。
 
@@ -103,7 +103,7 @@ $ docker run -itd --name ubuntu-test ubuntu /bin/bash
 $ docker stop <容器 ID>
 ```
 
-![img](http://cdn.jayh.club/uPic/docker-stop-11xhR8W.png)
+![img](http://cdn.passjava.cn/uPic/docker-stop-11xhR8W.png)
 
 停止的容器可以通过 docker restart 重启：
 
@@ -111,7 +111,7 @@ $ docker stop <容器 ID>
 $ docker restart <容器 ID>
 ```
 
-![img](http://cdn.jayh.club/uPic/docker-stop-2hGft8z.png)
+![img](http://cdn.passjava.cn/uPic/docker-stop-2hGft8z.png)
 
 ### 进入容器
 
@@ -128,7 +128,7 @@ $ docker restart <容器 ID>
 $ docker attach 1e560fca3906 
 ```
 
-[![img](http://cdn.jayh.club/uPic/docker-attachEP08tP.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-attach.png)
+[![img](http://cdn.passjava.cn/uPic/docker-attachEP08tP.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-attach.png)
 
 **注意：** 如果从这个容器退出，会导致容器的停止。
 
@@ -140,7 +140,7 @@ $ docker attach 1e560fca3906
 docker exec -it 243c32535da7 /bin/bash
 ```
 
-[![img](http://cdn.jayh.club/uPic/docker-execLAvK8U.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-exec.png)
+[![img](http://cdn.passjava.cn/uPic/docker-execLAvK8U.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-exec.png)
 
 **注意：** 如果从这个容器退出，容器不会停止，这就是为什么推荐大家使用 **docker exec** 的原因。
 
@@ -158,7 +158,7 @@ $ docker export 1e560fca3906 > ubuntu.tar
 
 导出容器 1e560fca3906 快照到本地文件 ubuntu.tar。
 
-[![img](http://cdn.jayh.club/uPic/docker-exportaslXmw.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-export.png)
+[![img](http://cdn.passjava.cn/uPic/docker-exportaslXmw.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-export.png)
 
 这样将导出容器快照到本地文件。
 
@@ -170,7 +170,7 @@ $ docker export 1e560fca3906 > ubuntu.tar
 $ cat docker/ubuntu.tar | docker import - test/ubuntu:v1
 ```
 
-[![img](http://cdn.jayh.club/uPic/docker-importaBIFpq.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-import.png)
+[![img](http://cdn.passjava.cn/uPic/docker-importaBIFpq.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-import.png)
 
 此外，也可以通过指定 URL 或者某个目录来导入，例如：
 
@@ -186,7 +186,7 @@ $ docker import http://example.com/exampleimage.tgz example/imagerepo
 $ docker rm -f 1e560fca3906
 ```
 
-[![img](http://cdn.jayh.club/uPic/docker-container-rmiV4ZouO.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-container-rmi.png)
+[![img](http://cdn.passjava.cn/uPic/docker-container-rmiV4ZouO.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-container-rmi.png)
 
 下面的命令可以清理掉所有处于终止状态的容器。
 
@@ -207,7 +207,7 @@ runoob@runoob:~# docker pull training/webapp  # 载入镜像
 runoob@runoob:~# docker run -d -P training/webapp python app.py
 ```
 
-![img](http://cdn.jayh.club/uPic/docker29oNedIt.png)
+![img](http://cdn.passjava.cn/uPic/docker29oNedIt.png)
 
 参数说明:
 
@@ -237,7 +237,7 @@ Docker 开放了 5000 端口（默认 Python Flask 端口）映射到主机端�
 
 这时我们可以通过浏览器访问WEB应用
 
-![img](http://cdn.jayh.club/uPic/docker314yFYGY.png)
+![img](http://cdn.passjava.cn/uPic/docker314yFYGY.png)
 
 我们也可以通过 -p 参数来设置不一样的端口：
 

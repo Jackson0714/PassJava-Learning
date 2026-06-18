@@ -91,7 +91,7 @@ docker 连接会创建一个父子关系，其中父容器可以看到子容器�
 
 ### Docker 容器网络
 
-![Docker 容器网络方案](http://cdn.jayh.club/uPic/image-202303071734255699nJ520.png)
+![Docker 容器网络方案](http://cdn.passjava.cn/uPic/image-202303071734255699nJ520.png)
 
 ### 容器命名
 
@@ -118,7 +118,7 @@ CONTAINER ID     IMAGE            COMMAND           ...    PORTS                
 $ docker network create -d bridge test-net
 ```
 
-![img](http://cdn.jayh.club/uPic/docker-net9ZILdm.png)
+![img](http://cdn.passjava.cn/uPic/docker-net9ZILdm.png)
 
 参数说明：
 
@@ -142,7 +142,7 @@ $ docker run -itd --name test2 --network test-net ubuntu /bin/bash
 
 点击图片查看大图：
 
-[![img](http://cdn.jayh.club/uPic/docker-net2VkjfVn.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-net2.png)
+[![img](http://cdn.passjava.cn/uPic/docker-net2VkjfVn.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-net2.png)
 
 下面通过 ping 来证明 test1 容器和 test2 容器建立了互联关系。
 
@@ -157,13 +157,13 @@ apt install iputils-ping
 
 点击图片查看大图：
 
-[![img](http://cdn.jayh.club/uPic/docker-net3uwG7z1.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-net3.png)
+[![img](http://cdn.passjava.cn/uPic/docker-net3uwG7z1.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-net3.png)
 
 同理在 test2 容器也会成功连接到:
 
 点击图片查看大图：
 
-[![img](http://cdn.jayh.club/uPic/docker-net4kZ75hs.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-net4.png)
+[![img](http://cdn.passjava.cn/uPic/docker-net4kZ75hs.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-net4.png)
 
 这样，test1 容器和 test2 容器建立了互联关系。
 
@@ -196,7 +196,7 @@ $ docker run -it --rm  ubuntu  cat etc/resolv.conf
 
 点击图片查看大图：
 
-[![img](http://cdn.jayh.club/uPic/docker-net52a0bQf.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-net5.png)
+[![img](http://cdn.passjava.cn/uPic/docker-net52a0bQf.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-net5.png)
 
 **手动指定容器的配置**
 
@@ -218,7 +218,7 @@ $ docker run -it --rm -h host_ubuntu  --dns=114.114.114.114 --dns-search=test.co
 
 点击图片查看大图：
 
-[![img](http://cdn.jayh.club/uPic/docker-net6FJP8Z1.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-net6.png)
+[![img](http://cdn.passjava.cn/uPic/docker-net6FJP8Z1.png)](https://www.runoob.com/wp-content/uploads/2016/05/docker-net6.png)
 
 如果在容器启动时没有指定 **--dns** 和 **--dns-search**，Docker 会默认用宿主主机上的 /etc/resolv.conf 来配置容器的 DNS。
 

@@ -6,7 +6,7 @@
 
 > 面试题第一时间会发到我的知识星球和群聊里面。
 
-![](http://cdn.jayh.club/blog/20210909/r0GNNmUoQput.png?imageslim)
+![](http://cdn.passjava.cn/blog/20210909/r0GNNmUoQput.png?imageslim)
 
 [toc]
 
@@ -126,7 +126,7 @@ select 的数据列只用从索引中就能够取得，不必从数据表中读�
 
 比如建立了 (a、b、c) 联合索引，那么有以下几种情况可以用到索引：
 
-![](http://cdn.jayh.club/blog/20210906/HkguNxMjBAlC.png?imageslim)
+![](http://cdn.passjava.cn/blog/20210906/HkguNxMjBAlC.png?imageslim)
 
 注意：8.0.13 可以使用跳跃索引，bc 和 c 可以使用到索引。
 
@@ -185,7 +185,7 @@ a=xxx and b<10 and b > 5 and c =xxx，c 字段用不到索引，因为 b 是一�
 最左匹配原则的原理：
 我们都知道索引的底层是一颗 B+ 树，那么联合索引当然还是一颗 B+ 树，只不过联合索引的健值数量不是一个，而是多个。构建一颗B+树只能根据一个值来构建，因此数据库依据联合索引最左的字段来构建B+树。 例子：假如创建一个（a,b)的联合索引，那么它的索引树是这样的，如下图所示：
 
-![mark](http://cdn.jayh.club/blog/20210906/wrzpw3I7CyUp.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20210906/wrzpw3I7CyUp.png?imageslim)
 
 可以看到 a 的值是有顺序的，1，1，2，2，3，3，3，3。b 的值是没有顺序的1，2，2，5，1，2，3，5。
 
@@ -240,7 +240,7 @@ Using index condition 可以理解为 ICP 的必要不充分条件；即执行�
 
 表结构：person 表中有四个字段，id，name，age，gender，其中 id为主键，name，age 关联索引；
 
-![](http://cdn.jayh.club/uPic/image-20220105224754674WQt7PJ.png)
+![](http://cdn.passjava.cn/uPic/image-20220105224754674WQt7PJ.png)
 
 
 举个索引下推的简单例子： 
@@ -310,7 +310,7 @@ Buffer Pool 有三大双端链表：free、flush、lru 链表。
 `意向共享锁`（IS Lock），事务想要获得一张表中某几行的共享锁。
 `意向排他锁`（IX Lock），事务想要获得一张表中某几行的排他锁。
 
-![](http://cdn.jayh.club/blog/20210906/NLfVpqwxJ3rS.png?imageslim)
+![](http://cdn.passjava.cn/blog/20210906/NLfVpqwxJ3rS.png?imageslim)
 
 **补充**：
 1、若将上锁的对象看成一颗树，那么对最下层的对象上锁，就是对最细粒度的对象进行上锁，首先就需要对粗粒度的对象上锁，
@@ -373,7 +373,7 @@ MySQL 中有四种隔离级别，Read Repeatable （RR）级别可以防止脏�
 
 如下图所示，undolog 的版本串起来长这样：
 
-![](http://cdn.jayh.club/blog/20210909/PyWzdIV4YRtp.png?imageslim)
+![](http://cdn.passjava.cn/blog/20210909/PyWzdIV4YRtp.png?imageslim)
 
 ### 控制
 
@@ -400,7 +400,7 @@ creator_trx_id：当前事务的 id。
 
 比如说事务 A 用来查询，事务 B 用来更新，它俩都开启了事务，也都还没有提交，对应的事务 id 分别为 51 和 59，那么 ReadView 就长这样：
 
-![](http://cdn.jayh.club/blog/20210909/SR1b1YnVPjce.png?imageslim)
+![](http://cdn.passjava.cn/blog/20210909/SR1b1YnVPjce.png?imageslim)
 
 活跃事务列表就是 [51，59]。不是一个区间，只有两个值 51 和 59。另外图中的 B 事务 id 应该改为 59。
 
@@ -512,11 +512,11 @@ RR 的可重复读怎么做到的？
 
 下面几张图说明了具体出现的场景：
 
-![](http://cdn.jayh.club/blog/20210906/n6v5SFVkIRiw.png?imageslim)
+![](http://cdn.passjava.cn/blog/20210906/n6v5SFVkIRiw.png?imageslim)
 
-![](http://cdn.jayh.club/blog/20210906/iWc2YDQQGM1O.png?imageslim)
+![](http://cdn.passjava.cn/blog/20210906/iWc2YDQQGM1O.png?imageslim)
 
-![](http://cdn.jayh.club/blog/20210906/eqcyH3F1CcUU.png?imageslim)
+![](http://cdn.passjava.cn/blog/20210906/eqcyH3F1CcUU.png?imageslim)
 
 ## 十六、说下主从复制原理？
 
@@ -530,7 +530,7 @@ RR 的可重复读怎么做到的？
 
 3. 同时主节点为每个 I/O 线程启动一个dump线程，用于向其发送二进制日志，并保存至从节点本地的中继日志中，从节点将启动 SQL 线程从中继日志中读取二进制日志，在本地重放，使得其数据和主节点的保持一致，最后 I/O Thread和 SQL Thread将进入睡眠状态，等待下一次被唤醒；
 
-![](http://cdn.jayh.club/blog/20210906/0bKMjNfTH2oL.png?imageslim)
+![](http://cdn.passjava.cn/blog/20210906/0bKMjNfTH2oL.png?imageslim)
 
 大白话就是：
 
@@ -602,7 +602,7 @@ MHA存在Manager、Node两种节点；Manager节点通过探测Node节点去判�
 
 串行化（serializable ），顾名思义是对于同一行记录，“写”会加“写锁”，“读”会加“读锁”。当出现读写锁冲突的时候，后访问的事务必须等前一个事务执行完成，才能继续执行。
 
-![](http://cdn.jayh.club/blog/20210817/tzjUQG7BUMHA.png?imageslim)
+![](http://cdn.passjava.cn/blog/20210817/tzjUQG7BUMHA.png?imageslim)
 
 ## 十八、说说生成唯一 ID 的雪花算法是怎么样的？
 
@@ -611,7 +611,7 @@ MHA存在Manager、Node两种节点；Manager节点通过探测Node节点去判�
 
 `snowflake`（雪花算法）：Twitter 开源的分布式 id 生成算法，64 位的 long 型的 id，分为 4 部分：
 
-![snowflake 算法](http://cdn.jayh.club/blog/20200922/p25TeO3p3gWe.png)
+![snowflake 算法](http://cdn.passjava.cn/blog/20200922/p25TeO3p3gWe.png)
 
 - 1 bit：不用，统一为 0
 - 41 bits：毫秒时间戳，可以表示 69 年的时间。
@@ -674,8 +674,8 @@ MySQL支持 XASTART/END/PREPARE/COMMIT 这些SQL语句，通过使用这些命�
 
 内部 XA 事务在昨天发的题目中有解答。
 
-![](http://cdn.jayh.club/blog/20210906/LucOF5FY6Goi.png?imageslim)
+![](http://cdn.passjava.cn/blog/20210906/LucOF5FY6Goi.png?imageslim)
 
 更多大厂面试题，请点击下面小程序卡片，进入知识星球查看！
 
-![](http://cdn.jayh.club/uPic/2021071922263371-202303251833090626s4g8D.png)
+![](http://cdn.passjava.cn/uPic/2021071922263371-202303251833090626s4g8D.png)

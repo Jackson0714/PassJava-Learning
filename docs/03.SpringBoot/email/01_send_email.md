@@ -10,15 +10,15 @@ SpringBoot 发送邮件的三种方式
 
 整个专栏目录如下，后续会加更。
 
-![](http://cdn.jayh.club/uPic/image-20231223144739143OUNBLO.png)
+![](http://cdn.passjava.cn/uPic/image-20231223144739143OUNBLO.png)
 
 第一篇是通过 SpringBoot 发送邮件的三种方式，项目代码如下。代码获取方式拉到文末。
 
-![](http://cdn.jayh.club/uPic/image-20231223143123272ZFeC2Q.png)
+![](http://cdn.passjava.cn/uPic/image-20231223143123272ZFeC2Q.png)
 
 接口如下：
 
-![](http://cdn.jayh.club/uPic/image-20231223151402442sF189J.png)
+![](http://cdn.passjava.cn/uPic/image-20231223151402442sF189J.png)
 
 ### SpringBoot 发送邮件的三种方式
 
@@ -166,11 +166,11 @@ public class EmailController {
 
 可以用 swagger 测试请求，也可以用 postman 工具测试。
 
-![](http://cdn.jayh.club/uPic/image-20231223153227450FUoEBO.png)
+![](http://cdn.passjava.cn/uPic/image-20231223153227450FUoEBO.png)
 
 测试结果如下：
 
-![](http://cdn.jayh.club/uPic/image-202312231547363683x5fs1.png)
+![](http://cdn.passjava.cn/uPic/image-202312231547363683x5fs1.png)
 
 ## 使用JavaMail API来发送邮件
 
@@ -379,7 +379,7 @@ public class EmailController {
 
 《Java 发送邮件专栏》更新中，项目代码获取方式：扫码加入悟空的知识星球，开通最新的项目代码。
 
-![](http://cdn.jayh.club/uPic/xingqiu-100_2025ajS9l9.png)
+![](http://cdn.passjava.cn/uPic/xingqiu-100_2025ajS9l9.png)
 
 
 

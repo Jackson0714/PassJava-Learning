@@ -16,7 +16,7 @@
 
 - 5.数据库、数据源、数据库连接池、JDBC、JDBC实现是什么关系？
 
-  ![mark](http://cdn.jayh.club/blog/20200405/Mtu1scag5TPq.png?imageslim)
+  ![mark](http://cdn.passjava.cn/blog/20200405/Mtu1scag5TPq.png?imageslim)
 
   - JDBC：Java和关系型数据库的桥梁，是一个桂芳，不是实现。不同类型的数据库需要有自己的JDBC实现
   - 数据源：包含数据库连接池，连接池管理。常见的有C3P0、HikariDataSoiurce、Druid等
@@ -79,7 +79,7 @@
 
 3）依赖图
 
-![mark](http://cdn.jayh.club/blog/20200405/8sBJUTxvgTPW.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200405/8sBJUTxvgTPW.png?imageslim)
 
 # 三、用注解方式使用 MyBatis
 
@@ -240,13 +240,13 @@ public class DepartmentController {
 
 使用Swagger来测试
 
-![mark](http://cdn.jayh.club/blog/20200405/cWF7X2iYgCEA.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200405/cWF7X2iYgCEA.png?imageslim)
 
 # 四、用配置方式使用MyBatis
 
 ## 1. 文件结构
 
-![mark](http://cdn.jayh.club/blog/20200405/Vuei3Dnl6ls7.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200405/Vuei3Dnl6ls7.png?imageslim)
 
 ## 2. 创建user表的脚本
 
@@ -312,7 +312,7 @@ public class User {
 
 **需要安装Lombok插件**
 
-![mark](http://cdn.jayh.club/blog/20200405/ter1RlLl1Sqy.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200405/ter1RlLl1Sqy.png?imageslim)
 
 需要引入Lombok依赖
 
@@ -387,11 +387,11 @@ public class Springboot07DataMybatisApplication {
 
 ## 9.在Swagger上测试
 
-![mark](http://cdn.jayh.club/blog/20200405/319EJP1FJbt2.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200405/319EJP1FJbt2.png?imageslim)
 
 ## 10. 查看Druid监控
 
-![mark](http://cdn.jayh.club/blog/20200405/BjHp3sjjrr0z.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200405/BjHp3sjjrr0z.png?imageslim)
 
 
 
@@ -401,6 +401,6 @@ Spring Boot 整合MyBatis 讲完了，持续更新 《深入浅出 Spring Boot �
 
 关注公众号：悟空聊架构，回复pmp，领取pmp资料！回复悟空，领取架构师资料！
 
-![mark](http://cdn.jayh.club/blog/20200405/G89QyK4Gg9tl.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200405/G89QyK4Gg9tl.png?imageslim)
 
 关注我，带你每天进步一点点！

@@ -16,7 +16,7 @@ VIP 版请加入我的星球获取。下方有扫码加入的方式。
 >
 > VIP 版提供正确学习项目的路线☀️
 
-![image-20230326094344901](http://cdn.jayh.club/uPic/image-20230326094344901tF4uTBX6iqFqH8riqnvw656Q.png)
+![image-20230326094344901](http://cdn.passjava.cn/uPic/image-20230326094344901tF4uTBX6iqFqH8riqnvw656Q.png)
 
 ### 学习此项目能在简历上写些什么内容
 
@@ -39,7 +39,7 @@ VIP 版请加入我的星球获取。下方有扫码加入的方式。
 
 下面是一张星球入场券，星球里面有多个专栏小册：《DevOps 持续集成》、《SpringCloud 微服务架构原理》、《分布式协议原理》，无其他套路。
 
-![](http://cdn.jayh.club/uPic/xingqiu-2025xYGCEX.png)
+![](http://cdn.passjava.cn/uPic/xingqiu-2025xYGCEX.png)
 
 # PassJava 学习教程
 
@@ -55,7 +55,7 @@ VIP 版请加入我的星球获取。下方有扫码加入的方式。
 
 [我的 B站](https://space.bilibili.com/493005591?spm_id_from=333.999.0.0)
 
-![目录](http://cdn.jayh.club/uPic/640tw1bSU.jpg)
+![目录](http://cdn.passjava.cn/uPic/640tw1bSU.jpg)
 ### 技术支持🌈
 
 > 因作者本人平时很忙，如果需要技术支持，请加入我的 VIP 答疑星球（下方扫码加入）。
@@ -86,7 +86,7 @@ VIP 版请加入我的星球获取。下方有扫码加入的方式。
 
 六、星球打卡活动，赠书赠书赠书
 
-![星球优惠券-100](http://cdn.jayh.club/uPic/xingqiu-2025xYGCEX.png)
+![星球优惠券-100](http://cdn.passjava.cn/uPic/xingqiu-2025xYGCEX.png)
 
 
 **悟空的多个技术专题**：
@@ -388,4 +388,4 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 
 PassJava 项目全套学习教程连载中，关注公众号「**PassJava666**」第一时间获取。
 
-![公众号图片](http://cdn.jayh.club/blog/20200910/dBsGAx0fBgC2.png?imageslim)
+![公众号图片](http://cdn.passjava.cn/blog/20200910/dBsGAx0fBgC2.png?imageslim)

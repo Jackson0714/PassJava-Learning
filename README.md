@@ -15,9 +15,9 @@ VIP 版请加入我的星球获取。下方有扫码加入的方式。
 >
 > VIP 版提供正确学习项目的路线☀️
 
-![image-20230326094344901](http://cdn.jayh.club/uPic/image-20230326094344901tF4uTBX6iqFqH8riqn.png)
+![image-20230326094344901](http://cdn.passjava.cn/uPic/image-20230326094344901tF4uTBX6iqFqH8riqn.png)
 
-![](http://cdn.jayh.club/uPic/image-20230326094113037SHNANq1ZpU4A.png)
+![](http://cdn.passjava.cn/uPic/image-20230326094113037SHNANq1ZpU4A.png)
 
 # PassJava 学习教程
 
@@ -230,4 +230,4 @@ Windows 版正在更新中，可参考 Mac 版的部署教程。
 
 PassJava 项目全套学习教程连载中，关注公众号「**PassJava666**」第一时间获取。
 
-![公众号图片](http://cdn.jayh.club/blog/20200910/dBsGAx0fBgC2.png?imageslim)
+![公众号图片](http://cdn.passjava.cn/blog/20200910/dBsGAx0fBgC2.png?imageslim)

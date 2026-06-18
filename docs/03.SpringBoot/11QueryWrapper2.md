@@ -10,7 +10,7 @@ Mybatis plus 强大的条件构造器 QueryWrapper 条件构造器基础方法�
 
  
 
-![img](http://cdn.jayh.club/uPic/1470521-20200408175328100-117288012RVosYn.png)
+![img](http://cdn.passjava.cn/uPic/1470521-20200408175328100-117288012RVosYn.png)
 
 
 
@@ -54,7 +54,7 @@ wapper 介绍 ：
 
 
 
-![img](http://cdn.jayh.club/uPic/1470521-20200408174347575-1589738937qvu8uU.png)
+![img](http://cdn.passjava.cn/uPic/1470521-20200408174347575-1589738937qvu8uU.png)
 
 
 
@@ -68,7 +68,7 @@ wapper 介绍 ：
 
 
 
-[![img](http://cdn.jayh.club/uPic/copycode-20230222152640917bZUS9Y.gif)](javascript:void(0);)
+[![img](http://cdn.passjava.cn/uPic/copycode-20230222152640917bZUS9Y.gif)](javascript:void(0);)
 
 ```
 package com.lqf.crud;
@@ -312,7 +312,7 @@ public class QueryWrapperTests {
 }
 ```
 
-[![img](http://cdn.jayh.club/uPic/copycode-20230222152640917bZUS9Y.gif)](javascript:void(0);)
+[![img](http://cdn.passjava.cn/uPic/copycode-20230222152640917bZUS9Y.gif)](javascript:void(0);)
 
 
 

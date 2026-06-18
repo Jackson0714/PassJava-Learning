@@ -93,7 +93,7 @@ runoob@runoob:~$  docker search httpd
 
 点击图片查看大图：
 
-[![img](http://cdn.jayh.club/uPic/423F2A2C-287A-4B03-855E-6A78E125B3463Pycvv.jpg)](https://www.runoob.com/wp-content/uploads/2016/05/423F2A2C-287A-4B03-855E-6A78E125B346.jpg)
+[![img](http://cdn.passjava.cn/uPic/423F2A2C-287A-4B03-855E-6A78E125B3463Pycvv.jpg)](https://www.runoob.com/wp-content/uploads/2016/05/423F2A2C-287A-4B03-855E-6A78E125B346.jpg)
 
 **NAME:** 镜像仓库源的名称
 
@@ -139,7 +139,7 @@ runoob@runoob:~$ docker run httpd
 $ docker rmi hello-world
 ```
 
-![img](http://cdn.jayh.club/uPic/docker-rmi-image2K4xCO.png)
+![img](http://cdn.passjava.cn/uPic/docker-rmi-image2K4xCO.png)
 
 ------
 

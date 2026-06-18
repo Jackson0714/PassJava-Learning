@@ -27,7 +27,7 @@ https://www.telerik.com/download/fiddler-everywhere
 
 有 10 天的免费期
 
-![](http://cdn.jayh.club/uPic/image-20231214133357887E6zvzE.png)
+![](http://cdn.passjava.cn/uPic/image-20231214133357887E6zvzE.png)
 
 ## 抓包示例
 
@@ -35,28 +35,28 @@ https://www.telerik.com/download/fiddler-everywhere
 
 ### 开启抓取 HTTPS 请求
 
-![image-20231214133700454](http://cdn.jayh.club/uPic/image-2023121413370045467w2Vz.png)
+![image-20231214133700454](http://cdn.passjava.cn/uPic/image-2023121413370045467w2Vz.png)
 
 ### 设置 Fillder 的监听端口
 
-![](http://cdn.jayh.club/uPic/image-20231214133722187HVjBYp.png)
+![](http://cdn.passjava.cn/uPic/image-20231214133722187HVjBYp.png)
 
 ### 设置微信小程序开发工具的代理地址
 
-![](http://cdn.jayh.club/uPic/image-20231214133835290QkTaAi.png)
+![](http://cdn.passjava.cn/uPic/image-20231214133835290QkTaAi.png)
 
 代理到本地，端口为 fillder 的监听端口，这样小程序开发者工具的请求都会先发到 fillder 工具上。
 
 ### 开启本地抓包
 
-![](http://cdn.jayh.club/uPic/image-20231214133944605ZbuIBK.png)
+![](http://cdn.passjava.cn/uPic/image-20231214133944605ZbuIBK.png)
 
 ![](../../../../../../Library/Application%20Support/typora-user-images/image-20231214134032573.png)
 
-![image-20231214134653336](http://cdn.jayh.club/uPic/image-20231214134653336TPSvKA.png)
+![image-20231214134653336](http://cdn.passjava.cn/uPic/image-20231214134653336TPSvKA.png)
 
 ### 更多使用技巧
 
-![Fiddler Everywhere for Mac v4.8.0最新版 老牌抓包工具](http://cdn.jayh.club/uPic/99a8306dae82073eMMEUg2.jpg)![Fiddler Everywhere for Mac v4.8.0最新版 老牌抓包工具](http://cdn.jayh.club/uPic/f5be7d06ec204275ENFGAK.jpg)![Fiddler Everywhere for Mac v4.8.0最新版 老牌抓包工具](http://cdn.jayh.club/uPic/c4a9013a07059814ffnGor.jpg)![Fiddler Everywhere for Mac v4.8.0最新版 老牌抓包工具](http://cdn.jayh.club/uPic/4513db07ab00a7b7sf2eHg.jpg)
+![Fiddler Everywhere for Mac v4.8.0最新版 老牌抓包工具](http://cdn.passjava.cn/uPic/99a8306dae82073eMMEUg2.jpg)![Fiddler Everywhere for Mac v4.8.0最新版 老牌抓包工具](http://cdn.passjava.cn/uPic/f5be7d06ec204275ENFGAK.jpg)![Fiddler Everywhere for Mac v4.8.0最新版 老牌抓包工具](http://cdn.passjava.cn/uPic/c4a9013a07059814ffnGor.jpg)![Fiddler Everywhere for Mac v4.8.0最新版 老牌抓包工具](http://cdn.passjava.cn/uPic/4513db07ab00a7b7sf2eHg.jpg)
 
-![Fiddler Everywhere for Mac v4.8.0最新版 老牌抓包工具](http://cdn.jayh.club/uPic/c7479c42d514e667GjScDB.jpg)
+![Fiddler Everywhere for Mac v4.8.0最新版 老牌抓包工具](http://cdn.passjava.cn/uPic/c7479c42d514e667GjScDB.jpg)

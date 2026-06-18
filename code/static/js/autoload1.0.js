@@ -1,5 +1,5 @@
 // 注意：live2d_path 参数应使用绝对路径
-const live2d_path = "http://cdn.jayh.club/js/";
+const live2d_path = "http://cdn.passjava.cn/js/";
 
 // 封装异步加载资源的方法
 function loadExternalResource(url, type) {
@@ -26,12 +26,12 @@ function loadExternalResource(url, type) {
 // 加载 waifu.css live2d.min.js waifu-tips.js
 if (screen.width >= 768) {
 	Promise.all([
-		loadExternalResource("http://cdn.jayh.club/css/waifu.css", "css"),
-		loadExternalResource("http://cdn.jayh.club/js/live2d.min.js", "js"),
-		loadExternalResource("http://cdn.jayh.club/js/waifu-tips.js", "js")
+		loadExternalResource("http://cdn.passjava.cn/css/waifu.css", "css"),
+		loadExternalResource("http://cdn.passjava.cn/js/live2d.min.js", "js"),
+		loadExternalResource("http://cdn.passjava.cn/js/waifu-tips.js", "js")
 	]).then(() => {
 		initWidget({
-			waifuPath: "http://cdn.jayh.club/json/waifu-tips.json",
+			waifuPath: "http://cdn.passjava.cn/json/waifu-tips.json",
 			//apiPath: "https://live2d.fghrsh.net/api/",
 			cdnPath: "https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/"
 		});

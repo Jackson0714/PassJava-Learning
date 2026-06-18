@@ -44,7 +44,7 @@
 
  
 
-![扫码免费试读👆](http://cdn.jayh.club/uPic/47e4b31db4b6cfd67284df520f81b435.png)
+![扫码免费试读👆](http://cdn.passjava.cn/uPic/47e4b31db4b6cfd67284df520f81b435.png)
 
 秒杀 + **口令**「`mysql1024`」
 
@@ -70,17 +70,17 @@
 
 这是极客最早的专栏之一，但真正有价值的内容，是经得起时间检验的。我也曾多次重读，每次都有新收获，**从内容到评论留言，都是高精**。就像有位读者说的，这是个 **“值得被所有开发同学看到的专栏”**。
 
-![](http://cdn.jayh.club/uPic/77a4e7b10f68838068b3b2e7ec491157.png)
+![](http://cdn.passjava.cn/uPic/77a4e7b10f68838068b3b2e7ec491157.png)
 
 而且文章中没有理解透彻的问题，都会在评论区找到丁奇给的答案。可以说帮到不少人，截了些评价供你参考，从留言字数，就能看出来，相当走心了。
 
-![](http://cdn.jayh.club/uPic/24c3cc1bd5b27739526de67a1ece894b.png)
+![](http://cdn.passjava.cn/uPic/24c3cc1bd5b27739526de67a1ece894b.png)
 
 
 说了这么多，看看目录吧。
 
 
-![](http://cdn.jayh.club/uPic/2fdb0df5e2f571c354e9c04c0ab772d1.png)
+![](http://cdn.passjava.cn/uPic/2fdb0df5e2f571c354e9c04c0ab772d1.png)
 
 
 想当年，我们哪有这种待遇，几十块就能获得技术大牛的经验总结。想都不敢想，只能自己摸爬滚打，踩坑试错。
@@ -102,7 +102,7 @@
 另外我会赠送 ProcessOn 会员。
 
 
-![扫码免费试读](http://cdn.jayh.club/uPic/69e1592aafae9b406b659f8c53cc498a.png)
+![扫码免费试读](http://cdn.passjava.cn/uPic/69e1592aafae9b406b659f8c53cc498a.png)
 
 
 

@@ -85,7 +85,7 @@ root@8d36124607a0:/# jstat -gcutil 9 1000 10
 
 ​    可以看到，这里 FGC 指的是 Full GC 数量，这里高达 6793，而且还在不断增长。从而进一步证实了是由于内存溢出导致的系统缓慢。那么这里确认了内存溢出，但是如何查看你是哪些对象导致的内存溢出呢，这个可以 dump 出内存日志，然后通过 eclipse 的 mat 工具进行查看，如下是其展示的一个对象树结构：
 
-![image-1.png](http://cdn.jayh.club/uPic/65fe863f6fe94eb05e48fd0835637be726dV9JE0b.jpg)
+![image-1.png](http://cdn.passjava.cn/uPic/65fe863f6fe94eb05e48fd0835637be726dV9JE0b.jpg)
 
 ​    经过 mat 工具分析之后，我们基本上就能确定内存中主要是哪个对象比较消耗内存，然后找到该对象的创建位置，进行处理即可。这里的主要是 PrintStream 最多，但是我们也可以看到，其内存消耗量只有 12.2%。也就是说，其还不足以导致大量的 Full GC，此时我们需要考虑另外一种情况，就是代码或者第三方依赖的包中有显示的 `System.gc()` 调用。这种情况我们查看 dump 内存得到的文件即可判断，因为其会打印 GC 原因：
 
@@ -105,7 +105,7 @@ root@8d36124607a0:/# jstat -gcutil 9 1000 10
 
 ​    在这里我们就可以区分导致 CPU 过高的原因具体是 Full GC 次数过多还是代码中有比较耗时的计算了。如果是 Full GC 次数过多，那么通过 `jstack` 得到的线程信息会是类似于 VM Thread 之类的线程，而如果是代码中有比较耗时的计算，那么我们得到的就是一个线程的具体堆栈信息。如下是一个代码中有比较耗时的计算，导致 CPU 过高的线程信息：
 
-![img](http://cdn.jayh.club/uPic/e1146eddc2dbf10ff28534abda323761369v1PFwo.jpg)
+![img](http://cdn.passjava.cn/uPic/e1146eddc2dbf10ff28534abda323761369v1PFwo.jpg)
 
 ​    这里可以看到，在请求 UserController 的时候，由于该 Controller 进行了一个比较耗时的调用，导致该线程的 CPU 一直处于 100%。我们可以根据堆栈信息，直接定位到 UserController 的 34 行，查看代码中具体是什么原因导致计算量如此之高。
 
@@ -184,7 +184,7 @@ root@8d36124607a0:/# jstat -gcutil 9 1000 10
 
 ​    对于死锁，这种情况基本上很容易发现，因为 `jstack` 可以帮助我们检查死锁，并且在日志中打印具体的死锁线程信息。如下是一个产生死锁的一个 `jstack` 日志示例：
 
-![img](http://cdn.jayh.club/uPic/d488242cef4cddc3e27c6cb737d0a7cc3ecLLeJtE.jpg)
+![img](http://cdn.passjava.cn/uPic/d488242cef4cddc3e27c6cb737d0a7cc3ecLLeJtE.jpg)
 
 ​    可以看到，在 jstack 日志的底部，其直接帮我们分析了日志中存在哪些死锁，以及每个死锁的线程堆栈信息。这里我们有两个用户线程分别在等待对方释放锁，而被阻塞的位置都是在 ConnectTask 的第 5 行，此时我们就可以直接定位到该位置，并且进行代码分析，从而找到产生死锁的原因。
 

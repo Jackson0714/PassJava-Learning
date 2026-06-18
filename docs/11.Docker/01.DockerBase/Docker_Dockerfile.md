@@ -19,7 +19,7 @@ FROM nginx
 RUN echo '这是一个本地构建的nginx镜像' > /usr/share/nginx/html/index.html
 ```
 
-![img](http://cdn.jayh.club/uPic/dockerfile1FCB6AX.png)
+![img](http://cdn.passjava.cn/uPic/dockerfile1FCB6AX.png)
 
 **2、FROM 和 RUN 指令的作用**
 
@@ -68,7 +68,7 @@ RUN **yum** -y **install** **wget** \
 
 $ docker build -t nginx:v3 .
 
-![img](http://cdn.jayh.club/uPic/dockerfile24vBCnb.png)
+![img](http://cdn.passjava.cn/uPic/dockerfile24vBCnb.png)
 
 以上显示，说明已经构建成功。
 

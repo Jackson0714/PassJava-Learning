@@ -17,13 +17,13 @@
 
 - 后台管理系统
 
-![添加题目管理菜单](http://cdn.jayh.club/uPic/image-2020091816532744149rB2M.png)
+![添加题目管理菜单](http://cdn.passjava.cn/uPic/image-2020091816532744149rB2M.png)
 
 - 小程序
 
-![mark](http://cdn.jayh.club/blog/20200405/ik8h4UItdnSA.jpg?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200405/ik8h4UItdnSA.jpg?imageslim)
 
-![mark](http://cdn.jayh.club/blog/20200405/pjfJNfuiXVnF.gif)
+![mark](http://cdn.passjava.cn/blog/20200405/pjfJNfuiXVnF.gif)
 
 ## PassJava 中使用的技术
 
@@ -33,11 +33,11 @@ SpringBoot、MyBatis、Redis、 MySql、 MongoDB、 RabbitMQ、Elasticsearch
 
 
 
-![mark](http://cdn.jayh.club/blog/20200405/pjfJNfuiXVnF.gif)
+![mark](http://cdn.passjava.cn/blog/20200405/pjfJNfuiXVnF.gif)
 
 ## PassJava 数据库表概览
 
-![mark](http://cdn.jayh.club/blog/20200411/4jVMyPUGn0ns.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200411/4jVMyPUGn0ns.png?imageslim)
 
 ### 数据库表前缀说明
 
@@ -51,7 +51,7 @@ SpringBoot、MyBatis、Redis、 MySql、 MongoDB、 RabbitMQ、Elasticsearch
 
 ## 微服务架构图
 
-![mark](http://cdn.jayh.club/blog/20200407/scg1XhlvGbUV.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200407/scg1XhlvGbUV.png?imageslim)
 
 # 三、项目前置要求
 
@@ -119,7 +119,7 @@ Vagrant 软件：https://www.vagrantup.com/downloads.html
 
 Vagrant 官方镜像：https://app.vagrantup.com/boxes/search
 
-![mark](http://cdn.jayh.club/blog/20200407/Islf9HWK5dpm.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200407/Islf9HWK5dpm.png?imageslim)
 
 - check是否安装好了vagrant
 
@@ -129,7 +129,7 @@ Vagrant 官方镜像：https://app.vagrantup.com/boxes/search
 vagrant
 ```
 
-![mark](http://cdn.jayh.club/blog/20200407/RbGapilevUic.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200407/RbGapilevUic.png?imageslim)
 
 ## 4.安装 vagrant ubuntu 国内镜像
 
@@ -150,7 +150,7 @@ vagrant box add https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cloud-images/vagrant
 vagrant box add https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cloud-images/bionic/current/bionic-server-cloudimg-amd64-vagrant.box --name ubuntu18
 ```
 
-![mark](http://cdn.jayh.club/blog/20200407/g6qNmBtq4DdX.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200407/g6qNmBtq4DdX.png?imageslim)
 
 - 创建vagrant配置文件
 
@@ -171,9 +171,9 @@ config.vm.box = "ubuntu18"
 vagrant up
 ```
 
-![mark](http://cdn.jayh.club/blog/20200407/F8SfLKFfJgph.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200407/F8SfLKFfJgph.png?imageslim)
 
-![mark](http://cdn.jayh.club/blog/20200407/ToVOBfPMuFzV.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200407/ToVOBfPMuFzV.png?imageslim)
 
 ## 6.连接虚拟机
 
@@ -181,7 +181,7 @@ vagrant up
 vagrant ssh
 ```
 
-![mark](http://cdn.jayh.club/blog/20200407/E9vL6MlHcEvf.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200407/E9vL6MlHcEvf.png?imageslim)
 
 
 
@@ -208,11 +208,11 @@ service sshd restart
 
   密码：vagrant
 
-- ![mark](http://cdn.jayh.club/blog/20200712/CVipwCrtRTaC.png?imageslim)
+- ![mark](http://cdn.passjava.cn/blog/20200712/CVipwCrtRTaC.png?imageslim)
 
   
 
-![连接成功](http://cdn.jayh.club/blog/20200712/L898uNJPtYmE.png?imageslim)
+![连接成功](http://cdn.passjava.cn/blog/20200712/L898uNJPtYmE.png?imageslim)
 
 
 

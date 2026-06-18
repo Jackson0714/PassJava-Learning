@@ -20,7 +20,7 @@ Java 种的垃圾回收机制，大家肯定都有所了解，比如如何确定
 
 下面的例子说明引用计数的是如何变化的：
 
-![mark](http://cdn.jayh.club/blog/20201119/pC3qrmPbKVb5.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20201119/pC3qrmPbKVb5.png?imageslim)
 
 ## 1.2 PHP 中的变量知识
 
@@ -38,7 +38,7 @@ Java 种的垃圾回收机制，大家肯定都有所了解，比如如何确定
 
 下面的表格说明了只有 type_flag 为以下 8 种类型且 IS_TYPE_REFOUNTED=true 的变量才使用引用计数，如下表所示
 
-![使用引用计数的类型](http://cdn.jayh.club/blog/20201119/cfyVPmgbHew8.png?imageslim)
+![使用引用计数的类型](http://cdn.passjava.cn/blog/20201119/cfyVPmgbHew8.png?imageslim)
 
  
 
@@ -61,7 +61,7 @@ Java 种的垃圾回收机制，大家肯定都有所了解，比如如何确定
 
 原理：垃圾是由于成员引用自身导致的，那么就对 value 的 refcount 减一操作，如果 value 的 refount 变为了 0，则表明其引用全部来自自身成员，value 属于垃圾。另外垃圾只会出现在array、object类型中。
 
-![回收步骤](http://cdn.jayh.club/blog/20201119/aqTDSoepOCEB.png?imageslim)
+![回收步骤](http://cdn.passjava.cn/blog/20201119/aqTDSoepOCEB.png?imageslim)
 
 - **步骤一：** 遍历垃圾回收器的 buffer 缓冲区，把 value 标为灰色，把 value 的成员的 refount-1，还是标为灰色。
 
@@ -79,7 +79,7 @@ Java 种的垃圾回收机制，大家肯定都有所了解，比如如何确定
 
 文件路径：\Zend\zend_gc.h。
 
-![垃圾管家](http://cdn.jayh.club/blog/20201119/5aOxjJj3Opde.png?imageslim)
+![垃圾管家](http://cdn.passjava.cn/blog/20201119/5aOxjJj3Opde.png?imageslim)
 
 ## 2. 垃圾管家初始化
 
@@ -87,11 +87,11 @@ Java 种的垃圾回收机制，大家肯定都有所了解，比如如何确定
 
 文件路径：\Zend\zend_gc.c
 
-![初始垃圾管家](http://cdn.jayh.club/blog/20201119/s0Vylu4pzboK.png?imageslim)
+![初始垃圾管家](http://cdn.passjava.cn/blog/20201119/s0Vylu4pzboK.png?imageslim)
 
 （2）gc_init() 函数里面调用 gc_reset() 函数初始化。
 
-![gc_reset() 函数初始化](http://cdn.jayh.club/blog/20201119/qQ1L5HD9WKrm.png?imageslim)
+![gc_reset() 函数初始化](http://cdn.passjava.cn/blog/20201119/qQ1L5HD9WKrm.png?imageslim)
 
 ## 3. 判断是否需要收集
 
@@ -99,7 +99,7 @@ Java 种的垃圾回收机制，大家肯定都有所了解，比如如何确定
 
 ​          文件路径：Zend\zend_variables.h
 
-![核心逻辑](http://cdn.jayh.club/blog/20201119/Q7FXNpeUFk3y.png?imageslim)
+![核心逻辑](http://cdn.passjava.cn/blog/20201119/Q7FXNpeUFk3y.png?imageslim)
 
 - 如果 refcount 减一后，refcount 等于 0，则认为不是垃圾，调用 _zval_dtor_func 方法释放此 value。
 
@@ -109,7 +109,7 @@ Java 种的垃圾回收机制，大家肯定都有所了解，比如如何确定
 
 文件路径：\Zend\zend_gc.c，调用方法：gc_possible_root
 
-![gc_possible_root](http://cdn.jayh.club/blog/20201119/qx0YC2eDHrrm.png?imageslim)
+![gc_possible_root](http://cdn.passjava.cn/blog/20201119/qx0YC2eDHrrm.png?imageslim)
 
 - 拿出 unused 指向的节点。
 - 如果拿出的节点是可用的，则将 unused 指向下一个节点。
@@ -119,7 +119,7 @@ Java 种的垃圾回收机制，大家肯定都有所了解，比如如何确定
 - buf 缓存区已满，启动垃圾鉴定、垃圾回收。
 - 如果未启用垃圾回收，则直接返回。
 
-![mark](http://cdn.jayh.club/blog/20201119/o2K3WPyE1qPn.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20201119/o2K3WPyE1qPn.png?imageslim)
 
 - 将插入的变量标为紫色，防止重复插入。
 - 将该节点在 buf 数组中的位置保存到了 gc_info 中，当后续 value 的 refcount 变为了 0。
@@ -129,7 +129,7 @@ Java 种的垃圾回收机制，大家肯定都有所了解，比如如何确定
 
 由于回收方法 zend_gc_collect_cycles() 实在是太长，我把几个关键步骤理出来了：
 
-![mark](http://cdn.jayh.club/blog/20201119/hQvvvONQUABB.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20201119/hQvvvONQUABB.png?imageslim)
 
 - 扫描根节点
 - 收集根节点

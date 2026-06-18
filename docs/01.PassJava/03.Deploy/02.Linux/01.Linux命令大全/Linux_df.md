@@ -1,6 +1,6 @@
 # Linux df 命令
 
-[![Linux 命令大全](http://cdn.jayh.club/uPic/upREuBGa.gif) Linux 命令大全](https://www.runoob.com/linux/linux-command-manual.html)
+[![Linux 命令大全](http://cdn.passjava.cn/uPic/upREuBGa.gif) Linux 命令大全](https://www.runoob.com/linux/linux-command-manual.html)
 
 Linux df（英文全拼：disk free） 命令用于显示目前在 Linux 系统上的文件系统磁盘使用情况统计。
 

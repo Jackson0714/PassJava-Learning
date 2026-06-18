@@ -5,7 +5,7 @@
 
 简单点说就是当想传递 aaaa,bbbb,cccc,dddd 给存储过程时，可以先将 aaa,bbb,ccc,dddd 存到一张表中：
 
-![](http://cdn.jayh.club/blog/20210627/UM06JdUyTAb0.png?imageslim)
+![](http://cdn.passjava.cn/blog/20210627/UM06JdUyTAb0.png?imageslim)
 
 然后将这张表传递给存储过程。
 
@@ -13,7 +13,7 @@
 
 可以先将"1,2,3,4"存到一张表中，然后将这张表传给存储过程。
 
-![mark](http://cdn.jayh.club/blog/20210627/geVC1wkmHfSy.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20210627/geVC1wkmHfSy.png?imageslim)
 
 这种方法有什么优势呢？请接着往下看。
 

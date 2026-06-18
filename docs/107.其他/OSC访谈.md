@@ -46,6 +46,6 @@
 
 **悟空**：坚持原创，坚持开源，乐于分享，乐于解决问题。写技术文是一个非常枯燥的过程，而且写硬核技术文更难。当你在写技术文的时候，又会发现自己很多地方不懂，知道的越多，不知道的越多，然后又会去补这一块的知识，循序渐进，不断地学习，才能突破自己。希望大家都友善对待原创博主，多给我们一些鼓励。对了，不要白嫖，多点赞多收藏哦，还可以关注我哦～
 
-<img src="http://cdn.jayh.club/uPic/%E8%B5%84%E6%96%99-%E6%82%9F%E7%A9%BA%E8%81%8A%E6%9E%B6%E6%9E%84.png" alt="资料-悟空聊架构" style="zoom: 67%;" />
+<img src="http://cdn.passjava.cn/uPic/%E8%B5%84%E6%96%99-%E6%82%9F%E7%A9%BA%E8%81%8A%E6%9E%B6%E6%9E%84.png" alt="资料-悟空聊架构" style="zoom: 67%;" />
 
-<img src="http://cdn.jayh.club/uPic/%E5%BF%85%E7%9C%8B.png" alt="必看" style="zoom:67%;" />
+<img src="http://cdn.passjava.cn/uPic/%E5%BF%85%E7%9C%8B.png" alt="必看" style="zoom:67%;" />

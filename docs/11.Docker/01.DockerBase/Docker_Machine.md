@@ -6,13 +6,13 @@ Docker Machine 是一种可以让您在虚拟主机上安装 Docker 的工具，
 
 Docker Machine 也可以集中管理所有的 docker 主机，比如快速的给 100 台服务器安装上 docker。
 
-![img](http://cdn.jayh.club/uPic/68747470733a2f2f646f63732e646f636b65722e636f6d2f6d616368696e652f696d672f6c6f676f2e706e67sECcQO.png)
+![img](http://cdn.passjava.cn/uPic/68747470733a2f2f646f63732e646f636b65722e636f6d2f6d616368696e652f696d672f6c6f676f2e706e67sECcQO.png)
 
 Docker Machine 管理的虚拟主机可以是机上的，也可以是云供应商，如阿里云，腾讯云，AWS，或 DigitalOcean。
 
 使用 docker-machine 命令，您可以启动，检查，停止和重新启动托管主机，也可以升级 Docker 客户端和守护程序，以及配置 Docker 客户端与您的主机进行通信。
 
-![img](http://cdn.jayh.club/uPic/machinehDe9AX.png)
+![img](http://cdn.passjava.cn/uPic/machinehDe9AX.png)
 
 ------
 
@@ -73,7 +73,7 @@ docker-machine version 0.16.0, build 9371605
 $ docker-machine ls
 ```
 
-[![img](http://cdn.jayh.club/uPic/docker-machine1tAXTfZ.png)](https://www.runoob.com/wp-content/uploads/2019/11/docker-machine1.png)
+[![img](http://cdn.passjava.cn/uPic/docker-machine1tAXTfZ.png)](https://www.runoob.com/wp-content/uploads/2019/11/docker-machine1.png)
 
 ### 2、创建机器
 
@@ -85,7 +85,7 @@ $ docker-machine create --driver virtualbox test
 
 - **--driver**：指定用来创建机器的驱动类型，这里是 virtualbox。
 
-[![img](http://cdn.jayh.club/uPic/docker-machine25Evltq.png)](https://www.runoob.com/wp-content/uploads/2019/11/docker-machine2.png)
+[![img](http://cdn.passjava.cn/uPic/docker-machine25Evltq.png)](https://www.runoob.com/wp-content/uploads/2019/11/docker-machine2.png)
 
 ### 3、查看机器的 ip
 
@@ -93,7 +93,7 @@ $ docker-machine create --driver virtualbox test
 $ docker-machine ip test
 ```
 
-[![img](http://cdn.jayh.club/uPic/docker-machine3axYF0H.png)](https://www.runoob.com/wp-content/uploads/2019/11/docker-machine3.png)
+[![img](http://cdn.passjava.cn/uPic/docker-machine3axYF0H.png)](https://www.runoob.com/wp-content/uploads/2019/11/docker-machine3.png)
 
 ### 4、停止机器
 
@@ -101,7 +101,7 @@ $ docker-machine ip test
 $ docker-machine stop test
 ```
 
-[![img](http://cdn.jayh.club/uPic/docker-machine4QKFaem.png)](https://www.runoob.com/wp-content/uploads/2019/11/docker-machine4.png)
+[![img](http://cdn.passjava.cn/uPic/docker-machine4QKFaem.png)](https://www.runoob.com/wp-content/uploads/2019/11/docker-machine4.png)
 
 ### 5、启动机器
 
@@ -109,7 +109,7 @@ $ docker-machine stop test
 $ docker-machine start test
 ```
 
-[![img](http://cdn.jayh.club/uPic/docker-machine5MKVNK2.png)](https://www.runoob.com/wp-content/uploads/2019/11/docker-machine5.png)
+[![img](http://cdn.passjava.cn/uPic/docker-machine5MKVNK2.png)](https://www.runoob.com/wp-content/uploads/2019/11/docker-machine5.png)
 
 ### 6、进入机器
 
@@ -117,7 +117,7 @@ $ docker-machine start test
 $ docker-machine ssh test
 ```
 
-[![img](http://cdn.jayh.club/uPic/docker-machine6a8yqAT.png)](https://www.runoob.com/wp-content/uploads/2019/11/docker-machine6.png)
+[![img](http://cdn.passjava.cn/uPic/docker-machine6a8yqAT.png)](https://www.runoob.com/wp-content/uploads/2019/11/docker-machine6.png)
 
 ### docker-machine 命令参数说明
 

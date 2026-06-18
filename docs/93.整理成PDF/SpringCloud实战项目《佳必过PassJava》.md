@@ -13,11 +13,11 @@
 
 ## 公众号：悟空聊架构 （原创好文，第一时间推送）
 
-![公众号：悟空聊架构](http://cdn.jayh.club/blog/20210323/cMGAFt562d4J.png?imageslim)
+![公众号：悟空聊架构](http://cdn.passjava.cn/blog/20210323/cMGAFt562d4J.png?imageslim)
 
 ## 加我好友 （答疑解惑）
 
-![加我好友](http://cdn.jayh.club/blog/20210323/2AlG6mLwpKcV.png?imageslim)
+![加我好友](http://cdn.passjava.cn/blog/20210323/2AlG6mLwpKcV.png?imageslim)
 
 # 一、PassJava 项目简介
 
@@ -35,11 +35,11 @@
 
 - 后台管理系统
 
-![添加题目管理菜单](http://cdn.jayh.club/blog/20200425/xN7NHGsUFGNe.png?imageslim)
+![添加题目管理菜单](http://cdn.passjava.cn/blog/20200425/xN7NHGsUFGNe.png?imageslim)
 
 - 小程序
 
-![mark](http://cdn.jayh.club/blog/20200405/pjfJNfuiXVnF.gif)
+![mark](http://cdn.passjava.cn/blog/20200405/pjfJNfuiXVnF.gif)
 
 ## PassJava 中使用的技术
 
@@ -49,11 +49,11 @@ SpringBoot、MyBatis、Redis、 MySql、 MongoDB、 RabbitMQ、Elasticsearch
 
 
 
-![mark](http://cdn.jayh.club/blog/20200405/pjfJNfuiXVnF.gif)
+![mark](http://cdn.passjava.cn/blog/20200405/pjfJNfuiXVnF.gif)
 
 ## PassJava 数据库表概览
 
-![mark](http://cdn.jayh.club/blog/20200411/4jVMyPUGn0ns.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200411/4jVMyPUGn0ns.png?imageslim)
 
 ### 数据库表前缀说明
 
@@ -67,9 +67,9 @@ SpringBoot、MyBatis、Redis、 MySql、 MongoDB、 RabbitMQ、Elasticsearch
 
 ## 微服务架构图
 
-![mark](http://cdn.jayh.club/blog/20200407/scg1XhlvGbUV.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200407/scg1XhlvGbUV.png?imageslim)
 
-![mark](http://cdn.jayh.club/blog/20200410/IIBsmjviRsAx.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200410/IIBsmjviRsAx.png?imageslim)
 
 # 三、项目前置要求
 
@@ -137,7 +137,7 @@ Vagrant 软件：https://www.vagrantup.com/downloads.html
 
 Vagrant 官方镜像：https://app.vagrantup.com/boxes/search
 
-![mark](http://cdn.jayh.club/blog/20200407/Islf9HWK5dpm.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200407/Islf9HWK5dpm.png?imageslim)
 
 - check 是否安装好了 vagrant
 
@@ -147,7 +147,7 @@ Vagrant 官方镜像：https://app.vagrantup.com/boxes/search
 vagrant
 ```
 
-![mark](http://cdn.jayh.club/blog/20200407/RbGapilevUic.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200407/RbGapilevUic.png?imageslim)
 
 ### 4. 安装 vagrant ubuntu 国内镜像
 
@@ -168,7 +168,7 @@ vagrant box add https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cloud-images/vagrant
 vagrant box add https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cloud-images/bionic/current/bionic-server-cloudimg-amd64-vagrant.box --name ubuntu18
 ```
 
-![mark](http://cdn.jayh.club/blog/20200407/g6qNmBtq4DdX.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200407/g6qNmBtq4DdX.png?imageslim)
 
 - 创建 vagrant 配置文件
 
@@ -189,9 +189,9 @@ config.vm.box = "ubuntu18"
 vagrant up
 ```
 
-![mark](http://cdn.jayh.club/blog/20200407/F8SfLKFfJgph.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200407/F8SfLKFfJgph.png?imageslim)
 
-![mark](http://cdn.jayh.club/blog/20200407/ToVOBfPMuFzV.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200407/ToVOBfPMuFzV.png?imageslim)
 
 ### 6. 连接虚拟机
 
@@ -199,7 +199,7 @@ vagrant up
 vagrant ssh
 ```
 
-![mark](http://cdn.jayh.club/blog/20200407/E9vL6MlHcEvf.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200407/E9vL6MlHcEvf.png?imageslim)
 
 
 
@@ -226,15 +226,15 @@ service sshd restart
 
   密码：vagrant
 
-- ![mark](http://cdn.jayh.club/blog/20200712/CVipwCrtRTaC.png?imageslim)
+- ![mark](http://cdn.passjava.cn/blog/20200712/CVipwCrtRTaC.png?imageslim)
 
-![连接成功](http://cdn.jayh.club/blog/20200712/L898uNJPtYmE.png?imageslim)
+![连接成功](http://cdn.passjava.cn/blog/20200712/L898uNJPtYmE.png?imageslim)
 
 ## 4.2 配置虚拟机网络
 
 ### 1.查看VirtualBox Host-Only Network
 
-![mark](http://cdn.jayh.club/blog/20200408/mh0LjwASREf6.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200408/mh0LjwASREf6.png?imageslim)
 
 本地VirtualBox 网络地址 `192.168.56.1`，则修改虚拟机IP地址为同一个网段下，比如`192.168.56.10`
 
@@ -258,13 +258,13 @@ vagrant reload
 
 虚拟机IP地址：192.168.56.10，和配置文件中的一致
 
-![mark](http://cdn.jayh.club/blog/20200408/o8OTm5m7g5Ht.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200408/o8OTm5m7g5Ht.png?imageslim)
 
 ### 5.测试本机是否可以ping通虚拟机
 
 ping 192.168.56.10，可以ping通
 
-![mark](http://cdn.jayh.club/blog/20200408/raELgTdl3IXc.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200408/raELgTdl3IXc.png?imageslim)
 
 ### 6.测试虚拟机是否可以ping通本机
 
@@ -322,7 +322,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 sudo docker run hello-world
 ```
 
-![mark](http://cdn.jayh.club/blog/20200408/8ESqchvexBAd.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200408/8ESqchvexBAd.png?imageslim)
 
 ### 5.设置开机自启动
 
@@ -332,7 +332,7 @@ sudo systemctl enable docker
 
 https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors
 
-![mark](http://cdn.jayh.club/blog/20200408/9ODDhfgeyXzK.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200408/9ODDhfgeyXzK.png?imageslim)
 
 ``` sh
 sudo mkdir -p /etc/docker
@@ -444,7 +444,7 @@ docker.io/library/mysql:5.7
 sudo docker images
 ```
 
-![mark](http://cdn.jayh.club/blog/20200408/7QiFgCOVD0OC.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200408/7QiFgCOVD0OC.png?imageslim)
 
 ### 3.创建mysql实例并启动
 
@@ -464,23 +464,23 @@ sudo docker run -p 3306:3306 --name mysql \
 -v /mydata/mysql/conf:/etc/mysql\ 将配置文件挂载到主机
 ```
 
-![mark](http://cdn.jayh.club/blog/20200408/3edTHcpOsU46.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200408/3edTHcpOsU46.png?imageslim)
 
 - 查看docker容器
 
   mysql容器已启动
 
-![mark](http://cdn.jayh.club/blog/20200408/99jqOmq2tshz.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200408/99jqOmq2tshz.png?imageslim)
 
 ### 4.连接数据库
 
 - 用Workbench连接数据库
 
-![mark](http://cdn.jayh.club/blog/20200408/vj81LmpK9zEn.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200408/vj81LmpK9zEn.png?imageslim)
 
 - 查看数据库
 
-![mark](http://cdn.jayh.club/blog/20200408/hkkUN9VUCNR4.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200408/hkkUN9VUCNR4.png?imageslim)
 
 ### 5.进入mysql 容器
 
@@ -488,7 +488,7 @@ sudo docker run -p 3306:3306 --name mysql \
 sudo docker exec -it mysql /bin/bash
 ```
 
-![mark](http://cdn.jayh.club/blog/20200408/ruh1ghIj40QA.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200408/ruh1ghIj40QA.png?imageslim)
 
 ### 6.查看虚拟机映射文件
 
@@ -497,7 +497,7 @@ cd /mydata/mysql
 ls
 ```
 
-![mark](http://cdn.jayh.club/blog/20200408/wzdOsRaOi2D8.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200408/wzdOsRaOi2D8.png?imageslim)
 
 ### 7.修改mysql账号密码
 
@@ -572,7 +572,7 @@ docker.io/library/redis:latest
 sudo docker images
 ```
 
-![mark](http://cdn.jayh.club/blog/20200408/MKBt0WBqxGan.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200408/MKBt0WBqxGan.png?imageslim)
 
 ### 2.启动redis
 
@@ -591,7 +591,7 @@ sudo docker run -p 6379:6379 --name redis -v /mydata/redis/data:/data \
 -d redis redis-server /etc/redis/redis.conf
 ```
 
-![mark](http://cdn.jayh.club/blog/20200408/G7ajnGUfDQsn.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200408/G7ajnGUfDQsn.png?imageslim)
 
 ### 3.连接redis
 
@@ -613,7 +613,7 @@ set a 100
 get a
 ```
 
-![mark](http://cdn.jayh.club/blog/20200408/pyqMcA67Sye8.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200408/pyqMcA67Sye8.png?imageslim)
 
 ### 5.设置redis持久化存储
 
@@ -653,11 +653,11 @@ get a,返回"200"
 
 - 连接redis
 
-![mark](http://cdn.jayh.club/blog/20200408/Nf7XJjB1DzbW.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200408/Nf7XJjB1DzbW.png?imageslim)
 
 - 查看redis数据库
 
-![mark](http://cdn.jayh.club/blog/20200408/QUVveBGFSvcB.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200408/QUVveBGFSvcB.png?imageslim)
 
 ## 4.6 本地开发环境配置
 
@@ -669,7 +669,7 @@ get a,返回"200"
 java -version
 ```
 
-![mark](http://cdn.jayh.club/blog/20200409/Rgsr2cSJK2op.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/Rgsr2cSJK2op.png?imageslim)
 
 java安装和环境变量配置：https://www.cnblogs.com/jackson0714/p/6591942.html
 
@@ -681,7 +681,7 @@ C:\apache-maven-3.6.2
 
 （2）添加到环境变量
 
-![mark](http://cdn.jayh.club/blog/20200412/v7rtqjkVwQtC.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200412/v7rtqjkVwQtC.png?imageslim)
 
  
 
@@ -689,7 +689,7 @@ C:\apache-maven-3.6.2
 
 如果报错命令不存在，则重新启动cmder
 
-![mark](http://cdn.jayh.club/blog/20200412/7rGpkYz7poOv.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200412/7rGpkYz7poOv.png?imageslim)
 
 （3）设置Maven代理
 
@@ -697,7 +697,7 @@ C:\apache-maven-3.6.2
 
 点击使用指南，拷贝配置指南
 
-![mark](http://cdn.jayh.club/blog/20200412/QzrJuur9YETW.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200412/QzrJuur9YETW.png?imageslim)
 
 ```xml
 <mirror>
@@ -731,23 +731,23 @@ C:\apache-maven-3.6.2
 
 - Maven配置
 
-![Maven配置](http://cdn.jayh.club/blog/20200409/hnOTRUp5FuFM.png?imageslim)
+![Maven配置](http://cdn.passjava.cn/blog/20200409/hnOTRUp5FuFM.png?imageslim)
 
 - 字符集配置
 
-![字符集配置](http://cdn.jayh.club/blog/20200412/cerMB5gRuyG7.png?imageslim)
+![字符集配置](http://cdn.passjava.cn/blog/20200412/cerMB5gRuyG7.png?imageslim)
 
 ### 4. IDEA 安装Lombok插件
 
 Lombok：简化JavaBean的开发
 
-![mark](http://cdn.jayh.club/blog/20200409/QXsBR9HVIlzz.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/QXsBR9HVIlzz.png?imageslim)
 
 ## 5. IDEA 安装mybatisx 插件
 
 mybatisx：mybatis plus开发的一个插件，从mapper方法快速定位到xml文件
 
-![mark](http://cdn.jayh.club/blog/20200409/r3v9UwnpFadN.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/r3v9UwnpFadN.png?imageslim)
 
 
 
@@ -755,57 +755,57 @@ mybatisx：mybatis plus开发的一个插件，从mapper方法快速定位到xml
 
 https://code.visualstudio.com/
 
-![mark](http://cdn.jayh.club/blog/20200409/YxKrkYS18n7X.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/YxKrkYS18n7X.png?imageslim)
 
 
 
 ### 7.添加VSCode插件
 
-![mark](http://cdn.jayh.club/blog/20200409/yJbjY1fhR3O3.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/yJbjY1fhR3O3.png?imageslim)
 
 - Auto Close Tag 自动加上关闭标签
 
-![mark](http://cdn.jayh.club/blog/20200409/VipCQvRyj9wo.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/VipCQvRyj9wo.png?imageslim)
 
 - Auto Rename Tag 自动命名配对标签
 
-![mark](http://cdn.jayh.club/blog/20200409/aePiOxpNRkKB.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/aePiOxpNRkKB.png?imageslim)
 
 - Chinese 中文简体包
 
-![mark](http://cdn.jayh.club/blog/20200409/QAIlWX9eA4lG.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/QAIlWX9eA4lG.png?imageslim)
 
 - ESLint 语法检查
 
-![mark](http://cdn.jayh.club/blog/20200409/Pnz46wDClPNa.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/Pnz46wDClPNa.png?imageslim)
 
 - HTML CSS Support 帮助CSS开发
 
-![mark](http://cdn.jayh.club/blog/20200409/Rt7NNbFQItKu.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/Rt7NNbFQItKu.png?imageslim)
 
 - HTML Snippets 帮忙HTML开发
 
-![mark](http://cdn.jayh.club/blog/20200409/l5UTT1JNDKVT.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/l5UTT1JNDKVT.png?imageslim)
 
 - JavaScript (ES6) 帮助JavaScript开发
 
-![mark](http://cdn.jayh.club/blog/20200409/zNX7cnSxhsB6.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/zNX7cnSxhsB6.png?imageslim)
 
 - Liver Server 启动一个本地服务
 
-![mark](http://cdn.jayh.club/blog/20200409/lslvvQy9fAKr.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/lslvvQy9fAKr.png?imageslim)
 
 - open in browser 用浏览器打开文件
 
-![mark](http://cdn.jayh.club/blog/20200409/5XOOR410BIYJ.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/5XOOR410BIYJ.png?imageslim)
 
 - Vetur  帮助Vue开发
 
-![mark](http://cdn.jayh.club/blog/20200409/PleA3UCu77i1.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/PleA3UCu77i1.png?imageslim)
 
 - minapp 帮助小程序开发
 
-![mark](http://cdn.jayh.club/blog/20200409/oQ8dXmeAK6Y2.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/oQ8dXmeAK6Y2.png?imageslim)
 
 ### 问题
 
@@ -828,7 +828,7 @@ git config --global user.email "jackson0585@163.com"
 ssh-keygen -t rsa -b 4096 -C "jackson0585@163.com"
 ```
 
-![mark](http://cdn.jayh.club/blog/20200409/Onz67H4OF7fd.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/Onz67H4OF7fd.png?imageslim)
 
 ### 3.设置ssh key
 
@@ -844,11 +844,11 @@ https://github.com/settings/ssh/new
 
 - 粘贴已拷贝的内容
 
-![mark](http://cdn.jayh.club/blog/20200409/26eesOCTIv1A.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/26eesOCTIv1A.png?imageslim)
 
 - 保存ssh key
 
-![mark](http://cdn.jayh.club/blog/20200409/EdBtsTK7cnQc.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/EdBtsTK7cnQc.png?imageslim)
 
 
 
@@ -856,7 +856,7 @@ https://github.com/settings/ssh/new
 
 如果遇到Fatal: HttpRequestException encountered问题
 
-![mark](http://cdn.jayh.club/blog/20200409/GhJ87LMpSTr2.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/GhJ87LMpSTr2.png?imageslim)
 
 则下载这个安装包解决：
 
@@ -908,13 +908,13 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 ### 1.安装截图
 
-![mark](http://cdn.jayh.club/blog/20200610/TkeERMXCMQlu.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200610/TkeERMXCMQlu.png?imageslim)
 
 ### 2.遇到的问题 1
 windows用syslog连接本地mysql数据库，提示 plugin caching_sha2_password
 
 
-![mark](http://cdn.jayh.club/blog/20200426/MUb6xENWSIOh.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200426/MUb6xENWSIOh.png?imageslim)
 
 解决方案：
 
@@ -922,7 +922,7 @@ windows用syslog连接本地mysql数据库，提示 plugin caching_sha2_password
 ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123';
 ```
 
-![mark](http://cdn.jayh.club/blog/20200426/Ky258k2bJazi.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200426/Ky258k2bJazi.png?imageslim)
 
 ### 2.遇到的问题 2
 Host is not allowed to connect to this MySQL server
@@ -953,21 +953,21 @@ flush privileges
 
 ### 1.GitHub上创建一个空的仓库
 
-![mark](http://cdn.jayh.club/blog/20200409/4mLUrA7X1YcJ.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/4mLUrA7X1YcJ.png?imageslim)
 
 ### 2.从GitHub上引入空的项目
 
-![mark](http://cdn.jayh.club/blog/20200409/vYwfPQGdsoLG.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/vYwfPQGdsoLG.png?imageslim)
 
-![mark](http://cdn.jayh.club/blog/20200409/vSURUbNHLdHG.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/vSURUbNHLdHG.png?imageslim)
 
 ### 3.添加内容服务
 
 passjava-content
 
-![mark](http://cdn.jayh.club/blog/20200409/F0vJzcY1oWbK.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/F0vJzcY1oWbK.png?imageslim)
 
-![mark](http://cdn.jayh.club/blog/20200409/ybHePqhqYYMa.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/ybHePqhqYYMa.png?imageslim)
 
 | 序号 | 字段        | 内容                             |
 | ---- | ----------- | -------------------------------- |
@@ -979,9 +979,9 @@ passjava-content
 
 - 添加依赖组件SpringWeb, OpenFeign
 
-![mark](http://cdn.jayh.club/blog/20200409/3492WTNWK8aU.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/3492WTNWK8aU.png?imageslim)
 
-![mark](http://cdn.jayh.club/blog/20200409/6GPTxqNeBNyJ.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/6GPTxqNeBNyJ.png?imageslim)
 
 ### 3.添加其他微服务
 
@@ -993,11 +993,11 @@ passjava-content
 | 4    | 学习微服务 | passjava-study    |
 | 5    | 渠道微服务 | passjava-channel  |
 
-![mark](http://cdn.jayh.club/blog/20200411/IkdojQtrCVxa.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200411/IkdojQtrCVxa.png?imageslim)
 
 ### 4.PassJava-Platform添加Pom.xml文件
 
-![mark](http://cdn.jayh.club/blog/20200409/kGoFAy6wAqQ0.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/kGoFAy6wAqQ0.png?imageslim)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -1023,15 +1023,15 @@ passjava-content
 
 ### 5.添加根目录Maven 配置
 
-![mark](http://cdn.jayh.club/blog/20200409/WWWnhkUwJ6J1.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/WWWnhkUwJ6J1.png?imageslim)
 
-![mark](http://cdn.jayh.club/blog/20200409/xjpUeEEiGNvz.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/xjpUeEEiGNvz.png?imageslim)
 
 Maven操作根项目就可以了，试下clean
 
-![mark](http://cdn.jayh.club/blog/20200409/F8ice3B84EoQ.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/F8ice3B84EoQ.png?imageslim)
 
-![mark](http://cdn.jayh.club/blog/20200409/6J6wcD3jcTEO.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/6J6wcD3jcTEO.png?imageslim)
 
 ### 6. 配置.gitignore文件
 
@@ -1110,7 +1110,7 @@ db/db_back_dir/
 
 删除子项目的.gitignore文件
 
-![mark](http://cdn.jayh.club/blog/20200409/Xby2yw7XDVpu.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200409/Xby2yw7XDVpu.png?imageslim)
 
 ### 7.提交代码
 
@@ -1128,37 +1128,37 @@ git push origin master
 
 - 用PowerDisigner工具创建数据库
 
-![用PowerDisigner工具创建数据库](http://cdn.jayh.club/blog/20200411/rGkitjMmv7T2.png?imageslim)
+![用PowerDisigner工具创建数据库](http://cdn.passjava.cn/blog/20200411/rGkitjMmv7T2.png?imageslim)
 
 总共有5个微服务数据库：内容、学习、渠道、用户、题目
 
-![5个数据库](http://cdn.jayh.club/blog/20200411/Xo71F4ku86PB.png?imageslim)
+![5个数据库](http://cdn.passjava.cn/blog/20200411/Xo71F4ku86PB.png?imageslim)
 
 - 内容微服务的数据库
 
-![内容微服务的数据库](http://cdn.jayh.club/blog/20200411/PkKsIdaWrcUA.png?imageslim)
+![内容微服务的数据库](http://cdn.passjava.cn/blog/20200411/PkKsIdaWrcUA.png?imageslim)
 
 - 学习微服务的数据库
 
-  ![学习微服务的数据库](http://cdn.jayh.club/blog/20200411/j9dtS9xryyEv.png?imageslim)
+  ![学习微服务的数据库](http://cdn.passjava.cn/blog/20200411/j9dtS9xryyEv.png?imageslim)
 
 - 渠道微服务的数据库
 
-  ![渠道微服务的数据库](http://cdn.jayh.club/blog/20200411/60lbRmKajihg.png?imageslim)
+  ![渠道微服务的数据库](http://cdn.passjava.cn/blog/20200411/60lbRmKajihg.png?imageslim)
 
 - 用户微服务的数据库
 
-  ![用户微服务的数据库](http://cdn.jayh.club/blog/20200411/qa2OQTzGyR9U.png?imageslim)
+  ![用户微服务的数据库](http://cdn.passjava.cn/blog/20200411/qa2OQTzGyR9U.png?imageslim)
 
 - 题目微服务的数据库
 
-![题目微服务的数据库](http://cdn.jayh.club/blog/20200411/LTxxK6fEeL6E.png?imageslim)
+![题目微服务的数据库](http://cdn.passjava.cn/blog/20200411/LTxxK6fEeL6E.png?imageslim)
 
 SQL文件在这个项目里面：https://github.com/Jackson0714/PassJava-Platform.git
 
-![SQL文件](http://cdn.jayh.club/blog/20200411/lSMwH7s8V19O.png?imageslim)
+![SQL文件](http://cdn.passjava.cn/blog/20200411/lSMwH7s8V19O.png?imageslim)
 
-![mark](http://cdn.jayh.club/blog/20200411/4jVMyPUGn0ns.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200411/4jVMyPUGn0ns.png?imageslim)
 
 
 ## 5.3 搭建管理后台
@@ -1193,7 +1193,7 @@ POM文件 添加依赖
 
 - 执行renren-fast/db/mysql.sql脚本
 
-![](http://cdn.jayh.club/blog/20200411/juqCArak674q.png?imageslim)
+![](http://cdn.passjava.cn/blog/20200411/juqCArak674q.png?imageslim)
 
 ### 4.修改renren-fast 服务的配置文件
 
@@ -1201,19 +1201,19 @@ POM文件 添加依赖
 
 - 修改数据库连接为自己的mysql数据库连接
 
-![mark](http://cdn.jayh.club/blog/20200411/gisvmdRTwJmz.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200411/gisvmdRTwJmz.png?imageslim)
 
 ### 5.启动renren-fast服务
 
 - 配置SDK为1.8 
 
-![mark](http://cdn.jayh.club/blog/20200411/rR2Pthfpcya9.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200411/rR2Pthfpcya9.png?imageslim)
 
-![mark](http://cdn.jayh.club/blog/20200411/swolhMLLHlLD.png?imageslim)- 
+![mark](http://cdn.passjava.cn/blog/20200411/swolhMLLHlLD.png?imageslim)- 
 
 - 运行renren-fast后台
 
-  ![mark](http://cdn.jayh.club/blog/20200411/gMYiHlBHl4zn.png?imageslim)
+  ![mark](http://cdn.passjava.cn/blog/20200411/gMYiHlBHl4zn.png?imageslim)
 
 出现错误：com.mysql.cj.jdbc.exceptions.PacketTooBigException: Packet for query is too large...
 
@@ -1230,7 +1230,7 @@ max_allowed_packet=32M
 
 - 执行结果
 
-![mark](http://cdn.jayh.club/blog/20200411/IFil27TVJIQT.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200411/IFil27TVJIQT.png?imageslim)
 
 - 测试服务运行状态
 
@@ -1268,7 +1268,7 @@ max_allowed_packet=32M
 
   http://localhost:8002
 
-  ![mark](http://cdn.jayh.club/blog/20200411/F6qFoEbBFFKP.png?imageslim)
+  ![mark](http://cdn.passjava.cn/blog/20200411/F6qFoEbBFFKP.png?imageslim)
 
 ### 7.前后端联调登录
 
@@ -1280,11 +1280,11 @@ max_allowed_packet=32M
 
   登录成功
 
-  ![mark](http://cdn.jayh.club/blog/20200411/c2RmpUrgw7MP.png?imageslim)
+  ![mark](http://cdn.passjava.cn/blog/20200411/c2RmpUrgw7MP.png?imageslim)
 
 - 查看后端服务日志
 
-  ![mark](http://cdn.jayh.club/blog/20200411/oPGlFndNIRps.png?imageslim)
+  ![mark](http://cdn.passjava.cn/blog/20200411/oPGlFndNIRps.png?imageslim)
 
 说明前端登录请求发送到了后端服务，并验证了用户名和密码是否正确。
 
@@ -1353,19 +1353,19 @@ import org.apache.shiro.authz.annotation.RequiresPermissions;
 
 ### 4.启动代码生成器服务
 
-![启动代码生成器服务](http://cdn.jayh.club/blog/20200412/yJd2l0DKTfd0.png?imageslim)
+![启动代码生成器服务](http://cdn.passjava.cn/blog/20200412/yJd2l0DKTfd0.png?imageslim)
 
 浏览器打开localhost，可以看到数据库qms的两张表已经显示在后台了
 
-![mark](http://cdn.jayh.club/blog/20200412/ddEkOhGYqoGD.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200412/ddEkOhGYqoGD.png?imageslim)
 
 ### 5.生成代码
 
 - 生成代码
 
-![生成代码](http://cdn.jayh.club/blog/20200412/BgYYVUlnY2NC.png?imageslim)
+![生成代码](http://cdn.passjava.cn/blog/20200412/BgYYVUlnY2NC.png?imageslim)
 
-![代码生成器生成的pms服务代码](http://cdn.jayh.club/blog/20200412/NM1ApxlLXKKu.png?imageslim)
+![代码生成器生成的pms服务代码](http://cdn.passjava.cn/blog/20200412/NM1ApxlLXKKu.png?imageslim)
 
 - 拷贝main文件夹到question模块src目录
 
@@ -1373,7 +1373,7 @@ import org.apache.shiro.authz.annotation.RequiresPermissions;
 
 - 代码结构
 
-  ![代码结构](http://cdn.jayh.club/blog/20200412/TkijmnIalY9z.png?imageslim)
+  ![代码结构](http://cdn.passjava.cn/blog/20200412/TkijmnIalY9z.png?imageslim)
 
 生成的代码包含controller，dao层，实体类，接口实现类，mapper映射文件
 
@@ -1381,17 +1381,17 @@ import org.apache.shiro.authz.annotation.RequiresPermissions;
 
 因为自动生成的代码引用了一些工具类，而我们的项目中没有，所以需要加个common模块添加一些工具类
 
-![引用工具类报错](http://cdn.jayh.club/blog/20200412/MthdcPT2mqK8.png?imageslim)
+![引用工具类报错](http://cdn.passjava.cn/blog/20200412/MthdcPT2mqK8.png?imageslim)
 
 - 添加passjava-common
 
   New Module: 选择Maven
 
-  ![选择Maven](http://cdn.jayh.club/blog/20200412/XCYkwexOdyg6.png?imageslim)
+  ![选择Maven](http://cdn.passjava.cn/blog/20200412/XCYkwexOdyg6.png?imageslim)
 
 Name: passjava-common
 
-![添加common模块](http://cdn.jayh.club/blog/20200412/8Jvylhjdn85G.png?imageslim)
+![添加common模块](http://cdn.passjava.cn/blog/20200412/8Jvylhjdn85G.png?imageslim)
 
 ### 7.question模块添加common模块依赖
 
@@ -1476,9 +1476,9 @@ pom文件添加依赖
 
   `HTMLFilter.java`、`SQLFilter.java`
 
-![passjava-common代码结构图](http://cdn.jayh.club/blog/20200413/9HK1gDH3i5nB.png?imageslim)
+![passjava-common代码结构图](http://cdn.passjava.cn/blog/20200413/9HK1gDH3i5nB.png?imageslim)
 
-![拷贝renren-fast文件](http://cdn.jayh.club/blog/20200413/Aqx99dkjs5SC.png?imageslim)
+![拷贝renren-fast文件](http://cdn.passjava.cn/blog/20200413/Aqx99dkjs5SC.png?imageslim)
 
 ## 5.5 整合MyBatis-Plus实现CRUD
 
@@ -1497,7 +1497,7 @@ pom文件添加依赖
 - 导入数据库的驱动
   - 查看mysql版本 5.7.29
 
-![mark](http://cdn.jayh.club/blog/20200413/6kWL77qdyEGc.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200413/6kWL77qdyEGc.png?imageslim)
 
 到maven仓库查看适用的mysql驱动，5.7的没有，8.0兼容5.7的，所以选择8.0的驱动
 
@@ -1527,7 +1527,7 @@ pom文件添加依赖
 
 - 配置mapper映射文件路径
 
-  ![配置mabatis-plus时的智能提示](http://cdn.jayh.club/blog/20200414/6mexDBOjV7mO.png?imageslim)
+  ![配置mabatis-plus时的智能提示](http://cdn.passjava.cn/blog/20200414/6mexDBOjV7mO.png?imageslim)
   
   ``` yxml
   mybatis-plus:
@@ -1567,7 +1567,7 @@ pom文件添加依赖
   }
   ```
 
-  ![创建类型为javaBasic的type表数据](http://cdn.jayh.club/blog/20200414/aJ5jNXUKoiUW.png?imageslim)
+  ![创建类型为javaBasic的type表数据](http://cdn.passjava.cn/blog/20200414/aJ5jNXUKoiUW.png?imageslim)
 
 - 更新id=1的表数据
 
@@ -1583,7 +1583,7 @@ pom文件添加依赖
   }
   ```
 
-  ![更新id=1的表数据](http://cdn.jayh.club/blog/20200414/AM3PCVuHgaQu.png?imageslim)
+  ![更新id=1的表数据](http://cdn.passjava.cn/blog/20200414/AM3PCVuHgaQu.png?imageslim)
 
 
 
@@ -1601,7 +1601,7 @@ pom文件添加依赖
   }
   ```
 
-![查询id=1的表数据](http://cdn.jayh.club/blog/20200414/9LfJymakpcWw.png?imageslim)
+![查询id=1的表数据](http://cdn.passjava.cn/blog/20200414/9LfJymakpcWw.png?imageslim)
 
 - 删除id=1的表数据
 
@@ -1614,7 +1614,7 @@ pom文件添加依赖
   }
   ```
 
-![删除id=1的表数据](http://cdn.jayh.club/blog/20200414/N0hTuJB1mDm1.png?imageslim)
+![删除id=1的表数据](http://cdn.passjava.cn/blog/20200414/N0hTuJB1mDm1.png?imageslim)
 
 ## 5.6 生成所有微服务的CRUD代码
 ### 1. 修改代码生成器配置文件
@@ -1640,7 +1640,7 @@ tablePrefix=chms_
 
 注意：端口地址默认是8080，我配置成了8003。
 
-![生成渠道微服务代码](http://cdn.jayh.club/blog/20200415/QSr1Ctzk2YOq.png?imageslim)
+![生成渠道微服务代码](http://cdn.passjava.cn/blog/20200415/QSr1Ctzk2YOq.png?imageslim)
 
 ### 3.添加生成的代码
 
@@ -1688,7 +1688,7 @@ tablePrefix=chms_
 
 ### 5.生成所有微服务的CRUD代码
 
-![生成所有微服务代码](http://cdn.jayh.club/blog/20200415/4Ka6egGEKz0m.png?imageslim)
+![生成所有微服务代码](http://cdn.passjava.cn/blog/20200415/4Ka6egGEKz0m.png?imageslim)
 
 ### 6.配置微服务端口
 
@@ -1710,7 +1710,7 @@ http://localhost:11000/question/question/list
 http://localhost:12000/study/studytime/list
 ```
 
-![mark](http://cdn.jayh.club/blog/20200415/1XPKa1g1NdoL.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200415/1XPKa1g1NdoL.png?imageslim)
 
 
 ## 5.7 管理后台-题目类型功能
@@ -1739,25 +1739,25 @@ npm run dev
   
   2.输入用户名和密码登陆
   
-  ![PassJava后台](http://cdn.jayh.club/blog/20200425/DQDm4seRS85s.png?imageslim)
+  ![PassJava后台](http://cdn.passjava.cn/blog/20200425/DQDm4seRS85s.png?imageslim)
 
 ### 2. 添加目录和菜单
 
 - 添加`题目中心`目录(一级菜单)
 
-![添加题目管理菜单](http://cdn.jayh.club/blog/20200425/xN7NHGsUFGNe.png?imageslim)
+![添加题目管理菜单](http://cdn.passjava.cn/blog/20200425/xN7NHGsUFGNe.png?imageslim)
 
 刷新页面,就可以看到题目中心菜单
 
 - 添加题目`类型维护`菜单(二级菜单)
 
-![题目类型维护菜单](http://cdn.jayh.club/blog/20200425/mg5QrTbMnNCn.png?imageslim)
+![题目类型维护菜单](http://cdn.passjava.cn/blog/20200425/mg5QrTbMnNCn.png?imageslim)
 
-![题目中心菜单](http://cdn.jayh.club/blog/20200425/NlVRP5AdpJjV.png?imageslim)
+![题目中心菜单](http://cdn.passjava.cn/blog/20200425/NlVRP5AdpJjV.png?imageslim)
 
 可以看到数据库新增了两条记录,分别对应两个菜单
 
-![sys_menu表](http://cdn.jayh.club/blog/20200425/c6WJ6Xdt1JR9.png?imageslim)
+![sys_menu表](http://cdn.passjava.cn/blog/20200425/c6WJ6Xdt1JR9.png?imageslim)
 
 点击类型维护菜单,打开了链接:http://localhost:8002/#/question-type,页面显示空白页面.
 
@@ -1767,9 +1767,9 @@ npm run dev
 
 拷贝question目录到前端目录 \src\views\modules
 
-![自动生成前端代码](http://cdn.jayh.club/blog/20200425/lQIv1UMSBLBH.png?imageslim)
+![自动生成前端代码](http://cdn.passjava.cn/blog/20200425/lQIv1UMSBLBH.png?imageslim)
 
-![前端Vue页面](http://cdn.jayh.club/blog/20200425/pzjq0UwcnbfU.png?imageslim)
+![前端Vue页面](http://cdn.passjava.cn/blog/20200425/pzjq0UwcnbfU.png?imageslim)
 
 
 
@@ -1779,7 +1779,7 @@ npm run dev
 
  http://localhost:8080/renren-fast/question/type/list?t=1587825969456&page=1&limit=10&key=
 
-![mark](http://cdn.jayh.club/blog/20200425/jdVLJmTeKUsh.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200425/jdVLJmTeKUsh.png?imageslim)
 
 > 因为页面的请求都访问到renren-fast服务了,所以要修改为访问题目微服务。但是前端有很多请求访问的是不同的服务，所以我们可以通过网关来作为请求的入口，然后将不同的请求路由到不同的服务。
 
@@ -1804,7 +1804,7 @@ window.SITE_CONFIG['baseUrl'] = 'http://localhost:8060'; // 网关地址
 GET http://localhost:8060/captcha.jpg?uuid=1ce21f53-1866-40b1-8b20-2f4515d59f0d 404 (Not Found)
 ```
 
-![获取验证码报404](http://cdn.jayh.club/blog/20200425/kAhPX4oiglXY.png?imageslim)
+![获取验证码报404](http://cdn.passjava.cn/blog/20200425/kAhPX4oiglXY.png?imageslim)
 
 > 可以将renren-fast注册到注册中心，然后通过网关将请求转发到renren-fast服务。
 
@@ -1840,7 +1840,7 @@ application:
 
 - 查看服务是否注册成功
 
-![Nacos服务列表](http://cdn.jayh.club/blog/20200425/JcoXD3tdLLoQ.png?imageslim)
+![Nacos服务列表](http://cdn.passjava.cn/blog/20200425/JcoXD3tdLLoQ.png?imageslim)
 
 ### 7. 添加网关路由规则
 
@@ -1897,7 +1897,7 @@ Access to XMLHttpRequest at 'http://localhost:8060/api/sys/login' from origin 'h
 
 - 出于安全原因，浏览器限制从脚本内发起的跨源HTTP请求。 例如，XMLHttpRequest和Fetch API遵循同源策略。 这意味着使用这些API的Web应用程序只能从加载应用程序的同一个域请求HTTP资源，除非响应报文包含了正确CORS响应头。
 
-  ![跨域场景](http://cdn.jayh.club/blog/20200426/WIKGCdNkHU2S.png?imageslim)
+  ![跨域场景](http://cdn.passjava.cn/blog/20200426/WIKGCdNkHU2S.png?imageslim)
 
 [^官方文档]: https://developer.mozilla.org/zh-CN/docs/Web/http/access_control_cors
 
@@ -1955,7 +1955,7 @@ public class PassJavaCorsConfiguration {
 
   可以看到login请求的响应报文中包含了已配置的CORS响应头
 
-![login请求](http://cdn.jayh.club/blog/20200426/NSLDIVzxTObO.png?imageslim)
+![login请求](http://cdn.passjava.cn/blog/20200426/NSLDIVzxTObO.png?imageslim)
 
 ### 10.配置题目服务的路由规则
 
@@ -1984,15 +1984,15 @@ spring:
 
 - 测试查询列表，可以看到有三条记录查询出来了
 
-  ![类型维护页面](http://cdn.jayh.club/blog/20200426/bHc19bUWFYh5.png?imageslim)
+  ![类型维护页面](http://cdn.passjava.cn/blog/20200426/bHc19bUWFYh5.png?imageslim)
 
 - 测试修改一条数据，可以看到数据库里面记录更新为23了
 
-  ![修改类型logo](http://cdn.jayh.club/blog/20200426/9uvVAcBOPTyR.png?imageslim)
+  ![修改类型logo](http://cdn.passjava.cn/blog/20200426/9uvVAcBOPTyR.png?imageslim)
 
 - 测试删除一条数据，可以看到界面和数据库都删除了一条数据
 
-  ![mark](http://cdn.jayh.club/blog/20200426/d2TqT4T7JHOI.png?imageslim)
+  ![mark](http://cdn.passjava.cn/blog/20200426/d2TqT4T7JHOI.png?imageslim)
 
 ### 12.打开新增和批量删除功能
 
@@ -2010,7 +2010,7 @@ export function isAuth (key) {
 }
 ```
 
-![新增和批量删除按钮](http://cdn.jayh.club/blog/20200426/ik2i5TzzSoGJ.png?imageslim)
+![新增和批量删除按钮](http://cdn.passjava.cn/blog/20200426/ik2i5TzzSoGJ.png?imageslim)
 
 ## 5.8 管理后台-题目维护功能
 
@@ -2051,7 +2051,7 @@ UPDATE qms_type SET del_flag=1 WHERE id IN ( 1 ) AND del_flag=0
 
 想要将是否显示改为快速开关
 
-![mark](http://cdn.jayh.club/blog/20200426/dWB1QSPspqJN.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200426/dWB1QSPspqJN.png?imageslim)
 
 
 
@@ -2152,7 +2152,7 @@ public R save(@Valid @RequestBody QuestionEntity question){
 
 测试结果
 
-![后端字段校验](http://cdn.jayh.club/blog/20200430/D4xbDjs5c0z7.PNG)
+![后端字段校验](http://cdn.passjava.cn/blog/20200430/D4xbDjs5c0z7.PNG)
 
 -1，0，0.2 不通过
 
@@ -2199,7 +2199,7 @@ public PageUtils queryPage(Map<String, Object> params) {
 
 ### 6.添加分页插件
 
-![没有分页插件显示共0条](http://cdn.jayh.club/blog/20200611/tsgcSujemoXG.png?imageslim)
+![没有分页插件显示共0条](http://cdn.passjava.cn/blog/20200611/tsgcSujemoXG.png?imageslim)
 
 添加分页插件
 
@@ -2232,7 +2232,7 @@ public class MyBatisConfig {
 
 添加分页插件后的显示
 
-![配置了分页插件的显示](http://cdn.jayh.club/blog/20200611/11fb5z71NsVr.png?imageslim)
+![配置了分页插件的显示](http://cdn.passjava.cn/blog/20200611/11fb5z71NsVr.png?imageslim)
 
 # 六、PassJava 高级实践篇
 
@@ -2367,7 +2367,7 @@ windows执行startupm.cmd遇到问题：
 
 启动成功：
 
-<img src="http://cdn.jayh.club/blog/20200417/g2RCtpUpwFyF.png?imageslim" alt="nacos server启动结果" style="zoom:50%;" />
+<img src="http://cdn.passjava.cn/blog/20200417/g2RCtpUpwFyF.png?imageslim" alt="nacos server启动结果" style="zoom:50%;" />
 
 
 ### 3.每个微服务都配置Nacos Server 地址
@@ -2419,7 +2419,7 @@ http://localhost:8848/nacos/index.html#/login
 
 密码：nacos
 
-<img src="http://cdn.jayh.club/blog/20200417/n8M8mic6VCrC.png?imageslim" alt="nacos server后台" style="zoom:67%;" />
+<img src="http://cdn.passjava.cn/blog/20200417/n8M8mic6VCrC.png?imageslim" alt="nacos server后台" style="zoom:67%;" />
 
 - 查看已注册的服务
 
@@ -2431,7 +2431,7 @@ http://localhost:8848/nacos/index.html#/login
   passjava-content 内容微服务
   ```
 
-  <img src="http://cdn.jayh.club/blog/20200417/LQBRITAhS6eX.png?imageslim" alt="已注册的服务" style="zoom:67%;" />
+  <img src="http://cdn.passjava.cn/blog/20200417/LQBRITAhS6eX.png?imageslim" alt="已注册的服务" style="zoom:67%;" />
 
 ## 6.3 SpringCloud整合OpenFeign远程调用
 
@@ -2532,7 +2532,7 @@ public R memberStudyTimeTest() {
 
   studytime和member都有数据，学习时长：100分钟，昵称：悟空聊架构
 
-  ![接口测试结果](http://cdn.jayh.club/blog/20200419/Ty3LMSktFR60.png?imageslim)
+  ![接口测试结果](http://cdn.passjava.cn/blog/20200419/Ty3LMSktFR60.png?imageslim)
 
 #### 2.4 测试OpenFeign传参
 
@@ -2581,7 +2581,7 @@ public R memberStudyTimeTest(@PathVariable("id") Long id) {
 
 执行结果：
 
-![执行结果](http://cdn.jayh.club/blog/20200419/ND82clGdmgwj.png?imageslim)
+![执行结果](http://cdn.passjava.cn/blog/20200419/ND82clGdmgwj.png?imageslim)
 
 #### 2.5 总结FeignClient使用方法
 
@@ -2629,7 +2629,7 @@ public R testLocalConfig() {
 
 - 测试结果
 
-![mark](http://cdn.jayh.club/blog/20200419/hVV0scmFNGyo.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200419/hVV0scmFNGyo.png?imageslim)
 
 总结：从配置文件中获取配置。
 
@@ -2656,7 +2656,7 @@ PassJava-Common项目的pom.xml文件引入Spring Cloud Alibaba Nacos Config依�
 
 - 配置 Nacos Config 元数据
 
-![bootstrap.properties](http://cdn.jayh.club/blog/20200419/Ts8oLK9Bnzi3.png?imageslim)
+![bootstrap.properties](http://cdn.passjava.cn/blog/20200419/Ts8oLK9Bnzi3.png?imageslim)
 
 ``` properties
 spring.application.name=passjava-member
@@ -2676,7 +2676,7 @@ member.nick="悟空"
 member.age=10
 ```
 
-![Nacos后台新增配置](http://cdn.jayh.club/blog/20200419/jrSKiQ6H0VES.png?imageslim)
+![Nacos后台新增配置](http://cdn.passjava.cn/blog/20200419/jrSKiQ6H0VES.png?imageslim)
 
 ### 5.开启动态刷新配置功能
 
@@ -2709,7 +2709,7 @@ Refresh keys changed: [member.age]
 
 注意：Nacos的配置项优先级高于application.propertite里面的配置。
 
-![测试结果](http://cdn.jayh.club/blog/20200419/hU9oOojlIG5T.png?imageslim)
+![测试结果](http://cdn.passjava.cn/blog/20200419/hU9oOojlIG5T.png?imageslim)
 
 ### 7.命名空间
 
@@ -2719,7 +2719,7 @@ Refresh keys changed: [member.age]
 
 - 创建命名空间
 
-  ![创建命名空间](http://cdn.jayh.club/blog/20200420/BUfm3HeAJn0Q.png?imageslim)
+  ![创建命名空间](http://cdn.passjava.cn/blog/20200420/BUfm3HeAJn0Q.png?imageslim)
 
 ``` json
 # 创建5个命名空间
@@ -2730,17 +2730,17 @@ passjava-question
 passjava-study
 ```
 
-![命名空间](http://cdn.jayh.club/blog/20200420/aUf1sIOuqtxq.png?imageslim)
+![命名空间](http://cdn.passjava.cn/blog/20200420/aUf1sIOuqtxq.png?imageslim)
 
 - 命名空间下创建配置
 
   我们打开配置列表菜单，可以看到有五个命名空间。
 
-  ![命名空间下创建配置](http://cdn.jayh.club/blog/20200420/XnxTl32zmBJo.png?imageslim)
+  ![命名空间下创建配置](http://cdn.passjava.cn/blog/20200420/XnxTl32zmBJo.png?imageslim)
 
 选中passjava-channel命名空间，然后新增配置项，与之前新增配置的步骤一致，也可以通过克隆命名空间来克隆配置。
 
-![克隆配置](http://cdn.jayh.club/blog/20200420/YqMIkqR7AQok.png?imageslim)
+![克隆配置](http://cdn.passjava.cn/blog/20200420/YqMIkqR7AQok.png?imageslim)
 
 - 修改指定的命名空间
 
@@ -2754,7 +2754,7 @@ passjava-study
 
   修改passjava-member.properties的配置内容
 
-  ![passjava-member.properties](http://cdn.jayh.club/blog/20200420/pSiFa7mJVXiD.png?imageslim)
+  ![passjava-member.properties](http://cdn.passjava.cn/blog/20200420/pSiFa7mJVXiD.png?imageslim)
 
   重启member服务
 
@@ -2783,9 +2783,9 @@ passjava-study
 
 - 首先创建一套dev环境配置项，然后克隆配置到test和prod环境
 
-![dev环境](http://cdn.jayh.club/blog/20200420/GsB5STRumA72.png?imageslim)
+![dev环境](http://cdn.passjava.cn/blog/20200420/GsB5STRumA72.png?imageslim)
 
-![dev、test、prod分组](http://cdn.jayh.club/blog/20200420/kUF8qfV1ty18.png?imageslim)
+![dev、test、prod分组](http://cdn.passjava.cn/blog/20200420/kUF8qfV1ty18.png?imageslim)
 
 - bootstrap.properties配置当前使用的分组：prod
 
@@ -2812,19 +2812,19 @@ spring.cloud.nacos.config.group=prod
 
 1.配置中心新建`datasource.yml` 配置
 
-![datasource.yml 配置](http://cdn.jayh.club/blog/20200422/0gOWIlAxhfpn.png?imageslim)
+![datasource.yml 配置](http://cdn.passjava.cn/blog/20200422/0gOWIlAxhfpn.png?imageslim)
 
 2.配置中心新建`mybatis.yml` 配置
 
-![mybatis.yml配置](http://cdn.jayh.club/blog/20200422/D3qEAgusQmnn.png?imageslim)
+![mybatis.yml配置](http://cdn.passjava.cn/blog/20200422/D3qEAgusQmnn.png?imageslim)
 
 3.配置中心新建`more.yml` 配置
 
-![more.yml配置](http://cdn.jayh.club/blog/20200422/v6Cci7Lm82fD.png?imageslim)
+![more.yml配置](http://cdn.passjava.cn/blog/20200422/v6Cci7Lm82fD.png?imageslim)
 
 4.克隆dev环境配置到test和prod环境
 
-![mark](http://cdn.jayh.club/blog/20200422/vtWsoYwn8XBW.png?imageslim)
+![mark](http://cdn.passjava.cn/blog/20200422/vtWsoYwn8XBW.png?imageslim)
 
 
 
@@ -2936,11 +2936,11 @@ PassJava项目中,小程序和管理后台请求先访问到API网关.
 
 API网关通过注册中心实时感知微服务的状态的路由地址,准确地将请求路由到各个服务.
 
-![Spring Cloud Gateway](http://cdn.jayh.club/blog/20200423/WhIlX8s2ielj.png?imageslim)
+![Spring Cloud Gateway](http://cdn.passjava.cn/blog/20200423/WhIlX8s2ielj.png?imageslim)
 
 官方文档:https://cloud.spring.io/spring-cloud-static/spring-cloud-gateway/2.2.2.RELEASE/reference/html/
 
-![Gateway原理](http://cdn.jayh.club/blog/20200423/vFG3pl5kg6Mh.png?imageslim)
+![Gateway原理](http://cdn.passjava.cn/blog/20200423/vFG3pl5kg6Mh.png?imageslim)
 
 - 请求到达网关后,先经过断言Predicate,是否符合某个路由规则
 - 如果符合,则按路由规则路由到指定地址
@@ -2951,15 +2951,15 @@ API网关通过注册中心实时感知微服务的状态的路由地址,准确�
 
 - 适用Spring 初始化器创建Gateway module
 
-![Spring 初始化器](http://cdn.jayh.club/blog/20200423/8otVyqWM34sp.png?imageslim)
+![Spring 初始化器](http://cdn.passjava.cn/blog/20200423/8otVyqWM34sp.png?imageslim)
 
 - 创建module
 
-![Gateway module](http://cdn.jayh.club/blog/20200423/1gpsU7eg2ADO.png?imageslim)
+![Gateway module](http://cdn.passjava.cn/blog/20200423/1gpsU7eg2ADO.png?imageslim)
 
 - 选择Gateway依赖
 
-![选择Gateway依赖](http://cdn.jayh.club/blog/20200423/ei7LC9ILPwc4.png?imageslim)
+![选择Gateway依赖](http://cdn.passjava.cn/blog/20200423/ei7LC9ILPwc4.png?imageslim)
 
 - 引入Gateway模块
 
@@ -3025,10 +3025,10 @@ public class PassjavaGatewayApplication {
 
 > 文件上传在系统中用的很频繁，所以我们需要将上传的文件进行存储，传统的将文件上传到本机已不适用分布式系统。自己搭建文件服务器有复杂性和维护成本。所以我们可以采用市面上成熟的文件存储服务，如阿里云的OSS对象存储服务。
 
-![上传图片](http://cdn.jayh.club/blog/20200428/BbhUgx6bs0xI.gif)
+![上传图片](http://cdn.passjava.cn/blog/20200428/BbhUgx6bs0xI.gif)
 
 每个 OSS 的用户都会用到上传服务。Web 端常见的上传方法是用户在浏览器或 APP 端上传文件到应用服务器，应用服务器再把文件上传到 OSS。具体流程如下图所示。
-![具体流程](http://cdn.jayh.club/blog/20200428/RJIuke5m522w.png?imageslim)
+![具体流程](http://cdn.passjava.cn/blog/20200428/RJIuke5m522w.png?imageslim)
 
 和数据直传到 OSS 相比，以上方法有三个缺点：
 
@@ -3046,7 +3046,7 @@ public class PassjavaGatewayApplication {
 
 ##### 2.1.2 原理介绍
 
-![原理介绍](http://cdn.jayh.club/blog/20200428/Uq4PAu1zk720.png?imageslim)
+![原理介绍](http://cdn.passjava.cn/blog/20200428/Uq4PAu1zk720.png?imageslim)
 
 服务端签名后直传的原理如下：
 
@@ -3062,27 +3062,27 @@ public class PassjavaGatewayApplication {
 
   https://www.aliyun.com/sale-season/2020/procurement-new-members?userCode=thp9caen
 
-![登录阿里云官网](http://cdn.jayh.club/blog/20200427/0AJHQmBdGIpC.png?imageslim)
+![登录阿里云官网](http://cdn.passjava.cn/blog/20200427/0AJHQmBdGIpC.png?imageslim)
 
 
 
 - 创建Bucket 存储桶
 
-  ![创建Bucket 存储桶](http://cdn.jayh.club/blog/20200427/VPfBeJAPQ5Tb.png?imageslim)
+  ![创建Bucket 存储桶](http://cdn.passjava.cn/blog/20200427/VPfBeJAPQ5Tb.png?imageslim)
 
 - 获取accesskey id和secret
 
-![获取accesskey id和secret](http://cdn.jayh.club/blog/20200427/hfgi86eqp8Ob.png?imageslim)
+![获取accesskey id和secret](http://cdn.passjava.cn/blog/20200427/hfgi86eqp8Ob.png?imageslim)
 
-![获取accesskey id和secret](http://cdn.jayh.club/blog/20200427/pCrDo8UwFAWF.png?imageslim)
+![获取accesskey id和secret](http://cdn.passjava.cn/blog/20200427/pCrDo8UwFAWF.png?imageslim)
 
-![获取accesskey id和secret](http://cdn.jayh.club/blog/20200427/xGPP7PFGK8uJ.png?imageslim)
+![获取accesskey id和secret](http://cdn.passjava.cn/blog/20200427/xGPP7PFGK8uJ.png?imageslim)
 
 - 分配权限
 
   分配 管理对象存储服务（OSS）权限
 
-  ![分配权限](http://cdn.jayh.club/blog/20200427/2p085d9bNdaq.png?imageslim)
+  ![分配权限](http://cdn.passjava.cn/blog/20200427/2p085d9bNdaq.png?imageslim)
 
 #### 3.2 使用OSS SDK
 
@@ -3167,7 +3167,7 @@ void testUploadByAlicloudOss() throws FileNotFoundException {
 }
 ```
 
-![上传成功](http://cdn.jayh.club/blog/20200428/F64VnQ6l5Kn9.png?imageslim)
+![上传成功](http://cdn.passjava.cn/blog/20200428/F64VnQ6l5Kn9.png?imageslim)
 
 #### 3.4 获取服务端签名
 
@@ -3228,7 +3228,7 @@ spring:
         endpoint: oss-cn-beijing.aliyuncs.com
 ```
 
-![配置oss.yml](http://cdn.jayh.club/blog/20200427/nDFBnzvuVXaI.png?imageslim)
+![配置oss.yml](http://cdn.passjava.cn/blog/20200427/nDFBnzvuVXaI.png?imageslim)
 
 - 开启服务发现`@EnableDiscoveryClient`
 
@@ -3354,7 +3354,7 @@ spring:
 
 配置跨域访问，所有post请求都可以跨域访问
 
-![配置跨域访问](http://cdn.jayh.club/blog/20200428/1UhhbsBvpGbY.png?imageslim)
+![配置跨域访问](http://cdn.passjava.cn/blog/20200428/1UhhbsBvpGbY.png?imageslim)
 
 ##### 3.4.5 Web端上传组件
 
@@ -3504,7 +3504,7 @@ export function policy () {
 </script>
 ```
 
-![上传图片](http://cdn.jayh.club/blog/20200428/BbhUgx6bs0xI.gif)
+![上传图片](http://cdn.passjava.cn/blog/20200428/BbhUgx6bs0xI.gif)
 
 上传文件成功
 
@@ -3783,11 +3783,11 @@ public R handleException(Throwable throwable) {
 
 假定三个微服务调用的链路如下图所示：`Service 1` 调用 `Service 2`，`Service 2` 调用 `Service 3` 和 Service 4。
 
-![微服务调用链路图](http://cdn.jayh.club/blog/20201113/0DBcQe6jT0D5.png?imageslim)
+![微服务调用链路图](http://cdn.passjava.cn/blog/20201113/0DBcQe6jT0D5.png?imageslim)
 
 那么链路追踪会在每个服务调用的时候加上 Trace ID 和 Span ID。如下图所示：
 
-![链路追踪原理图](http://cdn.jayh.club/blog/20201113/QmIVxLVczhEl.png?imageslim)
+![链路追踪原理图](http://cdn.passjava.cn/blog/20201113/QmIVxLVczhEl.png?imageslim)
 
 **大白话解释：** 
 
@@ -3810,7 +3810,7 @@ public R handleException(Throwable throwable) {
 
 **把以上的相同颜色的步骤简化为下面的链路追踪图：** 
 
-![链路追踪父子节点图](http://cdn.jayh.club/blog/20201113/jD37o9mBtnwJ.jpg?imageslim)
+![链路追踪父子节点图](http://cdn.passjava.cn/blog/20201113/jD37o9mBtnwJ.jpg?imageslim)
 
 - 第一个节点：Span ID = A，Parent ID = null，`Service 1` 接收到请求。
 - 第二个节点：Span ID = B，Parent ID= A，`Service 1` 发送请求到 `Service 2` 返回响应给 `Service 1` 的过程。
@@ -3884,7 +3884,7 @@ logging.level.org.springframework.cloud.sleuth=debug
 
   启动成功后如下图所示：
 
-![启动微服务](http://cdn.jayh.club/blog/20201113/bep64zUgq0k8.png?imageslim)
+![启动微服务](http://cdn.passjava.cn/blog/20201113/bep64zUgq0k8.png?imageslim)
 
 
 
@@ -3896,11 +3896,11 @@ logging.level.org.springframework.cloud.sleuth=debug
 http://localhost:8060/api/question/v1/admin/question/list?t=1605170539929&page=1&limit=10&key=
 ```
 
-![佳必过项目的后台界面](http://cdn.jayh.club/blog/20201113/UkTQdJqazR3f.png?imageslim)
+![佳必过项目的后台界面](http://cdn.passjava.cn/blog/20201113/UkTQdJqazR3f.png?imageslim)
 
 打开控制台，可以看到打印出了追踪日志。
 
-![链路追踪日志](http://cdn.jayh.club/blog/20201113/EVK7LJBndCut.png?imageslim)
+![链路追踪日志](http://cdn.passjava.cn/blog/20201113/EVK7LJBndCut.png?imageslim)
 
 说明：
 
@@ -3919,7 +3919,7 @@ Zipkin 的官文：https://zipkin.io
 
 #### 4.1 Zipkin 基础架构
 
-![Zipkin 基础架构](http://cdn.jayh.club/blog/20201113/FRXaXaM82QHB.png?imageslim)
+![Zipkin 基础架构](http://cdn.passjava.cn/blog/20201113/FRXaXaM82QHB.png?imageslim)
 
 **Zipkin 包含四大组件：** 
 
@@ -3930,7 +3930,7 @@ Zipkin 的官文：https://zipkin.io
 
 #### 4.2 Zipkin 跟踪流程
 
-![ Zipkin 跟踪流程](http://cdn.jayh.club/blog/20201113/9TJsLVF4q9Iu.png?imageslim)
+![ Zipkin 跟踪流程](http://cdn.passjava.cn/blog/20201113/9TJsLVF4q9Iu.png?imageslim)
 
 **流程解释：** 
 
@@ -3950,7 +3950,7 @@ Zipkin 的官文：https://zipkin.io
 vagrant up
 ```
 
-![启动虚拟机](http://cdn.jayh.club/blog/20201113/0MHnr14FCOEQ.png?imageslim)
+![启动虚拟机](http://cdn.passjava.cn/blog/20201113/0MHnr14FCOEQ.png?imageslim)
 
 用 Xshell 工具连接 虚拟机。
 
@@ -3964,17 +3964,17 @@ docker run -d -p 9411:9411 openzipkin/zipkin
 
 - 命令执行完后，会执行下载操作和启动操作。
 
-![docker 安装 zipkin 服务](http://cdn.jayh.club/blog/20201113/SqP777Tdyw1V.png?imageslim)
+![docker 安装 zipkin 服务](http://cdn.passjava.cn/blog/20201113/SqP777Tdyw1V.png?imageslim)
 
 - 使用 docker ps 命令可以看到 zipkin 容器已经启动成功了。如下图所示：
 
-![zipkin 容器启动成功](http://cdn.jayh.club/blog/20201113/744ztsITuJkV.png?imageslim)
+![zipkin 容器启动成功](http://cdn.passjava.cn/blog/20201113/744ztsITuJkV.png?imageslim)
 
 - 在浏览器窗口打开 zipkin UI 
 
 > 访问服务地址：http://192.168.56.10:9411/zipkin。
 
-<img src="http://cdn.jayh.club/blog/20201113/ttYgi3S0vCDA.png?imageslim" alt="链路追踪" style="zoom:67%;" />
+<img src="http://cdn.passjava.cn/blog/20201113/ttYgi3S0vCDA.png?imageslim" alt="链路追踪" style="zoom:67%;" />
 
 #### 5.3 引入 Zipkin 依赖
 
@@ -4015,11 +4015,11 @@ passjava-member 服务远程调用 passjava-study 服务的 API：getMemberStudy
 
 我用 postman 工具测试 member 服务的 API：
 
-![测试 Passjava-member 服务的 API](http://cdn.jayh.club/blog/20201113/fdTdJTy6d9AX.png?imageslim)
+![测试 Passjava-member 服务的 API](http://cdn.passjava.cn/blog/20201113/fdTdJTy6d9AX.png?imageslim)
 
 打开 Zipkin 工具，搜索 passjava-member 的链路追踪日志，可以看到有一条记录，相关说明如下图所示：
 
-![zipkin 示例](http://cdn.jayh.club/blog/20201113/mpU94HPGzLSa.png?imageslim)
+![zipkin 示例](http://cdn.passjava.cn/blog/20201113/mpU94HPGzLSa.png?imageslim)
 
 从图中可以看到 passjava-member 微服务调用了 passjava-study 微服务，如图中左半部分所示。
 
@@ -4038,7 +4038,7 @@ passjava-member 服务远程调用 passjava-study 服务的 API：getMemberStudy
 
 还可以用图标的方式查看：
 
-![图标的方式查看](http://cdn.jayh.club/blog/20201113/oVdmfBTIVCg5.png?imageslim)
+![图标的方式查看](http://cdn.passjava.cn/blog/20201113/oVdmfBTIVCg5.png?imageslim)
 
 ### 6. Zipkin 数据持久化
 
@@ -4061,7 +4061,7 @@ docker run --env STORAGE_TYPE=elasticsearch --env ES_HOSTS=192.168.56.10:9200 op
 
 - ES 作为存储介质的配置参数：
 
-![ES 作为存储介质的配置参数](http://cdn.jayh.club/blog/20201113/Tw1EtAwIvTkr.png?imageslim)
+![ES 作为存储介质的配置参数](http://cdn.passjava.cn/blog/20201113/Tw1EtAwIvTkr.png?imageslim)
 
 ### 7. 总结
 
@@ -4091,7 +4091,7 @@ docker run --env STORAGE_TYPE=elasticsearch --env ES_HOSTS=192.168.56.10:9200 op
 
 本篇主要内容如下：
 
-![主要内容](http://cdn.jayh.club/blog/20201009/FeDIusuH1JXe.png?imageslim)
+![主要内容](http://cdn.passjava.cn/blog/20201009/FeDIusuH1JXe.png?imageslim)
 
 ### 前言
 
@@ -4099,7 +4099,7 @@ docker run --env STORAGE_TYPE=elasticsearch --env ES_HOSTS=192.168.56.10:9200 op
 
 Kibana 界面如下图所示：
 
-![Kibana 界面](http://cdn.jayh.club/blog/20201007/oxihEk0lT425.png?imageslim)
+![Kibana 界面](http://cdn.passjava.cn/blog/20201007/oxihEk0lT425.png?imageslim)
 
 但这些日志检索原理是什么呢？这里就该我们的 Elasticsearch 搜索引擎登场了。
 
@@ -4123,13 +4123,13 @@ Elasticsearch 在速度和可扩展性方面都表现出色，而且还能够索
 
 -   比如一个在线网上商店，您可以在其中允许客户搜索您出售的产品。在这种情况下，您可以使用Elasticsearch 存储整个产品目录和库存，并为它们提供搜索和自动完成建议。
 
-![搜索手机](http://cdn.jayh.club/blog/20201008/bouuKG9HOiEo.png?imageslim)
+![搜索手机](http://cdn.passjava.cn/blog/20201008/bouuKG9HOiEo.png?imageslim)
 
 -   比如收集日志或交易数据，并且要分析和挖掘此数据以查找趋势，统计信息，摘要或异常。在这种情况下，您可以使用 Logstash（Elasticsearch / Logstash / Kibana堆栈的一部分）来收集，聚合和解析数据，然后让 Logstash 将这些数据提供给 Elasticsearch。数据放入 Elasticsearch 后，您可以运行搜索和聚合以挖掘您感兴趣的任何信息。
 
 #### 1.3 Elasticsearch 的工作原理？
 
-![ELK 原理图](http://cdn.jayh.club/blog/20201009/zGTJCTFPs4Xq.png?imageslim)
+![ELK 原理图](http://cdn.passjava.cn/blog/20201009/zGTJCTFPs4Xq.png?imageslim)
 
 Elasticsearch 是在 Lucene 基础上构建而成的。ES 在 Lucence 上做了很多增强。
 
@@ -4333,7 +4333,7 @@ docker run --name kibana -e ELASTICSEARCH_HOSTS=http://192.168.56.10:9200 -p 560
 
 访问 kibana: http://192.168.56.10:5601/
 
-![kibana](http://cdn.jayh.club/blog/20200618/KdLmdaHR2etK.png?imageslim)
+![kibana](http://cdn.passjava.cn/blog/20200618/KdLmdaHR2etK.png?imageslim)
 
 ### 4、初阶检索玩法
 
@@ -4410,7 +4410,7 @@ Reponse:
 
 -   也可以通过 Postman 工具发送请求来创建记录。
 
-![创建一条记录](http://cdn.jayh.club/blog/20200617/Kab9WijNRF8t.png?imageslim)
+![创建一条记录](http://cdn.passjava.cn/blog/20200617/Kab9WijNRF8t.png?imageslim)
 
 注意：
 
@@ -4604,7 +4604,7 @@ POST /member/external/_bulk
 
 执行结果如下图所示：
 
-![批量插入数据](http://cdn.jayh.club/blog/20200619/uqJhXNxRa4Dp.png?imageslim)
+![批量插入数据](http://cdn.passjava.cn/blog/20200619/uqJhXNxRa4Dp.png?imageslim)
 
 -   拷贝官方样本数据
 
@@ -4612,7 +4612,7 @@ POST /member/external/_bulk
   https://raw.githubusercontent.com/elastic/elasticsearch/master/docs/src/test/resources/accounts.json
   ```
 
-  ![官方样本数据](http://cdn.jayh.club/blog/20200619/iye5YjQSE8EI.png?imageslim)
+  ![官方样本数据](http://cdn.passjava.cn/blog/20200619/iye5YjQSE8EI.png?imageslim)
 
 -   在 kibana 中执行脚本
 
@@ -4624,11 +4624,11 @@ POST /bank/account/_bulk
 ......
 ```
 
-![批量插入样本数据的执行结果](http://cdn.jayh.club/blog/20200619/MQn9QhpBHr3W.png?imageslim)
+![批量插入样本数据的执行结果](http://cdn.passjava.cn/blog/20200619/MQn9QhpBHr3W.png?imageslim)
 
 -   查看所有索引
 
-  ![查看所有索引](http://cdn.jayh.club/blog/20200619/sbe64743CK9W.png?imageslim)
+  ![查看所有索引](http://cdn.passjava.cn/blog/20200619/sbe64743CK9W.png?imageslim)
 
 可以从返回结果中看到 bank 索引有 1000 条数据，占用了 440.2kb 存储空间。
 
@@ -4646,7 +4646,7 @@ GET bank/_search?q=*&sort=account_number: asc
 
 查询出所有数据，共 1000 条数据，耗时 1ms，只展示 10 条数据 ( ES 分页 )
 
-![URL 后接参数](http://cdn.jayh.club/blog/20200620/BvHAoaDumBk7.png?imageslim)
+![URL 后接参数](http://cdn.passjava.cn/blog/20200620/BvHAoaDumBk7.png?imageslim)
 
   属性值说明：
 
@@ -4680,7 +4680,7 @@ GET bank/_search
 
 示例：查询出所有，先按照 accout_number 升序排序，再按照 balance 降序排序
 
-![URL 加请求体进行检索](http://cdn.jayh.club/blog/20200620/HaSgoLuCjamf.png?imageslim)
+![URL 加请求体进行检索](http://cdn.passjava.cn/blog/20200620/HaSgoLuCjamf.png?imageslim)
 
 #### 5.2 详解 QueryDSL 查询
 
@@ -4735,7 +4735,7 @@ GET bank/_search
 }
 ```
 
-![字符串全文检索](http://cdn.jayh.club/blog/20200623/OKvUum6PodWJ.png?imageslim)
+![字符串全文检索](http://cdn.passjava.cn/blog/20200623/OKvUum6PodWJ.png?imageslim)
 
 > 全文检索按照评分进行排序，会对检索条件进行分词匹配。
 >
@@ -4935,7 +4935,7 @@ GET bank/_search
 
 hits 记录返回了，三种聚合结果也返回了，平均年龄 34 随，平均薪资 25208.0，品骏年龄分布：38 岁的有 2 个，28 岁的有一个，32 岁的有一个
 
-![示例 1](http://cdn.jayh.club/blog/20200629/amT7fuehc6yr.png?imageslim)
+![示例 1](http://cdn.passjava.cn/blog/20200629/amT7fuehc6yr.png?imageslim)
 
 如果不想返回 hits 结果，可以在最后面设置 size:0
 
@@ -4963,7 +4963,7 @@ GET bank/_search
 
 从结果可以看到 31 岁的有 61 个，平均薪资 28312.9，其他年龄的聚合结果类似。
 
-![示例 2](http://cdn.jayh.club/blog/20200629/6BVJ9lMdQPM3.png?imageslim)
+![示例 2](http://cdn.passjava.cn/blog/20200629/6BVJ9lMdQPM3.png?imageslim)
 
 -   示例 3：按照年龄分组，然后将分组后的结果按照性别分组，然后查询出这些分组后的平均薪资
 
@@ -5003,7 +5003,7 @@ GET bank/_search
 
 从结果可以看到 31 岁的有 61 个。其中性别为 `M` 的 35 个，平均薪资 29565.6，性别为 `F` 的 26 个，平均薪资 26626.6。其他年龄的聚合结果类似。
 
-![聚合结果](http://cdn.jayh.club/blog/20200629/fHRH5q2CDMSs.png?imageslim)
+![聚合结果](http://cdn.passjava.cn/blog/20200629/fHRH5q2CDMSs.png?imageslim)
 
 ##### 5.2.9 Mapping 映射
 
@@ -5155,7 +5155,7 @@ do, you, know, why, i, want, to, study, elk, 2,3,33
 
 （2）数字会进行分词。
 
-![英文句子分词](http://cdn.jayh.club/blog/20200708/msWLHBLAdo3c.png?imageslim)
+![英文句子分词](http://cdn.passjava.cn/blog/20200708/msWLHBLAdo3c.png?imageslim)
 
 ##### 6.1.4 中文分词示例
 
@@ -5169,7 +5169,7 @@ POST _analyze
 }
 ```
 
-![中文分词悟空聊架构](http://cdn.jayh.club/blog/20200708/I8dhOuSVoXem.png?imageslim)
+![中文分词悟空聊架构](http://cdn.passjava.cn/blog/20200708/I8dhOuSVoXem.png?imageslim)
 
 我们可以安装 ik 分词器来更加友好的支持中文分词。
 
@@ -5206,7 +5206,7 @@ http://192.168.56.10:9200/
 }
 ```
 
-![选择 ik 分词器](http://cdn.jayh.club/blog/20200709/MdL36AGYEYDg.png?imageslim)
+![选择 ik 分词器](http://cdn.passjava.cn/blog/20200709/MdL36AGYEYDg.png?imageslim)
 
 ##### 6.2.2 安装 ik 分词器的方式
 
@@ -5266,7 +5266,7 @@ rm -rf *.zip
 
 先用 XShell 工具连接虚拟机 ( 操作步骤可以参考之前写的文章 [02. 快速搭建 Linux 环境-运维必备](http://www.passjava.cn/#/01.PassJava/03.Deploy/01.环境搭建篇)) ，然后用 Xftp 将下载好的安装包复制到虚拟机。
 
-![Xftp 上传压缩包](http://cdn.jayh.club/blog/20200712/aE30LCn3xzXj.png?imageslim)
+![Xftp 上传压缩包](http://cdn.passjava.cn/blog/20200712/aE30LCn3xzXj.png?imageslim)
 
 #### 6.3 解压 ik 分词器到容器中
 
@@ -5286,7 +5286,7 @@ apt install unzip
 unzip ELK-IKv7.4.2.zip -d ./ik
 ```
 
-![解压 ik 分词器](http://cdn.jayh.club/blog/20201007/nkVKAH22jB5a.png?imageslim)
+![解压 ik 分词器](http://cdn.passjava.cn/blog/20201007/nkVKAH22jB5a.png?imageslim)
 
 -   修改文件夹权限为可读可写。
 
@@ -5320,7 +5320,7 @@ elasticsearch-plugin list
 ik
 ```
 
-![ik 分词器插件](http://cdn.jayh.club/blog/20201007/qf0NGUF7PBKo.png?imageslim)
+![ik 分词器插件](http://cdn.passjava.cn/blog/20201007/qf0NGUF7PBKo.png?imageslim)
 
 然后退出 Elasticsearch 容器，并重启 Elasticsearch 容器
 
@@ -5351,7 +5351,7 @@ POST _analyze
 
 得到如下结果，被分词为 一颗和小星星。
 
-![一颗小星星分词结果](http://cdn.jayh.club/blog/20201007/BGK3x4H9dY9F.png?imageslim)
+![一颗小星星分词结果](http://cdn.passjava.cn/blog/20201007/BGK3x4H9dY9F.png?imageslim)
 
 再来看下 ` 最大组合分词模式 `。输入如下查询语句。
 
@@ -5365,13 +5365,13 @@ POST _analyze
 
 ` 一颗小星星 ` 被分成了 6 个词语：一颗、一、颗、小星星、小星、星星。
 
-![一颗小星星分词结果](http://cdn.jayh.club/blog/20201007/mEXbb8SfTjhB.png?imageslim)
+![一颗小星星分词结果](http://cdn.passjava.cn/blog/20201007/mEXbb8SfTjhB.png?imageslim)
 
 我们再来看下另外一个中文分词。比如搜索悟空哥聊架构，期望结果：悟空哥、聊、架构三个词语。
 
 实际结果：悟、空哥、聊、架构四个词语。ik 分词器将悟空哥分词了，认为 ` 空哥 ` 是一个词语。所以需要让 ik 分词器知道 ` 悟空哥 ` 是一个词语，不需要拆分。那怎么办做呢？
 
-![悟空哥聊架构分词](http://cdn.jayh.club/blog/20201007/D3PCPzGSeR6g.png?imageslim)
+![悟空哥聊架构分词](http://cdn.passjava.cn/blog/20201007/D3PCPzGSeR6g.png?imageslim)
 
 #### 6.6 自定义分词词库
 
@@ -5515,7 +5515,7 @@ cd /mydata/elasticsearch/plugins/ik/config
 vim IKAnalyzer.cfg.xml
 ```
 
-![修改 ik 分词器配置](http://cdn.jayh.club/blog/20201008/G8VyYGe9wf9d.png?imageslim)
+![修改 ik 分词器配置](http://cdn.passjava.cn/blog/20201008/G8VyYGe9wf9d.png?imageslim)
 
 -   重启 elasticsearch 容器并设置每次重启机器后都启动 elasticsearch 容器。
 
@@ -5528,7 +5528,7 @@ docker update elasticsearch --restart=always
 
 可以看到 ` 悟空哥聊架构 ` 被拆分为 ` 悟空哥 `、` 聊 `、` 架构 ` 三个词语，说明自定义词库中的 ` 悟空哥 ` 有作用。
 
-![自定义词库后的分词结果](http://cdn.jayh.club/blog/20201008/3g6L6SLJ0GVg.png?imageslim)
+![自定义词库后的分词结果](http://cdn.passjava.cn/blog/20201008/3g6L6SLJ0GVg.png?imageslim)
 
 ### 7. 写在最后
 中篇和下篇继续肝，加油冲呀！
@@ -5580,17 +5580,17 @@ docker update elasticsearch --restart=always
 我下载的版本是 apache-jmeter-5.3
 ```
 
-![](http://cdn.jayh.club/uPic/8b33973211e6af588cea4d66427864ed-20230325183613222tiLMJM.png)
+![](http://cdn.passjava.cn/uPic/8b33973211e6af588cea4d66427864ed-20230325183613222tiLMJM.png)
 
 - 运行 JMeter 程序
 
 打开批处理文件：\apache-jmeter-5.3\bin\jmeter.bat
 
-![](http://cdn.jayh.club/uPic/9394eb8e9e21b096dd718aece354d155-20230325183602405F93pF9K1pekE.png)
+![](http://cdn.passjava.cn/uPic/9394eb8e9e21b096dd718aece354d155-20230325183602405F93pF9K1pekE.png)
 
 - 添加线程组
 
-![添加线程组](http://cdn.jayh.club/uPic/fcb5e7b525cf592cbbe2b061cced6914-20230325183620323kPqzhg.png)
+![添加线程组](http://cdn.passjava.cn/uPic/fcb5e7b525cf592cbbe2b061cced6914-20230325183620323kPqzhg.png)
 
 - 1s 内启动 200 个线程，循环次数 100 次。2w 个请求。
 
@@ -5860,7 +5860,7 @@ http://localhost:8060/api/question/v1/admin/question/test
 
 这里做个横向对比：
 
-![横向对比](http://cdn.jayh.club/uPic/43c2e652bee5ebd5ee5a509ec76a8644-20230325183631956eSK7tb.png)
+![横向对比](http://cdn.passjava.cn/uPic/43c2e652bee5ebd5ee5a509ec76a8644-20230325183631956eSK7tb.png)
 
 说明微服务 api 经过网关转发一次后，性能至少下降了一半。可以得出结果：中间件越多，性能损失越大，大部分损失都是网络交互导致的。可以通过增强网络通信质量来减少网络的延迟。
 
@@ -5876,23 +5876,23 @@ http://localhost:11000/question/v1/admin/question/list?type=5
 
 这个 api 的代码如下，很容易看懂。
 
-![查询问题列表的 api](http://cdn.jayh.club/uPic/899a7637f378aa37de27f72d50ebe45c-20230325183643215QfGSyHBEo2aY.png)
+![查询问题列表的 api](http://cdn.passjava.cn/uPic/899a7637f378aa37de27f72d50ebe45c-20230325183643215QfGSyHBEo2aY.png)
 
 我们加些测试代码：统计查询数据库的耗时。如下所示：
 
-![耗时统计](http://cdn.jayh.club/uPic/18e11d292f3589bc68f0923f64af96cc-20230325183649479YcVexz.png)
+![耗时统计](http://cdn.passjava.cn/uPic/18e11d292f3589bc68f0923f64af96cc-20230325183649479YcVexz.png)
 
 然后重启 passjava-question 服务，再次测试这个 api，耗时 43 ms
 
-![](http://cdn.jayh.club/uPic/f4f49bbdbed6360495dbc33438cf6051-20230325183651720C4o7QI.png)
+![](http://cdn.passjava.cn/uPic/f4f49bbdbed6360495dbc33438cf6051-20230325183651720C4o7QI.png)
 
 怎么对查询进行优化呢？很容易想到加索引，我们来试下加在 question 表加索引后的效果。给 type 字段加上普通索引，如下图所示：
 
-![添加索引](http://cdn.jayh.club/uPic/9bc76b5870c0a3b8480f03ec61d72480-20230325183656725oJkLDK.png)
+![添加索引](http://cdn.passjava.cn/uPic/9bc76b5870c0a3b8480f03ec61d72480-20230325183656725oJkLDK.png)
 
 我们再来看下加了索引后的耗时情况：耗时 18 ms，确实比之前的 43 ms 快了很多。
 
-![加了索引后的情况](http://cdn.jayh.club/uPic/d9f8d38ae103359594134e47da6dd9cd-20230325183659357jIXPe7.png)
+![加了索引后的情况](http://cdn.passjava.cn/uPic/d9f8d38ae103359594134e47da6dd9cd-20230325183659357jIXPe7.png)
 
 ### 9. 优化垃圾回收
 
@@ -5900,7 +5900,7 @@ http://localhost:11000/question/v1/admin/question/list?type=5
 
 原因是 Eden 区的内存分配得太小了，只有 32 M，我们来调大一点。
 
-![32M Eden 区频繁进行垃圾回收](http://cdn.jayh.club/uPic/7704b030fba57010fbeb91334621e14a-202303251837016270kZaIT.png)
+![32M Eden 区频繁进行垃圾回收](http://cdn.passjava.cn/uPic/7704b030fba57010fbeb91334621e14a-202303251837016270kZaIT.png)
 
 #### 9.1 增大 Eden 区大小
 
@@ -5912,7 +5912,7 @@ http://localhost:11000/question/v1/admin/question/list?type=5
 
 然后可以观察到在短时间（1分钟）内只进行了 92 次垃圾回收，说明垃圾回收的频率降低了。应用程序的性能也提升了。另外从压测工具中也可以看到，吞吐量为 347/s，吞吐量也有较大提升。
 
-![](http://cdn.jayh.club/uPic/86cbe05e08def8bbc92d30c9cf1c86e2-20230325183734009Xi6LLc.png)
+![](http://cdn.passjava.cn/uPic/86cbe05e08def8bbc92d30c9cf1c86e2-20230325183734009Xi6LLc.png)
 
 ### 10. 总结
 

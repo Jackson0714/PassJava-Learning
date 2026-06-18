@@ -1,6 +1,6 @@
 # 一、SQL Server组成部分
 
-![](http://cdn.jayh.club/blog/20210629/JKlAuGMpCU23.png?imageslim)
+![](http://cdn.passjava.cn/blog/20210629/JKlAuGMpCU23.png?imageslim)
 
 ## 1.关系引擎：主要作用是优化和执行查询。
 
@@ -40,7 +40,7 @@
 
 # 二、查询的底层原理
 
-<img src="http://cdn.jayh.club/blog/20210629/D90ob0mH2jAU.png?imageslim" style="zoom:80%;" />
+<img src="http://cdn.passjava.cn/blog/20210629/D90ob0mH2jAU.png?imageslim" style="zoom:80%;" />
 
 1.当客户端执行一条T-SQL语句给SQL Server服务器时，会首先到达服务器的网络接口，网络接口和客户端之间有协议层。
 

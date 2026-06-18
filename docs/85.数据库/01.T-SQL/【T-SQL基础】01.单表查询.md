@@ -94,7 +94,7 @@ DATEADD (_datepart_ , number , d_ate_ )
 
  **datepart**
 
-<img src="http://cdn.jayh.club/blog/20210623/hAo1bfdigzud.png?imageslim" style="zoom:80%;" />
+<img src="http://cdn.passjava.cn/blog/20210623/hAo1bfdigzud.png?imageslim" style="zoom:80%;" />
 
  `number` 是一个表达式，可以解析为与 _date_ 的 _datepart_ 相加的 int。用户定义的变量是有效的。
 

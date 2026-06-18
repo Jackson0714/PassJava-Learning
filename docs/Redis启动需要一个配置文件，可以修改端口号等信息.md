@@ -30,7 +30,7 @@
   
   编译成功之后会出现“It's a good idea to run 'make test'”的提示
   
-  ![image-20230719170524352](http://cdn.jayh.club/uPic/image-20230719170524352z0MdFj.png)
+  ![image-20230719170524352](http://cdn.passjava.cn/uPic/image-20230719170524352z0MdFj.png)
   
   使用命令 进行安装                                                            
   
@@ -40,7 +40,7 @@
   
   
   
-  ![image-20230719170534030](http://cdn.jayh.club/uPic/image-20230719170534030CmDU1k.png)
+  ![image-20230719170534030](http://cdn.passjava.cn/uPic/image-20230719170534030CmDU1k.png)
   
   安装完后，在/usr/local/redis/bin下有几个可执行文件可以查看               
   
@@ -50,7 +50,7 @@
   
   
   
-  ![image-20230719170539158](http://cdn.jayh.club/uPic/image-20230719170539158yBxBzr.png)
+  ![image-20230719170539158](http://cdn.passjava.cn/uPic/image-20230719170539158yBxBzr.png)
   
   
   
@@ -111,7 +111,7 @@ vim redis.conf
 
 使用命令ps -ef|grep redis查看已经启动的redis服务关闭redis服务     ps -ef|grep redis
 
-![image-20230719170603498](http://cdn.jayh.club/uPic/image-202307191706034987Eyitm.png)
+![image-20230719170603498](http://cdn.passjava.cn/uPic/image-202307191706034987Eyitm.png)
 
 使用./bin/redis-cli 命令进入到redis的客户端                        
 
@@ -121,7 +121,7 @@ vim redis.conf
 
 测试安装是否成功
 
-![image-20230719170610152](http://cdn.jayh.club/uPic/image-20230719170610152gpO2NU.png)
+![image-20230719170610152](http://cdn.passjava.cn/uPic/image-20230719170610152gpO2NU.png)
 
 修改/usr/redis-7.0.12/sentinel.conf中的配置
 
@@ -202,7 +202,7 @@ tail -100f redis-sentinel.log
 
 ```
 
-![image-20230719170616509](http://cdn.jayh.club/uPic/image-20230719170616509tGq1KF.png)
+![image-20230719170616509](http://cdn.passjava.cn/uPic/image-20230719170616509tGq1KF.png)
 
 启动命令合集
 

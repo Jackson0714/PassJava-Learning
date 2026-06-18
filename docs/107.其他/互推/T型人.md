@@ -4,7 +4,7 @@
 
 本文主要内容如下：
 
-![](http://cdn.jayh.club/uPic/image-20210414150653476.png)
+![](http://cdn.passjava.cn/uPic/image-20210414150653476.png)
 
 ## **T 型人**
 

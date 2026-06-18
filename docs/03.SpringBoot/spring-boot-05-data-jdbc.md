@@ -12,7 +12,7 @@ JDBC API 属于Java APIJDBC用于以下几种功能：连接到数据库、执�
 
 ### 2.1 创建 Spring Boot Project 时引入 JDBC API 依赖和 MySQL Driver依赖
 
-![mark](http://cdn.jayh.club/uPic/36a82cfc8610165bd569c805483d5dc8lWx0WQ.png)
+![mark](http://cdn.passjava.cn/uPic/36a82cfc8610165bd569c805483d5dc8lWx0WQ.png)
 可以在POM中找到引入的JDBC依赖和mysql依赖：
 JDBC 依赖：
 
@@ -85,7 +85,7 @@ class Springboot05DataJdbcApplicationTests {
 
 数据库连接：HikariProxyConnection@1335157064 wrapping com.mysql.cj.jdbc.ConnectionImpl@7ff8a9dc
 
-![](http://cdn.jayh.club/uPic/d9f8e7fb58f5837218069687a3589cee5hezfS.png)
+![](http://cdn.passjava.cn/uPic/d9f8e7fb58f5837218069687a3589cee5hezfS.png)
 
 ## 三、自动配置原理
 
@@ -212,7 +212,7 @@ schema:
 
 创建出的 `department` 表
 
-![](http://cdn.jayh.club/uPic/82fde24378fa650e3b46367549509ef5kEPCRN.png)
+![](http://cdn.passjava.cn/uPic/82fde24378fa650e3b46367549509ef5kEPCRN.png)
 
 ## 四、JdbcTemplate
 
@@ -292,7 +292,7 @@ public class SwaggerConfig {
 
 http://localhost:8081/swagger-ui.html
 
-![](http://cdn.jayh.club/uPic/fcc40fd2fb298785e2784db9f522867eIIm6Q7.png)
+![](http://cdn.passjava.cn/uPic/fcc40fd2fb298785e2784db9f522867eIIm6Q7.png)
 
 ## 六、测试
 
@@ -311,7 +311,7 @@ public int createDepartment(@RequestParam String name) {
 }
 ```
 
-![](http://cdn.jayh.club/uPic/960172f49734bff8c2849a8bc12d47afX0AOwS.png)
+![](http://cdn.passjava.cn/uPic/960172f49734bff8c2849a8bc12d47afX0AOwS.png)
 
 表记录
 
@@ -328,7 +328,7 @@ public List<Map<String, Object>> getAllDepartment() {
 }
 ```
 
-![](http://cdn.jayh.club/uPic/590d9985b17fc00818347f96a0dc21ffZxFkq4.png)
+![](http://cdn.passjava.cn/uPic/590d9985b17fc00818347f96a0dc21ffZxFkq4.png)
 
 ### 6.3 根据id查询某个部门
 
@@ -345,7 +345,7 @@ public Map<String, Object> getDepartmentById(@PathVariable Long id) {
 }
 ```
 
-![](http://cdn.jayh.club/uPic/3bb95720c506959f1ca40e7f97896a58AMA5Fv.png)
+![](http://cdn.passjava.cn/uPic/3bb95720c506959f1ca40e7f97896a58AMA5Fv.png)
 
 ### 6.4 根据id更新部门名称
 
@@ -363,7 +363,7 @@ public int updateDepartmentById(@RequestParam Long id, @RequestParam String name
 }
 ```
 
-![](http://cdn.jayh.club/uPic/ec1ce3c0523be48b317585a8c30fc07aKs48mw.png)
+![](http://cdn.passjava.cn/uPic/ec1ce3c0523be48b317585a8c30fc07aKs48mw.png)
 
 ### 6.5 根据id删除部门
 
@@ -380,7 +380,7 @@ public int deleteDepartment(@RequestParam Long id) {
 }
 ```
 
-![](http://cdn.jayh.club/uPic/a4448fa086ecfec6004396b44b080fc1ViBJVh.png)
+![](http://cdn.passjava.cn/uPic/a4448fa086ecfec6004396b44b080fc1ViBJVh.png)
 
 
 
@@ -392,7 +392,7 @@ public int deleteDepartment(@RequestParam Long id) {
 
 java.sql.SQLException:null, message from server: "Host 'Siri' is not allowed to connect to this MySQL server"
 
-![](http://cdn.jayh.club/uPic/157e6531147bb1b29e39940734e22a11glaz9E.png)
+![](http://cdn.passjava.cn/uPic/157e6531147bb1b29e39940734e22a11glaz9E.png)
 
 解决方案：
 
@@ -412,13 +412,13 @@ Query OK, 1 row affected
 
 如下图所示：
 
-![](http://cdn.jayh.club/uPic/37754c7db1a01eb831c948da4d3e0519MwXtL1.png)
+![](http://cdn.passjava.cn/uPic/37754c7db1a01eb831c948da4d3e0519MwXtL1.png)
 
 ### 问题2
 
 Caused by: com.mysql.cj.exceptions.InvalidConnectionAttributeException: The server time zone value '�й���׼ʱ��' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specifc time zone value if you want to utilize time zone support.
 
-![](http://cdn.jayh.club/uPic/2d346c388bf354bf008b0776a02b55fcHXOm5R.png)
+![](http://cdn.passjava.cn/uPic/2d346c388bf354bf008b0776a02b55fcHXOm5R.png)
 
 解决方案：
 

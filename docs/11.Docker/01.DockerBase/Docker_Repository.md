@@ -20,7 +20,7 @@
 $ docker login
 ```
 
-[![img](http://cdn.jayh.club/uPic/5974B2AE-945F-4DD0-A7C8-9D9B01BDAF62GibXWT.jpg)](https://www.runoob.com/wp-content/uploads/2019/10/5974B2AE-945F-4DD0-A7C8-9D9B01BDAF62.jpg)
+[![img](http://cdn.passjava.cn/uPic/5974B2AE-945F-4DD0-A7C8-9D9B01BDAF62GibXWT.jpg)](https://www.runoob.com/wp-content/uploads/2019/10/5974B2AE-945F-4DD0-A7C8-9D9B01BDAF62.jpg)
 
 **退出**
 
@@ -40,7 +40,7 @@ $ docker logout
 $ docker search ubuntu
 ```
 
-[![img](http://cdn.jayh.club/uPic/docker-search227Asp6G.png)](https://www.runoob.com/wp-content/uploads/2019/10/docker-search22.png)
+[![img](http://cdn.passjava.cn/uPic/docker-search227Asp6G.png)](https://www.runoob.com/wp-content/uploads/2019/10/docker-search22.png)
 
 使用 docker pull 将官方 ubuntu 镜像下载到本地：
 
@@ -48,7 +48,7 @@ $ docker search ubuntu
 $ docker pull ubuntu 
 ```
 
-[![img](http://cdn.jayh.club/uPic/docker-pull22LHrsKH.png)](https://www.runoob.com/wp-content/uploads/2019/10/docker-pull22.png)
+[![img](http://cdn.passjava.cn/uPic/docker-pull22LHrsKH.png)](https://www.runoob.com/wp-content/uploads/2019/10/docker-pull22.png)
 
 ### 推送镜像
 
